@@ -1,0 +1,12 @@
+{
+    "canisters": {
+        "multi_sig": {
+            "type": "custom",
+            "build": "npx azle multi_sig",
+            "root": "src",
+            "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
+            "candid": "node_modules/@cigdao/multi-sig/src/index.did",
+            "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
+        }
+    }
+}
