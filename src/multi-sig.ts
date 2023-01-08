@@ -8,15 +8,16 @@ import figlet from 'figlet';
 import { Command } from 'commander';
 import {execa} from 'execa';
 import { createSpinner } from 'nanospinner';
+import { Mlpconfig } from './init';
 
 let dao_name: string;
-let member_principal: string;
+let member_principal: string[];
 let token_principal = "token principal";
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 export default class MultiSig {
-    constructor(private program: Command){}
+    constructor(private program: Command, private config?: Mlpconfig){}
 
     async welcome() {
         const rainbowTitle = chalkAnimation.rainbow(
@@ -25,38 +26,42 @@ export default class MultiSig {
     
         await sleep();
         rainbowTitle.stop();
-    
-        /*console.log(`
-        ${chalk.bgBlue('HOW TO PLAY')} 
-        I am a process on your computer.
-        If you get any question wrong I will be ${chalk.bgRed('killed')}
-        So get all the questions right...
-      `);*/
     }
 
     async askDao() {
-        const answers = await inquirer.prompt({
-            name: 'dao_name',
-            type: 'input',
-            message: "What is your dao's name?",
-            default() {
-                return 'dao name';
-            },
-        });
-    
-        dao_name = answers.dao_name;
+        if (this.config?.dao_name) {
+            dao_name = this.config.dao_name;
+            console.log(`Dao Name: ${dao_name}`);
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'dao_name',
+                type: 'input',
+                message: "What is your dao's name?",
+                default() {
+                    return 'dao name';
+                },
+            });
+        
+            dao_name = answers.dao_name;
+        }
+
     }
     async askMember() {
-        const answers = await inquirer.prompt({
-            name: 'member_principal',
-            type: 'input',
-            message: "You need to add at least 1 member",
-            default() {
-                return 'principal';
-            },
-        });
-    
-        member_principal = answers.member_principal;
+        if (this.config?.dao_member) {
+            member_principal = this.config?.dao_member;
+            console.log(`Dao Member: ${member_principal}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'member_principal',
+                type: 'input',
+                message: "You need to add at least 1 member",
+                default() {
+                    return 'principal';
+                },
+            });
+        
+            member_principal = answers.member_principal;
+    }
     }
 
     async install_dfx() {
