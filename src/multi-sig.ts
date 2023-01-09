@@ -12,8 +12,8 @@ import { Mlpconfig } from './init';
 import standard from 'figlet/importable-fonts/Standard.js'
 
 let dao_name: string;
-let member_principal: string[];
-let token_principal = "token principal";
+let member_principal: string;
+let token_principal = "";
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
@@ -48,8 +48,8 @@ export default class MultiSig {
 
     }
     async askMember() {
-        if (this.config?.dao_member) {
-            member_principal = this.config?.dao_member;
+        if (this.config?.member_principal) {
+            member_principal = this.config?.member_principal;
             console.log(`Dao Member: ${member_principal}`)
         } else {
             const answers = await inquirer.prompt({
@@ -62,6 +62,24 @@ export default class MultiSig {
             });
 
             member_principal = answers.member_principal;
+        }
+    }
+
+    async askToken() {
+        if (this.config?.token_principal) {
+            token_principal = this.config?.token_principal;
+            console.log(`Token Pricipal: ${token_principal}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'token_principal',
+                type: 'input',
+                message: "The principal for your governace token",
+                default() {
+                    return 'principal';
+                },
+            });
+
+            token_principal = answers.token_principal;
         }
     }
 
@@ -85,7 +103,7 @@ export default class MultiSig {
         let text = "("
         let args = text.concat(`"${member_principal}",`, `"${token_principal}"`, ")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
             if (deploy.exitCode === 0) {
                 spinner.success({ text: `successfuly deployed canister`, mark: ':)' });
             }

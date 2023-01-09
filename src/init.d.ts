@@ -1,4 +1,7 @@
 export type Mlpconfig = {
     "dao_name": string,
-    "dao_member": string[]
+    "token_principal": string,
+    "member_principal": string,
+    "token_supply": number,
+    "token_decimals": number
 }

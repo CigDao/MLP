@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { newCommand } from "./new-command";
+import { initCommand } from "./commands";
+import { deployCommand } from "./commands";
 
 const program = new Command();
 program.name("MLP")
 program.description('My Little Protocol - Launching dao tools');
 program.version('0.0.1');
-program.addCommand(newCommand);
+program.addCommand(initCommand);
+program.addCommand(deployCommand);
 
 async function main() {
     await program.parseAsync();

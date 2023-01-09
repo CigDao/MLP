@@ -913,12 +913,12 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this;
       }
-      _optionEx(config, flags, description, fn, defaultValue) {
+      _optionEx(config2, flags, description, fn, defaultValue) {
         if (typeof flags === "object" && flags instanceof Option2) {
           throw new Error("To add an Option object use addOption() instead of option() or requiredOption()");
         }
         const option = this.createOption(flags, description);
-        option.makeOptionMandatory(!!config.mandatory);
+        option.makeOptionMandatory(!!config2.mandatory);
         if (typeof fn === "function") {
           option.default(defaultValue).argParser(fn);
         } else if (fn instanceof RegExp) {
@@ -1470,9 +1470,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
           this._outputConfiguration.writeErr("\n");
           this.outputHelp({ error: true });
         }
-        const config = errorOptions || {};
-        const exitCode = config.exitCode || 1;
-        const code = config.code || "commander.error";
+        const config2 = errorOptions || {};
+        const exitCode = config2.exitCode || 1;
+        const code = config2.code || "commander.error";
         this._exit(exitCode, code, message);
       }
       _parseOptionsEnv() {
@@ -5777,8 +5777,8 @@ var require_lastValueFrom = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.lastValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
-    function lastValueFrom(source, config) {
-      var hasConfig = typeof config === "object";
+    function lastValueFrom(source, config2) {
+      var hasConfig = typeof config2 === "object";
       return new Promise(function(resolve, reject) {
         var _hasValue = false;
         var _value;
@@ -5792,7 +5792,7 @@ var require_lastValueFrom = __commonJS({
             if (_hasValue) {
               resolve(_value);
             } else if (hasConfig) {
-              resolve(config.defaultValue);
+              resolve(config2.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -5812,8 +5812,8 @@ var require_firstValueFrom = __commonJS({
     exports.firstValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
     var Subscriber_1 = require_Subscriber();
-    function firstValueFrom(source, config) {
-      var hasConfig = typeof config === "object";
+    function firstValueFrom(source, config2) {
+      var hasConfig = typeof config2 === "object";
       return new Promise(function(resolve, reject) {
         var subscriber = new Subscriber_1.SafeSubscriber({
           next: function(value) {
@@ -5823,7 +5823,7 @@ var require_firstValueFrom = __commonJS({
           error: reject,
           complete: function() {
             if (hasConfig) {
-              resolve(config.defaultValue);
+              resolve(config2.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -5924,8 +5924,8 @@ var require_timeout = __commonJS({
         this.info = info;
       };
     });
-    function timeout(config, schedulerArg) {
-      var _a = isDate_1.isValidDate(config) ? { first: config } : typeof config === "number" ? { each: config } : config, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
+    function timeout(config2, schedulerArg) {
+      var _a = isDate_1.isValidDate(config2) ? { first: config2 } : typeof config2 === "number" ? { each: config2 } : config2, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
       if (first == null && each == null) {
         throw new TypeError("No timeout provided.");
       }
@@ -6487,12 +6487,12 @@ var require_connectable = __commonJS({
       },
       resetOnDisconnect: true
     };
-    function connectable(source, config) {
-      if (config === void 0) {
-        config = DEFAULT_CONFIG;
+    function connectable(source, config2) {
+      if (config2 === void 0) {
+        config2 = DEFAULT_CONFIG;
       }
       var connection = null;
-      var connector = config.connector, _a = config.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
+      var connector = config2.connector, _a = config2.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
       var subject = connector();
       var result = new Observable_1.Observable(function(subscriber) {
         return subject.subscribe(subscriber);
@@ -8093,11 +8093,11 @@ var require_connect = __commonJS({
         return new Subject_1.Subject();
       }
     };
-    function connect(selector, config) {
-      if (config === void 0) {
-        config = DEFAULT_CONFIG;
+    function connect(selector, config2) {
+      if (config2 === void 0) {
+        config2 = DEFAULT_CONFIG;
       }
-      var connector = config.connector;
+      var connector = config2.connector;
       return lift_1.operate(function(source, subscriber) {
         var subject = connector();
         innerFrom_1.innerFrom(selector(fromSubscribable_1.fromSubscribable(subject))).subscribe(subscriber);
@@ -9585,15 +9585,15 @@ var require_retry = __commonJS({
       if (configOrCount === void 0) {
         configOrCount = Infinity;
       }
-      var config;
+      var config2;
       if (configOrCount && typeof configOrCount === "object") {
-        config = configOrCount;
+        config2 = configOrCount;
       } else {
-        config = {
+        config2 = {
           count: configOrCount
         };
       }
-      var _a = config.count, count = _a === void 0 ? Infinity : _a, delay = config.delay, _b = config.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
+      var _a = config2.count, count = _a === void 0 ? Infinity : _a, delay = config2.delay, _b = config2.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
       return count <= 0 ? identity_1.identity : lift_1.operate(function(source, subscriber) {
         var soFar = 0;
         var innerSub;
@@ -10314,12 +10314,12 @@ var require_throttle = __commonJS({
       leading: true,
       trailing: false
     };
-    function throttle(durationSelector, config) {
-      if (config === void 0) {
-        config = exports.defaultThrottleConfig;
+    function throttle(durationSelector, config2) {
+      if (config2 === void 0) {
+        config2 = exports.defaultThrottleConfig;
       }
       return lift_1.operate(function(source, subscriber) {
-        var leading = config.leading, trailing = config.trailing;
+        var leading = config2.leading, trailing = config2.trailing;
         var hasValue = false;
         var sendValue = null;
         var throttled = null;
@@ -10371,17 +10371,17 @@ var require_throttleTime = __commonJS({
     var async_1 = require_async();
     var throttle_1 = require_throttle();
     var timer_1 = require_timer();
-    function throttleTime(duration, scheduler, config) {
+    function throttleTime(duration, scheduler, config2) {
       if (scheduler === void 0) {
         scheduler = async_1.asyncScheduler;
       }
-      if (config === void 0) {
-        config = throttle_1.defaultThrottleConfig;
+      if (config2 === void 0) {
+        config2 = throttle_1.defaultThrottleConfig;
       }
       var duration$ = timer_1.timer(duration, scheduler);
       return throttle_1.throttle(function() {
         return duration$;
-      }, config);
+      }, config2);
     }
     exports.throttleTime = throttleTime;
   }
@@ -46787,12 +46787,12 @@ Font modified May 20, 2012 by patorjk to add the 0xCA0 character
 // src/multi-sig.ts
 var dao_name;
 var member_principal;
-var token_principal = "token principal";
+var token_principal = "";
 var sleep = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var MultiSig = class {
-  constructor(program4, config) {
+  constructor(program4, config2) {
     this.program = program4;
-    this.config = config;
+    this.config = config2;
   }
   welcome() {
     return __async(this, null, function* () {
@@ -46823,8 +46823,8 @@ var MultiSig = class {
   askMember() {
     return __async(this, null, function* () {
       var _a, _b;
-      if ((_a = this.config) == null ? void 0 : _a.dao_member) {
-        member_principal = (_b = this.config) == null ? void 0 : _b.dao_member;
+      if ((_a = this.config) == null ? void 0 : _a.member_principal) {
+        member_principal = (_b = this.config) == null ? void 0 : _b.member_principal;
         console.log(`Dao Member: ${member_principal}`);
       } else {
         const answers = yield inquirer_default.prompt({
@@ -46836,6 +46836,25 @@ var MultiSig = class {
           }
         });
         member_principal = answers.member_principal;
+      }
+    });
+  }
+  askToken() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_principal) {
+        token_principal = (_b = this.config) == null ? void 0 : _b.token_principal;
+        console.log(`Token Pricipal: ${token_principal}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_principal",
+          type: "input",
+          message: "The principal for your governace token",
+          default() {
+            return "principal";
+          }
+        });
+        token_principal = answers.token_principal;
       }
     });
   }
@@ -46860,7 +46879,7 @@ var MultiSig = class {
       let text = "(";
       let args = text.concat(`"${member_principal}",`, `"${token_principal}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
         if (deploy.exitCode === 0) {
           spinner.success({ text: `successfuly deployed canister`, mark: ":)" });
         }
@@ -46882,20 +46901,182 @@ var MultiSig = class {
   }
 };
 
-// src/new-command.ts
+// src/init-commands.ts
+var dao_name2;
+var member_principal2;
+var token_principal2;
+var token_supply;
+var token_decimals;
+var sleep2 = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
+var MultiSig2 = class {
+  constructor(program4, config2) {
+    this.program = program4;
+    this.config = config2;
+  }
+  welcome() {
+    return __async(this, null, function* () {
+      const rainbowTitle = chalk_animation_default.rainbow("Welcome To My Little Protocol \n");
+      yield sleep2();
+      rainbowTitle.stop();
+    });
+  }
+  askDao() {
+    return __async(this, null, function* () {
+      var _a;
+      if ((_a = this.config) == null ? void 0 : _a.dao_name) {
+        dao_name2 = this.config.dao_name;
+        console.log(`Dao Name: ${dao_name2}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "dao_name",
+          type: "input",
+          message: "What is your dao's name?",
+          default() {
+            return "Dao Name";
+          }
+        });
+        return answers.dao_name;
+      }
+    });
+  }
+  askMember() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.member_principal) {
+        member_principal2 = (_b = this.config) == null ? void 0 : _b.member_principal;
+        console.log(`Dao Member: ${member_principal2}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "member_principal",
+          type: "input",
+          message: "You need to add at least 1 member",
+          default() {
+            return "principal";
+          }
+        });
+        return answers.member_principal;
+      }
+    });
+  }
+  askToken() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_principal) {
+        token_principal2 = (_b = this.config) == null ? void 0 : _b.token_principal;
+        console.log(`Token Principal: ${token_principal2}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_principal",
+          type: "input",
+          message: "The principal for your governace token",
+          default() {
+            return "Token Principal";
+          }
+        });
+        return answers.token_principal;
+      }
+    });
+  }
+  askTokenDecimals() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_decimals) {
+        token_decimals = (_b = this.config) == null ? void 0 : _b.token_decimals;
+        console.log(`Token Decimals: ${token_decimals}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_decimals",
+          type: "input",
+          message: "The number of decimals for your governace token",
+          default() {
+            return "Token Decimals";
+          }
+        });
+        return answers.token_decimals;
+      }
+    });
+  }
+  askTokenSupply() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_supply) {
+        token_supply = (_b = this.config) == null ? void 0 : _b.token_supply;
+        console.log(`Token Supply: ${token_supply}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_supply",
+          type: "input",
+          message: "The total supply for your governace token",
+          default() {
+            return "Token Supply";
+          }
+        });
+        return answers.token_supply;
+      }
+    });
+  }
+};
+
+// src/commands.ts
 var import_fs = require("fs");
-var newCommand = new Command("new");
-newCommand.description("Creates a new MLP canister");
-newCommand.command("multi-sig").description("creates a new multi-sig wallet").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").action((option) => __async(void 0, null, function* () {
+
+// src/json-data.ts
+var dfx = {
+  "canisters": {
+    "multi_sig": {
+      "type": "custom",
+      "build": "npx azle multi_sig",
+      "root": "src",
+      "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
+      "candid": "node_modules/@cigdao/multi-sig/src/index.did",
+      "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
+    }
+  }
+};
+var config = {
+  "dao_name": "",
+  "token_principal": "",
+  "member_principal": "",
+  "token_supply": 0,
+  "token_decimals": 0
+};
+
+// src/commands.ts
+var initCommand = new Command("init");
+var deployCommand = new Command("deploy");
+initCommand.description("Creates a new MLP pproject").action((option) => __async(void 0, null, function* () {
+  const init = new MultiSig2(initCommand);
+  yield init.welcome();
+  config.dao_name = yield init.askDao();
+  config.member_principal = yield init.askMember();
+  config.token_principal = yield init.askToken();
+  config.token_decimals = yield init.askTokenDecimals();
+  config.token_supply = yield init.askTokenSupply();
+  for (let i = 0; i < config.token_decimals; i++) {
+    config.token_supply = config.token_supply * 10;
+  }
+  try {
+    (0, import_fs.writeFileSync)("dfx.json", JSON.stringify(dfx));
+  } catch (err) {
+    console.error(err);
+  }
+  try {
+    (0, import_fs.writeFileSync)("mlpconfig.json", JSON.stringify(config));
+  } catch (err) {
+    console.error(err);
+  }
+}));
+deployCommand.command("multi-sig").description("creates a new multi-sig wallet").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").action((option) => __async(void 0, null, function* () {
   const configExists = (0, import_fs.existsSync)(option.config);
   let configFile = void 0;
   if (configExists) {
     let rawdata = (0, import_fs.readFileSync)(option.config, "utf8");
     configFile = JSON.parse(rawdata);
   }
-  const ms = new MultiSig(newCommand, configFile);
+  const ms = new MultiSig(deployCommand, configFile);
   yield ms.welcome();
   yield ms.askDao();
+  yield ms.askToken();
   yield ms.askMember();
   yield ms.install_dfx();
   yield ms.deploy_multi_sig();
@@ -46907,7 +47088,8 @@ var program3 = new Command();
 program3.name("MLP");
 program3.description("My Little Protocol - Launching dao tools");
 program3.version("0.0.1");
-program3.addCommand(newCommand);
+program3.addCommand(initCommand);
+program3.addCommand(deployCommand);
 function main2() {
   return __async(this, null, function* () {
     yield program3.parseAsync();
