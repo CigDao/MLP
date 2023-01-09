@@ -1,19 +1,20 @@
 #!/usr/bin/env node
-
 import chalk from 'chalk';
-import inquirer from 'inquirer';
 import * as gradient from 'gradient-string';
+// @ts-ignore
 import chalkAnimation from 'chalk-animation';
+// @ts-ignore
 import figlet from 'figlet';
 import { Command } from 'commander';
 import {execa} from 'execa';
 import { createSpinner } from 'nanospinner';
-import { Mlpconfig } from './init';
+// @ts-ignore
 import standard from 'figlet/importable-fonts/Standard.js'
+import { Mlpconfig } from './init';
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
-export default class MultiSig {
+export default class InitCommands {
     constructor(private program: Command, private config?: Mlpconfig) { }
 
     async title() {
@@ -108,7 +109,7 @@ export default class MultiSig {
 
         figlet(`Congrats , ${this.config?.dao_name} !\n Let's Make Crypto Great Again`, {
             font: 'Standard',
-        }, (err, data) => {
+        }, (err: any, data: string | undefined) => {
             console.log(gradient.pastel.multiline(data) + '\n');
 
             console.log(

@@ -1,15 +1,15 @@
-import { Command, program } from "commander";
+import { Command } from "commander";
 import Deploy from "./deploy";
 import InitCommands from "./init-commands";
 import { readFileSync, existsSync, writeFileSync } from "fs";
-import { Mlpconfig } from "./init";
 import {dfx,config} from "./json-data";
+import { Mlpconfig } from "./init";
 
 export const initCommand = new Command("init");
 export const deployCommand = new Command("deploy");
 
 initCommand.description("Creates a new MLP project")
-.action(async (option) => {
+.action(async () => {
     const init = new InitCommands(initCommand);
 
     await init.welcome();

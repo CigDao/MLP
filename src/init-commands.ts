@@ -1,15 +1,9 @@
 #!/usr/bin/env node
-
-import chalk from 'chalk';
 import inquirer from 'inquirer';
-import * as gradient from 'gradient-string';
+// @ts-ignore
 import chalkAnimation from 'chalk-animation';
-import figlet from 'figlet';
 import { Command } from 'commander';
-import {execa} from 'execa';
-import { createSpinner } from 'nanospinner';
 import { Mlpconfig } from './init';
-import standard from 'figlet/importable-fonts/Standard.js'
 
 let dao_name: string;
 let member_principal: string;
@@ -19,7 +13,7 @@ let token_decimals:number;
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
-export default class MultiSig {
+export default class InitCommands {
     constructor(private program: Command, private config?: Mlpconfig) { }
 
     async welcome() {

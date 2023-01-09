@@ -7,6 +7,11 @@
       "module": "commonjs",
       "sourceMap": true,
       "esModuleInterop": true,
-      "moduleResolution": "node"
-    }
+      "moduleResolution": "node",
+      "allowJs": true,
+      "allowSyntheticDefaultImports":true,
+    },
+    "include": [
+      "src/*"
+    ],
   }
