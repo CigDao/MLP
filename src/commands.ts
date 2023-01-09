@@ -1,5 +1,5 @@
 import { Command, program } from "commander";
-import MultiSig from "./multi-sig";
+import Deploy from "./deploy";
 import InitCommands from "./init-commands";
 import { readFileSync, existsSync, writeFileSync } from "fs";
 import { Mlpconfig } from "./init";
@@ -8,7 +8,7 @@ import {dfx,config} from "./json-data";
 export const initCommand = new Command("init");
 export const deployCommand = new Command("deploy");
 
-initCommand.description("Creates a new MLP pproject")
+initCommand.description("Creates a new MLP project")
 .action(async (option) => {
     const init = new InitCommands(initCommand);
 
@@ -37,8 +37,7 @@ initCommand.description("Creates a new MLP pproject")
       }
 })
 
-deployCommand.command("multi-sig")
-.description("creates a new multi-sig wallet")
+deployCommand.description("creates and deploys a new Dao")
 .option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json") // an optional flag where it grabs all inputs from congi file
 .action(async (option) => {
     const configExists = existsSync(option.config);
@@ -48,12 +47,11 @@ deployCommand.command("multi-sig")
         configFile = JSON.parse(rawdata);
     }
     
-    const ms = new MultiSig(deployCommand, configFile);
-    await ms.welcome();
-    await ms.askDao();
-    await ms.askToken()
-    await ms.askMember()
-    await ms.install_dfx()
-    await ms.deploy_multi_sig()
-    await ms.finish();
+    const dp = new Deploy(deployCommand, configFile);
+    await dp.title();
+    await dp.install_dfx()
+    await dp.install_azle()
+    await dp.install_multi_sig()
+    await dp.deploy_local()
+    await dp.finish();
 })

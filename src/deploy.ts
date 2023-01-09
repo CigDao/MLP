@@ -11,76 +11,18 @@ import { createSpinner } from 'nanospinner';
 import { Mlpconfig } from './init';
 import standard from 'figlet/importable-fonts/Standard.js'
 
-let dao_name: string;
-let member_principal: string;
-let token_principal = "";
-
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 export default class MultiSig {
     constructor(private program: Command, private config?: Mlpconfig) { }
 
-    async welcome() {
+    async title() {
         const rainbowTitle = chalkAnimation.rainbow(
-            'Welcome To My Little Protocol \n'
+            'Deploying... \n'
         );
 
         await sleep();
         rainbowTitle.stop();
-    }
-
-    async askDao() {
-        if (this.config?.dao_name) {
-            dao_name = this.config.dao_name;
-            console.log(`Dao Name: ${dao_name}`);
-        } else {
-            const answers = await inquirer.prompt({
-                name: 'dao_name',
-                type: 'input',
-                message: "What is your dao's name?",
-                default() {
-                    return 'dao name';
-                },
-            });
-
-            dao_name = answers.dao_name;
-        }
-
-    }
-    async askMember() {
-        if (this.config?.member_principal) {
-            member_principal = this.config?.member_principal;
-            console.log(`Dao Member: ${member_principal}`)
-        } else {
-            const answers = await inquirer.prompt({
-                name: 'member_principal',
-                type: 'input',
-                message: "You need to add at least 1 member",
-                default() {
-                    return 'principal';
-                },
-            });
-
-            member_principal = answers.member_principal;
-        }
-    }
-
-    async askToken() {
-        if (this.config?.token_principal) {
-            token_principal = this.config?.token_principal;
-            console.log(`Token Pricipal: ${token_principal}`)
-        } else {
-            const answers = await inquirer.prompt({
-                name: 'token_principal',
-                type: 'input',
-                message: "The principal for your governace token",
-                default() {
-                    return 'principal';
-                },
-            });
-
-            token_principal = answers.token_principal;
-        }
     }
 
     async install_dfx() {
@@ -92,20 +34,57 @@ export default class MultiSig {
             if (installDfx.exitCode !== 0) {
                 this.program.error("unable to install dfx, maybe install it manually?", { code: "1" })
             };
-            spinner.success({ text: `successfuly installed dfx`, mark: ':)' });
+            spinner.success({ text: `successfuly installed dfx`});
         }
         spinner.success({ text: `dfx already installed` });
     }
 
-    async deploy_multi_sig() {
+    async install_azle() {
+        const spinner = createSpinner('Installing azle...').start();
+        const install_npm = await execa("npm", ["init", "-y"]);
+        const install_azle = await execa("npm", ["install", "azle"]);
+        if (install_npm.exitCode !== 0 && install_azle.exitCode !== 0) {
+            this.program.error("unable to install azle, maybe install it manually?", { code: "1" })
+        };
+        spinner.success({ text: `successfuly installed azle`});
+    }
+
+    async install_multi_sig() {
+        const spinner = createSpinner('Installing multisig canister...').start();
+        const multi_sig = await execa("npm", ["install", "@cigdao/multi-sig"]);
+        if (multi_sig.exitCode !== 0) {
+            this.program.error("unable to install multi_sig, maybe install it manually?", { code: "1" })
+        };
+        spinner.success({ text: `successfuly installed multi_sig`});
+    }
+
+    async deploy() {
         // Run external tool synchronously
         const spinner = createSpinner('deploying canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${member_principal}",`, `"${token_principal}"`, ")");
+        let args = text.concat(`"${this.config?.member_principal}",`, `"${this.config?.token_principal}"`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed canister`, mark: ':)' });
+                spinner.success({ text: `successfuly deployed canister`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_local() {
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${this.config?.member_principal}",`, `"${this.config?.token_principal}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed canister`});
             }
 
         } catch (e) {
@@ -118,7 +97,7 @@ export default class MultiSig {
     finish() {
         figlet.parseFont('Standard', standard);
 
-        figlet(`Congrats , ${dao_name} !\n Let's Make Crypto Great Again`, {
+        figlet(`Congrats , ${this.config?.dao_name} !\n Let's Make Crypto Great Again`, {
             font: 'Standard',
         }, (err, data) => {
             console.log(gradient.pastel.multiline(data) + '\n');

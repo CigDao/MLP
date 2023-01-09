@@ -1803,56 +1803,5719 @@ var require_commander = __commonJS({
   }
 });
 
-// node_modules/restore-cursor/node_modules/mimic-fn/index.js
-var require_mimic_fn = __commonJS({
-  "node_modules/restore-cursor/node_modules/mimic-fn/index.js"(exports, module2) {
+// node_modules/gradient-string/node_modules/color-name/index.js
+var require_color_name = __commonJS({
+  "node_modules/gradient-string/node_modules/color-name/index.js"(exports, module2) {
     "use strict";
-    var mimicFn = (to, from3) => {
-      for (const prop of Reflect.ownKeys(from3)) {
-        Object.defineProperty(to, prop, Object.getOwnPropertyDescriptor(from3, prop));
-      }
-      return to;
+    module2.exports = {
+      "aliceblue": [240, 248, 255],
+      "antiquewhite": [250, 235, 215],
+      "aqua": [0, 255, 255],
+      "aquamarine": [127, 255, 212],
+      "azure": [240, 255, 255],
+      "beige": [245, 245, 220],
+      "bisque": [255, 228, 196],
+      "black": [0, 0, 0],
+      "blanchedalmond": [255, 235, 205],
+      "blue": [0, 0, 255],
+      "blueviolet": [138, 43, 226],
+      "brown": [165, 42, 42],
+      "burlywood": [222, 184, 135],
+      "cadetblue": [95, 158, 160],
+      "chartreuse": [127, 255, 0],
+      "chocolate": [210, 105, 30],
+      "coral": [255, 127, 80],
+      "cornflowerblue": [100, 149, 237],
+      "cornsilk": [255, 248, 220],
+      "crimson": [220, 20, 60],
+      "cyan": [0, 255, 255],
+      "darkblue": [0, 0, 139],
+      "darkcyan": [0, 139, 139],
+      "darkgoldenrod": [184, 134, 11],
+      "darkgray": [169, 169, 169],
+      "darkgreen": [0, 100, 0],
+      "darkgrey": [169, 169, 169],
+      "darkkhaki": [189, 183, 107],
+      "darkmagenta": [139, 0, 139],
+      "darkolivegreen": [85, 107, 47],
+      "darkorange": [255, 140, 0],
+      "darkorchid": [153, 50, 204],
+      "darkred": [139, 0, 0],
+      "darksalmon": [233, 150, 122],
+      "darkseagreen": [143, 188, 143],
+      "darkslateblue": [72, 61, 139],
+      "darkslategray": [47, 79, 79],
+      "darkslategrey": [47, 79, 79],
+      "darkturquoise": [0, 206, 209],
+      "darkviolet": [148, 0, 211],
+      "deeppink": [255, 20, 147],
+      "deepskyblue": [0, 191, 255],
+      "dimgray": [105, 105, 105],
+      "dimgrey": [105, 105, 105],
+      "dodgerblue": [30, 144, 255],
+      "firebrick": [178, 34, 34],
+      "floralwhite": [255, 250, 240],
+      "forestgreen": [34, 139, 34],
+      "fuchsia": [255, 0, 255],
+      "gainsboro": [220, 220, 220],
+      "ghostwhite": [248, 248, 255],
+      "gold": [255, 215, 0],
+      "goldenrod": [218, 165, 32],
+      "gray": [128, 128, 128],
+      "green": [0, 128, 0],
+      "greenyellow": [173, 255, 47],
+      "grey": [128, 128, 128],
+      "honeydew": [240, 255, 240],
+      "hotpink": [255, 105, 180],
+      "indianred": [205, 92, 92],
+      "indigo": [75, 0, 130],
+      "ivory": [255, 255, 240],
+      "khaki": [240, 230, 140],
+      "lavender": [230, 230, 250],
+      "lavenderblush": [255, 240, 245],
+      "lawngreen": [124, 252, 0],
+      "lemonchiffon": [255, 250, 205],
+      "lightblue": [173, 216, 230],
+      "lightcoral": [240, 128, 128],
+      "lightcyan": [224, 255, 255],
+      "lightgoldenrodyellow": [250, 250, 210],
+      "lightgray": [211, 211, 211],
+      "lightgreen": [144, 238, 144],
+      "lightgrey": [211, 211, 211],
+      "lightpink": [255, 182, 193],
+      "lightsalmon": [255, 160, 122],
+      "lightseagreen": [32, 178, 170],
+      "lightskyblue": [135, 206, 250],
+      "lightslategray": [119, 136, 153],
+      "lightslategrey": [119, 136, 153],
+      "lightsteelblue": [176, 196, 222],
+      "lightyellow": [255, 255, 224],
+      "lime": [0, 255, 0],
+      "limegreen": [50, 205, 50],
+      "linen": [250, 240, 230],
+      "magenta": [255, 0, 255],
+      "maroon": [128, 0, 0],
+      "mediumaquamarine": [102, 205, 170],
+      "mediumblue": [0, 0, 205],
+      "mediumorchid": [186, 85, 211],
+      "mediumpurple": [147, 112, 219],
+      "mediumseagreen": [60, 179, 113],
+      "mediumslateblue": [123, 104, 238],
+      "mediumspringgreen": [0, 250, 154],
+      "mediumturquoise": [72, 209, 204],
+      "mediumvioletred": [199, 21, 133],
+      "midnightblue": [25, 25, 112],
+      "mintcream": [245, 255, 250],
+      "mistyrose": [255, 228, 225],
+      "moccasin": [255, 228, 181],
+      "navajowhite": [255, 222, 173],
+      "navy": [0, 0, 128],
+      "oldlace": [253, 245, 230],
+      "olive": [128, 128, 0],
+      "olivedrab": [107, 142, 35],
+      "orange": [255, 165, 0],
+      "orangered": [255, 69, 0],
+      "orchid": [218, 112, 214],
+      "palegoldenrod": [238, 232, 170],
+      "palegreen": [152, 251, 152],
+      "paleturquoise": [175, 238, 238],
+      "palevioletred": [219, 112, 147],
+      "papayawhip": [255, 239, 213],
+      "peachpuff": [255, 218, 185],
+      "peru": [205, 133, 63],
+      "pink": [255, 192, 203],
+      "plum": [221, 160, 221],
+      "powderblue": [176, 224, 230],
+      "purple": [128, 0, 128],
+      "rebeccapurple": [102, 51, 153],
+      "red": [255, 0, 0],
+      "rosybrown": [188, 143, 143],
+      "royalblue": [65, 105, 225],
+      "saddlebrown": [139, 69, 19],
+      "salmon": [250, 128, 114],
+      "sandybrown": [244, 164, 96],
+      "seagreen": [46, 139, 87],
+      "seashell": [255, 245, 238],
+      "sienna": [160, 82, 45],
+      "silver": [192, 192, 192],
+      "skyblue": [135, 206, 235],
+      "slateblue": [106, 90, 205],
+      "slategray": [112, 128, 144],
+      "slategrey": [112, 128, 144],
+      "snow": [255, 250, 250],
+      "springgreen": [0, 255, 127],
+      "steelblue": [70, 130, 180],
+      "tan": [210, 180, 140],
+      "teal": [0, 128, 128],
+      "thistle": [216, 191, 216],
+      "tomato": [255, 99, 71],
+      "turquoise": [64, 224, 208],
+      "violet": [238, 130, 238],
+      "wheat": [245, 222, 179],
+      "white": [255, 255, 255],
+      "whitesmoke": [245, 245, 245],
+      "yellow": [255, 255, 0],
+      "yellowgreen": [154, 205, 50]
     };
-    module2.exports = mimicFn;
-    module2.exports.default = mimicFn;
   }
 });
 
-// node_modules/restore-cursor/node_modules/onetime/index.js
-var require_onetime = __commonJS({
-  "node_modules/restore-cursor/node_modules/onetime/index.js"(exports, module2) {
-    "use strict";
-    var mimicFn = require_mimic_fn();
-    var calledFunctions2 = /* @__PURE__ */ new WeakMap();
-    var onetime3 = (function_, options = {}) => {
-      if (typeof function_ !== "function") {
-        throw new TypeError("Expected a function");
+// node_modules/gradient-string/node_modules/color-convert/conversions.js
+var require_conversions = __commonJS({
+  "node_modules/gradient-string/node_modules/color-convert/conversions.js"(exports, module2) {
+    var cssKeywords = require_color_name();
+    var reverseKeywords = {};
+    for (const key of Object.keys(cssKeywords)) {
+      reverseKeywords[cssKeywords[key]] = key;
+    }
+    var convert = {
+      rgb: { channels: 3, labels: "rgb" },
+      hsl: { channels: 3, labels: "hsl" },
+      hsv: { channels: 3, labels: "hsv" },
+      hwb: { channels: 3, labels: "hwb" },
+      cmyk: { channels: 4, labels: "cmyk" },
+      xyz: { channels: 3, labels: "xyz" },
+      lab: { channels: 3, labels: "lab" },
+      lch: { channels: 3, labels: "lch" },
+      hex: { channels: 1, labels: ["hex"] },
+      keyword: { channels: 1, labels: ["keyword"] },
+      ansi16: { channels: 1, labels: ["ansi16"] },
+      ansi256: { channels: 1, labels: ["ansi256"] },
+      hcg: { channels: 3, labels: ["h", "c", "g"] },
+      apple: { channels: 3, labels: ["r16", "g16", "b16"] },
+      gray: { channels: 1, labels: ["gray"] }
+    };
+    module2.exports = convert;
+    for (const model of Object.keys(convert)) {
+      if (!("channels" in convert[model])) {
+        throw new Error("missing channels property: " + model);
       }
-      let returnValue;
-      let callCount = 0;
-      const functionName = function_.displayName || function_.name || "<anonymous>";
-      const onetime4 = function(...arguments_) {
-        calledFunctions2.set(onetime4, ++callCount);
-        if (callCount === 1) {
-          returnValue = function_.apply(this, arguments_);
-          function_ = null;
-        } else if (options.throw === true) {
-          throw new Error(`Function \`${functionName}\` can only be called once`);
-        }
-        return returnValue;
+      if (!("labels" in convert[model])) {
+        throw new Error("missing channel labels property: " + model);
+      }
+      if (convert[model].labels.length !== convert[model].channels) {
+        throw new Error("channel and label counts mismatch: " + model);
+      }
+      const { channels, labels } = convert[model];
+      delete convert[model].channels;
+      delete convert[model].labels;
+      Object.defineProperty(convert[model], "channels", { value: channels });
+      Object.defineProperty(convert[model], "labels", { value: labels });
+    }
+    convert.rgb.hsl = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const min = Math.min(r, g, b);
+      const max = Math.max(r, g, b);
+      const delta = max - min;
+      let h;
+      let s;
+      if (max === min) {
+        h = 0;
+      } else if (r === max) {
+        h = (g - b) / delta;
+      } else if (g === max) {
+        h = 2 + (b - r) / delta;
+      } else if (b === max) {
+        h = 4 + (r - g) / delta;
+      }
+      h = Math.min(h * 60, 360);
+      if (h < 0) {
+        h += 360;
+      }
+      const l = (min + max) / 2;
+      if (max === min) {
+        s = 0;
+      } else if (l <= 0.5) {
+        s = delta / (max + min);
+      } else {
+        s = delta / (2 - max - min);
+      }
+      return [h, s * 100, l * 100];
+    };
+    convert.rgb.hsv = function(rgb) {
+      let rdif;
+      let gdif;
+      let bdif;
+      let h;
+      let s;
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const v = Math.max(r, g, b);
+      const diff = v - Math.min(r, g, b);
+      const diffc = function(c) {
+        return (v - c) / 6 / diff + 1 / 2;
       };
-      mimicFn(onetime4, function_);
-      calledFunctions2.set(onetime4, callCount);
-      return onetime4;
-    };
-    module2.exports = onetime3;
-    module2.exports.default = onetime3;
-    module2.exports.callCount = (function_) => {
-      if (!calledFunctions2.has(function_)) {
-        throw new Error(`The given function \`${function_.name}\` is not wrapped by the \`onetime\` package`);
+      if (diff === 0) {
+        h = 0;
+        s = 0;
+      } else {
+        s = diff / v;
+        rdif = diffc(r);
+        gdif = diffc(g);
+        bdif = diffc(b);
+        if (r === v) {
+          h = bdif - gdif;
+        } else if (g === v) {
+          h = 1 / 3 + rdif - bdif;
+        } else if (b === v) {
+          h = 2 / 3 + gdif - rdif;
+        }
+        if (h < 0) {
+          h += 1;
+        } else if (h > 1) {
+          h -= 1;
+        }
       }
-      return calledFunctions2.get(function_);
+      return [
+        h * 360,
+        s * 100,
+        v * 100
+      ];
     };
+    convert.rgb.hwb = function(rgb) {
+      const r = rgb[0];
+      const g = rgb[1];
+      let b = rgb[2];
+      const h = convert.rgb.hsl(rgb)[0];
+      const w = 1 / 255 * Math.min(r, Math.min(g, b));
+      b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
+      return [h, w * 100, b * 100];
+    };
+    convert.rgb.cmyk = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const k = Math.min(1 - r, 1 - g, 1 - b);
+      const c = (1 - r - k) / (1 - k) || 0;
+      const m = (1 - g - k) / (1 - k) || 0;
+      const y = (1 - b - k) / (1 - k) || 0;
+      return [c * 100, m * 100, y * 100, k * 100];
+    };
+    function comparativeDistance(x, y) {
+      return (x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2 + (x[2] - y[2]) ** 2;
+    }
+    convert.rgb.keyword = function(rgb) {
+      const reversed = reverseKeywords[rgb];
+      if (reversed) {
+        return reversed;
+      }
+      let currentClosestDistance = Infinity;
+      let currentClosestKeyword;
+      for (const keyword of Object.keys(cssKeywords)) {
+        const value = cssKeywords[keyword];
+        const distance = comparativeDistance(rgb, value);
+        if (distance < currentClosestDistance) {
+          currentClosestDistance = distance;
+          currentClosestKeyword = keyword;
+        }
+      }
+      return currentClosestKeyword;
+    };
+    convert.keyword.rgb = function(keyword) {
+      return cssKeywords[keyword];
+    };
+    convert.rgb.xyz = function(rgb) {
+      let r = rgb[0] / 255;
+      let g = rgb[1] / 255;
+      let b = rgb[2] / 255;
+      r = r > 0.04045 ? ((r + 0.055) / 1.055) ** 2.4 : r / 12.92;
+      g = g > 0.04045 ? ((g + 0.055) / 1.055) ** 2.4 : g / 12.92;
+      b = b > 0.04045 ? ((b + 0.055) / 1.055) ** 2.4 : b / 12.92;
+      const x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+      const y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+      const z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+      return [x * 100, y * 100, z * 100];
+    };
+    convert.rgb.lab = function(rgb) {
+      const xyz = convert.rgb.xyz(rgb);
+      let x = xyz[0];
+      let y = xyz[1];
+      let z = xyz[2];
+      x /= 95.047;
+      y /= 100;
+      z /= 108.883;
+      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
+      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
+      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
+      const l = 116 * y - 16;
+      const a = 500 * (x - y);
+      const b = 200 * (y - z);
+      return [l, a, b];
+    };
+    convert.hsl.rgb = function(hsl) {
+      const h = hsl[0] / 360;
+      const s = hsl[1] / 100;
+      const l = hsl[2] / 100;
+      let t2;
+      let t3;
+      let val;
+      if (s === 0) {
+        val = l * 255;
+        return [val, val, val];
+      }
+      if (l < 0.5) {
+        t2 = l * (1 + s);
+      } else {
+        t2 = l + s - l * s;
+      }
+      const t1 = 2 * l - t2;
+      const rgb = [0, 0, 0];
+      for (let i = 0; i < 3; i++) {
+        t3 = h + 1 / 3 * -(i - 1);
+        if (t3 < 0) {
+          t3++;
+        }
+        if (t3 > 1) {
+          t3--;
+        }
+        if (6 * t3 < 1) {
+          val = t1 + (t2 - t1) * 6 * t3;
+        } else if (2 * t3 < 1) {
+          val = t2;
+        } else if (3 * t3 < 2) {
+          val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
+        } else {
+          val = t1;
+        }
+        rgb[i] = val * 255;
+      }
+      return rgb;
+    };
+    convert.hsl.hsv = function(hsl) {
+      const h = hsl[0];
+      let s = hsl[1] / 100;
+      let l = hsl[2] / 100;
+      let smin = s;
+      const lmin = Math.max(l, 0.01);
+      l *= 2;
+      s *= l <= 1 ? l : 2 - l;
+      smin *= lmin <= 1 ? lmin : 2 - lmin;
+      const v = (l + s) / 2;
+      const sv = l === 0 ? 2 * smin / (lmin + smin) : 2 * s / (l + s);
+      return [h, sv * 100, v * 100];
+    };
+    convert.hsv.rgb = function(hsv) {
+      const h = hsv[0] / 60;
+      const s = hsv[1] / 100;
+      let v = hsv[2] / 100;
+      const hi = Math.floor(h) % 6;
+      const f = h - Math.floor(h);
+      const p = 255 * v * (1 - s);
+      const q = 255 * v * (1 - s * f);
+      const t = 255 * v * (1 - s * (1 - f));
+      v *= 255;
+      switch (hi) {
+        case 0:
+          return [v, t, p];
+        case 1:
+          return [q, v, p];
+        case 2:
+          return [p, v, t];
+        case 3:
+          return [p, q, v];
+        case 4:
+          return [t, p, v];
+        case 5:
+          return [v, p, q];
+      }
+    };
+    convert.hsv.hsl = function(hsv) {
+      const h = hsv[0];
+      const s = hsv[1] / 100;
+      const v = hsv[2] / 100;
+      const vmin = Math.max(v, 0.01);
+      let sl;
+      let l;
+      l = (2 - s) * v;
+      const lmin = (2 - s) * vmin;
+      sl = s * vmin;
+      sl /= lmin <= 1 ? lmin : 2 - lmin;
+      sl = sl || 0;
+      l /= 2;
+      return [h, sl * 100, l * 100];
+    };
+    convert.hwb.rgb = function(hwb) {
+      const h = hwb[0] / 360;
+      let wh = hwb[1] / 100;
+      let bl = hwb[2] / 100;
+      const ratio = wh + bl;
+      let f;
+      if (ratio > 1) {
+        wh /= ratio;
+        bl /= ratio;
+      }
+      const i = Math.floor(6 * h);
+      const v = 1 - bl;
+      f = 6 * h - i;
+      if ((i & 1) !== 0) {
+        f = 1 - f;
+      }
+      const n = wh + f * (v - wh);
+      let r;
+      let g;
+      let b;
+      switch (i) {
+        default:
+        case 6:
+        case 0:
+          r = v;
+          g = n;
+          b = wh;
+          break;
+        case 1:
+          r = n;
+          g = v;
+          b = wh;
+          break;
+        case 2:
+          r = wh;
+          g = v;
+          b = n;
+          break;
+        case 3:
+          r = wh;
+          g = n;
+          b = v;
+          break;
+        case 4:
+          r = n;
+          g = wh;
+          b = v;
+          break;
+        case 5:
+          r = v;
+          g = wh;
+          b = n;
+          break;
+      }
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.cmyk.rgb = function(cmyk) {
+      const c = cmyk[0] / 100;
+      const m = cmyk[1] / 100;
+      const y = cmyk[2] / 100;
+      const k = cmyk[3] / 100;
+      const r = 1 - Math.min(1, c * (1 - k) + k);
+      const g = 1 - Math.min(1, m * (1 - k) + k);
+      const b = 1 - Math.min(1, y * (1 - k) + k);
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.xyz.rgb = function(xyz) {
+      const x = xyz[0] / 100;
+      const y = xyz[1] / 100;
+      const z = xyz[2] / 100;
+      let r;
+      let g;
+      let b;
+      r = x * 3.2406 + y * -1.5372 + z * -0.4986;
+      g = x * -0.9689 + y * 1.8758 + z * 0.0415;
+      b = x * 0.0557 + y * -0.204 + z * 1.057;
+      r = r > 31308e-7 ? 1.055 * r ** (1 / 2.4) - 0.055 : r * 12.92;
+      g = g > 31308e-7 ? 1.055 * g ** (1 / 2.4) - 0.055 : g * 12.92;
+      b = b > 31308e-7 ? 1.055 * b ** (1 / 2.4) - 0.055 : b * 12.92;
+      r = Math.min(Math.max(0, r), 1);
+      g = Math.min(Math.max(0, g), 1);
+      b = Math.min(Math.max(0, b), 1);
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.xyz.lab = function(xyz) {
+      let x = xyz[0];
+      let y = xyz[1];
+      let z = xyz[2];
+      x /= 95.047;
+      y /= 100;
+      z /= 108.883;
+      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
+      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
+      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
+      const l = 116 * y - 16;
+      const a = 500 * (x - y);
+      const b = 200 * (y - z);
+      return [l, a, b];
+    };
+    convert.lab.xyz = function(lab) {
+      const l = lab[0];
+      const a = lab[1];
+      const b = lab[2];
+      let x;
+      let y;
+      let z;
+      y = (l + 16) / 116;
+      x = a / 500 + y;
+      z = y - b / 200;
+      const y2 = y ** 3;
+      const x2 = x ** 3;
+      const z2 = z ** 3;
+      y = y2 > 8856e-6 ? y2 : (y - 16 / 116) / 7.787;
+      x = x2 > 8856e-6 ? x2 : (x - 16 / 116) / 7.787;
+      z = z2 > 8856e-6 ? z2 : (z - 16 / 116) / 7.787;
+      x *= 95.047;
+      y *= 100;
+      z *= 108.883;
+      return [x, y, z];
+    };
+    convert.lab.lch = function(lab) {
+      const l = lab[0];
+      const a = lab[1];
+      const b = lab[2];
+      let h;
+      const hr = Math.atan2(b, a);
+      h = hr * 360 / 2 / Math.PI;
+      if (h < 0) {
+        h += 360;
+      }
+      const c = Math.sqrt(a * a + b * b);
+      return [l, c, h];
+    };
+    convert.lch.lab = function(lch) {
+      const l = lch[0];
+      const c = lch[1];
+      const h = lch[2];
+      const hr = h / 360 * 2 * Math.PI;
+      const a = c * Math.cos(hr);
+      const b = c * Math.sin(hr);
+      return [l, a, b];
+    };
+    convert.rgb.ansi16 = function(args, saturation = null) {
+      const [r, g, b] = args;
+      let value = saturation === null ? convert.rgb.hsv(args)[2] : saturation;
+      value = Math.round(value / 50);
+      if (value === 0) {
+        return 30;
+      }
+      let ansi = 30 + (Math.round(b / 255) << 2 | Math.round(g / 255) << 1 | Math.round(r / 255));
+      if (value === 2) {
+        ansi += 60;
+      }
+      return ansi;
+    };
+    convert.hsv.ansi16 = function(args) {
+      return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
+    };
+    convert.rgb.ansi256 = function(args) {
+      const r = args[0];
+      const g = args[1];
+      const b = args[2];
+      if (r === g && g === b) {
+        if (r < 8) {
+          return 16;
+        }
+        if (r > 248) {
+          return 231;
+        }
+        return Math.round((r - 8) / 247 * 24) + 232;
+      }
+      const ansi = 16 + 36 * Math.round(r / 255 * 5) + 6 * Math.round(g / 255 * 5) + Math.round(b / 255 * 5);
+      return ansi;
+    };
+    convert.ansi16.rgb = function(args) {
+      let color = args % 10;
+      if (color === 0 || color === 7) {
+        if (args > 50) {
+          color += 3.5;
+        }
+        color = color / 10.5 * 255;
+        return [color, color, color];
+      }
+      const mult = (~~(args > 50) + 1) * 0.5;
+      const r = (color & 1) * mult * 255;
+      const g = (color >> 1 & 1) * mult * 255;
+      const b = (color >> 2 & 1) * mult * 255;
+      return [r, g, b];
+    };
+    convert.ansi256.rgb = function(args) {
+      if (args >= 232) {
+        const c = (args - 232) * 10 + 8;
+        return [c, c, c];
+      }
+      args -= 16;
+      let rem;
+      const r = Math.floor(args / 36) / 5 * 255;
+      const g = Math.floor((rem = args % 36) / 6) / 5 * 255;
+      const b = rem % 6 / 5 * 255;
+      return [r, g, b];
+    };
+    convert.rgb.hex = function(args) {
+      const integer = ((Math.round(args[0]) & 255) << 16) + ((Math.round(args[1]) & 255) << 8) + (Math.round(args[2]) & 255);
+      const string = integer.toString(16).toUpperCase();
+      return "000000".substring(string.length) + string;
+    };
+    convert.hex.rgb = function(args) {
+      const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!match) {
+        return [0, 0, 0];
+      }
+      let colorString = match[0];
+      if (match[0].length === 3) {
+        colorString = colorString.split("").map((char) => {
+          return char + char;
+        }).join("");
+      }
+      const integer = parseInt(colorString, 16);
+      const r = integer >> 16 & 255;
+      const g = integer >> 8 & 255;
+      const b = integer & 255;
+      return [r, g, b];
+    };
+    convert.rgb.hcg = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const max = Math.max(Math.max(r, g), b);
+      const min = Math.min(Math.min(r, g), b);
+      const chroma = max - min;
+      let grayscale;
+      let hue;
+      if (chroma < 1) {
+        grayscale = min / (1 - chroma);
+      } else {
+        grayscale = 0;
+      }
+      if (chroma <= 0) {
+        hue = 0;
+      } else if (max === r) {
+        hue = (g - b) / chroma % 6;
+      } else if (max === g) {
+        hue = 2 + (b - r) / chroma;
+      } else {
+        hue = 4 + (r - g) / chroma;
+      }
+      hue /= 6;
+      hue %= 1;
+      return [hue * 360, chroma * 100, grayscale * 100];
+    };
+    convert.hsl.hcg = function(hsl) {
+      const s = hsl[1] / 100;
+      const l = hsl[2] / 100;
+      const c = l < 0.5 ? 2 * s * l : 2 * s * (1 - l);
+      let f = 0;
+      if (c < 1) {
+        f = (l - 0.5 * c) / (1 - c);
+      }
+      return [hsl[0], c * 100, f * 100];
+    };
+    convert.hsv.hcg = function(hsv) {
+      const s = hsv[1] / 100;
+      const v = hsv[2] / 100;
+      const c = s * v;
+      let f = 0;
+      if (c < 1) {
+        f = (v - c) / (1 - c);
+      }
+      return [hsv[0], c * 100, f * 100];
+    };
+    convert.hcg.rgb = function(hcg) {
+      const h = hcg[0] / 360;
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      if (c === 0) {
+        return [g * 255, g * 255, g * 255];
+      }
+      const pure = [0, 0, 0];
+      const hi = h % 1 * 6;
+      const v = hi % 1;
+      const w = 1 - v;
+      let mg = 0;
+      switch (Math.floor(hi)) {
+        case 0:
+          pure[0] = 1;
+          pure[1] = v;
+          pure[2] = 0;
+          break;
+        case 1:
+          pure[0] = w;
+          pure[1] = 1;
+          pure[2] = 0;
+          break;
+        case 2:
+          pure[0] = 0;
+          pure[1] = 1;
+          pure[2] = v;
+          break;
+        case 3:
+          pure[0] = 0;
+          pure[1] = w;
+          pure[2] = 1;
+          break;
+        case 4:
+          pure[0] = v;
+          pure[1] = 0;
+          pure[2] = 1;
+          break;
+        default:
+          pure[0] = 1;
+          pure[1] = 0;
+          pure[2] = w;
+      }
+      mg = (1 - c) * g;
+      return [
+        (c * pure[0] + mg) * 255,
+        (c * pure[1] + mg) * 255,
+        (c * pure[2] + mg) * 255
+      ];
+    };
+    convert.hcg.hsv = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const v = c + g * (1 - c);
+      let f = 0;
+      if (v > 0) {
+        f = c / v;
+      }
+      return [hcg[0], f * 100, v * 100];
+    };
+    convert.hcg.hsl = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const l = g * (1 - c) + 0.5 * c;
+      let s = 0;
+      if (l > 0 && l < 0.5) {
+        s = c / (2 * l);
+      } else if (l >= 0.5 && l < 1) {
+        s = c / (2 * (1 - l));
+      }
+      return [hcg[0], s * 100, l * 100];
+    };
+    convert.hcg.hwb = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const v = c + g * (1 - c);
+      return [hcg[0], (v - c) * 100, (1 - v) * 100];
+    };
+    convert.hwb.hcg = function(hwb) {
+      const w = hwb[1] / 100;
+      const b = hwb[2] / 100;
+      const v = 1 - b;
+      const c = v - w;
+      let g = 0;
+      if (c < 1) {
+        g = (v - c) / (1 - c);
+      }
+      return [hwb[0], c * 100, g * 100];
+    };
+    convert.apple.rgb = function(apple) {
+      return [apple[0] / 65535 * 255, apple[1] / 65535 * 255, apple[2] / 65535 * 255];
+    };
+    convert.rgb.apple = function(rgb) {
+      return [rgb[0] / 255 * 65535, rgb[1] / 255 * 65535, rgb[2] / 255 * 65535];
+    };
+    convert.gray.rgb = function(args) {
+      return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
+    };
+    convert.gray.hsl = function(args) {
+      return [0, 0, args[0]];
+    };
+    convert.gray.hsv = convert.gray.hsl;
+    convert.gray.hwb = function(gray) {
+      return [0, 100, gray[0]];
+    };
+    convert.gray.cmyk = function(gray) {
+      return [0, 0, 0, gray[0]];
+    };
+    convert.gray.lab = function(gray) {
+      return [gray[0], 0, 0];
+    };
+    convert.gray.hex = function(gray) {
+      const val = Math.round(gray[0] / 100 * 255) & 255;
+      const integer = (val << 16) + (val << 8) + val;
+      const string = integer.toString(16).toUpperCase();
+      return "000000".substring(string.length) + string;
+    };
+    convert.rgb.gray = function(rgb) {
+      const val = (rgb[0] + rgb[1] + rgb[2]) / 3;
+      return [val / 255 * 100];
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/color-convert/route.js
+var require_route = __commonJS({
+  "node_modules/gradient-string/node_modules/color-convert/route.js"(exports, module2) {
+    var conversions = require_conversions();
+    function buildGraph() {
+      const graph = {};
+      const models = Object.keys(conversions);
+      for (let len = models.length, i = 0; i < len; i++) {
+        graph[models[i]] = {
+          distance: -1,
+          parent: null
+        };
+      }
+      return graph;
+    }
+    function deriveBFS(fromModel) {
+      const graph = buildGraph();
+      const queue = [fromModel];
+      graph[fromModel].distance = 0;
+      while (queue.length) {
+        const current = queue.pop();
+        const adjacents = Object.keys(conversions[current]);
+        for (let len = adjacents.length, i = 0; i < len; i++) {
+          const adjacent = adjacents[i];
+          const node = graph[adjacent];
+          if (node.distance === -1) {
+            node.distance = graph[current].distance + 1;
+            node.parent = current;
+            queue.unshift(adjacent);
+          }
+        }
+      }
+      return graph;
+    }
+    function link(from3, to) {
+      return function(args) {
+        return to(from3(args));
+      };
+    }
+    function wrapConversion(toModel, graph) {
+      const path3 = [graph[toModel].parent, toModel];
+      let fn = conversions[graph[toModel].parent][toModel];
+      let cur = graph[toModel].parent;
+      while (graph[cur].parent) {
+        path3.unshift(graph[cur].parent);
+        fn = link(conversions[graph[cur].parent][cur], fn);
+        cur = graph[cur].parent;
+      }
+      fn.conversion = path3;
+      return fn;
+    }
+    module2.exports = function(fromModel) {
+      const graph = deriveBFS(fromModel);
+      const conversion = {};
+      const models = Object.keys(graph);
+      for (let len = models.length, i = 0; i < len; i++) {
+        const toModel = models[i];
+        const node = graph[toModel];
+        if (node.parent === null) {
+          continue;
+        }
+        conversion[toModel] = wrapConversion(toModel, graph);
+      }
+      return conversion;
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/color-convert/index.js
+var require_color_convert = __commonJS({
+  "node_modules/gradient-string/node_modules/color-convert/index.js"(exports, module2) {
+    var conversions = require_conversions();
+    var route = require_route();
+    var convert = {};
+    var models = Object.keys(conversions);
+    function wrapRaw(fn) {
+      const wrappedFn = function(...args) {
+        const arg0 = args[0];
+        if (arg0 === void 0 || arg0 === null) {
+          return arg0;
+        }
+        if (arg0.length > 1) {
+          args = arg0;
+        }
+        return fn(args);
+      };
+      if ("conversion" in fn) {
+        wrappedFn.conversion = fn.conversion;
+      }
+      return wrappedFn;
+    }
+    function wrapRounded(fn) {
+      const wrappedFn = function(...args) {
+        const arg0 = args[0];
+        if (arg0 === void 0 || arg0 === null) {
+          return arg0;
+        }
+        if (arg0.length > 1) {
+          args = arg0;
+        }
+        const result = fn(args);
+        if (typeof result === "object") {
+          for (let len = result.length, i = 0; i < len; i++) {
+            result[i] = Math.round(result[i]);
+          }
+        }
+        return result;
+      };
+      if ("conversion" in fn) {
+        wrappedFn.conversion = fn.conversion;
+      }
+      return wrappedFn;
+    }
+    models.forEach((fromModel) => {
+      convert[fromModel] = {};
+      Object.defineProperty(convert[fromModel], "channels", { value: conversions[fromModel].channels });
+      Object.defineProperty(convert[fromModel], "labels", { value: conversions[fromModel].labels });
+      const routes = route(fromModel);
+      const routeModels = Object.keys(routes);
+      routeModels.forEach((toModel) => {
+        const fn = routes[toModel];
+        convert[fromModel][toModel] = wrapRounded(fn);
+        convert[fromModel][toModel].raw = wrapRaw(fn);
+      });
+    });
+    module2.exports = convert;
+  }
+});
+
+// node_modules/gradient-string/node_modules/ansi-styles/index.js
+var require_ansi_styles = __commonJS({
+  "node_modules/gradient-string/node_modules/ansi-styles/index.js"(exports, module2) {
+    "use strict";
+    var wrapAnsi163 = (fn, offset) => (...args) => {
+      const code = fn(...args);
+      return `\x1B[${code + offset}m`;
+    };
+    var wrapAnsi2563 = (fn, offset) => (...args) => {
+      const code = fn(...args);
+      return `\x1B[${38 + offset};5;${code}m`;
+    };
+    var wrapAnsi16m3 = (fn, offset) => (...args) => {
+      const rgb = fn(...args);
+      return `\x1B[${38 + offset};2;${rgb[0]};${rgb[1]};${rgb[2]}m`;
+    };
+    var ansi2ansi = (n) => n;
+    var rgb2rgb = (r, g, b) => [r, g, b];
+    var setLazyProperty = (object, property, get2) => {
+      Object.defineProperty(object, property, {
+        get: () => {
+          const value = get2();
+          Object.defineProperty(object, property, {
+            value,
+            enumerable: true,
+            configurable: true
+          });
+          return value;
+        },
+        enumerable: true,
+        configurable: true
+      });
+    };
+    var colorConvert;
+    var makeDynamicStyles = (wrap, targetSpace, identity, isBackground) => {
+      if (colorConvert === void 0) {
+        colorConvert = require_color_convert();
+      }
+      const offset = isBackground ? 10 : 0;
+      const styles4 = {};
+      for (const [sourceSpace, suite] of Object.entries(colorConvert)) {
+        const name = sourceSpace === "ansi16" ? "ansi" : sourceSpace;
+        if (sourceSpace === targetSpace) {
+          styles4[name] = wrap(identity, offset);
+        } else if (typeof suite === "object") {
+          styles4[name] = wrap(suite[targetSpace], offset);
+        }
+      }
+      return styles4;
+    };
+    function assembleStyles3() {
+      const codes = /* @__PURE__ */ new Map();
+      const styles4 = {
+        modifier: {
+          reset: [0, 0],
+          bold: [1, 22],
+          dim: [2, 22],
+          italic: [3, 23],
+          underline: [4, 24],
+          inverse: [7, 27],
+          hidden: [8, 28],
+          strikethrough: [9, 29]
+        },
+        color: {
+          black: [30, 39],
+          red: [31, 39],
+          green: [32, 39],
+          yellow: [33, 39],
+          blue: [34, 39],
+          magenta: [35, 39],
+          cyan: [36, 39],
+          white: [37, 39],
+          blackBright: [90, 39],
+          redBright: [91, 39],
+          greenBright: [92, 39],
+          yellowBright: [93, 39],
+          blueBright: [94, 39],
+          magentaBright: [95, 39],
+          cyanBright: [96, 39],
+          whiteBright: [97, 39]
+        },
+        bgColor: {
+          bgBlack: [40, 49],
+          bgRed: [41, 49],
+          bgGreen: [42, 49],
+          bgYellow: [43, 49],
+          bgBlue: [44, 49],
+          bgMagenta: [45, 49],
+          bgCyan: [46, 49],
+          bgWhite: [47, 49],
+          bgBlackBright: [100, 49],
+          bgRedBright: [101, 49],
+          bgGreenBright: [102, 49],
+          bgYellowBright: [103, 49],
+          bgBlueBright: [104, 49],
+          bgMagentaBright: [105, 49],
+          bgCyanBright: [106, 49],
+          bgWhiteBright: [107, 49]
+        }
+      };
+      styles4.color.gray = styles4.color.blackBright;
+      styles4.bgColor.bgGray = styles4.bgColor.bgBlackBright;
+      styles4.color.grey = styles4.color.blackBright;
+      styles4.bgColor.bgGrey = styles4.bgColor.bgBlackBright;
+      for (const [groupName, group] of Object.entries(styles4)) {
+        for (const [styleName, style] of Object.entries(group)) {
+          styles4[styleName] = {
+            open: `\x1B[${style[0]}m`,
+            close: `\x1B[${style[1]}m`
+          };
+          group[styleName] = styles4[styleName];
+          codes.set(style[0], style[1]);
+        }
+        Object.defineProperty(styles4, groupName, {
+          value: group,
+          enumerable: false
+        });
+      }
+      Object.defineProperty(styles4, "codes", {
+        value: codes,
+        enumerable: false
+      });
+      styles4.color.close = "\x1B[39m";
+      styles4.bgColor.close = "\x1B[49m";
+      setLazyProperty(styles4.color, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, false));
+      setLazyProperty(styles4.color, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, false));
+      setLazyProperty(styles4.color, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, false));
+      setLazyProperty(styles4.bgColor, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, true));
+      setLazyProperty(styles4.bgColor, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, true));
+      setLazyProperty(styles4.bgColor, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, true));
+      return styles4;
+    }
+    Object.defineProperty(module2, "exports", {
+      enumerable: true,
+      get: assembleStyles3
+    });
+  }
+});
+
+// node_modules/gradient-string/node_modules/has-flag/index.js
+var require_has_flag = __commonJS({
+  "node_modules/gradient-string/node_modules/has-flag/index.js"(exports, module2) {
+    "use strict";
+    module2.exports = (flag, argv = process.argv) => {
+      const prefix = flag.startsWith("-") ? "" : flag.length === 1 ? "-" : "--";
+      const position = argv.indexOf(prefix + flag);
+      const terminatorPosition = argv.indexOf("--");
+      return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/supports-color/index.js
+var require_supports_color = __commonJS({
+  "node_modules/gradient-string/node_modules/supports-color/index.js"(exports, module2) {
+    "use strict";
+    var os3 = require("os");
+    var tty2 = require("tty");
+    var hasFlag2 = require_has_flag();
+    var { env: env2 } = process;
+    var forceColor;
+    if (hasFlag2("no-color") || hasFlag2("no-colors") || hasFlag2("color=false") || hasFlag2("color=never")) {
+      forceColor = 0;
+    } else if (hasFlag2("color") || hasFlag2("colors") || hasFlag2("color=true") || hasFlag2("color=always")) {
+      forceColor = 1;
+    }
+    if ("FORCE_COLOR" in env2) {
+      if (env2.FORCE_COLOR === "true") {
+        forceColor = 1;
+      } else if (env2.FORCE_COLOR === "false") {
+        forceColor = 0;
+      } else {
+        forceColor = env2.FORCE_COLOR.length === 0 ? 1 : Math.min(parseInt(env2.FORCE_COLOR, 10), 3);
+      }
+    }
+    function translateLevel2(level) {
+      if (level === 0) {
+        return false;
+      }
+      return {
+        level,
+        hasBasic: true,
+        has256: level >= 2,
+        has16m: level >= 3
+      };
+    }
+    function supportsColor2(haveStream, streamIsTTY) {
+      if (forceColor === 0) {
+        return 0;
+      }
+      if (hasFlag2("color=16m") || hasFlag2("color=full") || hasFlag2("color=truecolor")) {
+        return 3;
+      }
+      if (hasFlag2("color=256")) {
+        return 2;
+      }
+      if (haveStream && !streamIsTTY && forceColor === void 0) {
+        return 0;
+      }
+      const min = forceColor || 0;
+      if (env2.TERM === "dumb") {
+        return min;
+      }
+      if (process.platform === "win32") {
+        const osRelease = os3.release().split(".");
+        if (Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) {
+          return Number(osRelease[2]) >= 14931 ? 3 : 2;
+        }
+        return 1;
+      }
+      if ("CI" in env2) {
+        if (["TRAVIS", "CIRCLECI", "APPVEYOR", "GITLAB_CI", "GITHUB_ACTIONS", "BUILDKITE"].some((sign) => sign in env2) || env2.CI_NAME === "codeship") {
+          return 1;
+        }
+        return min;
+      }
+      if ("TEAMCITY_VERSION" in env2) {
+        return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env2.TEAMCITY_VERSION) ? 1 : 0;
+      }
+      if (env2.COLORTERM === "truecolor") {
+        return 3;
+      }
+      if ("TERM_PROGRAM" in env2) {
+        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        switch (env2.TERM_PROGRAM) {
+          case "iTerm.app":
+            return version >= 3 ? 3 : 2;
+          case "Apple_Terminal":
+            return 2;
+        }
+      }
+      if (/-256(color)?$/i.test(env2.TERM)) {
+        return 2;
+      }
+      if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env2.TERM)) {
+        return 1;
+      }
+      if ("COLORTERM" in env2) {
+        return 1;
+      }
+      return min;
+    }
+    function getSupportLevel(stream) {
+      const level = supportsColor2(stream, stream && stream.isTTY);
+      return translateLevel2(level);
+    }
+    module2.exports = {
+      supportsColor: getSupportLevel,
+      stdout: translateLevel2(supportsColor2(true, tty2.isatty(1))),
+      stderr: translateLevel2(supportsColor2(true, tty2.isatty(2)))
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/chalk/source/util.js
+var require_util = __commonJS({
+  "node_modules/gradient-string/node_modules/chalk/source/util.js"(exports, module2) {
+    "use strict";
+    var stringReplaceAll2 = (string, substring, replacer) => {
+      let index = string.indexOf(substring);
+      if (index === -1) {
+        return string;
+      }
+      const substringLength = substring.length;
+      let endIndex = 0;
+      let returnValue = "";
+      do {
+        returnValue += string.substr(endIndex, index - endIndex) + substring + replacer;
+        endIndex = index + substringLength;
+        index = string.indexOf(substring, endIndex);
+      } while (index !== -1);
+      returnValue += string.substr(endIndex);
+      return returnValue;
+    };
+    var stringEncaseCRLFWithFirstIndex2 = (string, prefix, postfix, index) => {
+      let endIndex = 0;
+      let returnValue = "";
+      do {
+        const gotCR = string[index - 1] === "\r";
+        returnValue += string.substr(endIndex, (gotCR ? index - 1 : index) - endIndex) + prefix + (gotCR ? "\r\n" : "\n") + postfix;
+        endIndex = index + 1;
+        index = string.indexOf("\n", endIndex);
+      } while (index !== -1);
+      returnValue += string.substr(endIndex);
+      return returnValue;
+    };
+    module2.exports = {
+      stringReplaceAll: stringReplaceAll2,
+      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/chalk/source/templates.js
+var require_templates = __commonJS({
+  "node_modules/gradient-string/node_modules/chalk/source/templates.js"(exports, module2) {
+    "use strict";
+    var TEMPLATE_REGEX = /(?:\\(u(?:[a-f\d]{4}|\{[a-f\d]{1,6}\})|x[a-f\d]{2}|.))|(?:\{(~)?(\w+(?:\([^)]*\))?(?:\.\w+(?:\([^)]*\))?)*)(?:[ \t]|(?=\r?\n)))|(\})|((?:.|[\r\n\f])+?)/gi;
+    var STYLE_REGEX = /(?:^|\.)(\w+)(?:\(([^)]*)\))?/g;
+    var STRING_REGEX = /^(['"])((?:\\.|(?!\1)[^\\])*)\1$/;
+    var ESCAPE_REGEX = /\\(u(?:[a-f\d]{4}|{[a-f\d]{1,6}})|x[a-f\d]{2}|.)|([^\\])/gi;
+    var ESCAPES2 = /* @__PURE__ */ new Map([
+      ["n", "\n"],
+      ["r", "\r"],
+      ["t", "	"],
+      ["b", "\b"],
+      ["f", "\f"],
+      ["v", "\v"],
+      ["0", "\0"],
+      ["\\", "\\"],
+      ["e", "\x1B"],
+      ["a", "\x07"]
+    ]);
+    function unescape(c) {
+      const u = c[0] === "u";
+      const bracket = c[1] === "{";
+      if (u && !bracket && c.length === 5 || c[0] === "x" && c.length === 3) {
+        return String.fromCharCode(parseInt(c.slice(1), 16));
+      }
+      if (u && bracket) {
+        return String.fromCodePoint(parseInt(c.slice(2, -1), 16));
+      }
+      return ESCAPES2.get(c) || c;
+    }
+    function parseArguments(name, arguments_) {
+      const results = [];
+      const chunks = arguments_.trim().split(/\s*,\s*/g);
+      let matches;
+      for (const chunk of chunks) {
+        const number = Number(chunk);
+        if (!Number.isNaN(number)) {
+          results.push(number);
+        } else if (matches = chunk.match(STRING_REGEX)) {
+          results.push(matches[2].replace(ESCAPE_REGEX, (m, escape, character) => escape ? unescape(escape) : character));
+        } else {
+          throw new Error(`Invalid Chalk template style argument: ${chunk} (in style '${name}')`);
+        }
+      }
+      return results;
+    }
+    function parseStyle(style) {
+      STYLE_REGEX.lastIndex = 0;
+      const results = [];
+      let matches;
+      while ((matches = STYLE_REGEX.exec(style)) !== null) {
+        const name = matches[1];
+        if (matches[2]) {
+          const args = parseArguments(name, matches[2]);
+          results.push([name].concat(args));
+        } else {
+          results.push([name]);
+        }
+      }
+      return results;
+    }
+    function buildStyle(chalk3, styles4) {
+      const enabled = {};
+      for (const layer of styles4) {
+        for (const style of layer.styles) {
+          enabled[style[0]] = layer.inverse ? null : style.slice(1);
+        }
+      }
+      let current = chalk3;
+      for (const [styleName, styles5] of Object.entries(enabled)) {
+        if (!Array.isArray(styles5)) {
+          continue;
+        }
+        if (!(styleName in current)) {
+          throw new Error(`Unknown Chalk style: ${styleName}`);
+        }
+        current = styles5.length > 0 ? current[styleName](...styles5) : current[styleName];
+      }
+      return current;
+    }
+    module2.exports = (chalk3, temporary) => {
+      const styles4 = [];
+      const chunks = [];
+      let chunk = [];
+      temporary.replace(TEMPLATE_REGEX, (m, escapeCharacter, inverse, style, close, character) => {
+        if (escapeCharacter) {
+          chunk.push(unescape(escapeCharacter));
+        } else if (style) {
+          const string = chunk.join("");
+          chunk = [];
+          chunks.push(styles4.length === 0 ? string : buildStyle(chalk3, styles4)(string));
+          styles4.push({ inverse, styles: parseStyle(style) });
+        } else if (close) {
+          if (styles4.length === 0) {
+            throw new Error("Found extraneous } in Chalk template literal");
+          }
+          chunks.push(buildStyle(chalk3, styles4)(chunk.join("")));
+          chunk = [];
+          styles4.pop();
+        } else {
+          chunk.push(character);
+        }
+      });
+      chunks.push(chunk.join(""));
+      if (styles4.length > 0) {
+        const errMessage = `Chalk template literal is missing ${styles4.length} closing bracket${styles4.length === 1 ? "" : "s"} (\`}\`)`;
+        throw new Error(errMessage);
+      }
+      return chunks.join("");
+    };
+  }
+});
+
+// node_modules/gradient-string/node_modules/chalk/source/index.js
+var require_source = __commonJS({
+  "node_modules/gradient-string/node_modules/chalk/source/index.js"(exports, module2) {
+    "use strict";
+    var ansiStyles3 = require_ansi_styles();
+    var { stdout: stdoutColor2, stderr: stderrColor2 } = require_supports_color();
+    var {
+      stringReplaceAll: stringReplaceAll2,
+      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
+    } = require_util();
+    var { isArray } = Array;
+    var levelMapping2 = [
+      "ansi",
+      "ansi",
+      "ansi256",
+      "ansi16m"
+    ];
+    var styles4 = /* @__PURE__ */ Object.create(null);
+    var applyOptions2 = (object, options = {}) => {
+      if (options.level && !(Number.isInteger(options.level) && options.level >= 0 && options.level <= 3)) {
+        throw new Error("The `level` option should be an integer from 0 to 3");
+      }
+      const colorLevel = stdoutColor2 ? stdoutColor2.level : 0;
+      object.level = options.level === void 0 ? colorLevel : options.level;
+    };
+    var ChalkClass = class {
+      constructor(options) {
+        return chalkFactory2(options);
+      }
+    };
+    var chalkFactory2 = (options) => {
+      const chalk4 = {};
+      applyOptions2(chalk4, options);
+      chalk4.template = (...arguments_) => chalkTag(chalk4.template, ...arguments_);
+      Object.setPrototypeOf(chalk4, Chalk.prototype);
+      Object.setPrototypeOf(chalk4.template, chalk4);
+      chalk4.template.constructor = () => {
+        throw new Error("`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead.");
+      };
+      chalk4.template.Instance = ChalkClass;
+      return chalk4.template;
+    };
+    function Chalk(options) {
+      return chalkFactory2(options);
+    }
+    for (const [styleName, style] of Object.entries(ansiStyles3)) {
+      styles4[styleName] = {
+        get() {
+          const builder = createBuilder2(this, createStyler2(style.open, style.close, this._styler), this._isEmpty);
+          Object.defineProperty(this, styleName, { value: builder });
+          return builder;
+        }
+      };
+    }
+    styles4.visible = {
+      get() {
+        const builder = createBuilder2(this, this._styler, true);
+        Object.defineProperty(this, "visible", { value: builder });
+        return builder;
+      }
+    };
+    var usedModels2 = ["rgb", "hex", "keyword", "hsl", "hsv", "hwb", "ansi", "ansi256"];
+    for (const model of usedModels2) {
+      styles4[model] = {
+        get() {
+          const { level } = this;
+          return function(...arguments_) {
+            const styler = createStyler2(ansiStyles3.color[levelMapping2[level]][model](...arguments_), ansiStyles3.color.close, this._styler);
+            return createBuilder2(this, styler, this._isEmpty);
+          };
+        }
+      };
+    }
+    for (const model of usedModels2) {
+      const bgModel = "bg" + model[0].toUpperCase() + model.slice(1);
+      styles4[bgModel] = {
+        get() {
+          const { level } = this;
+          return function(...arguments_) {
+            const styler = createStyler2(ansiStyles3.bgColor[levelMapping2[level]][model](...arguments_), ansiStyles3.bgColor.close, this._styler);
+            return createBuilder2(this, styler, this._isEmpty);
+          };
+        }
+      };
+    }
+    var proto2 = Object.defineProperties(() => {
+    }, {
+      ...styles4,
+      level: {
+        enumerable: true,
+        get() {
+          return this._generator.level;
+        },
+        set(level) {
+          this._generator.level = level;
+        }
+      }
+    });
+    var createStyler2 = (open, close, parent) => {
+      let openAll;
+      let closeAll;
+      if (parent === void 0) {
+        openAll = open;
+        closeAll = close;
+      } else {
+        openAll = parent.openAll + open;
+        closeAll = close + parent.closeAll;
+      }
+      return {
+        open,
+        close,
+        openAll,
+        closeAll,
+        parent
+      };
+    };
+    var createBuilder2 = (self2, _styler, _isEmpty) => {
+      const builder = (...arguments_) => {
+        if (isArray(arguments_[0]) && isArray(arguments_[0].raw)) {
+          return applyStyle2(builder, chalkTag(builder, ...arguments_));
+        }
+        return applyStyle2(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
+      };
+      Object.setPrototypeOf(builder, proto2);
+      builder._generator = self2;
+      builder._styler = _styler;
+      builder._isEmpty = _isEmpty;
+      return builder;
+    };
+    var applyStyle2 = (self2, string) => {
+      if (self2.level <= 0 || !string) {
+        return self2._isEmpty ? "" : string;
+      }
+      let styler = self2._styler;
+      if (styler === void 0) {
+        return string;
+      }
+      const { openAll, closeAll } = styler;
+      if (string.indexOf("\x1B") !== -1) {
+        while (styler !== void 0) {
+          string = stringReplaceAll2(string, styler.close, styler.open);
+          styler = styler.parent;
+        }
+      }
+      const lfIndex = string.indexOf("\n");
+      if (lfIndex !== -1) {
+        string = stringEncaseCRLFWithFirstIndex2(string, closeAll, openAll, lfIndex);
+      }
+      return openAll + string + closeAll;
+    };
+    var template;
+    var chalkTag = (chalk4, ...strings) => {
+      const [firstString] = strings;
+      if (!isArray(firstString) || !isArray(firstString.raw)) {
+        return strings.join(" ");
+      }
+      const arguments_ = strings.slice(1);
+      const parts = [firstString.raw[0]];
+      for (let i = 1; i < firstString.length; i++) {
+        parts.push(String(arguments_[i - 1]).replace(/[{}\\]/g, "\\$&"), String(firstString.raw[i]));
+      }
+      if (template === void 0) {
+        template = require_templates();
+      }
+      return template(chalk4, parts.join(""));
+    };
+    Object.defineProperties(Chalk.prototype, styles4);
+    var chalk3 = Chalk();
+    chalk3.supportsColor = stdoutColor2;
+    chalk3.stderr = Chalk({ level: stderrColor2 ? stderrColor2.level : 0 });
+    chalk3.stderr.supportsColor = stderrColor2;
+    module2.exports = chalk3;
+  }
+});
+
+// node_modules/tinycolor2/cjs/tinycolor.js
+var require_tinycolor = __commonJS({
+  "node_modules/tinycolor2/cjs/tinycolor.js"(exports, module2) {
+    (function(global2, factory) {
+      typeof exports === "object" && typeof module2 !== "undefined" ? module2.exports = factory() : typeof define === "function" && define.amd ? define(factory) : (global2 = typeof globalThis !== "undefined" ? globalThis : global2 || self, global2.tinycolor = factory());
+    })(exports, function() {
+      "use strict";
+      const trimLeft = /^\s+/;
+      const trimRight = /\s+$/;
+      function tinycolor(color, opts) {
+        color = color ? color : "";
+        opts = opts || {};
+        if (color instanceof tinycolor) {
+          return color;
+        }
+        if (!(this instanceof tinycolor)) {
+          return new tinycolor(color, opts);
+        }
+        var rgb = inputToRGB(color);
+        this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
+        this._gradientType = opts.gradientType;
+        if (this._r < 1)
+          this._r = Math.round(this._r);
+        if (this._g < 1)
+          this._g = Math.round(this._g);
+        if (this._b < 1)
+          this._b = Math.round(this._b);
+        this._ok = rgb.ok;
+      }
+      tinycolor.prototype = {
+        isDark: function() {
+          return this.getBrightness() < 128;
+        },
+        isLight: function() {
+          return !this.isDark();
+        },
+        isValid: function() {
+          return this._ok;
+        },
+        getOriginalInput: function() {
+          return this._originalInput;
+        },
+        getFormat: function() {
+          return this._format;
+        },
+        getAlpha: function() {
+          return this._a;
+        },
+        getBrightness: function() {
+          var rgb = this.toRgb();
+          return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1e3;
+        },
+        getLuminance: function() {
+          var rgb = this.toRgb();
+          var RsRGB, GsRGB, BsRGB, R, G, B;
+          RsRGB = rgb.r / 255;
+          GsRGB = rgb.g / 255;
+          BsRGB = rgb.b / 255;
+          if (RsRGB <= 0.03928)
+            R = RsRGB / 12.92;
+          else
+            R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
+          if (GsRGB <= 0.03928)
+            G = GsRGB / 12.92;
+          else
+            G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
+          if (BsRGB <= 0.03928)
+            B = BsRGB / 12.92;
+          else
+            B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
+          return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+        },
+        setAlpha: function(value) {
+          this._a = boundAlpha(value);
+          this._roundA = Math.round(100 * this._a) / 100;
+          return this;
+        },
+        toHsv: function() {
+          var hsv = rgbToHsv(this._r, this._g, this._b);
+          return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
+        },
+        toHsvString: function() {
+          var hsv = rgbToHsv(this._r, this._g, this._b);
+          var h = Math.round(hsv.h * 360), s = Math.round(hsv.s * 100), v = Math.round(hsv.v * 100);
+          return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
+        },
+        toHsl: function() {
+          var hsl = rgbToHsl(this._r, this._g, this._b);
+          return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
+        },
+        toHslString: function() {
+          var hsl = rgbToHsl(this._r, this._g, this._b);
+          var h = Math.round(hsl.h * 360), s = Math.round(hsl.s * 100), l = Math.round(hsl.l * 100);
+          return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
+        },
+        toHex: function(allow3Char) {
+          return rgbToHex(this._r, this._g, this._b, allow3Char);
+        },
+        toHexString: function(allow3Char) {
+          return "#" + this.toHex(allow3Char);
+        },
+        toHex8: function(allow4Char) {
+          return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+        },
+        toHex8String: function(allow4Char) {
+          return "#" + this.toHex8(allow4Char);
+        },
+        toRgb: function() {
+          return {
+            r: Math.round(this._r),
+            g: Math.round(this._g),
+            b: Math.round(this._b),
+            a: this._a
+          };
+        },
+        toRgbString: function() {
+          return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
+        },
+        toPercentageRgb: function() {
+          return {
+            r: Math.round(bound01(this._r, 255) * 100) + "%",
+            g: Math.round(bound01(this._g, 255) * 100) + "%",
+            b: Math.round(bound01(this._b, 255) * 100) + "%",
+            a: this._a
+          };
+        },
+        toPercentageRgbString: function() {
+          return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+        },
+        toName: function() {
+          if (this._a === 0) {
+            return "transparent";
+          }
+          if (this._a < 1) {
+            return false;
+          }
+          return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+        },
+        toFilter: function(secondColor) {
+          var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+          var secondHex8String = hex8String;
+          var gradientType = this._gradientType ? "GradientType = 1, " : "";
+          if (secondColor) {
+            var s = tinycolor(secondColor);
+            secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+          }
+          return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
+        },
+        toString: function(format) {
+          var formatSet = !!format;
+          format = format || this._format;
+          var formattedString = false;
+          var hasAlpha = this._a < 1 && this._a >= 0;
+          var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
+          if (needsAlphaFormat) {
+            if (format === "name" && this._a === 0) {
+              return this.toName();
+            }
+            return this.toRgbString();
+          }
+          if (format === "rgb") {
+            formattedString = this.toRgbString();
+          }
+          if (format === "prgb") {
+            formattedString = this.toPercentageRgbString();
+          }
+          if (format === "hex" || format === "hex6") {
+            formattedString = this.toHexString();
+          }
+          if (format === "hex3") {
+            formattedString = this.toHexString(true);
+          }
+          if (format === "hex4") {
+            formattedString = this.toHex8String(true);
+          }
+          if (format === "hex8") {
+            formattedString = this.toHex8String();
+          }
+          if (format === "name") {
+            formattedString = this.toName();
+          }
+          if (format === "hsl") {
+            formattedString = this.toHslString();
+          }
+          if (format === "hsv") {
+            formattedString = this.toHsvString();
+          }
+          return formattedString || this.toHexString();
+        },
+        clone: function() {
+          return tinycolor(this.toString());
+        },
+        _applyModification: function(fn, args) {
+          var color = fn.apply(null, [this].concat([].slice.call(args)));
+          this._r = color._r;
+          this._g = color._g;
+          this._b = color._b;
+          this.setAlpha(color._a);
+          return this;
+        },
+        lighten: function() {
+          return this._applyModification(lighten, arguments);
+        },
+        brighten: function() {
+          return this._applyModification(brighten, arguments);
+        },
+        darken: function() {
+          return this._applyModification(darken, arguments);
+        },
+        desaturate: function() {
+          return this._applyModification(desaturate, arguments);
+        },
+        saturate: function() {
+          return this._applyModification(saturate, arguments);
+        },
+        greyscale: function() {
+          return this._applyModification(greyscale, arguments);
+        },
+        spin: function() {
+          return this._applyModification(spin, arguments);
+        },
+        _applyCombination: function(fn, args) {
+          return fn.apply(null, [this].concat([].slice.call(args)));
+        },
+        analogous: function() {
+          return this._applyCombination(analogous, arguments);
+        },
+        complement: function() {
+          return this._applyCombination(complement, arguments);
+        },
+        monochromatic: function() {
+          return this._applyCombination(monochromatic, arguments);
+        },
+        splitcomplement: function() {
+          return this._applyCombination(splitcomplement, arguments);
+        },
+        triad: function() {
+          return this._applyCombination(polyad, [3]);
+        },
+        tetrad: function() {
+          return this._applyCombination(polyad, [4]);
+        }
+      };
+      tinycolor.fromRatio = function(color, opts) {
+        if (typeof color == "object") {
+          var newColor = {};
+          for (var i in color) {
+            if (color.hasOwnProperty(i)) {
+              if (i === "a") {
+                newColor[i] = color[i];
+              } else {
+                newColor[i] = convertToPercentage(color[i]);
+              }
+            }
+          }
+          color = newColor;
+        }
+        return tinycolor(color, opts);
+      };
+      function inputToRGB(color) {
+        var rgb = { r: 0, g: 0, b: 0 };
+        var a = 1;
+        var s = null;
+        var v = null;
+        var l = null;
+        var ok = false;
+        var format = false;
+        if (typeof color == "string") {
+          color = stringInputToObject(color);
+        }
+        if (typeof color == "object") {
+          if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
+            rgb = rgbToRgb(color.r, color.g, color.b);
+            ok = true;
+            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+          } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
+            s = convertToPercentage(color.s);
+            v = convertToPercentage(color.v);
+            rgb = hsvToRgb(color.h, s, v);
+            ok = true;
+            format = "hsv";
+          } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
+            s = convertToPercentage(color.s);
+            l = convertToPercentage(color.l);
+            rgb = hslToRgb(color.h, s, l);
+            ok = true;
+            format = "hsl";
+          }
+          if (color.hasOwnProperty("a")) {
+            a = color.a;
+          }
+        }
+        a = boundAlpha(a);
+        return {
+          ok,
+          format: color.format || format,
+          r: Math.min(255, Math.max(rgb.r, 0)),
+          g: Math.min(255, Math.max(rgb.g, 0)),
+          b: Math.min(255, Math.max(rgb.b, 0)),
+          a
+        };
+      }
+      function rgbToRgb(r, g, b) {
+        return {
+          r: bound01(r, 255) * 255,
+          g: bound01(g, 255) * 255,
+          b: bound01(b, 255) * 255
+        };
+      }
+      function rgbToHsl(r, g, b) {
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, l = (max + min) / 2;
+        if (max == min) {
+          h = s = 0;
+        } else {
+          var d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+          switch (max) {
+            case r:
+              h = (g - b) / d + (g < b ? 6 : 0);
+              break;
+            case g:
+              h = (b - r) / d + 2;
+              break;
+            case b:
+              h = (r - g) / d + 4;
+              break;
+          }
+          h /= 6;
+        }
+        return { h, s, l };
+      }
+      function hslToRgb(h, s, l) {
+        var r, g, b;
+        h = bound01(h, 360);
+        s = bound01(s, 100);
+        l = bound01(l, 100);
+        function hue2rgb(p2, q2, t) {
+          if (t < 0)
+            t += 1;
+          if (t > 1)
+            t -= 1;
+          if (t < 1 / 6)
+            return p2 + (q2 - p2) * 6 * t;
+          if (t < 1 / 2)
+            return q2;
+          if (t < 2 / 3)
+            return p2 + (q2 - p2) * (2 / 3 - t) * 6;
+          return p2;
+        }
+        if (s === 0) {
+          r = g = b = l;
+        } else {
+          var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+          var p = 2 * l - q;
+          r = hue2rgb(p, q, h + 1 / 3);
+          g = hue2rgb(p, q, h);
+          b = hue2rgb(p, q, h - 1 / 3);
+        }
+        return { r: r * 255, g: g * 255, b: b * 255 };
+      }
+      function rgbToHsv(r, g, b) {
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, v = max;
+        var d = max - min;
+        s = max === 0 ? 0 : d / max;
+        if (max == min) {
+          h = 0;
+        } else {
+          switch (max) {
+            case r:
+              h = (g - b) / d + (g < b ? 6 : 0);
+              break;
+            case g:
+              h = (b - r) / d + 2;
+              break;
+            case b:
+              h = (r - g) / d + 4;
+              break;
+          }
+          h /= 6;
+        }
+        return { h, s, v };
+      }
+      function hsvToRgb(h, s, v) {
+        h = bound01(h, 360) * 6;
+        s = bound01(s, 100);
+        v = bound01(v, 100);
+        var i = Math.floor(h), f = h - i, p = v * (1 - s), q = v * (1 - f * s), t = v * (1 - (1 - f) * s), mod = i % 6, r = [v, q, p, p, t, v][mod], g = [t, v, v, q, p, p][mod], b = [p, p, t, v, v, q][mod];
+        return { r: r * 255, g: g * 255, b: b * 255 };
+      }
+      function rgbToHex(r, g, b, allow3Char) {
+        var hex = [
+          pad2(Math.round(r).toString(16)),
+          pad2(Math.round(g).toString(16)),
+          pad2(Math.round(b).toString(16))
+        ];
+        if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
+          return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+        }
+        return hex.join("");
+      }
+      function rgbaToHex(r, g, b, a, allow4Char) {
+        var hex = [
+          pad2(Math.round(r).toString(16)),
+          pad2(Math.round(g).toString(16)),
+          pad2(Math.round(b).toString(16)),
+          pad2(convertDecimalToHex(a))
+        ];
+        if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
+          return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
+        }
+        return hex.join("");
+      }
+      function rgbaToArgbHex(r, g, b, a) {
+        var hex = [
+          pad2(convertDecimalToHex(a)),
+          pad2(Math.round(r).toString(16)),
+          pad2(Math.round(g).toString(16)),
+          pad2(Math.round(b).toString(16))
+        ];
+        return hex.join("");
+      }
+      tinycolor.equals = function(color1, color2) {
+        if (!color1 || !color2)
+          return false;
+        return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+      };
+      tinycolor.random = function() {
+        return tinycolor.fromRatio({
+          r: Math.random(),
+          g: Math.random(),
+          b: Math.random()
+        });
+      };
+      function desaturate(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.s -= amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+      }
+      function saturate(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.s += amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+      }
+      function greyscale(color) {
+        return tinycolor(color).desaturate(100);
+      }
+      function lighten(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.l += amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+      }
+      function brighten(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var rgb = tinycolor(color).toRgb();
+        rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
+        rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
+        rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
+        return tinycolor(rgb);
+      }
+      function darken(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.l -= amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+      }
+      function spin(color, amount) {
+        var hsl = tinycolor(color).toHsl();
+        var hue = (hsl.h + amount) % 360;
+        hsl.h = hue < 0 ? 360 + hue : hue;
+        return tinycolor(hsl);
+      }
+      function complement(color) {
+        var hsl = tinycolor(color).toHsl();
+        hsl.h = (hsl.h + 180) % 360;
+        return tinycolor(hsl);
+      }
+      function polyad(color, number) {
+        if (isNaN(number) || number <= 0) {
+          throw new Error("Argument to polyad must be a positive number");
+        }
+        var hsl = tinycolor(color).toHsl();
+        var result = [tinycolor(color)];
+        var step = 360 / number;
+        for (var i = 1; i < number; i++) {
+          result.push(tinycolor({ h: (hsl.h + i * step) % 360, s: hsl.s, l: hsl.l }));
+        }
+        return result;
+      }
+      function splitcomplement(color) {
+        var hsl = tinycolor(color).toHsl();
+        var h = hsl.h;
+        return [
+          tinycolor(color),
+          tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l }),
+          tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l })
+        ];
+      }
+      function analogous(color, results, slices) {
+        results = results || 6;
+        slices = slices || 30;
+        var hsl = tinycolor(color).toHsl();
+        var part = 360 / slices;
+        var ret = [tinycolor(color)];
+        for (hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results; ) {
+          hsl.h = (hsl.h + part) % 360;
+          ret.push(tinycolor(hsl));
+        }
+        return ret;
+      }
+      function monochromatic(color, results) {
+        results = results || 6;
+        var hsv = tinycolor(color).toHsv();
+        var h = hsv.h, s = hsv.s, v = hsv.v;
+        var ret = [];
+        var modification = 1 / results;
+        while (results--) {
+          ret.push(tinycolor({ h, s, v }));
+          v = (v + modification) % 1;
+        }
+        return ret;
+      }
+      tinycolor.mix = function(color1, color2, amount) {
+        amount = amount === 0 ? 0 : amount || 50;
+        var rgb1 = tinycolor(color1).toRgb();
+        var rgb2 = tinycolor(color2).toRgb();
+        var p = amount / 100;
+        var rgba = {
+          r: (rgb2.r - rgb1.r) * p + rgb1.r,
+          g: (rgb2.g - rgb1.g) * p + rgb1.g,
+          b: (rgb2.b - rgb1.b) * p + rgb1.b,
+          a: (rgb2.a - rgb1.a) * p + rgb1.a
+        };
+        return tinycolor(rgba);
+      };
+      tinycolor.readability = function(color1, color2) {
+        var c1 = tinycolor(color1);
+        var c2 = tinycolor(color2);
+        return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
+      };
+      tinycolor.isReadable = function(color1, color2, wcag2) {
+        var readability = tinycolor.readability(color1, color2);
+        var wcag2Parms, out;
+        out = false;
+        wcag2Parms = validateWCAG2Parms(wcag2);
+        switch (wcag2Parms.level + wcag2Parms.size) {
+          case "AAsmall":
+          case "AAAlarge":
+            out = readability >= 4.5;
+            break;
+          case "AAlarge":
+            out = readability >= 3;
+            break;
+          case "AAAsmall":
+            out = readability >= 7;
+            break;
+        }
+        return out;
+      };
+      tinycolor.mostReadable = function(baseColor, colorList, args) {
+        var bestColor = null;
+        var bestScore = 0;
+        var readability;
+        var includeFallbackColors, level, size;
+        args = args || {};
+        includeFallbackColors = args.includeFallbackColors;
+        level = args.level;
+        size = args.size;
+        for (var i = 0; i < colorList.length; i++) {
+          readability = tinycolor.readability(baseColor, colorList[i]);
+          if (readability > bestScore) {
+            bestScore = readability;
+            bestColor = tinycolor(colorList[i]);
+          }
+        }
+        if (tinycolor.isReadable(baseColor, bestColor, {
+          level,
+          size
+        }) || !includeFallbackColors) {
+          return bestColor;
+        } else {
+          args.includeFallbackColors = false;
+          return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
+        }
+      };
+      var names = tinycolor.names = {
+        aliceblue: "f0f8ff",
+        antiquewhite: "faebd7",
+        aqua: "0ff",
+        aquamarine: "7fffd4",
+        azure: "f0ffff",
+        beige: "f5f5dc",
+        bisque: "ffe4c4",
+        black: "000",
+        blanchedalmond: "ffebcd",
+        blue: "00f",
+        blueviolet: "8a2be2",
+        brown: "a52a2a",
+        burlywood: "deb887",
+        burntsienna: "ea7e5d",
+        cadetblue: "5f9ea0",
+        chartreuse: "7fff00",
+        chocolate: "d2691e",
+        coral: "ff7f50",
+        cornflowerblue: "6495ed",
+        cornsilk: "fff8dc",
+        crimson: "dc143c",
+        cyan: "0ff",
+        darkblue: "00008b",
+        darkcyan: "008b8b",
+        darkgoldenrod: "b8860b",
+        darkgray: "a9a9a9",
+        darkgreen: "006400",
+        darkgrey: "a9a9a9",
+        darkkhaki: "bdb76b",
+        darkmagenta: "8b008b",
+        darkolivegreen: "556b2f",
+        darkorange: "ff8c00",
+        darkorchid: "9932cc",
+        darkred: "8b0000",
+        darksalmon: "e9967a",
+        darkseagreen: "8fbc8f",
+        darkslateblue: "483d8b",
+        darkslategray: "2f4f4f",
+        darkslategrey: "2f4f4f",
+        darkturquoise: "00ced1",
+        darkviolet: "9400d3",
+        deeppink: "ff1493",
+        deepskyblue: "00bfff",
+        dimgray: "696969",
+        dimgrey: "696969",
+        dodgerblue: "1e90ff",
+        firebrick: "b22222",
+        floralwhite: "fffaf0",
+        forestgreen: "228b22",
+        fuchsia: "f0f",
+        gainsboro: "dcdcdc",
+        ghostwhite: "f8f8ff",
+        gold: "ffd700",
+        goldenrod: "daa520",
+        gray: "808080",
+        green: "008000",
+        greenyellow: "adff2f",
+        grey: "808080",
+        honeydew: "f0fff0",
+        hotpink: "ff69b4",
+        indianred: "cd5c5c",
+        indigo: "4b0082",
+        ivory: "fffff0",
+        khaki: "f0e68c",
+        lavender: "e6e6fa",
+        lavenderblush: "fff0f5",
+        lawngreen: "7cfc00",
+        lemonchiffon: "fffacd",
+        lightblue: "add8e6",
+        lightcoral: "f08080",
+        lightcyan: "e0ffff",
+        lightgoldenrodyellow: "fafad2",
+        lightgray: "d3d3d3",
+        lightgreen: "90ee90",
+        lightgrey: "d3d3d3",
+        lightpink: "ffb6c1",
+        lightsalmon: "ffa07a",
+        lightseagreen: "20b2aa",
+        lightskyblue: "87cefa",
+        lightslategray: "789",
+        lightslategrey: "789",
+        lightsteelblue: "b0c4de",
+        lightyellow: "ffffe0",
+        lime: "0f0",
+        limegreen: "32cd32",
+        linen: "faf0e6",
+        magenta: "f0f",
+        maroon: "800000",
+        mediumaquamarine: "66cdaa",
+        mediumblue: "0000cd",
+        mediumorchid: "ba55d3",
+        mediumpurple: "9370db",
+        mediumseagreen: "3cb371",
+        mediumslateblue: "7b68ee",
+        mediumspringgreen: "00fa9a",
+        mediumturquoise: "48d1cc",
+        mediumvioletred: "c71585",
+        midnightblue: "191970",
+        mintcream: "f5fffa",
+        mistyrose: "ffe4e1",
+        moccasin: "ffe4b5",
+        navajowhite: "ffdead",
+        navy: "000080",
+        oldlace: "fdf5e6",
+        olive: "808000",
+        olivedrab: "6b8e23",
+        orange: "ffa500",
+        orangered: "ff4500",
+        orchid: "da70d6",
+        palegoldenrod: "eee8aa",
+        palegreen: "98fb98",
+        paleturquoise: "afeeee",
+        palevioletred: "db7093",
+        papayawhip: "ffefd5",
+        peachpuff: "ffdab9",
+        peru: "cd853f",
+        pink: "ffc0cb",
+        plum: "dda0dd",
+        powderblue: "b0e0e6",
+        purple: "800080",
+        rebeccapurple: "663399",
+        red: "f00",
+        rosybrown: "bc8f8f",
+        royalblue: "4169e1",
+        saddlebrown: "8b4513",
+        salmon: "fa8072",
+        sandybrown: "f4a460",
+        seagreen: "2e8b57",
+        seashell: "fff5ee",
+        sienna: "a0522d",
+        silver: "c0c0c0",
+        skyblue: "87ceeb",
+        slateblue: "6a5acd",
+        slategray: "708090",
+        slategrey: "708090",
+        snow: "fffafa",
+        springgreen: "00ff7f",
+        steelblue: "4682b4",
+        tan: "d2b48c",
+        teal: "008080",
+        thistle: "d8bfd8",
+        tomato: "ff6347",
+        turquoise: "40e0d0",
+        violet: "ee82ee",
+        wheat: "f5deb3",
+        white: "fff",
+        whitesmoke: "f5f5f5",
+        yellow: "ff0",
+        yellowgreen: "9acd32"
+      };
+      var hexNames = tinycolor.hexNames = flip(names);
+      function flip(o) {
+        var flipped = {};
+        for (var i in o) {
+          if (o.hasOwnProperty(i)) {
+            flipped[o[i]] = i;
+          }
+        }
+        return flipped;
+      }
+      function boundAlpha(a) {
+        a = parseFloat(a);
+        if (isNaN(a) || a < 0 || a > 1) {
+          a = 1;
+        }
+        return a;
+      }
+      function bound01(n, max) {
+        if (isOnePointZero(n))
+          n = "100%";
+        var processPercent = isPercentage(n);
+        n = Math.min(max, Math.max(0, parseFloat(n)));
+        if (processPercent) {
+          n = parseInt(n * max, 10) / 100;
+        }
+        if (Math.abs(n - max) < 1e-6) {
+          return 1;
+        }
+        return n % max / parseFloat(max);
+      }
+      function clamp01(val) {
+        return Math.min(1, Math.max(0, val));
+      }
+      function parseIntFromHex(val) {
+        return parseInt(val, 16);
+      }
+      function isOnePointZero(n) {
+        return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
+      }
+      function isPercentage(n) {
+        return typeof n === "string" && n.indexOf("%") != -1;
+      }
+      function pad2(c) {
+        return c.length == 1 ? "0" + c : "" + c;
+      }
+      function convertToPercentage(n) {
+        if (n <= 1) {
+          n = n * 100 + "%";
+        }
+        return n;
+      }
+      function convertDecimalToHex(d) {
+        return Math.round(parseFloat(d) * 255).toString(16);
+      }
+      function convertHexToDecimal(h) {
+        return parseIntFromHex(h) / 255;
+      }
+      var matchers = function() {
+        var CSS_INTEGER = "[-\\+]?\\d+%?";
+        var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+        var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+        var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+        var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+        return {
+          CSS_UNIT: new RegExp(CSS_UNIT),
+          rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+          rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+          hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+          hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+          hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+          hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+          hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+          hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+          hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+          hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+        };
+      }();
+      function isValidCSSUnit(color) {
+        return !!matchers.CSS_UNIT.exec(color);
+      }
+      function stringInputToObject(color) {
+        color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
+        var named = false;
+        if (names[color]) {
+          color = names[color];
+          named = true;
+        } else if (color == "transparent") {
+          return { r: 0, g: 0, b: 0, a: 0, format: "name" };
+        }
+        var match;
+        if (match = matchers.rgb.exec(color)) {
+          return { r: match[1], g: match[2], b: match[3] };
+        }
+        if (match = matchers.rgba.exec(color)) {
+          return { r: match[1], g: match[2], b: match[3], a: match[4] };
+        }
+        if (match = matchers.hsl.exec(color)) {
+          return { h: match[1], s: match[2], l: match[3] };
+        }
+        if (match = matchers.hsla.exec(color)) {
+          return { h: match[1], s: match[2], l: match[3], a: match[4] };
+        }
+        if (match = matchers.hsv.exec(color)) {
+          return { h: match[1], s: match[2], v: match[3] };
+        }
+        if (match = matchers.hsva.exec(color)) {
+          return { h: match[1], s: match[2], v: match[3], a: match[4] };
+        }
+        if (match = matchers.hex8.exec(color)) {
+          return {
+            r: parseIntFromHex(match[1]),
+            g: parseIntFromHex(match[2]),
+            b: parseIntFromHex(match[3]),
+            a: convertHexToDecimal(match[4]),
+            format: named ? "name" : "hex8"
+          };
+        }
+        if (match = matchers.hex6.exec(color)) {
+          return {
+            r: parseIntFromHex(match[1]),
+            g: parseIntFromHex(match[2]),
+            b: parseIntFromHex(match[3]),
+            format: named ? "name" : "hex"
+          };
+        }
+        if (match = matchers.hex4.exec(color)) {
+          return {
+            r: parseIntFromHex(match[1] + "" + match[1]),
+            g: parseIntFromHex(match[2] + "" + match[2]),
+            b: parseIntFromHex(match[3] + "" + match[3]),
+            a: convertHexToDecimal(match[4] + "" + match[4]),
+            format: named ? "name" : "hex8"
+          };
+        }
+        if (match = matchers.hex3.exec(color)) {
+          return {
+            r: parseIntFromHex(match[1] + "" + match[1]),
+            g: parseIntFromHex(match[2] + "" + match[2]),
+            b: parseIntFromHex(match[3] + "" + match[3]),
+            format: named ? "name" : "hex"
+          };
+        }
+        return false;
+      }
+      function validateWCAG2Parms(parms) {
+        var level, size;
+        parms = parms || { level: "AA", size: "small" };
+        level = (parms.level || "AA").toUpperCase();
+        size = (parms.size || "small").toLowerCase();
+        if (level !== "AA" && level !== "AAA") {
+          level = "AA";
+        }
+        if (size !== "small" && size !== "large") {
+          size = "small";
+        }
+        return { level, size };
+      }
+      return tinycolor;
+    });
+  }
+});
+
+// node_modules/tinygradient/index.js
+var require_tinygradient = __commonJS({
+  "node_modules/tinygradient/index.js"(exports, module2) {
+    var tinycolor = require_tinycolor();
+    var RGBA_MAX = { r: 256, g: 256, b: 256, a: 1 };
+    var HSVA_MAX = { h: 360, s: 1, v: 1, a: 1 };
+    function stepize(start, end, steps) {
+      let step = {};
+      for (let k in start) {
+        if (start.hasOwnProperty(k)) {
+          step[k] = steps === 0 ? 0 : (end[k] - start[k]) / steps;
+        }
+      }
+      return step;
+    }
+    function interpolate(step, start, i, max) {
+      let color = {};
+      for (let k in start) {
+        if (start.hasOwnProperty(k)) {
+          color[k] = step[k] * i + start[k];
+          color[k] = color[k] < 0 ? color[k] + max[k] : max[k] !== 1 ? color[k] % max[k] : color[k];
+        }
+      }
+      return color;
+    }
+    function interpolateRgb(stop1, stop2, steps) {
+      const start = stop1.color.toRgb();
+      const end = stop2.color.toRgb();
+      const step = stepize(start, end, steps);
+      let gradient3 = [stop1.color];
+      for (let i = 1; i < steps; i++) {
+        const color = interpolate(step, start, i, RGBA_MAX);
+        gradient3.push(tinycolor(color));
+      }
+      return gradient3;
+    }
+    function interpolateHsv(stop1, stop2, steps, mode) {
+      const start = stop1.color.toHsv();
+      const end = stop2.color.toHsv();
+      if (start.s === 0 || end.s === 0) {
+        return interpolateRgb(stop1, stop2, steps);
+      }
+      let trigonometric;
+      if (typeof mode === "boolean") {
+        trigonometric = mode;
+      } else {
+        const trigShortest = start.h < end.h && end.h - start.h < 180 || start.h > end.h && start.h - end.h > 180;
+        trigonometric = mode === "long" && trigShortest || mode === "short" && !trigShortest;
+      }
+      const step = stepize(start, end, steps);
+      let gradient3 = [stop1.color];
+      let diff;
+      if (start.h <= end.h && !trigonometric || start.h >= end.h && trigonometric) {
+        diff = end.h - start.h;
+      } else if (trigonometric) {
+        diff = 360 - end.h + start.h;
+      } else {
+        diff = 360 - start.h + end.h;
+      }
+      step.h = Math.pow(-1, trigonometric ? 1 : 0) * Math.abs(diff) / steps;
+      for (let i = 1; i < steps; i++) {
+        const color = interpolate(step, start, i, HSVA_MAX);
+        gradient3.push(tinycolor(color));
+      }
+      return gradient3;
+    }
+    function computeSubsteps(stops, steps) {
+      const l = stops.length;
+      steps = parseInt(steps, 10);
+      if (isNaN(steps) || steps < 2) {
+        throw new Error("Invalid number of steps (< 2)");
+      }
+      if (steps < l) {
+        throw new Error("Number of steps cannot be inferior to number of stops");
+      }
+      let substeps = [];
+      for (let i = 1; i < l; i++) {
+        const step = (steps - 1) * (stops[i].pos - stops[i - 1].pos);
+        substeps.push(Math.max(1, Math.round(step)));
+      }
+      let totalSubsteps = 1;
+      for (let n = l - 1; n--; )
+        totalSubsteps += substeps[n];
+      while (totalSubsteps !== steps) {
+        if (totalSubsteps < steps) {
+          const min = Math.min.apply(null, substeps);
+          substeps[substeps.indexOf(min)]++;
+          totalSubsteps++;
+        } else {
+          const max = Math.max.apply(null, substeps);
+          substeps[substeps.indexOf(max)]--;
+          totalSubsteps--;
+        }
+      }
+      return substeps;
+    }
+    function computeAt(stops, pos, method, max) {
+      if (pos < 0 || pos > 1) {
+        throw new Error("Position must be between 0 and 1");
+      }
+      let start, end;
+      for (let i = 0, l = stops.length; i < l - 1; i++) {
+        if (pos >= stops[i].pos && pos < stops[i + 1].pos) {
+          start = stops[i];
+          end = stops[i + 1];
+          break;
+        }
+      }
+      if (!start) {
+        start = end = stops[stops.length - 1];
+      }
+      const step = stepize(start.color[method](), end.color[method](), (end.pos - start.pos) * 100);
+      const color = interpolate(step, start.color[method](), (pos - start.pos) * 100, max);
+      return tinycolor(color);
+    }
+    var TinyGradient = class {
+      constructor(stops) {
+        if (stops.length < 2) {
+          throw new Error("Invalid number of stops (< 2)");
+        }
+        const havingPositions = stops[0].pos !== void 0;
+        let l = stops.length;
+        let p = -1;
+        let lastColorLess = false;
+        this.stops = stops.map((stop, i) => {
+          const hasPosition = stop.pos !== void 0;
+          if (havingPositions ^ hasPosition) {
+            throw new Error("Cannot mix positionned and not posionned color stops");
+          }
+          if (hasPosition) {
+            const hasColor = stop.color !== void 0;
+            if (!hasColor && (lastColorLess || i === 0 || i === l - 1)) {
+              throw new Error("Cannot define two consecutive position-only stops");
+            }
+            lastColorLess = !hasColor;
+            stop = {
+              color: hasColor ? tinycolor(stop.color) : null,
+              colorLess: !hasColor,
+              pos: stop.pos
+            };
+            if (stop.pos < 0 || stop.pos > 1) {
+              throw new Error("Color stops positions must be between 0 and 1");
+            } else if (stop.pos < p) {
+              throw new Error("Color stops positions are not ordered");
+            }
+            p = stop.pos;
+          } else {
+            stop = {
+              color: tinycolor(stop.color !== void 0 ? stop.color : stop),
+              pos: i / (l - 1)
+            };
+          }
+          return stop;
+        });
+        if (this.stops[0].pos !== 0) {
+          this.stops.unshift({
+            color: this.stops[0].color,
+            pos: 0
+          });
+          l++;
+        }
+        if (this.stops[l - 1].pos !== 1) {
+          this.stops.push({
+            color: this.stops[l - 1].color,
+            pos: 1
+          });
+        }
+      }
+      reverse() {
+        let stops = [];
+        this.stops.forEach(function(stop) {
+          stops.push({
+            color: stop.color,
+            pos: 1 - stop.pos
+          });
+        });
+        return new TinyGradient(stops.reverse());
+      }
+      loop() {
+        let stops1 = [];
+        let stops2 = [];
+        this.stops.forEach((stop) => {
+          stops1.push({
+            color: stop.color,
+            pos: stop.pos / 2
+          });
+        });
+        this.stops.slice(0, -1).forEach((stop) => {
+          stops2.push({
+            color: stop.color,
+            pos: 1 - stop.pos / 2
+          });
+        });
+        return new TinyGradient(stops1.concat(stops2.reverse()));
+      }
+      rgb(steps) {
+        const substeps = computeSubsteps(this.stops, steps);
+        let gradient3 = [];
+        this.stops.forEach((stop, i) => {
+          if (stop.colorLess) {
+            stop.color = interpolateRgb(this.stops[i - 1], this.stops[i + 1], 2)[1];
+          }
+        });
+        for (let i = 0, l = this.stops.length; i < l - 1; i++) {
+          const rgb = interpolateRgb(this.stops[i], this.stops[i + 1], substeps[i]);
+          gradient3.splice(gradient3.length, 0, ...rgb);
+        }
+        gradient3.push(this.stops[this.stops.length - 1].color);
+        return gradient3;
+      }
+      hsv(steps, mode) {
+        const substeps = computeSubsteps(this.stops, steps);
+        let gradient3 = [];
+        this.stops.forEach((stop, i) => {
+          if (stop.colorLess) {
+            stop.color = interpolateHsv(this.stops[i - 1], this.stops[i + 1], 2, mode)[1];
+          }
+        });
+        for (let i = 0, l = this.stops.length; i < l - 1; i++) {
+          const hsv = interpolateHsv(this.stops[i], this.stops[i + 1], substeps[i], mode);
+          gradient3.splice(gradient3.length, 0, ...hsv);
+        }
+        gradient3.push(this.stops[this.stops.length - 1].color);
+        return gradient3;
+      }
+      css(mode, direction) {
+        mode = mode || "linear";
+        direction = direction || (mode === "linear" ? "to right" : "ellipse at center");
+        let css = mode + "-gradient(" + direction;
+        this.stops.forEach(function(stop) {
+          css += ", " + (stop.colorLess ? "" : stop.color.toRgbString() + " ") + stop.pos * 100 + "%";
+        });
+        css += ")";
+        return css;
+      }
+      rgbAt(pos) {
+        return computeAt(this.stops, pos, "toRgb", RGBA_MAX);
+      }
+      hsvAt(pos) {
+        return computeAt(this.stops, pos, "toHsv", HSVA_MAX);
+      }
+    };
+    module2.exports = function(stops) {
+      if (arguments.length === 1) {
+        if (!Array.isArray(arguments[0])) {
+          throw new Error('"stops" is not an array');
+        }
+        stops = arguments[0];
+      } else {
+        stops = Array.prototype.slice.call(arguments);
+      }
+      return new TinyGradient(stops);
+    };
+  }
+});
+
+// node_modules/gradient-string/index.js
+var require_gradient_string = __commonJS({
+  "node_modules/gradient-string/index.js"(exports, module2) {
+    "use strict";
+    var chalk3 = require_source();
+    var tinygradient = require_tinygradient();
+    var forbiddenChars = /\s/g;
+    function InitGradient(...args) {
+      const grad = tinygradient.apply(this, args);
+      const ret = (str, opts) => applyGradient(str ? str.toString() : "", grad, opts);
+      ret.multiline = (str, opts) => multilineGradient(str ? str.toString() : "", grad, opts);
+      return ret;
+    }
+    var getColors = (gradient3, options, count) => options.interpolation.toLowerCase() === "hsv" ? gradient3.hsv(count, options.hsvSpin.toLowerCase()) : gradient3.rgb(count);
+    function applyGradient(str, gradient3, opts) {
+      const options = validateOptions(opts);
+      const colorsCount = Math.max(str.replace(forbiddenChars, "").length, gradient3.stops.length);
+      const colors = getColors(gradient3, options, colorsCount);
+      let result = "";
+      for (const s of str) {
+        result += s.match(forbiddenChars) ? s : chalk3.hex(colors.shift().toHex())(s);
+      }
+      return result;
+    }
+    function multilineGradient(str, gradient3, opts) {
+      const options = validateOptions(opts);
+      const lines = str.split("\n");
+      const maxLength = Math.max.apply(null, lines.map((l) => l.length).concat([gradient3.stops.length]));
+      const colors = getColors(gradient3, options, maxLength);
+      const results = [];
+      for (const line of lines) {
+        const lineColors = colors.slice(0);
+        let lineResult = "";
+        for (const l of line) {
+          lineResult += chalk3.hex(lineColors.shift().toHex())(l);
+        }
+        results.push(lineResult);
+      }
+      return results.join("\n");
+    }
+    function validateOptions(opts) {
+      const options = { interpolation: "rgb", hsvSpin: "short", ...opts };
+      if (opts !== void 0 && typeof opts !== "object") {
+        throw new TypeError(`Expected \`options\` to be an \`object\`, got \`${typeof opts}\``);
+      }
+      if (typeof options.interpolation !== "string") {
+        throw new TypeError(`Expected \`options.interpolation\` to be a \`string\`, got \`${typeof options.interpolation}\``);
+      }
+      if (options.interpolation.toLowerCase() === "hsv" && typeof options.hsvSpin !== "string") {
+        throw new TypeError(`Expected \`options.hsvSpin\` to be a \`string\`, got \`${typeof options.hsvSpin}\``);
+      }
+      return options;
+    }
+    var aliases2 = {
+      atlas: { colors: ["#feac5e", "#c779d0", "#4bc0c8"], options: {} },
+      cristal: { colors: ["#bdfff3", "#4ac29a"], options: {} },
+      teen: { colors: ["#77a1d3", "#79cbca", "#e684ae"], options: {} },
+      mind: { colors: ["#473b7b", "#3584a7", "#30d2be"], options: {} },
+      morning: { colors: ["#ff5f6d", "#ffc371"], options: { interpolation: "hsv" } },
+      vice: { colors: ["#5ee7df", "#b490ca"], options: { interpolation: "hsv" } },
+      passion: { colors: ["#f43b47", "#453a94"], options: {} },
+      fruit: { colors: ["#ff4e50", "#f9d423"], options: {} },
+      instagram: { colors: ["#833ab4", "#fd1d1d", "#fcb045"], options: {} },
+      retro: { colors: ["#3f51b1", "#5a55ae", "#7b5fac", "#8f6aae", "#a86aa4", "#cc6b8e", "#f18271", "#f3a469", "#f7c978"], options: {} },
+      summer: { colors: ["#fdbb2d", "#22c1c3"], options: {} },
+      rainbow: { colors: ["#ff0000", "#ff0100"], options: { interpolation: "hsv", hsvSpin: "long" } },
+      pastel: { colors: ["#74ebd5", "#74ecd5"], options: { interpolation: "hsv", hsvSpin: "long" } }
+    };
+    module2.exports = InitGradient;
+    for (const a in aliases2) {
+      module2.exports[a] = (str) => new InitGradient(aliases2[a].colors)(str, aliases2[a].options);
+      module2.exports[a].multiline = (str) => new InitGradient(aliases2[a].colors).multiline(str, aliases2[a].options);
+    }
+  }
+});
+
+// node_modules/chalk-animation/node_modules/color-name/index.js
+var require_color_name2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/color-name/index.js"(exports, module2) {
+    "use strict";
+    module2.exports = {
+      "aliceblue": [240, 248, 255],
+      "antiquewhite": [250, 235, 215],
+      "aqua": [0, 255, 255],
+      "aquamarine": [127, 255, 212],
+      "azure": [240, 255, 255],
+      "beige": [245, 245, 220],
+      "bisque": [255, 228, 196],
+      "black": [0, 0, 0],
+      "blanchedalmond": [255, 235, 205],
+      "blue": [0, 0, 255],
+      "blueviolet": [138, 43, 226],
+      "brown": [165, 42, 42],
+      "burlywood": [222, 184, 135],
+      "cadetblue": [95, 158, 160],
+      "chartreuse": [127, 255, 0],
+      "chocolate": [210, 105, 30],
+      "coral": [255, 127, 80],
+      "cornflowerblue": [100, 149, 237],
+      "cornsilk": [255, 248, 220],
+      "crimson": [220, 20, 60],
+      "cyan": [0, 255, 255],
+      "darkblue": [0, 0, 139],
+      "darkcyan": [0, 139, 139],
+      "darkgoldenrod": [184, 134, 11],
+      "darkgray": [169, 169, 169],
+      "darkgreen": [0, 100, 0],
+      "darkgrey": [169, 169, 169],
+      "darkkhaki": [189, 183, 107],
+      "darkmagenta": [139, 0, 139],
+      "darkolivegreen": [85, 107, 47],
+      "darkorange": [255, 140, 0],
+      "darkorchid": [153, 50, 204],
+      "darkred": [139, 0, 0],
+      "darksalmon": [233, 150, 122],
+      "darkseagreen": [143, 188, 143],
+      "darkslateblue": [72, 61, 139],
+      "darkslategray": [47, 79, 79],
+      "darkslategrey": [47, 79, 79],
+      "darkturquoise": [0, 206, 209],
+      "darkviolet": [148, 0, 211],
+      "deeppink": [255, 20, 147],
+      "deepskyblue": [0, 191, 255],
+      "dimgray": [105, 105, 105],
+      "dimgrey": [105, 105, 105],
+      "dodgerblue": [30, 144, 255],
+      "firebrick": [178, 34, 34],
+      "floralwhite": [255, 250, 240],
+      "forestgreen": [34, 139, 34],
+      "fuchsia": [255, 0, 255],
+      "gainsboro": [220, 220, 220],
+      "ghostwhite": [248, 248, 255],
+      "gold": [255, 215, 0],
+      "goldenrod": [218, 165, 32],
+      "gray": [128, 128, 128],
+      "green": [0, 128, 0],
+      "greenyellow": [173, 255, 47],
+      "grey": [128, 128, 128],
+      "honeydew": [240, 255, 240],
+      "hotpink": [255, 105, 180],
+      "indianred": [205, 92, 92],
+      "indigo": [75, 0, 130],
+      "ivory": [255, 255, 240],
+      "khaki": [240, 230, 140],
+      "lavender": [230, 230, 250],
+      "lavenderblush": [255, 240, 245],
+      "lawngreen": [124, 252, 0],
+      "lemonchiffon": [255, 250, 205],
+      "lightblue": [173, 216, 230],
+      "lightcoral": [240, 128, 128],
+      "lightcyan": [224, 255, 255],
+      "lightgoldenrodyellow": [250, 250, 210],
+      "lightgray": [211, 211, 211],
+      "lightgreen": [144, 238, 144],
+      "lightgrey": [211, 211, 211],
+      "lightpink": [255, 182, 193],
+      "lightsalmon": [255, 160, 122],
+      "lightseagreen": [32, 178, 170],
+      "lightskyblue": [135, 206, 250],
+      "lightslategray": [119, 136, 153],
+      "lightslategrey": [119, 136, 153],
+      "lightsteelblue": [176, 196, 222],
+      "lightyellow": [255, 255, 224],
+      "lime": [0, 255, 0],
+      "limegreen": [50, 205, 50],
+      "linen": [250, 240, 230],
+      "magenta": [255, 0, 255],
+      "maroon": [128, 0, 0],
+      "mediumaquamarine": [102, 205, 170],
+      "mediumblue": [0, 0, 205],
+      "mediumorchid": [186, 85, 211],
+      "mediumpurple": [147, 112, 219],
+      "mediumseagreen": [60, 179, 113],
+      "mediumslateblue": [123, 104, 238],
+      "mediumspringgreen": [0, 250, 154],
+      "mediumturquoise": [72, 209, 204],
+      "mediumvioletred": [199, 21, 133],
+      "midnightblue": [25, 25, 112],
+      "mintcream": [245, 255, 250],
+      "mistyrose": [255, 228, 225],
+      "moccasin": [255, 228, 181],
+      "navajowhite": [255, 222, 173],
+      "navy": [0, 0, 128],
+      "oldlace": [253, 245, 230],
+      "olive": [128, 128, 0],
+      "olivedrab": [107, 142, 35],
+      "orange": [255, 165, 0],
+      "orangered": [255, 69, 0],
+      "orchid": [218, 112, 214],
+      "palegoldenrod": [238, 232, 170],
+      "palegreen": [152, 251, 152],
+      "paleturquoise": [175, 238, 238],
+      "palevioletred": [219, 112, 147],
+      "papayawhip": [255, 239, 213],
+      "peachpuff": [255, 218, 185],
+      "peru": [205, 133, 63],
+      "pink": [255, 192, 203],
+      "plum": [221, 160, 221],
+      "powderblue": [176, 224, 230],
+      "purple": [128, 0, 128],
+      "rebeccapurple": [102, 51, 153],
+      "red": [255, 0, 0],
+      "rosybrown": [188, 143, 143],
+      "royalblue": [65, 105, 225],
+      "saddlebrown": [139, 69, 19],
+      "salmon": [250, 128, 114],
+      "sandybrown": [244, 164, 96],
+      "seagreen": [46, 139, 87],
+      "seashell": [255, 245, 238],
+      "sienna": [160, 82, 45],
+      "silver": [192, 192, 192],
+      "skyblue": [135, 206, 235],
+      "slateblue": [106, 90, 205],
+      "slategray": [112, 128, 144],
+      "slategrey": [112, 128, 144],
+      "snow": [255, 250, 250],
+      "springgreen": [0, 255, 127],
+      "steelblue": [70, 130, 180],
+      "tan": [210, 180, 140],
+      "teal": [0, 128, 128],
+      "thistle": [216, 191, 216],
+      "tomato": [255, 99, 71],
+      "turquoise": [64, 224, 208],
+      "violet": [238, 130, 238],
+      "wheat": [245, 222, 179],
+      "white": [255, 255, 255],
+      "whitesmoke": [245, 245, 245],
+      "yellow": [255, 255, 0],
+      "yellowgreen": [154, 205, 50]
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/color-convert/conversions.js
+var require_conversions2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/color-convert/conversions.js"(exports, module2) {
+    var cssKeywords = require_color_name2();
+    var reverseKeywords = {};
+    for (const key of Object.keys(cssKeywords)) {
+      reverseKeywords[cssKeywords[key]] = key;
+    }
+    var convert = {
+      rgb: { channels: 3, labels: "rgb" },
+      hsl: { channels: 3, labels: "hsl" },
+      hsv: { channels: 3, labels: "hsv" },
+      hwb: { channels: 3, labels: "hwb" },
+      cmyk: { channels: 4, labels: "cmyk" },
+      xyz: { channels: 3, labels: "xyz" },
+      lab: { channels: 3, labels: "lab" },
+      lch: { channels: 3, labels: "lch" },
+      hex: { channels: 1, labels: ["hex"] },
+      keyword: { channels: 1, labels: ["keyword"] },
+      ansi16: { channels: 1, labels: ["ansi16"] },
+      ansi256: { channels: 1, labels: ["ansi256"] },
+      hcg: { channels: 3, labels: ["h", "c", "g"] },
+      apple: { channels: 3, labels: ["r16", "g16", "b16"] },
+      gray: { channels: 1, labels: ["gray"] }
+    };
+    module2.exports = convert;
+    for (const model of Object.keys(convert)) {
+      if (!("channels" in convert[model])) {
+        throw new Error("missing channels property: " + model);
+      }
+      if (!("labels" in convert[model])) {
+        throw new Error("missing channel labels property: " + model);
+      }
+      if (convert[model].labels.length !== convert[model].channels) {
+        throw new Error("channel and label counts mismatch: " + model);
+      }
+      const { channels, labels } = convert[model];
+      delete convert[model].channels;
+      delete convert[model].labels;
+      Object.defineProperty(convert[model], "channels", { value: channels });
+      Object.defineProperty(convert[model], "labels", { value: labels });
+    }
+    convert.rgb.hsl = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const min = Math.min(r, g, b);
+      const max = Math.max(r, g, b);
+      const delta = max - min;
+      let h;
+      let s;
+      if (max === min) {
+        h = 0;
+      } else if (r === max) {
+        h = (g - b) / delta;
+      } else if (g === max) {
+        h = 2 + (b - r) / delta;
+      } else if (b === max) {
+        h = 4 + (r - g) / delta;
+      }
+      h = Math.min(h * 60, 360);
+      if (h < 0) {
+        h += 360;
+      }
+      const l = (min + max) / 2;
+      if (max === min) {
+        s = 0;
+      } else if (l <= 0.5) {
+        s = delta / (max + min);
+      } else {
+        s = delta / (2 - max - min);
+      }
+      return [h, s * 100, l * 100];
+    };
+    convert.rgb.hsv = function(rgb) {
+      let rdif;
+      let gdif;
+      let bdif;
+      let h;
+      let s;
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const v = Math.max(r, g, b);
+      const diff = v - Math.min(r, g, b);
+      const diffc = function(c) {
+        return (v - c) / 6 / diff + 1 / 2;
+      };
+      if (diff === 0) {
+        h = 0;
+        s = 0;
+      } else {
+        s = diff / v;
+        rdif = diffc(r);
+        gdif = diffc(g);
+        bdif = diffc(b);
+        if (r === v) {
+          h = bdif - gdif;
+        } else if (g === v) {
+          h = 1 / 3 + rdif - bdif;
+        } else if (b === v) {
+          h = 2 / 3 + gdif - rdif;
+        }
+        if (h < 0) {
+          h += 1;
+        } else if (h > 1) {
+          h -= 1;
+        }
+      }
+      return [
+        h * 360,
+        s * 100,
+        v * 100
+      ];
+    };
+    convert.rgb.hwb = function(rgb) {
+      const r = rgb[0];
+      const g = rgb[1];
+      let b = rgb[2];
+      const h = convert.rgb.hsl(rgb)[0];
+      const w = 1 / 255 * Math.min(r, Math.min(g, b));
+      b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
+      return [h, w * 100, b * 100];
+    };
+    convert.rgb.cmyk = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const k = Math.min(1 - r, 1 - g, 1 - b);
+      const c = (1 - r - k) / (1 - k) || 0;
+      const m = (1 - g - k) / (1 - k) || 0;
+      const y = (1 - b - k) / (1 - k) || 0;
+      return [c * 100, m * 100, y * 100, k * 100];
+    };
+    function comparativeDistance(x, y) {
+      return (x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2 + (x[2] - y[2]) ** 2;
+    }
+    convert.rgb.keyword = function(rgb) {
+      const reversed = reverseKeywords[rgb];
+      if (reversed) {
+        return reversed;
+      }
+      let currentClosestDistance = Infinity;
+      let currentClosestKeyword;
+      for (const keyword of Object.keys(cssKeywords)) {
+        const value = cssKeywords[keyword];
+        const distance = comparativeDistance(rgb, value);
+        if (distance < currentClosestDistance) {
+          currentClosestDistance = distance;
+          currentClosestKeyword = keyword;
+        }
+      }
+      return currentClosestKeyword;
+    };
+    convert.keyword.rgb = function(keyword) {
+      return cssKeywords[keyword];
+    };
+    convert.rgb.xyz = function(rgb) {
+      let r = rgb[0] / 255;
+      let g = rgb[1] / 255;
+      let b = rgb[2] / 255;
+      r = r > 0.04045 ? ((r + 0.055) / 1.055) ** 2.4 : r / 12.92;
+      g = g > 0.04045 ? ((g + 0.055) / 1.055) ** 2.4 : g / 12.92;
+      b = b > 0.04045 ? ((b + 0.055) / 1.055) ** 2.4 : b / 12.92;
+      const x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+      const y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+      const z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+      return [x * 100, y * 100, z * 100];
+    };
+    convert.rgb.lab = function(rgb) {
+      const xyz = convert.rgb.xyz(rgb);
+      let x = xyz[0];
+      let y = xyz[1];
+      let z = xyz[2];
+      x /= 95.047;
+      y /= 100;
+      z /= 108.883;
+      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
+      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
+      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
+      const l = 116 * y - 16;
+      const a = 500 * (x - y);
+      const b = 200 * (y - z);
+      return [l, a, b];
+    };
+    convert.hsl.rgb = function(hsl) {
+      const h = hsl[0] / 360;
+      const s = hsl[1] / 100;
+      const l = hsl[2] / 100;
+      let t2;
+      let t3;
+      let val;
+      if (s === 0) {
+        val = l * 255;
+        return [val, val, val];
+      }
+      if (l < 0.5) {
+        t2 = l * (1 + s);
+      } else {
+        t2 = l + s - l * s;
+      }
+      const t1 = 2 * l - t2;
+      const rgb = [0, 0, 0];
+      for (let i = 0; i < 3; i++) {
+        t3 = h + 1 / 3 * -(i - 1);
+        if (t3 < 0) {
+          t3++;
+        }
+        if (t3 > 1) {
+          t3--;
+        }
+        if (6 * t3 < 1) {
+          val = t1 + (t2 - t1) * 6 * t3;
+        } else if (2 * t3 < 1) {
+          val = t2;
+        } else if (3 * t3 < 2) {
+          val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
+        } else {
+          val = t1;
+        }
+        rgb[i] = val * 255;
+      }
+      return rgb;
+    };
+    convert.hsl.hsv = function(hsl) {
+      const h = hsl[0];
+      let s = hsl[1] / 100;
+      let l = hsl[2] / 100;
+      let smin = s;
+      const lmin = Math.max(l, 0.01);
+      l *= 2;
+      s *= l <= 1 ? l : 2 - l;
+      smin *= lmin <= 1 ? lmin : 2 - lmin;
+      const v = (l + s) / 2;
+      const sv = l === 0 ? 2 * smin / (lmin + smin) : 2 * s / (l + s);
+      return [h, sv * 100, v * 100];
+    };
+    convert.hsv.rgb = function(hsv) {
+      const h = hsv[0] / 60;
+      const s = hsv[1] / 100;
+      let v = hsv[2] / 100;
+      const hi = Math.floor(h) % 6;
+      const f = h - Math.floor(h);
+      const p = 255 * v * (1 - s);
+      const q = 255 * v * (1 - s * f);
+      const t = 255 * v * (1 - s * (1 - f));
+      v *= 255;
+      switch (hi) {
+        case 0:
+          return [v, t, p];
+        case 1:
+          return [q, v, p];
+        case 2:
+          return [p, v, t];
+        case 3:
+          return [p, q, v];
+        case 4:
+          return [t, p, v];
+        case 5:
+          return [v, p, q];
+      }
+    };
+    convert.hsv.hsl = function(hsv) {
+      const h = hsv[0];
+      const s = hsv[1] / 100;
+      const v = hsv[2] / 100;
+      const vmin = Math.max(v, 0.01);
+      let sl;
+      let l;
+      l = (2 - s) * v;
+      const lmin = (2 - s) * vmin;
+      sl = s * vmin;
+      sl /= lmin <= 1 ? lmin : 2 - lmin;
+      sl = sl || 0;
+      l /= 2;
+      return [h, sl * 100, l * 100];
+    };
+    convert.hwb.rgb = function(hwb) {
+      const h = hwb[0] / 360;
+      let wh = hwb[1] / 100;
+      let bl = hwb[2] / 100;
+      const ratio = wh + bl;
+      let f;
+      if (ratio > 1) {
+        wh /= ratio;
+        bl /= ratio;
+      }
+      const i = Math.floor(6 * h);
+      const v = 1 - bl;
+      f = 6 * h - i;
+      if ((i & 1) !== 0) {
+        f = 1 - f;
+      }
+      const n = wh + f * (v - wh);
+      let r;
+      let g;
+      let b;
+      switch (i) {
+        default:
+        case 6:
+        case 0:
+          r = v;
+          g = n;
+          b = wh;
+          break;
+        case 1:
+          r = n;
+          g = v;
+          b = wh;
+          break;
+        case 2:
+          r = wh;
+          g = v;
+          b = n;
+          break;
+        case 3:
+          r = wh;
+          g = n;
+          b = v;
+          break;
+        case 4:
+          r = n;
+          g = wh;
+          b = v;
+          break;
+        case 5:
+          r = v;
+          g = wh;
+          b = n;
+          break;
+      }
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.cmyk.rgb = function(cmyk) {
+      const c = cmyk[0] / 100;
+      const m = cmyk[1] / 100;
+      const y = cmyk[2] / 100;
+      const k = cmyk[3] / 100;
+      const r = 1 - Math.min(1, c * (1 - k) + k);
+      const g = 1 - Math.min(1, m * (1 - k) + k);
+      const b = 1 - Math.min(1, y * (1 - k) + k);
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.xyz.rgb = function(xyz) {
+      const x = xyz[0] / 100;
+      const y = xyz[1] / 100;
+      const z = xyz[2] / 100;
+      let r;
+      let g;
+      let b;
+      r = x * 3.2406 + y * -1.5372 + z * -0.4986;
+      g = x * -0.9689 + y * 1.8758 + z * 0.0415;
+      b = x * 0.0557 + y * -0.204 + z * 1.057;
+      r = r > 31308e-7 ? 1.055 * r ** (1 / 2.4) - 0.055 : r * 12.92;
+      g = g > 31308e-7 ? 1.055 * g ** (1 / 2.4) - 0.055 : g * 12.92;
+      b = b > 31308e-7 ? 1.055 * b ** (1 / 2.4) - 0.055 : b * 12.92;
+      r = Math.min(Math.max(0, r), 1);
+      g = Math.min(Math.max(0, g), 1);
+      b = Math.min(Math.max(0, b), 1);
+      return [r * 255, g * 255, b * 255];
+    };
+    convert.xyz.lab = function(xyz) {
+      let x = xyz[0];
+      let y = xyz[1];
+      let z = xyz[2];
+      x /= 95.047;
+      y /= 100;
+      z /= 108.883;
+      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
+      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
+      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
+      const l = 116 * y - 16;
+      const a = 500 * (x - y);
+      const b = 200 * (y - z);
+      return [l, a, b];
+    };
+    convert.lab.xyz = function(lab) {
+      const l = lab[0];
+      const a = lab[1];
+      const b = lab[2];
+      let x;
+      let y;
+      let z;
+      y = (l + 16) / 116;
+      x = a / 500 + y;
+      z = y - b / 200;
+      const y2 = y ** 3;
+      const x2 = x ** 3;
+      const z2 = z ** 3;
+      y = y2 > 8856e-6 ? y2 : (y - 16 / 116) / 7.787;
+      x = x2 > 8856e-6 ? x2 : (x - 16 / 116) / 7.787;
+      z = z2 > 8856e-6 ? z2 : (z - 16 / 116) / 7.787;
+      x *= 95.047;
+      y *= 100;
+      z *= 108.883;
+      return [x, y, z];
+    };
+    convert.lab.lch = function(lab) {
+      const l = lab[0];
+      const a = lab[1];
+      const b = lab[2];
+      let h;
+      const hr = Math.atan2(b, a);
+      h = hr * 360 / 2 / Math.PI;
+      if (h < 0) {
+        h += 360;
+      }
+      const c = Math.sqrt(a * a + b * b);
+      return [l, c, h];
+    };
+    convert.lch.lab = function(lch) {
+      const l = lch[0];
+      const c = lch[1];
+      const h = lch[2];
+      const hr = h / 360 * 2 * Math.PI;
+      const a = c * Math.cos(hr);
+      const b = c * Math.sin(hr);
+      return [l, a, b];
+    };
+    convert.rgb.ansi16 = function(args, saturation = null) {
+      const [r, g, b] = args;
+      let value = saturation === null ? convert.rgb.hsv(args)[2] : saturation;
+      value = Math.round(value / 50);
+      if (value === 0) {
+        return 30;
+      }
+      let ansi = 30 + (Math.round(b / 255) << 2 | Math.round(g / 255) << 1 | Math.round(r / 255));
+      if (value === 2) {
+        ansi += 60;
+      }
+      return ansi;
+    };
+    convert.hsv.ansi16 = function(args) {
+      return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
+    };
+    convert.rgb.ansi256 = function(args) {
+      const r = args[0];
+      const g = args[1];
+      const b = args[2];
+      if (r === g && g === b) {
+        if (r < 8) {
+          return 16;
+        }
+        if (r > 248) {
+          return 231;
+        }
+        return Math.round((r - 8) / 247 * 24) + 232;
+      }
+      const ansi = 16 + 36 * Math.round(r / 255 * 5) + 6 * Math.round(g / 255 * 5) + Math.round(b / 255 * 5);
+      return ansi;
+    };
+    convert.ansi16.rgb = function(args) {
+      let color = args % 10;
+      if (color === 0 || color === 7) {
+        if (args > 50) {
+          color += 3.5;
+        }
+        color = color / 10.5 * 255;
+        return [color, color, color];
+      }
+      const mult = (~~(args > 50) + 1) * 0.5;
+      const r = (color & 1) * mult * 255;
+      const g = (color >> 1 & 1) * mult * 255;
+      const b = (color >> 2 & 1) * mult * 255;
+      return [r, g, b];
+    };
+    convert.ansi256.rgb = function(args) {
+      if (args >= 232) {
+        const c = (args - 232) * 10 + 8;
+        return [c, c, c];
+      }
+      args -= 16;
+      let rem;
+      const r = Math.floor(args / 36) / 5 * 255;
+      const g = Math.floor((rem = args % 36) / 6) / 5 * 255;
+      const b = rem % 6 / 5 * 255;
+      return [r, g, b];
+    };
+    convert.rgb.hex = function(args) {
+      const integer = ((Math.round(args[0]) & 255) << 16) + ((Math.round(args[1]) & 255) << 8) + (Math.round(args[2]) & 255);
+      const string = integer.toString(16).toUpperCase();
+      return "000000".substring(string.length) + string;
+    };
+    convert.hex.rgb = function(args) {
+      const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!match) {
+        return [0, 0, 0];
+      }
+      let colorString = match[0];
+      if (match[0].length === 3) {
+        colorString = colorString.split("").map((char) => {
+          return char + char;
+        }).join("");
+      }
+      const integer = parseInt(colorString, 16);
+      const r = integer >> 16 & 255;
+      const g = integer >> 8 & 255;
+      const b = integer & 255;
+      return [r, g, b];
+    };
+    convert.rgb.hcg = function(rgb) {
+      const r = rgb[0] / 255;
+      const g = rgb[1] / 255;
+      const b = rgb[2] / 255;
+      const max = Math.max(Math.max(r, g), b);
+      const min = Math.min(Math.min(r, g), b);
+      const chroma = max - min;
+      let grayscale;
+      let hue;
+      if (chroma < 1) {
+        grayscale = min / (1 - chroma);
+      } else {
+        grayscale = 0;
+      }
+      if (chroma <= 0) {
+        hue = 0;
+      } else if (max === r) {
+        hue = (g - b) / chroma % 6;
+      } else if (max === g) {
+        hue = 2 + (b - r) / chroma;
+      } else {
+        hue = 4 + (r - g) / chroma;
+      }
+      hue /= 6;
+      hue %= 1;
+      return [hue * 360, chroma * 100, grayscale * 100];
+    };
+    convert.hsl.hcg = function(hsl) {
+      const s = hsl[1] / 100;
+      const l = hsl[2] / 100;
+      const c = l < 0.5 ? 2 * s * l : 2 * s * (1 - l);
+      let f = 0;
+      if (c < 1) {
+        f = (l - 0.5 * c) / (1 - c);
+      }
+      return [hsl[0], c * 100, f * 100];
+    };
+    convert.hsv.hcg = function(hsv) {
+      const s = hsv[1] / 100;
+      const v = hsv[2] / 100;
+      const c = s * v;
+      let f = 0;
+      if (c < 1) {
+        f = (v - c) / (1 - c);
+      }
+      return [hsv[0], c * 100, f * 100];
+    };
+    convert.hcg.rgb = function(hcg) {
+      const h = hcg[0] / 360;
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      if (c === 0) {
+        return [g * 255, g * 255, g * 255];
+      }
+      const pure = [0, 0, 0];
+      const hi = h % 1 * 6;
+      const v = hi % 1;
+      const w = 1 - v;
+      let mg = 0;
+      switch (Math.floor(hi)) {
+        case 0:
+          pure[0] = 1;
+          pure[1] = v;
+          pure[2] = 0;
+          break;
+        case 1:
+          pure[0] = w;
+          pure[1] = 1;
+          pure[2] = 0;
+          break;
+        case 2:
+          pure[0] = 0;
+          pure[1] = 1;
+          pure[2] = v;
+          break;
+        case 3:
+          pure[0] = 0;
+          pure[1] = w;
+          pure[2] = 1;
+          break;
+        case 4:
+          pure[0] = v;
+          pure[1] = 0;
+          pure[2] = 1;
+          break;
+        default:
+          pure[0] = 1;
+          pure[1] = 0;
+          pure[2] = w;
+      }
+      mg = (1 - c) * g;
+      return [
+        (c * pure[0] + mg) * 255,
+        (c * pure[1] + mg) * 255,
+        (c * pure[2] + mg) * 255
+      ];
+    };
+    convert.hcg.hsv = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const v = c + g * (1 - c);
+      let f = 0;
+      if (v > 0) {
+        f = c / v;
+      }
+      return [hcg[0], f * 100, v * 100];
+    };
+    convert.hcg.hsl = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const l = g * (1 - c) + 0.5 * c;
+      let s = 0;
+      if (l > 0 && l < 0.5) {
+        s = c / (2 * l);
+      } else if (l >= 0.5 && l < 1) {
+        s = c / (2 * (1 - l));
+      }
+      return [hcg[0], s * 100, l * 100];
+    };
+    convert.hcg.hwb = function(hcg) {
+      const c = hcg[1] / 100;
+      const g = hcg[2] / 100;
+      const v = c + g * (1 - c);
+      return [hcg[0], (v - c) * 100, (1 - v) * 100];
+    };
+    convert.hwb.hcg = function(hwb) {
+      const w = hwb[1] / 100;
+      const b = hwb[2] / 100;
+      const v = 1 - b;
+      const c = v - w;
+      let g = 0;
+      if (c < 1) {
+        g = (v - c) / (1 - c);
+      }
+      return [hwb[0], c * 100, g * 100];
+    };
+    convert.apple.rgb = function(apple) {
+      return [apple[0] / 65535 * 255, apple[1] / 65535 * 255, apple[2] / 65535 * 255];
+    };
+    convert.rgb.apple = function(rgb) {
+      return [rgb[0] / 255 * 65535, rgb[1] / 255 * 65535, rgb[2] / 255 * 65535];
+    };
+    convert.gray.rgb = function(args) {
+      return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
+    };
+    convert.gray.hsl = function(args) {
+      return [0, 0, args[0]];
+    };
+    convert.gray.hsv = convert.gray.hsl;
+    convert.gray.hwb = function(gray) {
+      return [0, 100, gray[0]];
+    };
+    convert.gray.cmyk = function(gray) {
+      return [0, 0, 0, gray[0]];
+    };
+    convert.gray.lab = function(gray) {
+      return [gray[0], 0, 0];
+    };
+    convert.gray.hex = function(gray) {
+      const val = Math.round(gray[0] / 100 * 255) & 255;
+      const integer = (val << 16) + (val << 8) + val;
+      const string = integer.toString(16).toUpperCase();
+      return "000000".substring(string.length) + string;
+    };
+    convert.rgb.gray = function(rgb) {
+      const val = (rgb[0] + rgb[1] + rgb[2]) / 3;
+      return [val / 255 * 100];
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/color-convert/route.js
+var require_route2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/color-convert/route.js"(exports, module2) {
+    var conversions = require_conversions2();
+    function buildGraph() {
+      const graph = {};
+      const models = Object.keys(conversions);
+      for (let len = models.length, i = 0; i < len; i++) {
+        graph[models[i]] = {
+          distance: -1,
+          parent: null
+        };
+      }
+      return graph;
+    }
+    function deriveBFS(fromModel) {
+      const graph = buildGraph();
+      const queue = [fromModel];
+      graph[fromModel].distance = 0;
+      while (queue.length) {
+        const current = queue.pop();
+        const adjacents = Object.keys(conversions[current]);
+        for (let len = adjacents.length, i = 0; i < len; i++) {
+          const adjacent = adjacents[i];
+          const node = graph[adjacent];
+          if (node.distance === -1) {
+            node.distance = graph[current].distance + 1;
+            node.parent = current;
+            queue.unshift(adjacent);
+          }
+        }
+      }
+      return graph;
+    }
+    function link(from3, to) {
+      return function(args) {
+        return to(from3(args));
+      };
+    }
+    function wrapConversion(toModel, graph) {
+      const path3 = [graph[toModel].parent, toModel];
+      let fn = conversions[graph[toModel].parent][toModel];
+      let cur = graph[toModel].parent;
+      while (graph[cur].parent) {
+        path3.unshift(graph[cur].parent);
+        fn = link(conversions[graph[cur].parent][cur], fn);
+        cur = graph[cur].parent;
+      }
+      fn.conversion = path3;
+      return fn;
+    }
+    module2.exports = function(fromModel) {
+      const graph = deriveBFS(fromModel);
+      const conversion = {};
+      const models = Object.keys(graph);
+      for (let len = models.length, i = 0; i < len; i++) {
+        const toModel = models[i];
+        const node = graph[toModel];
+        if (node.parent === null) {
+          continue;
+        }
+        conversion[toModel] = wrapConversion(toModel, graph);
+      }
+      return conversion;
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/color-convert/index.js
+var require_color_convert2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/color-convert/index.js"(exports, module2) {
+    var conversions = require_conversions2();
+    var route = require_route2();
+    var convert = {};
+    var models = Object.keys(conversions);
+    function wrapRaw(fn) {
+      const wrappedFn = function(...args) {
+        const arg0 = args[0];
+        if (arg0 === void 0 || arg0 === null) {
+          return arg0;
+        }
+        if (arg0.length > 1) {
+          args = arg0;
+        }
+        return fn(args);
+      };
+      if ("conversion" in fn) {
+        wrappedFn.conversion = fn.conversion;
+      }
+      return wrappedFn;
+    }
+    function wrapRounded(fn) {
+      const wrappedFn = function(...args) {
+        const arg0 = args[0];
+        if (arg0 === void 0 || arg0 === null) {
+          return arg0;
+        }
+        if (arg0.length > 1) {
+          args = arg0;
+        }
+        const result = fn(args);
+        if (typeof result === "object") {
+          for (let len = result.length, i = 0; i < len; i++) {
+            result[i] = Math.round(result[i]);
+          }
+        }
+        return result;
+      };
+      if ("conversion" in fn) {
+        wrappedFn.conversion = fn.conversion;
+      }
+      return wrappedFn;
+    }
+    models.forEach((fromModel) => {
+      convert[fromModel] = {};
+      Object.defineProperty(convert[fromModel], "channels", { value: conversions[fromModel].channels });
+      Object.defineProperty(convert[fromModel], "labels", { value: conversions[fromModel].labels });
+      const routes = route(fromModel);
+      const routeModels = Object.keys(routes);
+      routeModels.forEach((toModel) => {
+        const fn = routes[toModel];
+        convert[fromModel][toModel] = wrapRounded(fn);
+        convert[fromModel][toModel].raw = wrapRaw(fn);
+      });
+    });
+    module2.exports = convert;
+  }
+});
+
+// node_modules/chalk-animation/node_modules/ansi-styles/index.js
+var require_ansi_styles2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/ansi-styles/index.js"(exports, module2) {
+    "use strict";
+    var wrapAnsi163 = (fn, offset) => (...args) => {
+      const code = fn(...args);
+      return `\x1B[${code + offset}m`;
+    };
+    var wrapAnsi2563 = (fn, offset) => (...args) => {
+      const code = fn(...args);
+      return `\x1B[${38 + offset};5;${code}m`;
+    };
+    var wrapAnsi16m3 = (fn, offset) => (...args) => {
+      const rgb = fn(...args);
+      return `\x1B[${38 + offset};2;${rgb[0]};${rgb[1]};${rgb[2]}m`;
+    };
+    var ansi2ansi = (n) => n;
+    var rgb2rgb = (r, g, b) => [r, g, b];
+    var setLazyProperty = (object, property, get2) => {
+      Object.defineProperty(object, property, {
+        get: () => {
+          const value = get2();
+          Object.defineProperty(object, property, {
+            value,
+            enumerable: true,
+            configurable: true
+          });
+          return value;
+        },
+        enumerable: true,
+        configurable: true
+      });
+    };
+    var colorConvert;
+    var makeDynamicStyles = (wrap, targetSpace, identity, isBackground) => {
+      if (colorConvert === void 0) {
+        colorConvert = require_color_convert2();
+      }
+      const offset = isBackground ? 10 : 0;
+      const styles4 = {};
+      for (const [sourceSpace, suite] of Object.entries(colorConvert)) {
+        const name = sourceSpace === "ansi16" ? "ansi" : sourceSpace;
+        if (sourceSpace === targetSpace) {
+          styles4[name] = wrap(identity, offset);
+        } else if (typeof suite === "object") {
+          styles4[name] = wrap(suite[targetSpace], offset);
+        }
+      }
+      return styles4;
+    };
+    function assembleStyles3() {
+      const codes = /* @__PURE__ */ new Map();
+      const styles4 = {
+        modifier: {
+          reset: [0, 0],
+          bold: [1, 22],
+          dim: [2, 22],
+          italic: [3, 23],
+          underline: [4, 24],
+          inverse: [7, 27],
+          hidden: [8, 28],
+          strikethrough: [9, 29]
+        },
+        color: {
+          black: [30, 39],
+          red: [31, 39],
+          green: [32, 39],
+          yellow: [33, 39],
+          blue: [34, 39],
+          magenta: [35, 39],
+          cyan: [36, 39],
+          white: [37, 39],
+          blackBright: [90, 39],
+          redBright: [91, 39],
+          greenBright: [92, 39],
+          yellowBright: [93, 39],
+          blueBright: [94, 39],
+          magentaBright: [95, 39],
+          cyanBright: [96, 39],
+          whiteBright: [97, 39]
+        },
+        bgColor: {
+          bgBlack: [40, 49],
+          bgRed: [41, 49],
+          bgGreen: [42, 49],
+          bgYellow: [43, 49],
+          bgBlue: [44, 49],
+          bgMagenta: [45, 49],
+          bgCyan: [46, 49],
+          bgWhite: [47, 49],
+          bgBlackBright: [100, 49],
+          bgRedBright: [101, 49],
+          bgGreenBright: [102, 49],
+          bgYellowBright: [103, 49],
+          bgBlueBright: [104, 49],
+          bgMagentaBright: [105, 49],
+          bgCyanBright: [106, 49],
+          bgWhiteBright: [107, 49]
+        }
+      };
+      styles4.color.gray = styles4.color.blackBright;
+      styles4.bgColor.bgGray = styles4.bgColor.bgBlackBright;
+      styles4.color.grey = styles4.color.blackBright;
+      styles4.bgColor.bgGrey = styles4.bgColor.bgBlackBright;
+      for (const [groupName, group] of Object.entries(styles4)) {
+        for (const [styleName, style] of Object.entries(group)) {
+          styles4[styleName] = {
+            open: `\x1B[${style[0]}m`,
+            close: `\x1B[${style[1]}m`
+          };
+          group[styleName] = styles4[styleName];
+          codes.set(style[0], style[1]);
+        }
+        Object.defineProperty(styles4, groupName, {
+          value: group,
+          enumerable: false
+        });
+      }
+      Object.defineProperty(styles4, "codes", {
+        value: codes,
+        enumerable: false
+      });
+      styles4.color.close = "\x1B[39m";
+      styles4.bgColor.close = "\x1B[49m";
+      setLazyProperty(styles4.color, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, false));
+      setLazyProperty(styles4.color, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, false));
+      setLazyProperty(styles4.color, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, false));
+      setLazyProperty(styles4.bgColor, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, true));
+      setLazyProperty(styles4.bgColor, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, true));
+      setLazyProperty(styles4.bgColor, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, true));
+      return styles4;
+    }
+    Object.defineProperty(module2, "exports", {
+      enumerable: true,
+      get: assembleStyles3
+    });
+  }
+});
+
+// node_modules/chalk-animation/node_modules/has-flag/index.js
+var require_has_flag2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/has-flag/index.js"(exports, module2) {
+    "use strict";
+    module2.exports = (flag, argv = process.argv) => {
+      const prefix = flag.startsWith("-") ? "" : flag.length === 1 ? "-" : "--";
+      const position = argv.indexOf(prefix + flag);
+      const terminatorPosition = argv.indexOf("--");
+      return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/supports-color/index.js
+var require_supports_color2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/supports-color/index.js"(exports, module2) {
+    "use strict";
+    var os3 = require("os");
+    var tty2 = require("tty");
+    var hasFlag2 = require_has_flag2();
+    var { env: env2 } = process;
+    var forceColor;
+    if (hasFlag2("no-color") || hasFlag2("no-colors") || hasFlag2("color=false") || hasFlag2("color=never")) {
+      forceColor = 0;
+    } else if (hasFlag2("color") || hasFlag2("colors") || hasFlag2("color=true") || hasFlag2("color=always")) {
+      forceColor = 1;
+    }
+    if ("FORCE_COLOR" in env2) {
+      if (env2.FORCE_COLOR === "true") {
+        forceColor = 1;
+      } else if (env2.FORCE_COLOR === "false") {
+        forceColor = 0;
+      } else {
+        forceColor = env2.FORCE_COLOR.length === 0 ? 1 : Math.min(parseInt(env2.FORCE_COLOR, 10), 3);
+      }
+    }
+    function translateLevel2(level) {
+      if (level === 0) {
+        return false;
+      }
+      return {
+        level,
+        hasBasic: true,
+        has256: level >= 2,
+        has16m: level >= 3
+      };
+    }
+    function supportsColor2(haveStream, streamIsTTY) {
+      if (forceColor === 0) {
+        return 0;
+      }
+      if (hasFlag2("color=16m") || hasFlag2("color=full") || hasFlag2("color=truecolor")) {
+        return 3;
+      }
+      if (hasFlag2("color=256")) {
+        return 2;
+      }
+      if (haveStream && !streamIsTTY && forceColor === void 0) {
+        return 0;
+      }
+      const min = forceColor || 0;
+      if (env2.TERM === "dumb") {
+        return min;
+      }
+      if (process.platform === "win32") {
+        const osRelease = os3.release().split(".");
+        if (Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) {
+          return Number(osRelease[2]) >= 14931 ? 3 : 2;
+        }
+        return 1;
+      }
+      if ("CI" in env2) {
+        if (["TRAVIS", "CIRCLECI", "APPVEYOR", "GITLAB_CI", "GITHUB_ACTIONS", "BUILDKITE"].some((sign) => sign in env2) || env2.CI_NAME === "codeship") {
+          return 1;
+        }
+        return min;
+      }
+      if ("TEAMCITY_VERSION" in env2) {
+        return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env2.TEAMCITY_VERSION) ? 1 : 0;
+      }
+      if (env2.COLORTERM === "truecolor") {
+        return 3;
+      }
+      if ("TERM_PROGRAM" in env2) {
+        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        switch (env2.TERM_PROGRAM) {
+          case "iTerm.app":
+            return version >= 3 ? 3 : 2;
+          case "Apple_Terminal":
+            return 2;
+        }
+      }
+      if (/-256(color)?$/i.test(env2.TERM)) {
+        return 2;
+      }
+      if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env2.TERM)) {
+        return 1;
+      }
+      if ("COLORTERM" in env2) {
+        return 1;
+      }
+      return min;
+    }
+    function getSupportLevel(stream) {
+      const level = supportsColor2(stream, stream && stream.isTTY);
+      return translateLevel2(level);
+    }
+    module2.exports = {
+      supportsColor: getSupportLevel,
+      stdout: translateLevel2(supportsColor2(true, tty2.isatty(1))),
+      stderr: translateLevel2(supportsColor2(true, tty2.isatty(2)))
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/chalk/source/util.js
+var require_util2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/chalk/source/util.js"(exports, module2) {
+    "use strict";
+    var stringReplaceAll2 = (string, substring, replacer) => {
+      let index = string.indexOf(substring);
+      if (index === -1) {
+        return string;
+      }
+      const substringLength = substring.length;
+      let endIndex = 0;
+      let returnValue = "";
+      do {
+        returnValue += string.substr(endIndex, index - endIndex) + substring + replacer;
+        endIndex = index + substringLength;
+        index = string.indexOf(substring, endIndex);
+      } while (index !== -1);
+      returnValue += string.substr(endIndex);
+      return returnValue;
+    };
+    var stringEncaseCRLFWithFirstIndex2 = (string, prefix, postfix, index) => {
+      let endIndex = 0;
+      let returnValue = "";
+      do {
+        const gotCR = string[index - 1] === "\r";
+        returnValue += string.substr(endIndex, (gotCR ? index - 1 : index) - endIndex) + prefix + (gotCR ? "\r\n" : "\n") + postfix;
+        endIndex = index + 1;
+        index = string.indexOf("\n", endIndex);
+      } while (index !== -1);
+      returnValue += string.substr(endIndex);
+      return returnValue;
+    };
+    module2.exports = {
+      stringReplaceAll: stringReplaceAll2,
+      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/chalk/source/templates.js
+var require_templates2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/chalk/source/templates.js"(exports, module2) {
+    "use strict";
+    var TEMPLATE_REGEX = /(?:\\(u(?:[a-f\d]{4}|\{[a-f\d]{1,6}\})|x[a-f\d]{2}|.))|(?:\{(~)?(\w+(?:\([^)]*\))?(?:\.\w+(?:\([^)]*\))?)*)(?:[ \t]|(?=\r?\n)))|(\})|((?:.|[\r\n\f])+?)/gi;
+    var STYLE_REGEX = /(?:^|\.)(\w+)(?:\(([^)]*)\))?/g;
+    var STRING_REGEX = /^(['"])((?:\\.|(?!\1)[^\\])*)\1$/;
+    var ESCAPE_REGEX = /\\(u(?:[a-f\d]{4}|{[a-f\d]{1,6}})|x[a-f\d]{2}|.)|([^\\])/gi;
+    var ESCAPES2 = /* @__PURE__ */ new Map([
+      ["n", "\n"],
+      ["r", "\r"],
+      ["t", "	"],
+      ["b", "\b"],
+      ["f", "\f"],
+      ["v", "\v"],
+      ["0", "\0"],
+      ["\\", "\\"],
+      ["e", "\x1B"],
+      ["a", "\x07"]
+    ]);
+    function unescape(c) {
+      const u = c[0] === "u";
+      const bracket = c[1] === "{";
+      if (u && !bracket && c.length === 5 || c[0] === "x" && c.length === 3) {
+        return String.fromCharCode(parseInt(c.slice(1), 16));
+      }
+      if (u && bracket) {
+        return String.fromCodePoint(parseInt(c.slice(2, -1), 16));
+      }
+      return ESCAPES2.get(c) || c;
+    }
+    function parseArguments(name, arguments_) {
+      const results = [];
+      const chunks = arguments_.trim().split(/\s*,\s*/g);
+      let matches;
+      for (const chunk of chunks) {
+        const number = Number(chunk);
+        if (!Number.isNaN(number)) {
+          results.push(number);
+        } else if (matches = chunk.match(STRING_REGEX)) {
+          results.push(matches[2].replace(ESCAPE_REGEX, (m, escape, character) => escape ? unescape(escape) : character));
+        } else {
+          throw new Error(`Invalid Chalk template style argument: ${chunk} (in style '${name}')`);
+        }
+      }
+      return results;
+    }
+    function parseStyle(style) {
+      STYLE_REGEX.lastIndex = 0;
+      const results = [];
+      let matches;
+      while ((matches = STYLE_REGEX.exec(style)) !== null) {
+        const name = matches[1];
+        if (matches[2]) {
+          const args = parseArguments(name, matches[2]);
+          results.push([name].concat(args));
+        } else {
+          results.push([name]);
+        }
+      }
+      return results;
+    }
+    function buildStyle(chalk3, styles4) {
+      const enabled = {};
+      for (const layer of styles4) {
+        for (const style of layer.styles) {
+          enabled[style[0]] = layer.inverse ? null : style.slice(1);
+        }
+      }
+      let current = chalk3;
+      for (const [styleName, styles5] of Object.entries(enabled)) {
+        if (!Array.isArray(styles5)) {
+          continue;
+        }
+        if (!(styleName in current)) {
+          throw new Error(`Unknown Chalk style: ${styleName}`);
+        }
+        current = styles5.length > 0 ? current[styleName](...styles5) : current[styleName];
+      }
+      return current;
+    }
+    module2.exports = (chalk3, temporary) => {
+      const styles4 = [];
+      const chunks = [];
+      let chunk = [];
+      temporary.replace(TEMPLATE_REGEX, (m, escapeCharacter, inverse, style, close, character) => {
+        if (escapeCharacter) {
+          chunk.push(unescape(escapeCharacter));
+        } else if (style) {
+          const string = chunk.join("");
+          chunk = [];
+          chunks.push(styles4.length === 0 ? string : buildStyle(chalk3, styles4)(string));
+          styles4.push({ inverse, styles: parseStyle(style) });
+        } else if (close) {
+          if (styles4.length === 0) {
+            throw new Error("Found extraneous } in Chalk template literal");
+          }
+          chunks.push(buildStyle(chalk3, styles4)(chunk.join("")));
+          chunk = [];
+          styles4.pop();
+        } else {
+          chunk.push(character);
+        }
+      });
+      chunks.push(chunk.join(""));
+      if (styles4.length > 0) {
+        const errMessage = `Chalk template literal is missing ${styles4.length} closing bracket${styles4.length === 1 ? "" : "s"} (\`}\`)`;
+        throw new Error(errMessage);
+      }
+      return chunks.join("");
+    };
+  }
+});
+
+// node_modules/chalk-animation/node_modules/chalk/source/index.js
+var require_source2 = __commonJS({
+  "node_modules/chalk-animation/node_modules/chalk/source/index.js"(exports, module2) {
+    "use strict";
+    var ansiStyles3 = require_ansi_styles2();
+    var { stdout: stdoutColor2, stderr: stderrColor2 } = require_supports_color2();
+    var {
+      stringReplaceAll: stringReplaceAll2,
+      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
+    } = require_util2();
+    var { isArray } = Array;
+    var levelMapping2 = [
+      "ansi",
+      "ansi",
+      "ansi256",
+      "ansi16m"
+    ];
+    var styles4 = /* @__PURE__ */ Object.create(null);
+    var applyOptions2 = (object, options = {}) => {
+      if (options.level && !(Number.isInteger(options.level) && options.level >= 0 && options.level <= 3)) {
+        throw new Error("The `level` option should be an integer from 0 to 3");
+      }
+      const colorLevel = stdoutColor2 ? stdoutColor2.level : 0;
+      object.level = options.level === void 0 ? colorLevel : options.level;
+    };
+    var ChalkClass = class {
+      constructor(options) {
+        return chalkFactory2(options);
+      }
+    };
+    var chalkFactory2 = (options) => {
+      const chalk4 = {};
+      applyOptions2(chalk4, options);
+      chalk4.template = (...arguments_) => chalkTag(chalk4.template, ...arguments_);
+      Object.setPrototypeOf(chalk4, Chalk.prototype);
+      Object.setPrototypeOf(chalk4.template, chalk4);
+      chalk4.template.constructor = () => {
+        throw new Error("`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead.");
+      };
+      chalk4.template.Instance = ChalkClass;
+      return chalk4.template;
+    };
+    function Chalk(options) {
+      return chalkFactory2(options);
+    }
+    for (const [styleName, style] of Object.entries(ansiStyles3)) {
+      styles4[styleName] = {
+        get() {
+          const builder = createBuilder2(this, createStyler2(style.open, style.close, this._styler), this._isEmpty);
+          Object.defineProperty(this, styleName, { value: builder });
+          return builder;
+        }
+      };
+    }
+    styles4.visible = {
+      get() {
+        const builder = createBuilder2(this, this._styler, true);
+        Object.defineProperty(this, "visible", { value: builder });
+        return builder;
+      }
+    };
+    var usedModels2 = ["rgb", "hex", "keyword", "hsl", "hsv", "hwb", "ansi", "ansi256"];
+    for (const model of usedModels2) {
+      styles4[model] = {
+        get() {
+          const { level } = this;
+          return function(...arguments_) {
+            const styler = createStyler2(ansiStyles3.color[levelMapping2[level]][model](...arguments_), ansiStyles3.color.close, this._styler);
+            return createBuilder2(this, styler, this._isEmpty);
+          };
+        }
+      };
+    }
+    for (const model of usedModels2) {
+      const bgModel = "bg" + model[0].toUpperCase() + model.slice(1);
+      styles4[bgModel] = {
+        get() {
+          const { level } = this;
+          return function(...arguments_) {
+            const styler = createStyler2(ansiStyles3.bgColor[levelMapping2[level]][model](...arguments_), ansiStyles3.bgColor.close, this._styler);
+            return createBuilder2(this, styler, this._isEmpty);
+          };
+        }
+      };
+    }
+    var proto2 = Object.defineProperties(() => {
+    }, {
+      ...styles4,
+      level: {
+        enumerable: true,
+        get() {
+          return this._generator.level;
+        },
+        set(level) {
+          this._generator.level = level;
+        }
+      }
+    });
+    var createStyler2 = (open, close, parent) => {
+      let openAll;
+      let closeAll;
+      if (parent === void 0) {
+        openAll = open;
+        closeAll = close;
+      } else {
+        openAll = parent.openAll + open;
+        closeAll = close + parent.closeAll;
+      }
+      return {
+        open,
+        close,
+        openAll,
+        closeAll,
+        parent
+      };
+    };
+    var createBuilder2 = (self2, _styler, _isEmpty) => {
+      const builder = (...arguments_) => {
+        if (isArray(arguments_[0]) && isArray(arguments_[0].raw)) {
+          return applyStyle2(builder, chalkTag(builder, ...arguments_));
+        }
+        return applyStyle2(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
+      };
+      Object.setPrototypeOf(builder, proto2);
+      builder._generator = self2;
+      builder._styler = _styler;
+      builder._isEmpty = _isEmpty;
+      return builder;
+    };
+    var applyStyle2 = (self2, string) => {
+      if (self2.level <= 0 || !string) {
+        return self2._isEmpty ? "" : string;
+      }
+      let styler = self2._styler;
+      if (styler === void 0) {
+        return string;
+      }
+      const { openAll, closeAll } = styler;
+      if (string.indexOf("\x1B") !== -1) {
+        while (styler !== void 0) {
+          string = stringReplaceAll2(string, styler.close, styler.open);
+          styler = styler.parent;
+        }
+      }
+      const lfIndex = string.indexOf("\n");
+      if (lfIndex !== -1) {
+        string = stringEncaseCRLFWithFirstIndex2(string, closeAll, openAll, lfIndex);
+      }
+      return openAll + string + closeAll;
+    };
+    var template;
+    var chalkTag = (chalk4, ...strings) => {
+      const [firstString] = strings;
+      if (!isArray(firstString) || !isArray(firstString.raw)) {
+        return strings.join(" ");
+      }
+      const arguments_ = strings.slice(1);
+      const parts = [firstString.raw[0]];
+      for (let i = 1; i < firstString.length; i++) {
+        parts.push(String(arguments_[i - 1]).replace(/[{}\\]/g, "\\$&"), String(firstString.raw[i]));
+      }
+      if (template === void 0) {
+        template = require_templates2();
+      }
+      return template(chalk4, parts.join(""));
+    };
+    Object.defineProperties(Chalk.prototype, styles4);
+    var chalk3 = Chalk();
+    chalk3.supportsColor = stdoutColor2;
+    chalk3.stderr = Chalk({ level: stderrColor2 ? stderrColor2.level : 0 });
+    chalk3.stderr.supportsColor = stderrColor2;
+    module2.exports = chalk3;
+  }
+});
+
+// node_modules/figlet/lib/figlet.js
+var require_figlet = __commonJS({
+  "node_modules/figlet/lib/figlet.js"(exports, module2) {
+    "use strict";
+    var figlet2 = figlet2 || function() {
+      var FULL_WIDTH = 0, FITTING = 1, SMUSHING = 2, CONTROLLED_SMUSHING = 3;
+      var figFonts = {};
+      var figDefaults = {
+        font: "Standard",
+        fontPath: "./fonts"
+      };
+      function getSmushingRules(oldLayout, newLayout) {
+        var rules = {};
+        var val, index, len, code;
+        var codes = [
+          [16384, "vLayout", SMUSHING],
+          [8192, "vLayout", FITTING],
+          [4096, "vRule5", true],
+          [2048, "vRule4", true],
+          [1024, "vRule3", true],
+          [512, "vRule2", true],
+          [256, "vRule1", true],
+          [128, "hLayout", SMUSHING],
+          [64, "hLayout", FITTING],
+          [32, "hRule6", true],
+          [16, "hRule5", true],
+          [8, "hRule4", true],
+          [4, "hRule3", true],
+          [2, "hRule2", true],
+          [1, "hRule1", true]
+        ];
+        val = newLayout !== null ? newLayout : oldLayout;
+        index = 0;
+        len = codes.length;
+        while (index < len) {
+          code = codes[index];
+          if (val >= code[0]) {
+            val = val - code[0];
+            rules[code[1]] = typeof rules[code[1]] === "undefined" ? code[2] : rules[code[1]];
+          } else if (code[1] !== "vLayout" && code[1] !== "hLayout") {
+            rules[code[1]] = false;
+          }
+          index++;
+        }
+        if (typeof rules["hLayout"] === "undefined") {
+          if (oldLayout === 0) {
+            rules["hLayout"] = FITTING;
+          } else if (oldLayout === -1) {
+            rules["hLayout"] = FULL_WIDTH;
+          } else {
+            if (rules["hRule1"] || rules["hRule2"] || rules["hRule3"] || rules["hRule4"] || rules["hRule5"] || rules["hRule6"]) {
+              rules["hLayout"] = CONTROLLED_SMUSHING;
+            } else {
+              rules["hLayout"] = SMUSHING;
+            }
+          }
+        } else if (rules["hLayout"] === SMUSHING) {
+          if (rules["hRule1"] || rules["hRule2"] || rules["hRule3"] || rules["hRule4"] || rules["hRule5"] || rules["hRule6"]) {
+            rules["hLayout"] = CONTROLLED_SMUSHING;
+          }
+        }
+        if (typeof rules["vLayout"] === "undefined") {
+          if (rules["vRule1"] || rules["vRule2"] || rules["vRule3"] || rules["vRule4"] || rules["vRule5"]) {
+            rules["vLayout"] = CONTROLLED_SMUSHING;
+          } else {
+            rules["vLayout"] = FULL_WIDTH;
+          }
+        } else if (rules["vLayout"] === SMUSHING) {
+          if (rules["vRule1"] || rules["vRule2"] || rules["vRule3"] || rules["vRule4"] || rules["vRule5"]) {
+            rules["vLayout"] = CONTROLLED_SMUSHING;
+          }
+        }
+        return rules;
+      }
+      function hRule1_Smush(ch1, ch2, hardBlank) {
+        if (ch1 === ch2 && ch1 !== hardBlank) {
+          return ch1;
+        }
+        return false;
+      }
+      function hRule2_Smush(ch1, ch2) {
+        var rule2Str = "|/\\[]{}()<>";
+        if (ch1 === "_") {
+          if (rule2Str.indexOf(ch2) !== -1) {
+            return ch2;
+          }
+        } else if (ch2 === "_") {
+          if (rule2Str.indexOf(ch1) !== -1) {
+            return ch1;
+          }
+        }
+        return false;
+      }
+      function hRule3_Smush(ch1, ch2) {
+        var rule3Classes = "| /\\ [] {} () <>";
+        var r3_pos1 = rule3Classes.indexOf(ch1);
+        var r3_pos2 = rule3Classes.indexOf(ch2);
+        if (r3_pos1 !== -1 && r3_pos2 !== -1) {
+          if (r3_pos1 !== r3_pos2 && Math.abs(r3_pos1 - r3_pos2) !== 1) {
+            return rule3Classes.substr(Math.max(r3_pos1, r3_pos2), 1);
+          }
+        }
+        return false;
+      }
+      function hRule4_Smush(ch1, ch2) {
+        var rule4Str = "[] {} ()";
+        var r4_pos1 = rule4Str.indexOf(ch1);
+        var r4_pos2 = rule4Str.indexOf(ch2);
+        if (r4_pos1 !== -1 && r4_pos2 !== -1) {
+          if (Math.abs(r4_pos1 - r4_pos2) <= 1) {
+            return "|";
+          }
+        }
+        return false;
+      }
+      function hRule5_Smush(ch1, ch2) {
+        var rule5Str = "/\\ \\/ ><";
+        var rule5Hash = { "0": "|", "3": "Y", "6": "X" };
+        var r5_pos1 = rule5Str.indexOf(ch1);
+        var r5_pos2 = rule5Str.indexOf(ch2);
+        if (r5_pos1 !== -1 && r5_pos2 !== -1) {
+          if (r5_pos2 - r5_pos1 === 1) {
+            return rule5Hash[r5_pos1];
+          }
+        }
+        return false;
+      }
+      function hRule6_Smush(ch1, ch2, hardBlank) {
+        if (ch1 === hardBlank && ch2 === hardBlank) {
+          return hardBlank;
+        }
+        return false;
+      }
+      function vRule1_Smush(ch1, ch2) {
+        if (ch1 === ch2) {
+          return ch1;
+        }
+        return false;
+      }
+      function vRule2_Smush(ch1, ch2) {
+        var rule2Str = "|/\\[]{}()<>";
+        if (ch1 === "_") {
+          if (rule2Str.indexOf(ch2) !== -1) {
+            return ch2;
+          }
+        } else if (ch2 === "_") {
+          if (rule2Str.indexOf(ch1) !== -1) {
+            return ch1;
+          }
+        }
+        return false;
+      }
+      function vRule3_Smush(ch1, ch2) {
+        var rule3Classes = "| /\\ [] {} () <>";
+        var r3_pos1 = rule3Classes.indexOf(ch1);
+        var r3_pos2 = rule3Classes.indexOf(ch2);
+        if (r3_pos1 !== -1 && r3_pos2 !== -1) {
+          if (r3_pos1 !== r3_pos2 && Math.abs(r3_pos1 - r3_pos2) !== 1) {
+            return rule3Classes.substr(Math.max(r3_pos1, r3_pos2), 1);
+          }
+        }
+        return false;
+      }
+      function vRule4_Smush(ch1, ch2) {
+        if (ch1 === "-" && ch2 === "_" || ch1 === "_" && ch2 === "-") {
+          return "=";
+        }
+        return false;
+      }
+      function vRule5_Smush(ch1, ch2) {
+        if (ch1 === "|" && ch2 === "|") {
+          return "|";
+        }
+        return false;
+      }
+      function uni_Smush(ch1, ch2, hardBlank) {
+        if (ch2 === " " || ch2 === "") {
+          return ch1;
+        } else if (ch2 === hardBlank && ch1 !== " ") {
+          return ch1;
+        } else {
+          return ch2;
+        }
+      }
+      function canVerticalSmush(txt1, txt2, opts) {
+        if (opts.fittingRules.vLayout === FULL_WIDTH) {
+          return "invalid";
+        }
+        var ii, len = Math.min(txt1.length, txt2.length);
+        var ch1, ch2, endSmush = false, validSmush;
+        if (len === 0) {
+          return "invalid";
+        }
+        for (ii = 0; ii < len; ii++) {
+          ch1 = txt1.substr(ii, 1);
+          ch2 = txt2.substr(ii, 1);
+          if (ch1 !== " " && ch2 !== " ") {
+            if (opts.fittingRules.vLayout === FITTING) {
+              return "invalid";
+            } else if (opts.fittingRules.vLayout === SMUSHING) {
+              return "end";
+            } else {
+              if (vRule5_Smush(ch1, ch2)) {
+                endSmush = endSmush || false;
+                continue;
+              }
+              validSmush = false;
+              validSmush = opts.fittingRules.vRule1 ? vRule1_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule2 ? vRule2_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule3 ? vRule3_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule4 ? vRule4_Smush(ch1, ch2) : validSmush;
+              endSmush = true;
+              if (!validSmush) {
+                return "invalid";
+              }
+            }
+          }
+        }
+        if (endSmush) {
+          return "end";
+        } else {
+          return "valid";
+        }
+      }
+      function getVerticalSmushDist(lines1, lines2, opts) {
+        var maxDist = lines1.length;
+        var len1 = lines1.length;
+        var len2 = lines2.length;
+        var subLines1, subLines2, slen;
+        var curDist = 1;
+        var ii, ret, result;
+        while (curDist <= maxDist) {
+          subLines1 = lines1.slice(Math.max(0, len1 - curDist), len1);
+          subLines2 = lines2.slice(0, Math.min(maxDist, curDist));
+          slen = subLines2.length;
+          result = "";
+          for (ii = 0; ii < slen; ii++) {
+            ret = canVerticalSmush(subLines1[ii], subLines2[ii], opts);
+            if (ret === "end") {
+              result = ret;
+            } else if (ret === "invalid") {
+              result = ret;
+              break;
+            } else {
+              if (result === "") {
+                result = "valid";
+              }
+            }
+          }
+          if (result === "invalid") {
+            curDist--;
+            break;
+          }
+          if (result === "end") {
+            break;
+          }
+          if (result === "valid") {
+            curDist++;
+          }
+        }
+        return Math.min(maxDist, curDist);
+      }
+      function verticallySmushLines(line1, line2, opts) {
+        var ii, len = Math.min(line1.length, line2.length);
+        var ch1, ch2, result = "", validSmush;
+        for (ii = 0; ii < len; ii++) {
+          ch1 = line1.substr(ii, 1);
+          ch2 = line2.substr(ii, 1);
+          if (ch1 !== " " && ch2 !== " ") {
+            if (opts.fittingRules.vLayout === FITTING) {
+              result += uni_Smush(ch1, ch2);
+            } else if (opts.fittingRules.vLayout === SMUSHING) {
+              result += uni_Smush(ch1, ch2);
+            } else {
+              validSmush = false;
+              validSmush = opts.fittingRules.vRule5 ? vRule5_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule1 ? vRule1_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule2 ? vRule2_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule3 ? vRule3_Smush(ch1, ch2) : validSmush;
+              validSmush = !validSmush && opts.fittingRules.vRule4 ? vRule4_Smush(ch1, ch2) : validSmush;
+              result += validSmush;
+            }
+          } else {
+            result += uni_Smush(ch1, ch2);
+          }
+        }
+        return result;
+      }
+      function verticalSmush(lines1, lines2, overlap, opts) {
+        var len1 = lines1.length;
+        var len2 = lines2.length;
+        var piece1 = lines1.slice(0, Math.max(0, len1 - overlap));
+        var piece2_1 = lines1.slice(Math.max(0, len1 - overlap), len1);
+        var piece2_2 = lines2.slice(0, Math.min(overlap, len2));
+        var ii, len, line, piece2 = [], piece3, result = [];
+        len = piece2_1.length;
+        for (ii = 0; ii < len; ii++) {
+          if (ii >= len2) {
+            line = piece2_1[ii];
+          } else {
+            line = verticallySmushLines(piece2_1[ii], piece2_2[ii], opts);
+          }
+          piece2.push(line);
+        }
+        piece3 = lines2.slice(Math.min(overlap, len2), len2);
+        return result.concat(piece1, piece2, piece3);
+      }
+      function padLines(lines, numSpaces) {
+        var ii, len = lines.length, padding = "";
+        for (ii = 0; ii < numSpaces; ii++) {
+          padding += " ";
+        }
+        for (ii = 0; ii < len; ii++) {
+          lines[ii] += padding;
+        }
+      }
+      function smushVerticalFigLines(output, lines, opts) {
+        var len1 = output[0].length;
+        var len2 = lines[0].length;
+        var overlap;
+        if (len1 > len2) {
+          padLines(lines, len1 - len2);
+        } else if (len2 > len1) {
+          padLines(output, len2 - len1);
+        }
+        overlap = getVerticalSmushDist(output, lines, opts);
+        return verticalSmush(output, lines, overlap, opts);
+      }
+      function getHorizontalSmushLength(txt1, txt2, opts) {
+        if (opts.fittingRules.hLayout === FULL_WIDTH) {
+          return 0;
+        }
+        var ii, len1 = txt1.length, len2 = txt2.length;
+        var maxDist = len1;
+        var curDist = 1;
+        var breakAfter = false;
+        var validSmush = false;
+        var seg1, seg2, ch1, ch2;
+        if (len1 === 0) {
+          return 0;
+        }
+        distCal:
+          while (curDist <= maxDist) {
+            seg1 = txt1.substr(len1 - curDist, curDist);
+            seg2 = txt2.substr(0, Math.min(curDist, len2));
+            for (ii = 0; ii < Math.min(curDist, len2); ii++) {
+              ch1 = seg1.substr(ii, 1);
+              ch2 = seg2.substr(ii, 1);
+              if (ch1 !== " " && ch2 !== " ") {
+                if (opts.fittingRules.hLayout === FITTING) {
+                  curDist = curDist - 1;
+                  break distCal;
+                } else if (opts.fittingRules.hLayout === SMUSHING) {
+                  if (ch1 === opts.hardBlank || ch2 === opts.hardBlank) {
+                    curDist = curDist - 1;
+                  }
+                  break distCal;
+                } else {
+                  breakAfter = true;
+                  validSmush = false;
+                  validSmush = opts.fittingRules.hRule1 ? hRule1_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  validSmush = !validSmush && opts.fittingRules.hRule2 ? hRule2_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  validSmush = !validSmush && opts.fittingRules.hRule3 ? hRule3_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  validSmush = !validSmush && opts.fittingRules.hRule4 ? hRule4_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  validSmush = !validSmush && opts.fittingRules.hRule5 ? hRule5_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  validSmush = !validSmush && opts.fittingRules.hRule6 ? hRule6_Smush(ch1, ch2, opts.hardBlank) : validSmush;
+                  if (!validSmush) {
+                    curDist = curDist - 1;
+                    break distCal;
+                  }
+                }
+              }
+            }
+            if (breakAfter) {
+              break;
+            }
+            curDist++;
+          }
+        return Math.min(maxDist, curDist);
+      }
+      function horizontalSmush(textBlock1, textBlock2, overlap, opts) {
+        var ii, jj, ch, outputFig = [], overlapStart, piece1, piece2, piece3, len1, len2, txt1, txt2;
+        for (ii = 0; ii < opts.height; ii++) {
+          txt1 = textBlock1[ii];
+          txt2 = textBlock2[ii];
+          len1 = txt1.length;
+          len2 = txt2.length;
+          overlapStart = len1 - overlap;
+          piece1 = txt1.substr(0, Math.max(0, overlapStart));
+          piece2 = "";
+          var seg1 = txt1.substr(Math.max(0, len1 - overlap), overlap);
+          var seg2 = txt2.substr(0, Math.min(overlap, len2));
+          for (jj = 0; jj < overlap; jj++) {
+            var ch1 = jj < len1 ? seg1.substr(jj, 1) : " ";
+            var ch2 = jj < len2 ? seg2.substr(jj, 1) : " ";
+            if (ch1 !== " " && ch2 !== " ") {
+              if (opts.fittingRules.hLayout === FITTING) {
+                piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
+              } else if (opts.fittingRules.hLayout === SMUSHING) {
+                piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
+              } else {
+                var nextCh = "";
+                nextCh = !nextCh && opts.fittingRules.hRule1 ? hRule1_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = !nextCh && opts.fittingRules.hRule2 ? hRule2_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = !nextCh && opts.fittingRules.hRule3 ? hRule3_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = !nextCh && opts.fittingRules.hRule4 ? hRule4_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = !nextCh && opts.fittingRules.hRule5 ? hRule5_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = !nextCh && opts.fittingRules.hRule6 ? hRule6_Smush(ch1, ch2, opts.hardBlank) : nextCh;
+                nextCh = nextCh || uni_Smush(ch1, ch2, opts.hardBlank);
+                piece2 += nextCh;
+              }
+            } else {
+              piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
+            }
+          }
+          if (overlap >= len2) {
+            piece3 = "";
+          } else {
+            piece3 = txt2.substr(overlap, Math.max(0, len2 - overlap));
+          }
+          outputFig[ii] = piece1 + piece2 + piece3;
+        }
+        return outputFig;
+      }
+      function newFigChar(len) {
+        var outputFigText = [], row;
+        for (row = 0; row < len; row++) {
+          outputFigText[row] = "";
+        }
+        return outputFigText;
+      }
+      function joinFigArray(array, len, opts) {
+        return array.reduce(function(acc, data) {
+          return horizontalSmush(acc, data.fig, data.overlap, opts);
+        }, newFigChar(len));
+      }
+      function breakWord(figChars, len, opts) {
+        var result = {};
+        for (var i = figChars.length; --i; ) {
+          var w = joinFigArray(figChars.slice(0, i), len, opts);
+          if (figLinesWidth(w) <= opts.width) {
+            result.outputFigText = w;
+            if (i < figChars.length) {
+              result.chars = figChars.slice(i);
+            } else {
+              result.chars = [];
+            }
+            break;
+          }
+        }
+        return result;
+      }
+      function generateFigTextLines(txt, figChars, opts) {
+        var charIndex, figChar, spaceIndex, overlap = 0, row, outputFigText, len, height2 = opts.height, outputFigLines = [], maxWidth, prevWidth, nextFigChars, figWords = [], char, isSpace, textFigWord, textFigLine, tmpBreak;
+        outputFigText = newFigChar(height2);
+        if (opts.width > 0 && opts.whitespaceBreak) {
+          nextFigChars = {
+            chars: [],
+            overlap
+          };
+        }
+        if (opts.printDirection === 1) {
+          txt = txt.split("").reverse().join("");
+        }
+        len = txt.length;
+        for (charIndex = 0; charIndex < len; charIndex++) {
+          char = txt.substr(charIndex, 1);
+          isSpace = char.match(/\s/);
+          figChar = figChars[char.charCodeAt(0)];
+          textFigLine = null;
+          if (figChar) {
+            if (opts.fittingRules.hLayout !== FULL_WIDTH) {
+              overlap = 1e4;
+              for (row = 0; row < opts.height; row++) {
+                overlap = Math.min(overlap, getHorizontalSmushLength(outputFigText[row], figChar[row], opts));
+              }
+              overlap = overlap === 1e4 ? 0 : overlap;
+            }
+            if (opts.width > 0) {
+              if (opts.whitespaceBreak) {
+                textFigWord = joinFigArray(nextFigChars.chars.concat([{
+                  fig: figChar,
+                  overlap
+                }]), height2, opts);
+                textFigLine = joinFigArray(figWords.concat([{
+                  fig: textFigWord,
+                  overlap: nextFigChars.overlap
+                }]), height2, opts);
+                maxWidth = figLinesWidth(textFigLine);
+              } else {
+                textFigLine = horizontalSmush(outputFigText, figChar, overlap, opts);
+                maxWidth = figLinesWidth(textFigLine);
+              }
+              if (maxWidth >= opts.width && charIndex > 0) {
+                if (opts.whitespaceBreak) {
+                  outputFigText = joinFigArray(figWords.slice(0, -1), height2, opts);
+                  if (figWords.length > 1) {
+                    outputFigLines.push(outputFigText);
+                    outputFigText = newFigChar(height2);
+                  }
+                  figWords = [];
+                } else {
+                  outputFigLines.push(outputFigText);
+                  outputFigText = newFigChar(height2);
+                }
+              }
+            }
+            if (opts.width > 0 && opts.whitespaceBreak) {
+              if (!isSpace || charIndex === len - 1) {
+                nextFigChars.chars.push({ fig: figChar, overlap });
+              }
+              if (isSpace || charIndex === len - 1) {
+                tmpBreak = null;
+                while (true) {
+                  textFigLine = joinFigArray(nextFigChars.chars, height2, opts);
+                  maxWidth = figLinesWidth(textFigLine);
+                  if (maxWidth >= opts.width) {
+                    tmpBreak = breakWord(nextFigChars.chars, height2, opts);
+                    nextFigChars = { chars: tmpBreak.chars };
+                    outputFigLines.push(tmpBreak.outputFigText);
+                  } else {
+                    break;
+                  }
+                }
+                if (maxWidth > 0) {
+                  if (tmpBreak) {
+                    figWords.push({ fig: textFigLine, overlap: 1 });
+                  } else {
+                    figWords.push({
+                      fig: textFigLine,
+                      overlap: nextFigChars.overlap
+                    });
+                  }
+                }
+                if (isSpace) {
+                  figWords.push({ fig: figChar, overlap });
+                  outputFigText = newFigChar(height2);
+                }
+                if (charIndex === len - 1) {
+                  outputFigText = joinFigArray(figWords, height2, opts);
+                }
+                nextFigChars = {
+                  chars: [],
+                  overlap
+                };
+                continue;
+              }
+            }
+            outputFigText = horizontalSmush(outputFigText, figChar, overlap, opts);
+          }
+        }
+        if (figLinesWidth(outputFigText) > 0) {
+          outputFigLines.push(outputFigText);
+        }
+        if (opts.showHardBlanks !== true) {
+          outputFigLines.forEach(function(outputFigText2) {
+            len = outputFigText2.length;
+            for (row = 0; row < len; row++) {
+              outputFigText2[row] = outputFigText2[row].replace(new RegExp("\\" + opts.hardBlank, "g"), " ");
+            }
+          });
+        }
+        return outputFigLines;
+      }
+      var getHorizontalFittingRules = function(layout, options) {
+        var props = ["hLayout", "hRule1", "hRule2", "hRule3", "hRule4", "hRule5", "hRule6"], params = {}, prop, ii;
+        if (layout === "default") {
+          for (ii = 0; ii < props.length; ii++) {
+            params[props[ii]] = options.fittingRules[props[ii]];
+          }
+        } else if (layout === "full") {
+          params = { "hLayout": FULL_WIDTH, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
+        } else if (layout === "fitted") {
+          params = { "hLayout": FITTING, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
+        } else if (layout === "controlled smushing") {
+          params = { "hLayout": CONTROLLED_SMUSHING, "hRule1": true, "hRule2": true, "hRule3": true, "hRule4": true, "hRule5": true, "hRule6": true };
+        } else if (layout === "universal smushing") {
+          params = { "hLayout": SMUSHING, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
+        } else {
+          return;
+        }
+        return params;
+      };
+      var getVerticalFittingRules = function(layout, options) {
+        var props = ["vLayout", "vRule1", "vRule2", "vRule3", "vRule4", "vRule5"], params = {}, prop, ii;
+        if (layout === "default") {
+          for (ii = 0; ii < props.length; ii++) {
+            params[props[ii]] = options.fittingRules[props[ii]];
+          }
+        } else if (layout === "full") {
+          params = { "vLayout": FULL_WIDTH, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
+        } else if (layout === "fitted") {
+          params = { "vLayout": FITTING, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
+        } else if (layout === "controlled smushing") {
+          params = { "vLayout": CONTROLLED_SMUSHING, "vRule1": true, "vRule2": true, "vRule3": true, "vRule4": true, "vRule5": true };
+        } else if (layout === "universal smushing") {
+          params = { "vLayout": SMUSHING, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
+        } else {
+          return;
+        }
+        return params;
+      };
+      var figLinesWidth = function(textLines) {
+        return Math.max.apply(Math, textLines.map(function(line, i) {
+          return line.length;
+        }));
+      };
+      var generateText = function(fontName, options, txt) {
+        txt = txt.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+        var lines = txt.split("\n");
+        var figLines = [];
+        var ii, len, output;
+        len = lines.length;
+        for (ii = 0; ii < len; ii++) {
+          figLines = figLines.concat(generateFigTextLines(lines[ii], figFonts[fontName], options));
+        }
+        len = figLines.length;
+        output = figLines[0];
+        for (ii = 1; ii < len; ii++) {
+          output = smushVerticalFigLines(output, figLines[ii], options);
+        }
+        return output ? output.join("\n") : "";
+      };
+      var me = function(txt, options, next) {
+        me.text(txt, options, next);
+      };
+      me.text = function(txt, options, next) {
+        var fontName = "";
+        txt = txt + "";
+        if (typeof arguments[1] === "function") {
+          next = options;
+          options = {};
+          options.font = figDefaults.font;
+        }
+        if (typeof options === "string") {
+          fontName = options;
+          options = {};
+        } else {
+          options = options || {};
+          fontName = options.font || figDefaults.font;
+        }
+        me.loadFont(fontName, function(err, fontOpts) {
+          if (err) {
+            return next(err);
+          }
+          next(null, generateText(fontName, _reworkFontOpts(fontOpts, options), txt));
+        });
+      };
+      me.textSync = function(txt, options) {
+        var fontName = "";
+        txt = txt + "";
+        if (typeof options === "string") {
+          fontName = options;
+          options = {};
+        } else {
+          options = options || {};
+          fontName = options.font || figDefaults.font;
+        }
+        var fontOpts = _reworkFontOpts(me.loadFontSync(fontName), options);
+        return generateText(fontName, fontOpts, txt);
+      };
+      function _reworkFontOpts(fontOpts, options) {
+        var myOpts = JSON.parse(JSON.stringify(fontOpts)), params, prop;
+        if (typeof options.horizontalLayout !== "undefined") {
+          params = getHorizontalFittingRules(options.horizontalLayout, fontOpts);
+          for (prop in params) {
+            if (params.hasOwnProperty(prop)) {
+              myOpts.fittingRules[prop] = params[prop];
+            }
+          }
+        }
+        if (typeof options.verticalLayout !== "undefined") {
+          params = getVerticalFittingRules(options.verticalLayout, fontOpts);
+          for (prop in params) {
+            if (params.hasOwnProperty(prop)) {
+              myOpts.fittingRules[prop] = params[prop];
+            }
+          }
+        }
+        myOpts.printDirection = typeof options.printDirection !== "undefined" ? options.printDirection : fontOpts.printDirection;
+        myOpts.showHardBlanks = options.showHardBlanks || false;
+        myOpts.width = options.width || -1;
+        myOpts.whitespaceBreak = options.whitespaceBreak || false;
+        return myOpts;
+      }
+      me.metadata = function(fontName, next) {
+        fontName = fontName + "";
+        me.loadFont(fontName, function(err, fontOpts) {
+          if (err) {
+            next(err);
+            return;
+          }
+          next(null, fontOpts, figFonts[fontName].comment);
+        });
+      };
+      me.defaults = function(opts) {
+        if (typeof opts === "object" && opts !== null) {
+          for (var prop in opts) {
+            if (opts.hasOwnProperty(prop)) {
+              figDefaults[prop] = opts[prop];
+            }
+          }
+        }
+        return JSON.parse(JSON.stringify(figDefaults));
+      };
+      me.parseFont = function(fontName, data) {
+        data = data.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+        figFonts[fontName] = {};
+        var lines = data.split("\n");
+        var headerData = lines.splice(0, 1)[0].split(" ");
+        var figFont = figFonts[fontName];
+        var opts = {};
+        opts.hardBlank = headerData[0].substr(5, 1);
+        opts.height = parseInt(headerData[1], 10);
+        opts.baseline = parseInt(headerData[2], 10);
+        opts.maxLength = parseInt(headerData[3], 10);
+        opts.oldLayout = parseInt(headerData[4], 10);
+        opts.numCommentLines = parseInt(headerData[5], 10);
+        opts.printDirection = headerData.length >= 6 ? parseInt(headerData[6], 10) : 0;
+        opts.fullLayout = headerData.length >= 7 ? parseInt(headerData[7], 10) : null;
+        opts.codeTagCount = headerData.length >= 8 ? parseInt(headerData[8], 10) : null;
+        opts.fittingRules = getSmushingRules(opts.oldLayout, opts.fullLayout);
+        figFont.options = opts;
+        if (opts.hardBlank.length !== 1 || isNaN(opts.height) || isNaN(opts.baseline) || isNaN(opts.maxLength) || isNaN(opts.oldLayout) || isNaN(opts.numCommentLines)) {
+          throw new Error("FIGlet header contains invalid values.");
+        }
+        var charNums = [], ii;
+        for (ii = 32; ii <= 126; ii++) {
+          charNums.push(ii);
+        }
+        charNums = charNums.concat(196, 214, 220, 228, 246, 252, 223);
+        if (lines.length < opts.numCommentLines + opts.height * charNums.length) {
+          throw new Error("FIGlet file is missing data.");
+        }
+        var cNum, endCharRegEx, parseError = false;
+        figFont.comment = lines.splice(0, opts.numCommentLines).join("\n");
+        figFont.numChars = 0;
+        while (lines.length > 0 && figFont.numChars < charNums.length) {
+          cNum = charNums[figFont.numChars];
+          figFont[cNum] = lines.splice(0, opts.height);
+          for (ii = 0; ii < opts.height; ii++) {
+            if (typeof figFont[cNum][ii] === "undefined") {
+              figFont[cNum][ii] = "";
+            } else {
+              endCharRegEx = new RegExp("\\" + figFont[cNum][ii].substr(figFont[cNum][ii].length - 1, 1) + "+$");
+              figFont[cNum][ii] = figFont[cNum][ii].replace(endCharRegEx, "");
+            }
+          }
+          figFont.numChars++;
+        }
+        while (lines.length > 0) {
+          cNum = lines.splice(0, 1)[0].split(" ")[0];
+          if (/^0[xX][0-9a-fA-F]+$/.test(cNum)) {
+            cNum = parseInt(cNum, 16);
+          } else if (/^0[0-7]+$/.test(cNum)) {
+            cNum = parseInt(cNum, 8);
+          } else if (/^[0-9]+$/.test(cNum)) {
+            cNum = parseInt(cNum, 10);
+          } else if (/^-0[xX][0-9a-fA-F]+$/.test(cNum)) {
+            cNum = parseInt(cNum, 16);
+          } else {
+            if (cNum === "") {
+              break;
+            }
+            console.log("Invalid data:" + cNum);
+            parseError = true;
+            break;
+          }
+          figFont[cNum] = lines.splice(0, opts.height);
+          for (ii = 0; ii < opts.height; ii++) {
+            if (typeof figFont[cNum][ii] === "undefined") {
+              figFont[cNum][ii] = "";
+            } else {
+              endCharRegEx = new RegExp("\\" + figFont[cNum][ii].substr(figFont[cNum][ii].length - 1, 1) + "+$");
+              figFont[cNum][ii] = figFont[cNum][ii].replace(endCharRegEx, "");
+            }
+          }
+          figFont.numChars++;
+        }
+        if (parseError === true) {
+          throw new Error("Error parsing data.");
+        }
+        return opts;
+      };
+      me.loadFont = function(fontName, next) {
+        if (figFonts[fontName]) {
+          next(null, figFonts[fontName].options);
+          return;
+        }
+        if (typeof fetch !== "function") {
+          console.error("figlet.js requires the fetch API or a fetch polyfill such as https://cdnjs.com/libraries/fetch");
+          throw new Error("fetch is required for figlet.js to work.");
+        }
+        fetch(figDefaults.fontPath + "/" + fontName + ".flf").then(function(response) {
+          if (response.ok) {
+            return response.text();
+          }
+          console.log("Unexpected response", response);
+          throw new Error("Network response was not ok.");
+        }).then(function(text) {
+          next(null, me.parseFont(fontName, text));
+        }).catch(next);
+      };
+      me.loadFontSync = function(name) {
+        if (figFonts[name]) {
+          return figFonts[name].options;
+        }
+        throw new Error("synchronous font loading is not implemented for the browser");
+      };
+      me.preloadFonts = function(fonts, next) {
+        var fontData = [];
+        fonts.reduce(function(promise, name) {
+          return promise.then(function() {
+            return fetch(figDefaults.fontPath + "/" + name + ".flf").then((response) => {
+              return response.text();
+            }).then(function(data) {
+              fontData.push(data);
+            });
+          });
+        }, Promise.resolve()).then(function(res) {
+          for (var i in fonts) {
+            if (fonts.hasOwnProperty(i)) {
+              me.parseFont(fonts[i], fontData[i]);
+            }
+          }
+          if (next)
+            next();
+        });
+      };
+      me.figFonts = figFonts;
+      return me;
+    }();
+    if (typeof module2 !== "undefined") {
+      if (typeof module2.exports !== "undefined") {
+        module2.exports = figlet2;
+      }
+    }
+  }
+});
+
+// node_modules/figlet/lib/node-figlet.js
+var require_node_figlet = __commonJS({
+  "node_modules/figlet/lib/node-figlet.js"(exports, module2) {
+    var figlet2 = require_figlet();
+    var fs = require("fs");
+    var path3 = require("path");
+    var fontDir = path3.join(__dirname, "/../fonts/");
+    figlet2.loadFont = function(name, next) {
+      if (figlet2.figFonts[name]) {
+        next(null, figlet2.figFonts[name].options);
+        return;
+      }
+      fs.readFile(path3.join(fontDir, name + ".flf"), { encoding: "utf-8" }, function(err, fontData) {
+        if (err) {
+          return next(err);
+        }
+        fontData = fontData + "";
+        try {
+          next(null, figlet2.parseFont(name, fontData));
+        } catch (error) {
+          next(error);
+        }
+      });
+    };
+    figlet2.loadFontSync = function(name) {
+      if (figlet2.figFonts[name]) {
+        return figlet2.figFonts[name].options;
+      }
+      var fontData = fs.readFileSync(path3.join(fontDir, name + ".flf"), { encoding: "utf-8" });
+      fontData = fontData + "";
+      return figlet2.parseFont(name, fontData);
+    };
+    figlet2.fonts = function(next) {
+      var fontList = [];
+      fs.readdir(fontDir, function(err, files) {
+        if (err) {
+          return next(err);
+        }
+        files.forEach(function(file) {
+          if (/\.flf$/.test(file)) {
+            fontList.push(file.replace(/\.flf$/, ""));
+          }
+        });
+        next(null, fontList);
+      });
+    };
+    figlet2.fontsSync = function() {
+      var fontList = [];
+      fs.readdirSync(fontDir).forEach(function(file) {
+        if (/\.flf$/.test(file)) {
+          fontList.push(file.replace(/\.flf$/, ""));
+        }
+      });
+      return fontList;
+    };
+    module2.exports = figlet2;
+  }
+});
+
+// node_modules/isexe/windows.js
+var require_windows = __commonJS({
+  "node_modules/isexe/windows.js"(exports, module2) {
+    module2.exports = isexe;
+    isexe.sync = sync;
+    var fs = require("fs");
+    function checkPathExt(path3, options) {
+      var pathext = options.pathExt !== void 0 ? options.pathExt : process.env.PATHEXT;
+      if (!pathext) {
+        return true;
+      }
+      pathext = pathext.split(";");
+      if (pathext.indexOf("") !== -1) {
+        return true;
+      }
+      for (var i = 0; i < pathext.length; i++) {
+        var p = pathext[i].toLowerCase();
+        if (p && path3.substr(-p.length).toLowerCase() === p) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function checkStat(stat, path3, options) {
+      if (!stat.isSymbolicLink() && !stat.isFile()) {
+        return false;
+      }
+      return checkPathExt(path3, options);
+    }
+    function isexe(path3, options, cb) {
+      fs.stat(path3, function(er, stat) {
+        cb(er, er ? false : checkStat(stat, path3, options));
+      });
+    }
+    function sync(path3, options) {
+      return checkStat(fs.statSync(path3), path3, options);
+    }
+  }
+});
+
+// node_modules/isexe/mode.js
+var require_mode = __commonJS({
+  "node_modules/isexe/mode.js"(exports, module2) {
+    module2.exports = isexe;
+    isexe.sync = sync;
+    var fs = require("fs");
+    function isexe(path3, options, cb) {
+      fs.stat(path3, function(er, stat) {
+        cb(er, er ? false : checkStat(stat, options));
+      });
+    }
+    function sync(path3, options) {
+      return checkStat(fs.statSync(path3), options);
+    }
+    function checkStat(stat, options) {
+      return stat.isFile() && checkMode(stat, options);
+    }
+    function checkMode(stat, options) {
+      var mod = stat.mode;
+      var uid = stat.uid;
+      var gid = stat.gid;
+      var myUid = options.uid !== void 0 ? options.uid : process.getuid && process.getuid();
+      var myGid = options.gid !== void 0 ? options.gid : process.getgid && process.getgid();
+      var u = parseInt("100", 8);
+      var g = parseInt("010", 8);
+      var o = parseInt("001", 8);
+      var ug = u | g;
+      var ret = mod & o || mod & g && gid === myGid || mod & u && uid === myUid || mod & ug && myUid === 0;
+      return ret;
+    }
+  }
+});
+
+// node_modules/isexe/index.js
+var require_isexe = __commonJS({
+  "node_modules/isexe/index.js"(exports, module2) {
+    var fs = require("fs");
+    var core;
+    if (process.platform === "win32" || global.TESTING_WINDOWS) {
+      core = require_windows();
+    } else {
+      core = require_mode();
+    }
+    module2.exports = isexe;
+    isexe.sync = sync;
+    function isexe(path3, options, cb) {
+      if (typeof options === "function") {
+        cb = options;
+        options = {};
+      }
+      if (!cb) {
+        if (typeof Promise !== "function") {
+          throw new TypeError("callback not provided");
+        }
+        return new Promise(function(resolve, reject) {
+          isexe(path3, options || {}, function(er, is) {
+            if (er) {
+              reject(er);
+            } else {
+              resolve(is);
+            }
+          });
+        });
+      }
+      core(path3, options || {}, function(er, is) {
+        if (er) {
+          if (er.code === "EACCES" || options && options.ignoreErrors) {
+            er = null;
+            is = false;
+          }
+        }
+        cb(er, is);
+      });
+    }
+    function sync(path3, options) {
+      try {
+        return core.sync(path3, options || {});
+      } catch (er) {
+        if (options && options.ignoreErrors || er.code === "EACCES") {
+          return false;
+        } else {
+          throw er;
+        }
+      }
+    }
+  }
+});
+
+// node_modules/which/which.js
+var require_which = __commonJS({
+  "node_modules/which/which.js"(exports, module2) {
+    var isWindows = process.platform === "win32" || process.env.OSTYPE === "cygwin" || process.env.OSTYPE === "msys";
+    var path3 = require("path");
+    var COLON = isWindows ? ";" : ":";
+    var isexe = require_isexe();
+    var getNotFoundError = (cmd) => Object.assign(new Error(`not found: ${cmd}`), { code: "ENOENT" });
+    var getPathInfo = (cmd, opt) => {
+      const colon = opt.colon || COLON;
+      const pathEnv = cmd.match(/\//) || isWindows && cmd.match(/\\/) ? [""] : [
+        ...isWindows ? [process.cwd()] : [],
+        ...(opt.path || process.env.PATH || "").split(colon)
+      ];
+      const pathExtExe = isWindows ? opt.pathExt || process.env.PATHEXT || ".EXE;.CMD;.BAT;.COM" : "";
+      const pathExt = isWindows ? pathExtExe.split(colon) : [""];
+      if (isWindows) {
+        if (cmd.indexOf(".") !== -1 && pathExt[0] !== "")
+          pathExt.unshift("");
+      }
+      return {
+        pathEnv,
+        pathExt,
+        pathExtExe
+      };
+    };
+    var which = (cmd, opt, cb) => {
+      if (typeof opt === "function") {
+        cb = opt;
+        opt = {};
+      }
+      if (!opt)
+        opt = {};
+      const { pathEnv, pathExt, pathExtExe } = getPathInfo(cmd, opt);
+      const found = [];
+      const step = (i) => new Promise((resolve, reject) => {
+        if (i === pathEnv.length)
+          return opt.all && found.length ? resolve(found) : reject(getNotFoundError(cmd));
+        const ppRaw = pathEnv[i];
+        const pathPart = /^".*"$/.test(ppRaw) ? ppRaw.slice(1, -1) : ppRaw;
+        const pCmd = path3.join(pathPart, cmd);
+        const p = !pathPart && /^\.[\\\/]/.test(cmd) ? cmd.slice(0, 2) + pCmd : pCmd;
+        resolve(subStep(p, i, 0));
+      });
+      const subStep = (p, i, ii) => new Promise((resolve, reject) => {
+        if (ii === pathExt.length)
+          return resolve(step(i + 1));
+        const ext = pathExt[ii];
+        isexe(p + ext, { pathExt: pathExtExe }, (er, is) => {
+          if (!er && is) {
+            if (opt.all)
+              found.push(p + ext);
+            else
+              return resolve(p + ext);
+          }
+          return resolve(subStep(p, i, ii + 1));
+        });
+      });
+      return cb ? step(0).then((res) => cb(null, res), cb) : step(0);
+    };
+    var whichSync = (cmd, opt) => {
+      opt = opt || {};
+      const { pathEnv, pathExt, pathExtExe } = getPathInfo(cmd, opt);
+      const found = [];
+      for (let i = 0; i < pathEnv.length; i++) {
+        const ppRaw = pathEnv[i];
+        const pathPart = /^".*"$/.test(ppRaw) ? ppRaw.slice(1, -1) : ppRaw;
+        const pCmd = path3.join(pathPart, cmd);
+        const p = !pathPart && /^\.[\\\/]/.test(cmd) ? cmd.slice(0, 2) + pCmd : pCmd;
+        for (let j = 0; j < pathExt.length; j++) {
+          const cur = p + pathExt[j];
+          try {
+            const is = isexe.sync(cur, { pathExt: pathExtExe });
+            if (is) {
+              if (opt.all)
+                found.push(cur);
+              else
+                return cur;
+            }
+          } catch (ex) {
+          }
+        }
+      }
+      if (opt.all && found.length)
+        return found;
+      if (opt.nothrow)
+        return null;
+      throw getNotFoundError(cmd);
+    };
+    module2.exports = which;
+    which.sync = whichSync;
+  }
+});
+
+// node_modules/path-key/index.js
+var require_path_key = __commonJS({
+  "node_modules/path-key/index.js"(exports, module2) {
+    "use strict";
+    var pathKey2 = (options = {}) => {
+      const environment = options.env || process.env;
+      const platform2 = options.platform || process.platform;
+      if (platform2 !== "win32") {
+        return "PATH";
+      }
+      return Object.keys(environment).reverse().find((key) => key.toUpperCase() === "PATH") || "Path";
+    };
+    module2.exports = pathKey2;
+    module2.exports.default = pathKey2;
+  }
+});
+
+// node_modules/cross-spawn/lib/util/resolveCommand.js
+var require_resolveCommand = __commonJS({
+  "node_modules/cross-spawn/lib/util/resolveCommand.js"(exports, module2) {
+    "use strict";
+    var path3 = require("path");
+    var which = require_which();
+    var getPathKey = require_path_key();
+    function resolveCommandAttempt(parsed, withoutPathExt) {
+      const env2 = parsed.options.env || process.env;
+      const cwd = process.cwd();
+      const hasCustomCwd = parsed.options.cwd != null;
+      const shouldSwitchCwd = hasCustomCwd && process.chdir !== void 0 && !process.chdir.disabled;
+      if (shouldSwitchCwd) {
+        try {
+          process.chdir(parsed.options.cwd);
+        } catch (err) {
+        }
+      }
+      let resolved;
+      try {
+        resolved = which.sync(parsed.command, {
+          path: env2[getPathKey({ env: env2 })],
+          pathExt: withoutPathExt ? path3.delimiter : void 0
+        });
+      } catch (e) {
+      } finally {
+        if (shouldSwitchCwd) {
+          process.chdir(cwd);
+        }
+      }
+      if (resolved) {
+        resolved = path3.resolve(hasCustomCwd ? parsed.options.cwd : "", resolved);
+      }
+      return resolved;
+    }
+    function resolveCommand(parsed) {
+      return resolveCommandAttempt(parsed) || resolveCommandAttempt(parsed, true);
+    }
+    module2.exports = resolveCommand;
+  }
+});
+
+// node_modules/cross-spawn/lib/util/escape.js
+var require_escape = __commonJS({
+  "node_modules/cross-spawn/lib/util/escape.js"(exports, module2) {
+    "use strict";
+    var metaCharsRegExp = /([()\][%!^"`<>&|;, *?])/g;
+    function escapeCommand(arg) {
+      arg = arg.replace(metaCharsRegExp, "^$1");
+      return arg;
+    }
+    function escapeArgument(arg, doubleEscapeMetaChars) {
+      arg = `${arg}`;
+      arg = arg.replace(/(\\*)"/g, '$1$1\\"');
+      arg = arg.replace(/(\\*)$/, "$1$1");
+      arg = `"${arg}"`;
+      arg = arg.replace(metaCharsRegExp, "^$1");
+      if (doubleEscapeMetaChars) {
+        arg = arg.replace(metaCharsRegExp, "^$1");
+      }
+      return arg;
+    }
+    module2.exports.command = escapeCommand;
+    module2.exports.argument = escapeArgument;
+  }
+});
+
+// node_modules/shebang-regex/index.js
+var require_shebang_regex = __commonJS({
+  "node_modules/shebang-regex/index.js"(exports, module2) {
+    "use strict";
+    module2.exports = /^#!(.*)/;
+  }
+});
+
+// node_modules/shebang-command/index.js
+var require_shebang_command = __commonJS({
+  "node_modules/shebang-command/index.js"(exports, module2) {
+    "use strict";
+    var shebangRegex = require_shebang_regex();
+    module2.exports = (string = "") => {
+      const match = string.match(shebangRegex);
+      if (!match) {
+        return null;
+      }
+      const [path3, argument] = match[0].replace(/#! ?/, "").split(" ");
+      const binary = path3.split("/").pop();
+      if (binary === "env") {
+        return argument;
+      }
+      return argument ? `${binary} ${argument}` : binary;
+    };
+  }
+});
+
+// node_modules/cross-spawn/lib/util/readShebang.js
+var require_readShebang = __commonJS({
+  "node_modules/cross-spawn/lib/util/readShebang.js"(exports, module2) {
+    "use strict";
+    var fs = require("fs");
+    var shebangCommand = require_shebang_command();
+    function readShebang(command) {
+      const size = 150;
+      const buffer = Buffer.alloc(size);
+      let fd;
+      try {
+        fd = fs.openSync(command, "r");
+        fs.readSync(fd, buffer, 0, size, 0);
+        fs.closeSync(fd);
+      } catch (e) {
+      }
+      return shebangCommand(buffer.toString());
+    }
+    module2.exports = readShebang;
+  }
+});
+
+// node_modules/cross-spawn/lib/parse.js
+var require_parse = __commonJS({
+  "node_modules/cross-spawn/lib/parse.js"(exports, module2) {
+    "use strict";
+    var path3 = require("path");
+    var resolveCommand = require_resolveCommand();
+    var escape = require_escape();
+    var readShebang = require_readShebang();
+    var isWin = process.platform === "win32";
+    var isExecutableRegExp = /\.(?:com|exe)$/i;
+    var isCmdShimRegExp = /node_modules[\\/].bin[\\/][^\\/]+\.cmd$/i;
+    function detectShebang(parsed) {
+      parsed.file = resolveCommand(parsed);
+      const shebang = parsed.file && readShebang(parsed.file);
+      if (shebang) {
+        parsed.args.unshift(parsed.file);
+        parsed.command = shebang;
+        return resolveCommand(parsed);
+      }
+      return parsed.file;
+    }
+    function parseNonShell(parsed) {
+      if (!isWin) {
+        return parsed;
+      }
+      const commandFile = detectShebang(parsed);
+      const needsShell = !isExecutableRegExp.test(commandFile);
+      if (parsed.options.forceShell || needsShell) {
+        const needsDoubleEscapeMetaChars = isCmdShimRegExp.test(commandFile);
+        parsed.command = path3.normalize(parsed.command);
+        parsed.command = escape.command(parsed.command);
+        parsed.args = parsed.args.map((arg) => escape.argument(arg, needsDoubleEscapeMetaChars));
+        const shellCommand = [parsed.command].concat(parsed.args).join(" ");
+        parsed.args = ["/d", "/s", "/c", `"${shellCommand}"`];
+        parsed.command = process.env.comspec || "cmd.exe";
+        parsed.options.windowsVerbatimArguments = true;
+      }
+      return parsed;
+    }
+    function parse(command, args, options) {
+      if (args && !Array.isArray(args)) {
+        options = args;
+        args = null;
+      }
+      args = args ? args.slice(0) : [];
+      options = Object.assign({}, options);
+      const parsed = {
+        command,
+        args,
+        options,
+        file: void 0,
+        original: {
+          command,
+          args
+        }
+      };
+      return options.shell ? parsed : parseNonShell(parsed);
+    }
+    module2.exports = parse;
+  }
+});
+
+// node_modules/cross-spawn/lib/enoent.js
+var require_enoent = __commonJS({
+  "node_modules/cross-spawn/lib/enoent.js"(exports, module2) {
+    "use strict";
+    var isWin = process.platform === "win32";
+    function notFoundError(original, syscall) {
+      return Object.assign(new Error(`${syscall} ${original.command} ENOENT`), {
+        code: "ENOENT",
+        errno: "ENOENT",
+        syscall: `${syscall} ${original.command}`,
+        path: original.command,
+        spawnargs: original.args
+      });
+    }
+    function hookChildProcess(cp, parsed) {
+      if (!isWin) {
+        return;
+      }
+      const originalEmit = cp.emit;
+      cp.emit = function(name, arg1) {
+        if (name === "exit") {
+          const err = verifyENOENT(arg1, parsed, "spawn");
+          if (err) {
+            return originalEmit.call(cp, "error", err);
+          }
+        }
+        return originalEmit.apply(cp, arguments);
+      };
+    }
+    function verifyENOENT(status, parsed) {
+      if (isWin && status === 1 && !parsed.file) {
+        return notFoundError(parsed.original, "spawn");
+      }
+      return null;
+    }
+    function verifyENOENTSync(status, parsed) {
+      if (isWin && status === 1 && !parsed.file) {
+        return notFoundError(parsed.original, "spawnSync");
+      }
+      return null;
+    }
+    module2.exports = {
+      hookChildProcess,
+      verifyENOENT,
+      verifyENOENTSync,
+      notFoundError
+    };
+  }
+});
+
+// node_modules/cross-spawn/index.js
+var require_cross_spawn = __commonJS({
+  "node_modules/cross-spawn/index.js"(exports, module2) {
+    "use strict";
+    var cp = require("child_process");
+    var parse = require_parse();
+    var enoent = require_enoent();
+    function spawn(command, args, options) {
+      const parsed = parse(command, args, options);
+      const spawned = cp.spawn(parsed.command, parsed.args, parsed.options);
+      enoent.hookChildProcess(spawned, parsed);
+      return spawned;
+    }
+    function spawnSync(command, args, options) {
+      const parsed = parse(command, args, options);
+      const result = cp.spawnSync(parsed.command, parsed.args, parsed.options);
+      result.error = result.error || enoent.verifyENOENTSync(result.status, parsed);
+      return result;
+    }
+    module2.exports = spawn;
+    module2.exports.spawn = spawn;
+    module2.exports.sync = spawnSync;
+    module2.exports._parse = parse;
+    module2.exports._enoent = enoent;
   }
 });
 
@@ -2030,6 +7693,357 @@ var require_signal_exit = __commonJS({
     var processReallyExit;
     var originalProcessEmit;
     var processEmit;
+  }
+});
+
+// node_modules/get-stream/buffer-stream.js
+var require_buffer_stream = __commonJS({
+  "node_modules/get-stream/buffer-stream.js"(exports, module2) {
+    "use strict";
+    var { PassThrough: PassThroughStream } = require("stream");
+    module2.exports = (options) => {
+      options = { ...options };
+      const { array } = options;
+      let { encoding } = options;
+      const isBuffer = encoding === "buffer";
+      let objectMode = false;
+      if (array) {
+        objectMode = !(encoding || isBuffer);
+      } else {
+        encoding = encoding || "utf8";
+      }
+      if (isBuffer) {
+        encoding = null;
+      }
+      const stream = new PassThroughStream({ objectMode });
+      if (encoding) {
+        stream.setEncoding(encoding);
+      }
+      let length = 0;
+      const chunks = [];
+      stream.on("data", (chunk) => {
+        chunks.push(chunk);
+        if (objectMode) {
+          length = chunks.length;
+        } else {
+          length += chunk.length;
+        }
+      });
+      stream.getBufferedValue = () => {
+        if (array) {
+          return chunks;
+        }
+        return isBuffer ? Buffer.concat(chunks, length) : chunks.join("");
+      };
+      stream.getBufferedLength = () => length;
+      return stream;
+    };
+  }
+});
+
+// node_modules/get-stream/index.js
+var require_get_stream = __commonJS({
+  "node_modules/get-stream/index.js"(exports, module2) {
+    "use strict";
+    var { constants: BufferConstants } = require("buffer");
+    var stream = require("stream");
+    var { promisify } = require("util");
+    var bufferStream = require_buffer_stream();
+    var streamPipelinePromisified = promisify(stream.pipeline);
+    var MaxBufferError = class extends Error {
+      constructor() {
+        super("maxBuffer exceeded");
+        this.name = "MaxBufferError";
+      }
+    };
+    async function getStream2(inputStream, options) {
+      if (!inputStream) {
+        throw new Error("Expected a stream");
+      }
+      options = {
+        maxBuffer: Infinity,
+        ...options
+      };
+      const { maxBuffer } = options;
+      const stream2 = bufferStream(options);
+      await new Promise((resolve, reject) => {
+        const rejectPromise = (error) => {
+          if (error && stream2.getBufferedLength() <= BufferConstants.MAX_LENGTH) {
+            error.bufferedData = stream2.getBufferedValue();
+          }
+          reject(error);
+        };
+        (async () => {
+          try {
+            await streamPipelinePromisified(inputStream, stream2);
+            resolve();
+          } catch (error) {
+            rejectPromise(error);
+          }
+        })();
+        stream2.on("data", () => {
+          if (stream2.getBufferedLength() > maxBuffer) {
+            rejectPromise(new MaxBufferError());
+          }
+        });
+      });
+      return stream2.getBufferedValue();
+    }
+    module2.exports = getStream2;
+    module2.exports.buffer = (stream2, options) => getStream2(stream2, { ...options, encoding: "buffer" });
+    module2.exports.array = (stream2, options) => getStream2(stream2, { ...options, array: true });
+    module2.exports.MaxBufferError = MaxBufferError;
+  }
+});
+
+// node_modules/merge-stream/index.js
+var require_merge_stream = __commonJS({
+  "node_modules/merge-stream/index.js"(exports, module2) {
+    "use strict";
+    var { PassThrough } = require("stream");
+    module2.exports = function() {
+      var sources = [];
+      var output = new PassThrough({ objectMode: true });
+      output.setMaxListeners(0);
+      output.add = add;
+      output.isEmpty = isEmpty;
+      output.on("unpipe", remove);
+      Array.prototype.slice.call(arguments).forEach(add);
+      return output;
+      function add(source) {
+        if (Array.isArray(source)) {
+          source.forEach(add);
+          return this;
+        }
+        sources.push(source);
+        source.once("end", remove.bind(null, source));
+        source.once("error", output.emit.bind(output, "error"));
+        source.pipe(output, { end: false });
+        return this;
+      }
+      function isEmpty() {
+        return sources.length == 0;
+      }
+      function remove(source) {
+        sources = sources.filter(function(it) {
+          return it !== source;
+        });
+        if (!sources.length && output.readable) {
+          output.end();
+        }
+      }
+    };
+  }
+});
+
+// node_modules/picocolors/picocolors.js
+var require_picocolors = __commonJS({
+  "node_modules/picocolors/picocolors.js"(exports, module2) {
+    var tty2 = require("tty");
+    var isColorSupported = !("NO_COLOR" in process.env || process.argv.includes("--no-color")) && ("FORCE_COLOR" in process.env || process.argv.includes("--color") || process.platform === "win32" || tty2.isatty(1) && process.env.TERM !== "dumb" || "CI" in process.env);
+    var formatter = (open, close, replace = open) => (input) => {
+      let string = "" + input;
+      let index = string.indexOf(close, open.length);
+      return ~index ? open + replaceClose(string, close, replace, index) + close : open + string + close;
+    };
+    var replaceClose = (string, close, replace, index) => {
+      let start = string.substring(0, index) + replace;
+      let end = string.substring(index + close.length);
+      let nextIndex = end.indexOf(close);
+      return ~nextIndex ? start + replaceClose(end, close, replace, nextIndex) : start + end;
+    };
+    var createColors = (enabled = isColorSupported) => ({
+      isColorSupported: enabled,
+      reset: enabled ? (s) => `\x1B[0m${s}\x1B[0m` : String,
+      bold: enabled ? formatter("\x1B[1m", "\x1B[22m", "\x1B[22m\x1B[1m") : String,
+      dim: enabled ? formatter("\x1B[2m", "\x1B[22m", "\x1B[22m\x1B[2m") : String,
+      italic: enabled ? formatter("\x1B[3m", "\x1B[23m") : String,
+      underline: enabled ? formatter("\x1B[4m", "\x1B[24m") : String,
+      inverse: enabled ? formatter("\x1B[7m", "\x1B[27m") : String,
+      hidden: enabled ? formatter("\x1B[8m", "\x1B[28m") : String,
+      strikethrough: enabled ? formatter("\x1B[9m", "\x1B[29m") : String,
+      black: enabled ? formatter("\x1B[30m", "\x1B[39m") : String,
+      red: enabled ? formatter("\x1B[31m", "\x1B[39m") : String,
+      green: enabled ? formatter("\x1B[32m", "\x1B[39m") : String,
+      yellow: enabled ? formatter("\x1B[33m", "\x1B[39m") : String,
+      blue: enabled ? formatter("\x1B[34m", "\x1B[39m") : String,
+      magenta: enabled ? formatter("\x1B[35m", "\x1B[39m") : String,
+      cyan: enabled ? formatter("\x1B[36m", "\x1B[39m") : String,
+      white: enabled ? formatter("\x1B[37m", "\x1B[39m") : String,
+      gray: enabled ? formatter("\x1B[90m", "\x1B[39m") : String,
+      bgBlack: enabled ? formatter("\x1B[40m", "\x1B[49m") : String,
+      bgRed: enabled ? formatter("\x1B[41m", "\x1B[49m") : String,
+      bgGreen: enabled ? formatter("\x1B[42m", "\x1B[49m") : String,
+      bgYellow: enabled ? formatter("\x1B[43m", "\x1B[49m") : String,
+      bgBlue: enabled ? formatter("\x1B[44m", "\x1B[49m") : String,
+      bgMagenta: enabled ? formatter("\x1B[45m", "\x1B[49m") : String,
+      bgCyan: enabled ? formatter("\x1B[46m", "\x1B[49m") : String,
+      bgWhite: enabled ? formatter("\x1B[47m", "\x1B[49m") : String
+    });
+    module2.exports = createColors();
+    module2.exports.createColors = createColors;
+  }
+});
+
+// node_modules/nanospinner/consts.js
+var require_consts = __commonJS({
+  "node_modules/nanospinner/consts.js"(exports, module2) {
+    var tty2 = require("tty");
+    var isCI = process.env.CI || process.env.WT_SESSION || process.env.ConEmuTask === "{cmd::Cmder}" || process.env.TERM_PROGRAM === "vscode" || process.env.TERM === "xterm-256color" || process.env.TERM === "alacritty";
+    var isTTY = tty2.isatty(1) && process.env.TERM !== "dumb" && !("CI" in process.env);
+    var supportUnicode = process.platform !== "win32" ? process.env.TERM !== "linux" : isCI;
+    var symbols = {
+      frames: isTTY ? supportUnicode ? ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"] : ["-", "\\", "|", "/"] : ["-"],
+      tick: supportUnicode ? "\u2714" : "\u221A",
+      cross: supportUnicode ? "\u2716" : "\xD7",
+      warn: supportUnicode ? "\u26A0" : "!!"
+    };
+    module2.exports = { isTTY, symbols };
+  }
+});
+
+// node_modules/nanospinner/index.js
+var require_nanospinner = __commonJS({
+  "node_modules/nanospinner/index.js"(exports, module2) {
+    var pico = require_picocolors();
+    var { isTTY, symbols } = require_consts();
+    var { green, red, yellow } = pico;
+    function getLines(str = "", width = 80) {
+      return str.replace(/\u001b[^m]*?m/g, "").split("\n").reduce((col, line) => col += Math.max(1, Math.ceil(line.length / width)), 0);
+    }
+    function createSpinner2(text = "", opts = {}) {
+      let current = 0, interval = opts.interval || 50, stream = opts.stream || process.stderr, frames = opts.frames && opts.frames.length ? opts.frames : symbols.frames, color = opts.color || "yellow", lines = 0, timer;
+      let spinner = {
+        reset() {
+          current = 0;
+          lines = 0;
+          timer = clearTimeout(timer);
+        },
+        clear() {
+          spinner.write("\x1B[1G");
+          for (let i = 0; i < lines; i++) {
+            i > 0 && spinner.write("\x1B[1A");
+            spinner.write("\x1B[2K\x1B[1G");
+          }
+          lines = 0;
+          return spinner;
+        },
+        write(str, clear = false) {
+          if (clear && isTTY) {
+            spinner.clear();
+          }
+          stream.write(str);
+          return spinner;
+        },
+        render() {
+          let mark = pico[color](frames[current]);
+          let str = `${mark} ${text}`;
+          isTTY ? spinner.write(`\x1B[?25l`) : str += "\n";
+          spinner.write(str, true);
+          isTTY && (lines = getLines(str, stream.columns));
+        },
+        spin() {
+          spinner.render();
+          current = ++current % frames.length;
+          return spinner;
+        },
+        update(opts2 = {}) {
+          text = opts2.text || text;
+          frames = opts2.frames && opts2.frames.length ? opts2.frames : frames;
+          interval = opts2.interval || interval;
+          color = opts2.color || color;
+          if (frames.length - 1 < current) {
+            current = 0;
+          }
+          return spinner;
+        },
+        loop() {
+          isTTY && (timer = setTimeout(() => spinner.loop(), interval));
+          return spinner.spin();
+        },
+        start(opts2 = {}) {
+          timer && spinner.reset();
+          return spinner.update({ text: opts2.text, color: opts2.color }).loop();
+        },
+        stop(opts2 = {}) {
+          timer = clearTimeout(timer);
+          let mark = pico[opts2.color || color](frames[current]);
+          let optsMark = opts2.mark && opts2.color ? pico[opts2.color](opts2.mark) : opts2.mark;
+          spinner.write(`${optsMark || mark} ${opts2.text || text}
+`, true);
+          return isTTY ? spinner.write(`\x1B[?25h`) : spinner;
+        },
+        success(opts2 = {}) {
+          let mark = green(symbols.tick);
+          return spinner.stop({ mark, ...opts2 });
+        },
+        error(opts2 = {}) {
+          let mark = red(symbols.cross);
+          return spinner.stop({ mark, ...opts2 });
+        },
+        warn(opts2 = {}) {
+          let mark = yellow(symbols.warn);
+          return spinner.stop({ mark, ...opts2 });
+        }
+      };
+      return spinner;
+    }
+    module2.exports = {
+      createSpinner: createSpinner2
+    };
+  }
+});
+
+// node_modules/restore-cursor/node_modules/mimic-fn/index.js
+var require_mimic_fn = __commonJS({
+  "node_modules/restore-cursor/node_modules/mimic-fn/index.js"(exports, module2) {
+    "use strict";
+    var mimicFn = (to, from3) => {
+      for (const prop of Reflect.ownKeys(from3)) {
+        Object.defineProperty(to, prop, Object.getOwnPropertyDescriptor(from3, prop));
+      }
+      return to;
+    };
+    module2.exports = mimicFn;
+    module2.exports.default = mimicFn;
+  }
+});
+
+// node_modules/restore-cursor/node_modules/onetime/index.js
+var require_onetime = __commonJS({
+  "node_modules/restore-cursor/node_modules/onetime/index.js"(exports, module2) {
+    "use strict";
+    var mimicFn = require_mimic_fn();
+    var calledFunctions2 = /* @__PURE__ */ new WeakMap();
+    var onetime3 = (function_, options = {}) => {
+      if (typeof function_ !== "function") {
+        throw new TypeError("Expected a function");
+      }
+      let returnValue;
+      let callCount = 0;
+      const functionName = function_.displayName || function_.name || "<anonymous>";
+      const onetime4 = function(...arguments_) {
+        calledFunctions2.set(onetime4, ++callCount);
+        if (callCount === 1) {
+          returnValue = function_.apply(this, arguments_);
+          function_ = null;
+        } else if (options.throw === true) {
+          throw new Error(`Function \`${functionName}\` can only be called once`);
+        }
+        return returnValue;
+      };
+      mimicFn(onetime4, function_);
+      calledFunctions2.set(onetime4, callCount);
+      return onetime4;
+    };
+    module2.exports = onetime3;
+    module2.exports.default = onetime3;
+    module2.exports.callCount = (function_) => {
+      if (!calledFunctions2.has(function_)) {
+        throw new Error(`The given function \`${function_.name}\` is not wrapped by the \`onetime\` package`);
+      }
+      return calledFunctions2.get(function_);
+    };
   }
 });
 
@@ -34286,6020 +40300,6 @@ var require_set = __commonJS({
   }
 });
 
-// node_modules/gradient-string/node_modules/color-name/index.js
-var require_color_name = __commonJS({
-  "node_modules/gradient-string/node_modules/color-name/index.js"(exports, module2) {
-    "use strict";
-    module2.exports = {
-      "aliceblue": [240, 248, 255],
-      "antiquewhite": [250, 235, 215],
-      "aqua": [0, 255, 255],
-      "aquamarine": [127, 255, 212],
-      "azure": [240, 255, 255],
-      "beige": [245, 245, 220],
-      "bisque": [255, 228, 196],
-      "black": [0, 0, 0],
-      "blanchedalmond": [255, 235, 205],
-      "blue": [0, 0, 255],
-      "blueviolet": [138, 43, 226],
-      "brown": [165, 42, 42],
-      "burlywood": [222, 184, 135],
-      "cadetblue": [95, 158, 160],
-      "chartreuse": [127, 255, 0],
-      "chocolate": [210, 105, 30],
-      "coral": [255, 127, 80],
-      "cornflowerblue": [100, 149, 237],
-      "cornsilk": [255, 248, 220],
-      "crimson": [220, 20, 60],
-      "cyan": [0, 255, 255],
-      "darkblue": [0, 0, 139],
-      "darkcyan": [0, 139, 139],
-      "darkgoldenrod": [184, 134, 11],
-      "darkgray": [169, 169, 169],
-      "darkgreen": [0, 100, 0],
-      "darkgrey": [169, 169, 169],
-      "darkkhaki": [189, 183, 107],
-      "darkmagenta": [139, 0, 139],
-      "darkolivegreen": [85, 107, 47],
-      "darkorange": [255, 140, 0],
-      "darkorchid": [153, 50, 204],
-      "darkred": [139, 0, 0],
-      "darksalmon": [233, 150, 122],
-      "darkseagreen": [143, 188, 143],
-      "darkslateblue": [72, 61, 139],
-      "darkslategray": [47, 79, 79],
-      "darkslategrey": [47, 79, 79],
-      "darkturquoise": [0, 206, 209],
-      "darkviolet": [148, 0, 211],
-      "deeppink": [255, 20, 147],
-      "deepskyblue": [0, 191, 255],
-      "dimgray": [105, 105, 105],
-      "dimgrey": [105, 105, 105],
-      "dodgerblue": [30, 144, 255],
-      "firebrick": [178, 34, 34],
-      "floralwhite": [255, 250, 240],
-      "forestgreen": [34, 139, 34],
-      "fuchsia": [255, 0, 255],
-      "gainsboro": [220, 220, 220],
-      "ghostwhite": [248, 248, 255],
-      "gold": [255, 215, 0],
-      "goldenrod": [218, 165, 32],
-      "gray": [128, 128, 128],
-      "green": [0, 128, 0],
-      "greenyellow": [173, 255, 47],
-      "grey": [128, 128, 128],
-      "honeydew": [240, 255, 240],
-      "hotpink": [255, 105, 180],
-      "indianred": [205, 92, 92],
-      "indigo": [75, 0, 130],
-      "ivory": [255, 255, 240],
-      "khaki": [240, 230, 140],
-      "lavender": [230, 230, 250],
-      "lavenderblush": [255, 240, 245],
-      "lawngreen": [124, 252, 0],
-      "lemonchiffon": [255, 250, 205],
-      "lightblue": [173, 216, 230],
-      "lightcoral": [240, 128, 128],
-      "lightcyan": [224, 255, 255],
-      "lightgoldenrodyellow": [250, 250, 210],
-      "lightgray": [211, 211, 211],
-      "lightgreen": [144, 238, 144],
-      "lightgrey": [211, 211, 211],
-      "lightpink": [255, 182, 193],
-      "lightsalmon": [255, 160, 122],
-      "lightseagreen": [32, 178, 170],
-      "lightskyblue": [135, 206, 250],
-      "lightslategray": [119, 136, 153],
-      "lightslategrey": [119, 136, 153],
-      "lightsteelblue": [176, 196, 222],
-      "lightyellow": [255, 255, 224],
-      "lime": [0, 255, 0],
-      "limegreen": [50, 205, 50],
-      "linen": [250, 240, 230],
-      "magenta": [255, 0, 255],
-      "maroon": [128, 0, 0],
-      "mediumaquamarine": [102, 205, 170],
-      "mediumblue": [0, 0, 205],
-      "mediumorchid": [186, 85, 211],
-      "mediumpurple": [147, 112, 219],
-      "mediumseagreen": [60, 179, 113],
-      "mediumslateblue": [123, 104, 238],
-      "mediumspringgreen": [0, 250, 154],
-      "mediumturquoise": [72, 209, 204],
-      "mediumvioletred": [199, 21, 133],
-      "midnightblue": [25, 25, 112],
-      "mintcream": [245, 255, 250],
-      "mistyrose": [255, 228, 225],
-      "moccasin": [255, 228, 181],
-      "navajowhite": [255, 222, 173],
-      "navy": [0, 0, 128],
-      "oldlace": [253, 245, 230],
-      "olive": [128, 128, 0],
-      "olivedrab": [107, 142, 35],
-      "orange": [255, 165, 0],
-      "orangered": [255, 69, 0],
-      "orchid": [218, 112, 214],
-      "palegoldenrod": [238, 232, 170],
-      "palegreen": [152, 251, 152],
-      "paleturquoise": [175, 238, 238],
-      "palevioletred": [219, 112, 147],
-      "papayawhip": [255, 239, 213],
-      "peachpuff": [255, 218, 185],
-      "peru": [205, 133, 63],
-      "pink": [255, 192, 203],
-      "plum": [221, 160, 221],
-      "powderblue": [176, 224, 230],
-      "purple": [128, 0, 128],
-      "rebeccapurple": [102, 51, 153],
-      "red": [255, 0, 0],
-      "rosybrown": [188, 143, 143],
-      "royalblue": [65, 105, 225],
-      "saddlebrown": [139, 69, 19],
-      "salmon": [250, 128, 114],
-      "sandybrown": [244, 164, 96],
-      "seagreen": [46, 139, 87],
-      "seashell": [255, 245, 238],
-      "sienna": [160, 82, 45],
-      "silver": [192, 192, 192],
-      "skyblue": [135, 206, 235],
-      "slateblue": [106, 90, 205],
-      "slategray": [112, 128, 144],
-      "slategrey": [112, 128, 144],
-      "snow": [255, 250, 250],
-      "springgreen": [0, 255, 127],
-      "steelblue": [70, 130, 180],
-      "tan": [210, 180, 140],
-      "teal": [0, 128, 128],
-      "thistle": [216, 191, 216],
-      "tomato": [255, 99, 71],
-      "turquoise": [64, 224, 208],
-      "violet": [238, 130, 238],
-      "wheat": [245, 222, 179],
-      "white": [255, 255, 255],
-      "whitesmoke": [245, 245, 245],
-      "yellow": [255, 255, 0],
-      "yellowgreen": [154, 205, 50]
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/color-convert/conversions.js
-var require_conversions = __commonJS({
-  "node_modules/gradient-string/node_modules/color-convert/conversions.js"(exports, module2) {
-    var cssKeywords = require_color_name();
-    var reverseKeywords = {};
-    for (const key of Object.keys(cssKeywords)) {
-      reverseKeywords[cssKeywords[key]] = key;
-    }
-    var convert = {
-      rgb: { channels: 3, labels: "rgb" },
-      hsl: { channels: 3, labels: "hsl" },
-      hsv: { channels: 3, labels: "hsv" },
-      hwb: { channels: 3, labels: "hwb" },
-      cmyk: { channels: 4, labels: "cmyk" },
-      xyz: { channels: 3, labels: "xyz" },
-      lab: { channels: 3, labels: "lab" },
-      lch: { channels: 3, labels: "lch" },
-      hex: { channels: 1, labels: ["hex"] },
-      keyword: { channels: 1, labels: ["keyword"] },
-      ansi16: { channels: 1, labels: ["ansi16"] },
-      ansi256: { channels: 1, labels: ["ansi256"] },
-      hcg: { channels: 3, labels: ["h", "c", "g"] },
-      apple: { channels: 3, labels: ["r16", "g16", "b16"] },
-      gray: { channels: 1, labels: ["gray"] }
-    };
-    module2.exports = convert;
-    for (const model of Object.keys(convert)) {
-      if (!("channels" in convert[model])) {
-        throw new Error("missing channels property: " + model);
-      }
-      if (!("labels" in convert[model])) {
-        throw new Error("missing channel labels property: " + model);
-      }
-      if (convert[model].labels.length !== convert[model].channels) {
-        throw new Error("channel and label counts mismatch: " + model);
-      }
-      const { channels, labels } = convert[model];
-      delete convert[model].channels;
-      delete convert[model].labels;
-      Object.defineProperty(convert[model], "channels", { value: channels });
-      Object.defineProperty(convert[model], "labels", { value: labels });
-    }
-    convert.rgb.hsl = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const min = Math.min(r, g, b);
-      const max = Math.max(r, g, b);
-      const delta = max - min;
-      let h;
-      let s;
-      if (max === min) {
-        h = 0;
-      } else if (r === max) {
-        h = (g - b) / delta;
-      } else if (g === max) {
-        h = 2 + (b - r) / delta;
-      } else if (b === max) {
-        h = 4 + (r - g) / delta;
-      }
-      h = Math.min(h * 60, 360);
-      if (h < 0) {
-        h += 360;
-      }
-      const l = (min + max) / 2;
-      if (max === min) {
-        s = 0;
-      } else if (l <= 0.5) {
-        s = delta / (max + min);
-      } else {
-        s = delta / (2 - max - min);
-      }
-      return [h, s * 100, l * 100];
-    };
-    convert.rgb.hsv = function(rgb) {
-      let rdif;
-      let gdif;
-      let bdif;
-      let h;
-      let s;
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const v = Math.max(r, g, b);
-      const diff = v - Math.min(r, g, b);
-      const diffc = function(c) {
-        return (v - c) / 6 / diff + 1 / 2;
-      };
-      if (diff === 0) {
-        h = 0;
-        s = 0;
-      } else {
-        s = diff / v;
-        rdif = diffc(r);
-        gdif = diffc(g);
-        bdif = diffc(b);
-        if (r === v) {
-          h = bdif - gdif;
-        } else if (g === v) {
-          h = 1 / 3 + rdif - bdif;
-        } else if (b === v) {
-          h = 2 / 3 + gdif - rdif;
-        }
-        if (h < 0) {
-          h += 1;
-        } else if (h > 1) {
-          h -= 1;
-        }
-      }
-      return [
-        h * 360,
-        s * 100,
-        v * 100
-      ];
-    };
-    convert.rgb.hwb = function(rgb) {
-      const r = rgb[0];
-      const g = rgb[1];
-      let b = rgb[2];
-      const h = convert.rgb.hsl(rgb)[0];
-      const w = 1 / 255 * Math.min(r, Math.min(g, b));
-      b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
-      return [h, w * 100, b * 100];
-    };
-    convert.rgb.cmyk = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const k = Math.min(1 - r, 1 - g, 1 - b);
-      const c = (1 - r - k) / (1 - k) || 0;
-      const m = (1 - g - k) / (1 - k) || 0;
-      const y = (1 - b - k) / (1 - k) || 0;
-      return [c * 100, m * 100, y * 100, k * 100];
-    };
-    function comparativeDistance(x, y) {
-      return (x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2 + (x[2] - y[2]) ** 2;
-    }
-    convert.rgb.keyword = function(rgb) {
-      const reversed = reverseKeywords[rgb];
-      if (reversed) {
-        return reversed;
-      }
-      let currentClosestDistance = Infinity;
-      let currentClosestKeyword;
-      for (const keyword of Object.keys(cssKeywords)) {
-        const value = cssKeywords[keyword];
-        const distance = comparativeDistance(rgb, value);
-        if (distance < currentClosestDistance) {
-          currentClosestDistance = distance;
-          currentClosestKeyword = keyword;
-        }
-      }
-      return currentClosestKeyword;
-    };
-    convert.keyword.rgb = function(keyword) {
-      return cssKeywords[keyword];
-    };
-    convert.rgb.xyz = function(rgb) {
-      let r = rgb[0] / 255;
-      let g = rgb[1] / 255;
-      let b = rgb[2] / 255;
-      r = r > 0.04045 ? ((r + 0.055) / 1.055) ** 2.4 : r / 12.92;
-      g = g > 0.04045 ? ((g + 0.055) / 1.055) ** 2.4 : g / 12.92;
-      b = b > 0.04045 ? ((b + 0.055) / 1.055) ** 2.4 : b / 12.92;
-      const x = r * 0.4124 + g * 0.3576 + b * 0.1805;
-      const y = r * 0.2126 + g * 0.7152 + b * 0.0722;
-      const z = r * 0.0193 + g * 0.1192 + b * 0.9505;
-      return [x * 100, y * 100, z * 100];
-    };
-    convert.rgb.lab = function(rgb) {
-      const xyz = convert.rgb.xyz(rgb);
-      let x = xyz[0];
-      let y = xyz[1];
-      let z = xyz[2];
-      x /= 95.047;
-      y /= 100;
-      z /= 108.883;
-      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
-      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
-      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
-      const l = 116 * y - 16;
-      const a = 500 * (x - y);
-      const b = 200 * (y - z);
-      return [l, a, b];
-    };
-    convert.hsl.rgb = function(hsl) {
-      const h = hsl[0] / 360;
-      const s = hsl[1] / 100;
-      const l = hsl[2] / 100;
-      let t2;
-      let t3;
-      let val;
-      if (s === 0) {
-        val = l * 255;
-        return [val, val, val];
-      }
-      if (l < 0.5) {
-        t2 = l * (1 + s);
-      } else {
-        t2 = l + s - l * s;
-      }
-      const t1 = 2 * l - t2;
-      const rgb = [0, 0, 0];
-      for (let i = 0; i < 3; i++) {
-        t3 = h + 1 / 3 * -(i - 1);
-        if (t3 < 0) {
-          t3++;
-        }
-        if (t3 > 1) {
-          t3--;
-        }
-        if (6 * t3 < 1) {
-          val = t1 + (t2 - t1) * 6 * t3;
-        } else if (2 * t3 < 1) {
-          val = t2;
-        } else if (3 * t3 < 2) {
-          val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
-        } else {
-          val = t1;
-        }
-        rgb[i] = val * 255;
-      }
-      return rgb;
-    };
-    convert.hsl.hsv = function(hsl) {
-      const h = hsl[0];
-      let s = hsl[1] / 100;
-      let l = hsl[2] / 100;
-      let smin = s;
-      const lmin = Math.max(l, 0.01);
-      l *= 2;
-      s *= l <= 1 ? l : 2 - l;
-      smin *= lmin <= 1 ? lmin : 2 - lmin;
-      const v = (l + s) / 2;
-      const sv = l === 0 ? 2 * smin / (lmin + smin) : 2 * s / (l + s);
-      return [h, sv * 100, v * 100];
-    };
-    convert.hsv.rgb = function(hsv) {
-      const h = hsv[0] / 60;
-      const s = hsv[1] / 100;
-      let v = hsv[2] / 100;
-      const hi = Math.floor(h) % 6;
-      const f = h - Math.floor(h);
-      const p = 255 * v * (1 - s);
-      const q = 255 * v * (1 - s * f);
-      const t = 255 * v * (1 - s * (1 - f));
-      v *= 255;
-      switch (hi) {
-        case 0:
-          return [v, t, p];
-        case 1:
-          return [q, v, p];
-        case 2:
-          return [p, v, t];
-        case 3:
-          return [p, q, v];
-        case 4:
-          return [t, p, v];
-        case 5:
-          return [v, p, q];
-      }
-    };
-    convert.hsv.hsl = function(hsv) {
-      const h = hsv[0];
-      const s = hsv[1] / 100;
-      const v = hsv[2] / 100;
-      const vmin = Math.max(v, 0.01);
-      let sl;
-      let l;
-      l = (2 - s) * v;
-      const lmin = (2 - s) * vmin;
-      sl = s * vmin;
-      sl /= lmin <= 1 ? lmin : 2 - lmin;
-      sl = sl || 0;
-      l /= 2;
-      return [h, sl * 100, l * 100];
-    };
-    convert.hwb.rgb = function(hwb) {
-      const h = hwb[0] / 360;
-      let wh = hwb[1] / 100;
-      let bl = hwb[2] / 100;
-      const ratio = wh + bl;
-      let f;
-      if (ratio > 1) {
-        wh /= ratio;
-        bl /= ratio;
-      }
-      const i = Math.floor(6 * h);
-      const v = 1 - bl;
-      f = 6 * h - i;
-      if ((i & 1) !== 0) {
-        f = 1 - f;
-      }
-      const n = wh + f * (v - wh);
-      let r;
-      let g;
-      let b;
-      switch (i) {
-        default:
-        case 6:
-        case 0:
-          r = v;
-          g = n;
-          b = wh;
-          break;
-        case 1:
-          r = n;
-          g = v;
-          b = wh;
-          break;
-        case 2:
-          r = wh;
-          g = v;
-          b = n;
-          break;
-        case 3:
-          r = wh;
-          g = n;
-          b = v;
-          break;
-        case 4:
-          r = n;
-          g = wh;
-          b = v;
-          break;
-        case 5:
-          r = v;
-          g = wh;
-          b = n;
-          break;
-      }
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.cmyk.rgb = function(cmyk) {
-      const c = cmyk[0] / 100;
-      const m = cmyk[1] / 100;
-      const y = cmyk[2] / 100;
-      const k = cmyk[3] / 100;
-      const r = 1 - Math.min(1, c * (1 - k) + k);
-      const g = 1 - Math.min(1, m * (1 - k) + k);
-      const b = 1 - Math.min(1, y * (1 - k) + k);
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.xyz.rgb = function(xyz) {
-      const x = xyz[0] / 100;
-      const y = xyz[1] / 100;
-      const z = xyz[2] / 100;
-      let r;
-      let g;
-      let b;
-      r = x * 3.2406 + y * -1.5372 + z * -0.4986;
-      g = x * -0.9689 + y * 1.8758 + z * 0.0415;
-      b = x * 0.0557 + y * -0.204 + z * 1.057;
-      r = r > 31308e-7 ? 1.055 * r ** (1 / 2.4) - 0.055 : r * 12.92;
-      g = g > 31308e-7 ? 1.055 * g ** (1 / 2.4) - 0.055 : g * 12.92;
-      b = b > 31308e-7 ? 1.055 * b ** (1 / 2.4) - 0.055 : b * 12.92;
-      r = Math.min(Math.max(0, r), 1);
-      g = Math.min(Math.max(0, g), 1);
-      b = Math.min(Math.max(0, b), 1);
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.xyz.lab = function(xyz) {
-      let x = xyz[0];
-      let y = xyz[1];
-      let z = xyz[2];
-      x /= 95.047;
-      y /= 100;
-      z /= 108.883;
-      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
-      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
-      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
-      const l = 116 * y - 16;
-      const a = 500 * (x - y);
-      const b = 200 * (y - z);
-      return [l, a, b];
-    };
-    convert.lab.xyz = function(lab) {
-      const l = lab[0];
-      const a = lab[1];
-      const b = lab[2];
-      let x;
-      let y;
-      let z;
-      y = (l + 16) / 116;
-      x = a / 500 + y;
-      z = y - b / 200;
-      const y2 = y ** 3;
-      const x2 = x ** 3;
-      const z2 = z ** 3;
-      y = y2 > 8856e-6 ? y2 : (y - 16 / 116) / 7.787;
-      x = x2 > 8856e-6 ? x2 : (x - 16 / 116) / 7.787;
-      z = z2 > 8856e-6 ? z2 : (z - 16 / 116) / 7.787;
-      x *= 95.047;
-      y *= 100;
-      z *= 108.883;
-      return [x, y, z];
-    };
-    convert.lab.lch = function(lab) {
-      const l = lab[0];
-      const a = lab[1];
-      const b = lab[2];
-      let h;
-      const hr = Math.atan2(b, a);
-      h = hr * 360 / 2 / Math.PI;
-      if (h < 0) {
-        h += 360;
-      }
-      const c = Math.sqrt(a * a + b * b);
-      return [l, c, h];
-    };
-    convert.lch.lab = function(lch) {
-      const l = lch[0];
-      const c = lch[1];
-      const h = lch[2];
-      const hr = h / 360 * 2 * Math.PI;
-      const a = c * Math.cos(hr);
-      const b = c * Math.sin(hr);
-      return [l, a, b];
-    };
-    convert.rgb.ansi16 = function(args, saturation = null) {
-      const [r, g, b] = args;
-      let value = saturation === null ? convert.rgb.hsv(args)[2] : saturation;
-      value = Math.round(value / 50);
-      if (value === 0) {
-        return 30;
-      }
-      let ansi = 30 + (Math.round(b / 255) << 2 | Math.round(g / 255) << 1 | Math.round(r / 255));
-      if (value === 2) {
-        ansi += 60;
-      }
-      return ansi;
-    };
-    convert.hsv.ansi16 = function(args) {
-      return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
-    };
-    convert.rgb.ansi256 = function(args) {
-      const r = args[0];
-      const g = args[1];
-      const b = args[2];
-      if (r === g && g === b) {
-        if (r < 8) {
-          return 16;
-        }
-        if (r > 248) {
-          return 231;
-        }
-        return Math.round((r - 8) / 247 * 24) + 232;
-      }
-      const ansi = 16 + 36 * Math.round(r / 255 * 5) + 6 * Math.round(g / 255 * 5) + Math.round(b / 255 * 5);
-      return ansi;
-    };
-    convert.ansi16.rgb = function(args) {
-      let color = args % 10;
-      if (color === 0 || color === 7) {
-        if (args > 50) {
-          color += 3.5;
-        }
-        color = color / 10.5 * 255;
-        return [color, color, color];
-      }
-      const mult = (~~(args > 50) + 1) * 0.5;
-      const r = (color & 1) * mult * 255;
-      const g = (color >> 1 & 1) * mult * 255;
-      const b = (color >> 2 & 1) * mult * 255;
-      return [r, g, b];
-    };
-    convert.ansi256.rgb = function(args) {
-      if (args >= 232) {
-        const c = (args - 232) * 10 + 8;
-        return [c, c, c];
-      }
-      args -= 16;
-      let rem;
-      const r = Math.floor(args / 36) / 5 * 255;
-      const g = Math.floor((rem = args % 36) / 6) / 5 * 255;
-      const b = rem % 6 / 5 * 255;
-      return [r, g, b];
-    };
-    convert.rgb.hex = function(args) {
-      const integer = ((Math.round(args[0]) & 255) << 16) + ((Math.round(args[1]) & 255) << 8) + (Math.round(args[2]) & 255);
-      const string = integer.toString(16).toUpperCase();
-      return "000000".substring(string.length) + string;
-    };
-    convert.hex.rgb = function(args) {
-      const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!match) {
-        return [0, 0, 0];
-      }
-      let colorString = match[0];
-      if (match[0].length === 3) {
-        colorString = colorString.split("").map((char) => {
-          return char + char;
-        }).join("");
-      }
-      const integer = parseInt(colorString, 16);
-      const r = integer >> 16 & 255;
-      const g = integer >> 8 & 255;
-      const b = integer & 255;
-      return [r, g, b];
-    };
-    convert.rgb.hcg = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const max = Math.max(Math.max(r, g), b);
-      const min = Math.min(Math.min(r, g), b);
-      const chroma = max - min;
-      let grayscale;
-      let hue;
-      if (chroma < 1) {
-        grayscale = min / (1 - chroma);
-      } else {
-        grayscale = 0;
-      }
-      if (chroma <= 0) {
-        hue = 0;
-      } else if (max === r) {
-        hue = (g - b) / chroma % 6;
-      } else if (max === g) {
-        hue = 2 + (b - r) / chroma;
-      } else {
-        hue = 4 + (r - g) / chroma;
-      }
-      hue /= 6;
-      hue %= 1;
-      return [hue * 360, chroma * 100, grayscale * 100];
-    };
-    convert.hsl.hcg = function(hsl) {
-      const s = hsl[1] / 100;
-      const l = hsl[2] / 100;
-      const c = l < 0.5 ? 2 * s * l : 2 * s * (1 - l);
-      let f = 0;
-      if (c < 1) {
-        f = (l - 0.5 * c) / (1 - c);
-      }
-      return [hsl[0], c * 100, f * 100];
-    };
-    convert.hsv.hcg = function(hsv) {
-      const s = hsv[1] / 100;
-      const v = hsv[2] / 100;
-      const c = s * v;
-      let f = 0;
-      if (c < 1) {
-        f = (v - c) / (1 - c);
-      }
-      return [hsv[0], c * 100, f * 100];
-    };
-    convert.hcg.rgb = function(hcg) {
-      const h = hcg[0] / 360;
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      if (c === 0) {
-        return [g * 255, g * 255, g * 255];
-      }
-      const pure = [0, 0, 0];
-      const hi = h % 1 * 6;
-      const v = hi % 1;
-      const w = 1 - v;
-      let mg = 0;
-      switch (Math.floor(hi)) {
-        case 0:
-          pure[0] = 1;
-          pure[1] = v;
-          pure[2] = 0;
-          break;
-        case 1:
-          pure[0] = w;
-          pure[1] = 1;
-          pure[2] = 0;
-          break;
-        case 2:
-          pure[0] = 0;
-          pure[1] = 1;
-          pure[2] = v;
-          break;
-        case 3:
-          pure[0] = 0;
-          pure[1] = w;
-          pure[2] = 1;
-          break;
-        case 4:
-          pure[0] = v;
-          pure[1] = 0;
-          pure[2] = 1;
-          break;
-        default:
-          pure[0] = 1;
-          pure[1] = 0;
-          pure[2] = w;
-      }
-      mg = (1 - c) * g;
-      return [
-        (c * pure[0] + mg) * 255,
-        (c * pure[1] + mg) * 255,
-        (c * pure[2] + mg) * 255
-      ];
-    };
-    convert.hcg.hsv = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const v = c + g * (1 - c);
-      let f = 0;
-      if (v > 0) {
-        f = c / v;
-      }
-      return [hcg[0], f * 100, v * 100];
-    };
-    convert.hcg.hsl = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const l = g * (1 - c) + 0.5 * c;
-      let s = 0;
-      if (l > 0 && l < 0.5) {
-        s = c / (2 * l);
-      } else if (l >= 0.5 && l < 1) {
-        s = c / (2 * (1 - l));
-      }
-      return [hcg[0], s * 100, l * 100];
-    };
-    convert.hcg.hwb = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const v = c + g * (1 - c);
-      return [hcg[0], (v - c) * 100, (1 - v) * 100];
-    };
-    convert.hwb.hcg = function(hwb) {
-      const w = hwb[1] / 100;
-      const b = hwb[2] / 100;
-      const v = 1 - b;
-      const c = v - w;
-      let g = 0;
-      if (c < 1) {
-        g = (v - c) / (1 - c);
-      }
-      return [hwb[0], c * 100, g * 100];
-    };
-    convert.apple.rgb = function(apple) {
-      return [apple[0] / 65535 * 255, apple[1] / 65535 * 255, apple[2] / 65535 * 255];
-    };
-    convert.rgb.apple = function(rgb) {
-      return [rgb[0] / 255 * 65535, rgb[1] / 255 * 65535, rgb[2] / 255 * 65535];
-    };
-    convert.gray.rgb = function(args) {
-      return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
-    };
-    convert.gray.hsl = function(args) {
-      return [0, 0, args[0]];
-    };
-    convert.gray.hsv = convert.gray.hsl;
-    convert.gray.hwb = function(gray) {
-      return [0, 100, gray[0]];
-    };
-    convert.gray.cmyk = function(gray) {
-      return [0, 0, 0, gray[0]];
-    };
-    convert.gray.lab = function(gray) {
-      return [gray[0], 0, 0];
-    };
-    convert.gray.hex = function(gray) {
-      const val = Math.round(gray[0] / 100 * 255) & 255;
-      const integer = (val << 16) + (val << 8) + val;
-      const string = integer.toString(16).toUpperCase();
-      return "000000".substring(string.length) + string;
-    };
-    convert.rgb.gray = function(rgb) {
-      const val = (rgb[0] + rgb[1] + rgb[2]) / 3;
-      return [val / 255 * 100];
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/color-convert/route.js
-var require_route = __commonJS({
-  "node_modules/gradient-string/node_modules/color-convert/route.js"(exports, module2) {
-    var conversions = require_conversions();
-    function buildGraph() {
-      const graph = {};
-      const models = Object.keys(conversions);
-      for (let len = models.length, i = 0; i < len; i++) {
-        graph[models[i]] = {
-          distance: -1,
-          parent: null
-        };
-      }
-      return graph;
-    }
-    function deriveBFS(fromModel) {
-      const graph = buildGraph();
-      const queue = [fromModel];
-      graph[fromModel].distance = 0;
-      while (queue.length) {
-        const current = queue.pop();
-        const adjacents = Object.keys(conversions[current]);
-        for (let len = adjacents.length, i = 0; i < len; i++) {
-          const adjacent = adjacents[i];
-          const node = graph[adjacent];
-          if (node.distance === -1) {
-            node.distance = graph[current].distance + 1;
-            node.parent = current;
-            queue.unshift(adjacent);
-          }
-        }
-      }
-      return graph;
-    }
-    function link(from3, to) {
-      return function(args) {
-        return to(from3(args));
-      };
-    }
-    function wrapConversion(toModel, graph) {
-      const path3 = [graph[toModel].parent, toModel];
-      let fn = conversions[graph[toModel].parent][toModel];
-      let cur = graph[toModel].parent;
-      while (graph[cur].parent) {
-        path3.unshift(graph[cur].parent);
-        fn = link(conversions[graph[cur].parent][cur], fn);
-        cur = graph[cur].parent;
-      }
-      fn.conversion = path3;
-      return fn;
-    }
-    module2.exports = function(fromModel) {
-      const graph = deriveBFS(fromModel);
-      const conversion = {};
-      const models = Object.keys(graph);
-      for (let len = models.length, i = 0; i < len; i++) {
-        const toModel = models[i];
-        const node = graph[toModel];
-        if (node.parent === null) {
-          continue;
-        }
-        conversion[toModel] = wrapConversion(toModel, graph);
-      }
-      return conversion;
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/color-convert/index.js
-var require_color_convert = __commonJS({
-  "node_modules/gradient-string/node_modules/color-convert/index.js"(exports, module2) {
-    var conversions = require_conversions();
-    var route = require_route();
-    var convert = {};
-    var models = Object.keys(conversions);
-    function wrapRaw(fn) {
-      const wrappedFn = function(...args) {
-        const arg0 = args[0];
-        if (arg0 === void 0 || arg0 === null) {
-          return arg0;
-        }
-        if (arg0.length > 1) {
-          args = arg0;
-        }
-        return fn(args);
-      };
-      if ("conversion" in fn) {
-        wrappedFn.conversion = fn.conversion;
-      }
-      return wrappedFn;
-    }
-    function wrapRounded(fn) {
-      const wrappedFn = function(...args) {
-        const arg0 = args[0];
-        if (arg0 === void 0 || arg0 === null) {
-          return arg0;
-        }
-        if (arg0.length > 1) {
-          args = arg0;
-        }
-        const result = fn(args);
-        if (typeof result === "object") {
-          for (let len = result.length, i = 0; i < len; i++) {
-            result[i] = Math.round(result[i]);
-          }
-        }
-        return result;
-      };
-      if ("conversion" in fn) {
-        wrappedFn.conversion = fn.conversion;
-      }
-      return wrappedFn;
-    }
-    models.forEach((fromModel) => {
-      convert[fromModel] = {};
-      Object.defineProperty(convert[fromModel], "channels", { value: conversions[fromModel].channels });
-      Object.defineProperty(convert[fromModel], "labels", { value: conversions[fromModel].labels });
-      const routes = route(fromModel);
-      const routeModels = Object.keys(routes);
-      routeModels.forEach((toModel) => {
-        const fn = routes[toModel];
-        convert[fromModel][toModel] = wrapRounded(fn);
-        convert[fromModel][toModel].raw = wrapRaw(fn);
-      });
-    });
-    module2.exports = convert;
-  }
-});
-
-// node_modules/gradient-string/node_modules/ansi-styles/index.js
-var require_ansi_styles = __commonJS({
-  "node_modules/gradient-string/node_modules/ansi-styles/index.js"(exports, module2) {
-    "use strict";
-    var wrapAnsi163 = (fn, offset) => (...args) => {
-      const code = fn(...args);
-      return `\x1B[${code + offset}m`;
-    };
-    var wrapAnsi2563 = (fn, offset) => (...args) => {
-      const code = fn(...args);
-      return `\x1B[${38 + offset};5;${code}m`;
-    };
-    var wrapAnsi16m3 = (fn, offset) => (...args) => {
-      const rgb = fn(...args);
-      return `\x1B[${38 + offset};2;${rgb[0]};${rgb[1]};${rgb[2]}m`;
-    };
-    var ansi2ansi = (n) => n;
-    var rgb2rgb = (r, g, b) => [r, g, b];
-    var setLazyProperty = (object, property, get2) => {
-      Object.defineProperty(object, property, {
-        get: () => {
-          const value = get2();
-          Object.defineProperty(object, property, {
-            value,
-            enumerable: true,
-            configurable: true
-          });
-          return value;
-        },
-        enumerable: true,
-        configurable: true
-      });
-    };
-    var colorConvert;
-    var makeDynamicStyles = (wrap, targetSpace, identity, isBackground) => {
-      if (colorConvert === void 0) {
-        colorConvert = require_color_convert();
-      }
-      const offset = isBackground ? 10 : 0;
-      const styles4 = {};
-      for (const [sourceSpace, suite] of Object.entries(colorConvert)) {
-        const name = sourceSpace === "ansi16" ? "ansi" : sourceSpace;
-        if (sourceSpace === targetSpace) {
-          styles4[name] = wrap(identity, offset);
-        } else if (typeof suite === "object") {
-          styles4[name] = wrap(suite[targetSpace], offset);
-        }
-      }
-      return styles4;
-    };
-    function assembleStyles3() {
-      const codes = /* @__PURE__ */ new Map();
-      const styles4 = {
-        modifier: {
-          reset: [0, 0],
-          bold: [1, 22],
-          dim: [2, 22],
-          italic: [3, 23],
-          underline: [4, 24],
-          inverse: [7, 27],
-          hidden: [8, 28],
-          strikethrough: [9, 29]
-        },
-        color: {
-          black: [30, 39],
-          red: [31, 39],
-          green: [32, 39],
-          yellow: [33, 39],
-          blue: [34, 39],
-          magenta: [35, 39],
-          cyan: [36, 39],
-          white: [37, 39],
-          blackBright: [90, 39],
-          redBright: [91, 39],
-          greenBright: [92, 39],
-          yellowBright: [93, 39],
-          blueBright: [94, 39],
-          magentaBright: [95, 39],
-          cyanBright: [96, 39],
-          whiteBright: [97, 39]
-        },
-        bgColor: {
-          bgBlack: [40, 49],
-          bgRed: [41, 49],
-          bgGreen: [42, 49],
-          bgYellow: [43, 49],
-          bgBlue: [44, 49],
-          bgMagenta: [45, 49],
-          bgCyan: [46, 49],
-          bgWhite: [47, 49],
-          bgBlackBright: [100, 49],
-          bgRedBright: [101, 49],
-          bgGreenBright: [102, 49],
-          bgYellowBright: [103, 49],
-          bgBlueBright: [104, 49],
-          bgMagentaBright: [105, 49],
-          bgCyanBright: [106, 49],
-          bgWhiteBright: [107, 49]
-        }
-      };
-      styles4.color.gray = styles4.color.blackBright;
-      styles4.bgColor.bgGray = styles4.bgColor.bgBlackBright;
-      styles4.color.grey = styles4.color.blackBright;
-      styles4.bgColor.bgGrey = styles4.bgColor.bgBlackBright;
-      for (const [groupName, group] of Object.entries(styles4)) {
-        for (const [styleName, style] of Object.entries(group)) {
-          styles4[styleName] = {
-            open: `\x1B[${style[0]}m`,
-            close: `\x1B[${style[1]}m`
-          };
-          group[styleName] = styles4[styleName];
-          codes.set(style[0], style[1]);
-        }
-        Object.defineProperty(styles4, groupName, {
-          value: group,
-          enumerable: false
-        });
-      }
-      Object.defineProperty(styles4, "codes", {
-        value: codes,
-        enumerable: false
-      });
-      styles4.color.close = "\x1B[39m";
-      styles4.bgColor.close = "\x1B[49m";
-      setLazyProperty(styles4.color, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, false));
-      setLazyProperty(styles4.color, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, false));
-      setLazyProperty(styles4.color, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, false));
-      setLazyProperty(styles4.bgColor, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, true));
-      setLazyProperty(styles4.bgColor, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, true));
-      setLazyProperty(styles4.bgColor, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, true));
-      return styles4;
-    }
-    Object.defineProperty(module2, "exports", {
-      enumerable: true,
-      get: assembleStyles3
-    });
-  }
-});
-
-// node_modules/gradient-string/node_modules/has-flag/index.js
-var require_has_flag = __commonJS({
-  "node_modules/gradient-string/node_modules/has-flag/index.js"(exports, module2) {
-    "use strict";
-    module2.exports = (flag, argv = process.argv) => {
-      const prefix = flag.startsWith("-") ? "" : flag.length === 1 ? "-" : "--";
-      const position = argv.indexOf(prefix + flag);
-      const terminatorPosition = argv.indexOf("--");
-      return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/supports-color/index.js
-var require_supports_color = __commonJS({
-  "node_modules/gradient-string/node_modules/supports-color/index.js"(exports, module2) {
-    "use strict";
-    var os3 = require("os");
-    var tty2 = require("tty");
-    var hasFlag2 = require_has_flag();
-    var { env: env2 } = process;
-    var forceColor;
-    if (hasFlag2("no-color") || hasFlag2("no-colors") || hasFlag2("color=false") || hasFlag2("color=never")) {
-      forceColor = 0;
-    } else if (hasFlag2("color") || hasFlag2("colors") || hasFlag2("color=true") || hasFlag2("color=always")) {
-      forceColor = 1;
-    }
-    if ("FORCE_COLOR" in env2) {
-      if (env2.FORCE_COLOR === "true") {
-        forceColor = 1;
-      } else if (env2.FORCE_COLOR === "false") {
-        forceColor = 0;
-      } else {
-        forceColor = env2.FORCE_COLOR.length === 0 ? 1 : Math.min(parseInt(env2.FORCE_COLOR, 10), 3);
-      }
-    }
-    function translateLevel2(level) {
-      if (level === 0) {
-        return false;
-      }
-      return {
-        level,
-        hasBasic: true,
-        has256: level >= 2,
-        has16m: level >= 3
-      };
-    }
-    function supportsColor2(haveStream, streamIsTTY) {
-      if (forceColor === 0) {
-        return 0;
-      }
-      if (hasFlag2("color=16m") || hasFlag2("color=full") || hasFlag2("color=truecolor")) {
-        return 3;
-      }
-      if (hasFlag2("color=256")) {
-        return 2;
-      }
-      if (haveStream && !streamIsTTY && forceColor === void 0) {
-        return 0;
-      }
-      const min = forceColor || 0;
-      if (env2.TERM === "dumb") {
-        return min;
-      }
-      if (process.platform === "win32") {
-        const osRelease = os3.release().split(".");
-        if (Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) {
-          return Number(osRelease[2]) >= 14931 ? 3 : 2;
-        }
-        return 1;
-      }
-      if ("CI" in env2) {
-        if (["TRAVIS", "CIRCLECI", "APPVEYOR", "GITLAB_CI", "GITHUB_ACTIONS", "BUILDKITE"].some((sign) => sign in env2) || env2.CI_NAME === "codeship") {
-          return 1;
-        }
-        return min;
-      }
-      if ("TEAMCITY_VERSION" in env2) {
-        return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env2.TEAMCITY_VERSION) ? 1 : 0;
-      }
-      if (env2.COLORTERM === "truecolor") {
-        return 3;
-      }
-      if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
-        switch (env2.TERM_PROGRAM) {
-          case "iTerm.app":
-            return version >= 3 ? 3 : 2;
-          case "Apple_Terminal":
-            return 2;
-        }
-      }
-      if (/-256(color)?$/i.test(env2.TERM)) {
-        return 2;
-      }
-      if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env2.TERM)) {
-        return 1;
-      }
-      if ("COLORTERM" in env2) {
-        return 1;
-      }
-      return min;
-    }
-    function getSupportLevel(stream) {
-      const level = supportsColor2(stream, stream && stream.isTTY);
-      return translateLevel2(level);
-    }
-    module2.exports = {
-      supportsColor: getSupportLevel,
-      stdout: translateLevel2(supportsColor2(true, tty2.isatty(1))),
-      stderr: translateLevel2(supportsColor2(true, tty2.isatty(2)))
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/chalk/source/util.js
-var require_util = __commonJS({
-  "node_modules/gradient-string/node_modules/chalk/source/util.js"(exports, module2) {
-    "use strict";
-    var stringReplaceAll2 = (string, substring, replacer) => {
-      let index = string.indexOf(substring);
-      if (index === -1) {
-        return string;
-      }
-      const substringLength = substring.length;
-      let endIndex = 0;
-      let returnValue = "";
-      do {
-        returnValue += string.substr(endIndex, index - endIndex) + substring + replacer;
-        endIndex = index + substringLength;
-        index = string.indexOf(substring, endIndex);
-      } while (index !== -1);
-      returnValue += string.substr(endIndex);
-      return returnValue;
-    };
-    var stringEncaseCRLFWithFirstIndex2 = (string, prefix, postfix, index) => {
-      let endIndex = 0;
-      let returnValue = "";
-      do {
-        const gotCR = string[index - 1] === "\r";
-        returnValue += string.substr(endIndex, (gotCR ? index - 1 : index) - endIndex) + prefix + (gotCR ? "\r\n" : "\n") + postfix;
-        endIndex = index + 1;
-        index = string.indexOf("\n", endIndex);
-      } while (index !== -1);
-      returnValue += string.substr(endIndex);
-      return returnValue;
-    };
-    module2.exports = {
-      stringReplaceAll: stringReplaceAll2,
-      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/chalk/source/templates.js
-var require_templates = __commonJS({
-  "node_modules/gradient-string/node_modules/chalk/source/templates.js"(exports, module2) {
-    "use strict";
-    var TEMPLATE_REGEX = /(?:\\(u(?:[a-f\d]{4}|\{[a-f\d]{1,6}\})|x[a-f\d]{2}|.))|(?:\{(~)?(\w+(?:\([^)]*\))?(?:\.\w+(?:\([^)]*\))?)*)(?:[ \t]|(?=\r?\n)))|(\})|((?:.|[\r\n\f])+?)/gi;
-    var STYLE_REGEX = /(?:^|\.)(\w+)(?:\(([^)]*)\))?/g;
-    var STRING_REGEX = /^(['"])((?:\\.|(?!\1)[^\\])*)\1$/;
-    var ESCAPE_REGEX = /\\(u(?:[a-f\d]{4}|{[a-f\d]{1,6}})|x[a-f\d]{2}|.)|([^\\])/gi;
-    var ESCAPES2 = /* @__PURE__ */ new Map([
-      ["n", "\n"],
-      ["r", "\r"],
-      ["t", "	"],
-      ["b", "\b"],
-      ["f", "\f"],
-      ["v", "\v"],
-      ["0", "\0"],
-      ["\\", "\\"],
-      ["e", "\x1B"],
-      ["a", "\x07"]
-    ]);
-    function unescape(c) {
-      const u = c[0] === "u";
-      const bracket = c[1] === "{";
-      if (u && !bracket && c.length === 5 || c[0] === "x" && c.length === 3) {
-        return String.fromCharCode(parseInt(c.slice(1), 16));
-      }
-      if (u && bracket) {
-        return String.fromCodePoint(parseInt(c.slice(2, -1), 16));
-      }
-      return ESCAPES2.get(c) || c;
-    }
-    function parseArguments(name, arguments_) {
-      const results = [];
-      const chunks = arguments_.trim().split(/\s*,\s*/g);
-      let matches;
-      for (const chunk of chunks) {
-        const number = Number(chunk);
-        if (!Number.isNaN(number)) {
-          results.push(number);
-        } else if (matches = chunk.match(STRING_REGEX)) {
-          results.push(matches[2].replace(ESCAPE_REGEX, (m, escape, character) => escape ? unescape(escape) : character));
-        } else {
-          throw new Error(`Invalid Chalk template style argument: ${chunk} (in style '${name}')`);
-        }
-      }
-      return results;
-    }
-    function parseStyle(style) {
-      STYLE_REGEX.lastIndex = 0;
-      const results = [];
-      let matches;
-      while ((matches = STYLE_REGEX.exec(style)) !== null) {
-        const name = matches[1];
-        if (matches[2]) {
-          const args = parseArguments(name, matches[2]);
-          results.push([name].concat(args));
-        } else {
-          results.push([name]);
-        }
-      }
-      return results;
-    }
-    function buildStyle(chalk3, styles4) {
-      const enabled = {};
-      for (const layer of styles4) {
-        for (const style of layer.styles) {
-          enabled[style[0]] = layer.inverse ? null : style.slice(1);
-        }
-      }
-      let current = chalk3;
-      for (const [styleName, styles5] of Object.entries(enabled)) {
-        if (!Array.isArray(styles5)) {
-          continue;
-        }
-        if (!(styleName in current)) {
-          throw new Error(`Unknown Chalk style: ${styleName}`);
-        }
-        current = styles5.length > 0 ? current[styleName](...styles5) : current[styleName];
-      }
-      return current;
-    }
-    module2.exports = (chalk3, temporary) => {
-      const styles4 = [];
-      const chunks = [];
-      let chunk = [];
-      temporary.replace(TEMPLATE_REGEX, (m, escapeCharacter, inverse, style, close, character) => {
-        if (escapeCharacter) {
-          chunk.push(unescape(escapeCharacter));
-        } else if (style) {
-          const string = chunk.join("");
-          chunk = [];
-          chunks.push(styles4.length === 0 ? string : buildStyle(chalk3, styles4)(string));
-          styles4.push({ inverse, styles: parseStyle(style) });
-        } else if (close) {
-          if (styles4.length === 0) {
-            throw new Error("Found extraneous } in Chalk template literal");
-          }
-          chunks.push(buildStyle(chalk3, styles4)(chunk.join("")));
-          chunk = [];
-          styles4.pop();
-        } else {
-          chunk.push(character);
-        }
-      });
-      chunks.push(chunk.join(""));
-      if (styles4.length > 0) {
-        const errMessage = `Chalk template literal is missing ${styles4.length} closing bracket${styles4.length === 1 ? "" : "s"} (\`}\`)`;
-        throw new Error(errMessage);
-      }
-      return chunks.join("");
-    };
-  }
-});
-
-// node_modules/gradient-string/node_modules/chalk/source/index.js
-var require_source = __commonJS({
-  "node_modules/gradient-string/node_modules/chalk/source/index.js"(exports, module2) {
-    "use strict";
-    var ansiStyles3 = require_ansi_styles();
-    var { stdout: stdoutColor2, stderr: stderrColor2 } = require_supports_color();
-    var {
-      stringReplaceAll: stringReplaceAll2,
-      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
-    } = require_util();
-    var { isArray } = Array;
-    var levelMapping2 = [
-      "ansi",
-      "ansi",
-      "ansi256",
-      "ansi16m"
-    ];
-    var styles4 = /* @__PURE__ */ Object.create(null);
-    var applyOptions2 = (object, options = {}) => {
-      if (options.level && !(Number.isInteger(options.level) && options.level >= 0 && options.level <= 3)) {
-        throw new Error("The `level` option should be an integer from 0 to 3");
-      }
-      const colorLevel = stdoutColor2 ? stdoutColor2.level : 0;
-      object.level = options.level === void 0 ? colorLevel : options.level;
-    };
-    var ChalkClass = class {
-      constructor(options) {
-        return chalkFactory2(options);
-      }
-    };
-    var chalkFactory2 = (options) => {
-      const chalk4 = {};
-      applyOptions2(chalk4, options);
-      chalk4.template = (...arguments_) => chalkTag(chalk4.template, ...arguments_);
-      Object.setPrototypeOf(chalk4, Chalk.prototype);
-      Object.setPrototypeOf(chalk4.template, chalk4);
-      chalk4.template.constructor = () => {
-        throw new Error("`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead.");
-      };
-      chalk4.template.Instance = ChalkClass;
-      return chalk4.template;
-    };
-    function Chalk(options) {
-      return chalkFactory2(options);
-    }
-    for (const [styleName, style] of Object.entries(ansiStyles3)) {
-      styles4[styleName] = {
-        get() {
-          const builder = createBuilder2(this, createStyler2(style.open, style.close, this._styler), this._isEmpty);
-          Object.defineProperty(this, styleName, { value: builder });
-          return builder;
-        }
-      };
-    }
-    styles4.visible = {
-      get() {
-        const builder = createBuilder2(this, this._styler, true);
-        Object.defineProperty(this, "visible", { value: builder });
-        return builder;
-      }
-    };
-    var usedModels2 = ["rgb", "hex", "keyword", "hsl", "hsv", "hwb", "ansi", "ansi256"];
-    for (const model of usedModels2) {
-      styles4[model] = {
-        get() {
-          const { level } = this;
-          return function(...arguments_) {
-            const styler = createStyler2(ansiStyles3.color[levelMapping2[level]][model](...arguments_), ansiStyles3.color.close, this._styler);
-            return createBuilder2(this, styler, this._isEmpty);
-          };
-        }
-      };
-    }
-    for (const model of usedModels2) {
-      const bgModel = "bg" + model[0].toUpperCase() + model.slice(1);
-      styles4[bgModel] = {
-        get() {
-          const { level } = this;
-          return function(...arguments_) {
-            const styler = createStyler2(ansiStyles3.bgColor[levelMapping2[level]][model](...arguments_), ansiStyles3.bgColor.close, this._styler);
-            return createBuilder2(this, styler, this._isEmpty);
-          };
-        }
-      };
-    }
-    var proto2 = Object.defineProperties(() => {
-    }, {
-      ...styles4,
-      level: {
-        enumerable: true,
-        get() {
-          return this._generator.level;
-        },
-        set(level) {
-          this._generator.level = level;
-        }
-      }
-    });
-    var createStyler2 = (open, close, parent) => {
-      let openAll;
-      let closeAll;
-      if (parent === void 0) {
-        openAll = open;
-        closeAll = close;
-      } else {
-        openAll = parent.openAll + open;
-        closeAll = close + parent.closeAll;
-      }
-      return {
-        open,
-        close,
-        openAll,
-        closeAll,
-        parent
-      };
-    };
-    var createBuilder2 = (self2, _styler, _isEmpty) => {
-      const builder = (...arguments_) => {
-        if (isArray(arguments_[0]) && isArray(arguments_[0].raw)) {
-          return applyStyle2(builder, chalkTag(builder, ...arguments_));
-        }
-        return applyStyle2(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
-      };
-      Object.setPrototypeOf(builder, proto2);
-      builder._generator = self2;
-      builder._styler = _styler;
-      builder._isEmpty = _isEmpty;
-      return builder;
-    };
-    var applyStyle2 = (self2, string) => {
-      if (self2.level <= 0 || !string) {
-        return self2._isEmpty ? "" : string;
-      }
-      let styler = self2._styler;
-      if (styler === void 0) {
-        return string;
-      }
-      const { openAll, closeAll } = styler;
-      if (string.indexOf("\x1B") !== -1) {
-        while (styler !== void 0) {
-          string = stringReplaceAll2(string, styler.close, styler.open);
-          styler = styler.parent;
-        }
-      }
-      const lfIndex = string.indexOf("\n");
-      if (lfIndex !== -1) {
-        string = stringEncaseCRLFWithFirstIndex2(string, closeAll, openAll, lfIndex);
-      }
-      return openAll + string + closeAll;
-    };
-    var template;
-    var chalkTag = (chalk4, ...strings) => {
-      const [firstString] = strings;
-      if (!isArray(firstString) || !isArray(firstString.raw)) {
-        return strings.join(" ");
-      }
-      const arguments_ = strings.slice(1);
-      const parts = [firstString.raw[0]];
-      for (let i = 1; i < firstString.length; i++) {
-        parts.push(String(arguments_[i - 1]).replace(/[{}\\]/g, "\\$&"), String(firstString.raw[i]));
-      }
-      if (template === void 0) {
-        template = require_templates();
-      }
-      return template(chalk4, parts.join(""));
-    };
-    Object.defineProperties(Chalk.prototype, styles4);
-    var chalk3 = Chalk();
-    chalk3.supportsColor = stdoutColor2;
-    chalk3.stderr = Chalk({ level: stderrColor2 ? stderrColor2.level : 0 });
-    chalk3.stderr.supportsColor = stderrColor2;
-    module2.exports = chalk3;
-  }
-});
-
-// node_modules/tinycolor2/cjs/tinycolor.js
-var require_tinycolor = __commonJS({
-  "node_modules/tinycolor2/cjs/tinycolor.js"(exports, module2) {
-    (function(global2, factory) {
-      typeof exports === "object" && typeof module2 !== "undefined" ? module2.exports = factory() : typeof define === "function" && define.amd ? define(factory) : (global2 = typeof globalThis !== "undefined" ? globalThis : global2 || self, global2.tinycolor = factory());
-    })(exports, function() {
-      "use strict";
-      const trimLeft = /^\s+/;
-      const trimRight = /\s+$/;
-      function tinycolor(color, opts) {
-        color = color ? color : "";
-        opts = opts || {};
-        if (color instanceof tinycolor) {
-          return color;
-        }
-        if (!(this instanceof tinycolor)) {
-          return new tinycolor(color, opts);
-        }
-        var rgb = inputToRGB(color);
-        this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
-        this._gradientType = opts.gradientType;
-        if (this._r < 1)
-          this._r = Math.round(this._r);
-        if (this._g < 1)
-          this._g = Math.round(this._g);
-        if (this._b < 1)
-          this._b = Math.round(this._b);
-        this._ok = rgb.ok;
-      }
-      tinycolor.prototype = {
-        isDark: function() {
-          return this.getBrightness() < 128;
-        },
-        isLight: function() {
-          return !this.isDark();
-        },
-        isValid: function() {
-          return this._ok;
-        },
-        getOriginalInput: function() {
-          return this._originalInput;
-        },
-        getFormat: function() {
-          return this._format;
-        },
-        getAlpha: function() {
-          return this._a;
-        },
-        getBrightness: function() {
-          var rgb = this.toRgb();
-          return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1e3;
-        },
-        getLuminance: function() {
-          var rgb = this.toRgb();
-          var RsRGB, GsRGB, BsRGB, R, G, B;
-          RsRGB = rgb.r / 255;
-          GsRGB = rgb.g / 255;
-          BsRGB = rgb.b / 255;
-          if (RsRGB <= 0.03928)
-            R = RsRGB / 12.92;
-          else
-            R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
-          if (GsRGB <= 0.03928)
-            G = GsRGB / 12.92;
-          else
-            G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
-          if (BsRGB <= 0.03928)
-            B = BsRGB / 12.92;
-          else
-            B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
-          return 0.2126 * R + 0.7152 * G + 0.0722 * B;
-        },
-        setAlpha: function(value) {
-          this._a = boundAlpha(value);
-          this._roundA = Math.round(100 * this._a) / 100;
-          return this;
-        },
-        toHsv: function() {
-          var hsv = rgbToHsv(this._r, this._g, this._b);
-          return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
-        },
-        toHsvString: function() {
-          var hsv = rgbToHsv(this._r, this._g, this._b);
-          var h = Math.round(hsv.h * 360), s = Math.round(hsv.s * 100), v = Math.round(hsv.v * 100);
-          return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
-        },
-        toHsl: function() {
-          var hsl = rgbToHsl(this._r, this._g, this._b);
-          return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
-        },
-        toHslString: function() {
-          var hsl = rgbToHsl(this._r, this._g, this._b);
-          var h = Math.round(hsl.h * 360), s = Math.round(hsl.s * 100), l = Math.round(hsl.l * 100);
-          return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
-        },
-        toHex: function(allow3Char) {
-          return rgbToHex(this._r, this._g, this._b, allow3Char);
-        },
-        toHexString: function(allow3Char) {
-          return "#" + this.toHex(allow3Char);
-        },
-        toHex8: function(allow4Char) {
-          return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
-        },
-        toHex8String: function(allow4Char) {
-          return "#" + this.toHex8(allow4Char);
-        },
-        toRgb: function() {
-          return {
-            r: Math.round(this._r),
-            g: Math.round(this._g),
-            b: Math.round(this._b),
-            a: this._a
-          };
-        },
-        toRgbString: function() {
-          return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
-        },
-        toPercentageRgb: function() {
-          return {
-            r: Math.round(bound01(this._r, 255) * 100) + "%",
-            g: Math.round(bound01(this._g, 255) * 100) + "%",
-            b: Math.round(bound01(this._b, 255) * 100) + "%",
-            a: this._a
-          };
-        },
-        toPercentageRgbString: function() {
-          return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
-        },
-        toName: function() {
-          if (this._a === 0) {
-            return "transparent";
-          }
-          if (this._a < 1) {
-            return false;
-          }
-          return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
-        },
-        toFilter: function(secondColor) {
-          var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
-          var secondHex8String = hex8String;
-          var gradientType = this._gradientType ? "GradientType = 1, " : "";
-          if (secondColor) {
-            var s = tinycolor(secondColor);
-            secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
-          }
-          return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
-        },
-        toString: function(format) {
-          var formatSet = !!format;
-          format = format || this._format;
-          var formattedString = false;
-          var hasAlpha = this._a < 1 && this._a >= 0;
-          var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
-          if (needsAlphaFormat) {
-            if (format === "name" && this._a === 0) {
-              return this.toName();
-            }
-            return this.toRgbString();
-          }
-          if (format === "rgb") {
-            formattedString = this.toRgbString();
-          }
-          if (format === "prgb") {
-            formattedString = this.toPercentageRgbString();
-          }
-          if (format === "hex" || format === "hex6") {
-            formattedString = this.toHexString();
-          }
-          if (format === "hex3") {
-            formattedString = this.toHexString(true);
-          }
-          if (format === "hex4") {
-            formattedString = this.toHex8String(true);
-          }
-          if (format === "hex8") {
-            formattedString = this.toHex8String();
-          }
-          if (format === "name") {
-            formattedString = this.toName();
-          }
-          if (format === "hsl") {
-            formattedString = this.toHslString();
-          }
-          if (format === "hsv") {
-            formattedString = this.toHsvString();
-          }
-          return formattedString || this.toHexString();
-        },
-        clone: function() {
-          return tinycolor(this.toString());
-        },
-        _applyModification: function(fn, args) {
-          var color = fn.apply(null, [this].concat([].slice.call(args)));
-          this._r = color._r;
-          this._g = color._g;
-          this._b = color._b;
-          this.setAlpha(color._a);
-          return this;
-        },
-        lighten: function() {
-          return this._applyModification(lighten, arguments);
-        },
-        brighten: function() {
-          return this._applyModification(brighten, arguments);
-        },
-        darken: function() {
-          return this._applyModification(darken, arguments);
-        },
-        desaturate: function() {
-          return this._applyModification(desaturate, arguments);
-        },
-        saturate: function() {
-          return this._applyModification(saturate, arguments);
-        },
-        greyscale: function() {
-          return this._applyModification(greyscale, arguments);
-        },
-        spin: function() {
-          return this._applyModification(spin, arguments);
-        },
-        _applyCombination: function(fn, args) {
-          return fn.apply(null, [this].concat([].slice.call(args)));
-        },
-        analogous: function() {
-          return this._applyCombination(analogous, arguments);
-        },
-        complement: function() {
-          return this._applyCombination(complement, arguments);
-        },
-        monochromatic: function() {
-          return this._applyCombination(monochromatic, arguments);
-        },
-        splitcomplement: function() {
-          return this._applyCombination(splitcomplement, arguments);
-        },
-        triad: function() {
-          return this._applyCombination(polyad, [3]);
-        },
-        tetrad: function() {
-          return this._applyCombination(polyad, [4]);
-        }
-      };
-      tinycolor.fromRatio = function(color, opts) {
-        if (typeof color == "object") {
-          var newColor = {};
-          for (var i in color) {
-            if (color.hasOwnProperty(i)) {
-              if (i === "a") {
-                newColor[i] = color[i];
-              } else {
-                newColor[i] = convertToPercentage(color[i]);
-              }
-            }
-          }
-          color = newColor;
-        }
-        return tinycolor(color, opts);
-      };
-      function inputToRGB(color) {
-        var rgb = { r: 0, g: 0, b: 0 };
-        var a = 1;
-        var s = null;
-        var v = null;
-        var l = null;
-        var ok = false;
-        var format = false;
-        if (typeof color == "string") {
-          color = stringInputToObject(color);
-        }
-        if (typeof color == "object") {
-          if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
-            rgb = rgbToRgb(color.r, color.g, color.b);
-            ok = true;
-            format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
-          } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
-            s = convertToPercentage(color.s);
-            v = convertToPercentage(color.v);
-            rgb = hsvToRgb(color.h, s, v);
-            ok = true;
-            format = "hsv";
-          } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
-            s = convertToPercentage(color.s);
-            l = convertToPercentage(color.l);
-            rgb = hslToRgb(color.h, s, l);
-            ok = true;
-            format = "hsl";
-          }
-          if (color.hasOwnProperty("a")) {
-            a = color.a;
-          }
-        }
-        a = boundAlpha(a);
-        return {
-          ok,
-          format: color.format || format,
-          r: Math.min(255, Math.max(rgb.r, 0)),
-          g: Math.min(255, Math.max(rgb.g, 0)),
-          b: Math.min(255, Math.max(rgb.b, 0)),
-          a
-        };
-      }
-      function rgbToRgb(r, g, b) {
-        return {
-          r: bound01(r, 255) * 255,
-          g: bound01(g, 255) * 255,
-          b: bound01(b, 255) * 255
-        };
-      }
-      function rgbToHsl(r, g, b) {
-        r = bound01(r, 255);
-        g = bound01(g, 255);
-        b = bound01(b, 255);
-        var max = Math.max(r, g, b), min = Math.min(r, g, b);
-        var h, s, l = (max + min) / 2;
-        if (max == min) {
-          h = s = 0;
-        } else {
-          var d = max - min;
-          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-          switch (max) {
-            case r:
-              h = (g - b) / d + (g < b ? 6 : 0);
-              break;
-            case g:
-              h = (b - r) / d + 2;
-              break;
-            case b:
-              h = (r - g) / d + 4;
-              break;
-          }
-          h /= 6;
-        }
-        return { h, s, l };
-      }
-      function hslToRgb(h, s, l) {
-        var r, g, b;
-        h = bound01(h, 360);
-        s = bound01(s, 100);
-        l = bound01(l, 100);
-        function hue2rgb(p2, q2, t) {
-          if (t < 0)
-            t += 1;
-          if (t > 1)
-            t -= 1;
-          if (t < 1 / 6)
-            return p2 + (q2 - p2) * 6 * t;
-          if (t < 1 / 2)
-            return q2;
-          if (t < 2 / 3)
-            return p2 + (q2 - p2) * (2 / 3 - t) * 6;
-          return p2;
-        }
-        if (s === 0) {
-          r = g = b = l;
-        } else {
-          var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-          var p = 2 * l - q;
-          r = hue2rgb(p, q, h + 1 / 3);
-          g = hue2rgb(p, q, h);
-          b = hue2rgb(p, q, h - 1 / 3);
-        }
-        return { r: r * 255, g: g * 255, b: b * 255 };
-      }
-      function rgbToHsv(r, g, b) {
-        r = bound01(r, 255);
-        g = bound01(g, 255);
-        b = bound01(b, 255);
-        var max = Math.max(r, g, b), min = Math.min(r, g, b);
-        var h, s, v = max;
-        var d = max - min;
-        s = max === 0 ? 0 : d / max;
-        if (max == min) {
-          h = 0;
-        } else {
-          switch (max) {
-            case r:
-              h = (g - b) / d + (g < b ? 6 : 0);
-              break;
-            case g:
-              h = (b - r) / d + 2;
-              break;
-            case b:
-              h = (r - g) / d + 4;
-              break;
-          }
-          h /= 6;
-        }
-        return { h, s, v };
-      }
-      function hsvToRgb(h, s, v) {
-        h = bound01(h, 360) * 6;
-        s = bound01(s, 100);
-        v = bound01(v, 100);
-        var i = Math.floor(h), f = h - i, p = v * (1 - s), q = v * (1 - f * s), t = v * (1 - (1 - f) * s), mod = i % 6, r = [v, q, p, p, t, v][mod], g = [t, v, v, q, p, p][mod], b = [p, p, t, v, v, q][mod];
-        return { r: r * 255, g: g * 255, b: b * 255 };
-      }
-      function rgbToHex(r, g, b, allow3Char) {
-        var hex = [
-          pad2(Math.round(r).toString(16)),
-          pad2(Math.round(g).toString(16)),
-          pad2(Math.round(b).toString(16))
-        ];
-        if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
-          return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
-        }
-        return hex.join("");
-      }
-      function rgbaToHex(r, g, b, a, allow4Char) {
-        var hex = [
-          pad2(Math.round(r).toString(16)),
-          pad2(Math.round(g).toString(16)),
-          pad2(Math.round(b).toString(16)),
-          pad2(convertDecimalToHex(a))
-        ];
-        if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) {
-          return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
-        }
-        return hex.join("");
-      }
-      function rgbaToArgbHex(r, g, b, a) {
-        var hex = [
-          pad2(convertDecimalToHex(a)),
-          pad2(Math.round(r).toString(16)),
-          pad2(Math.round(g).toString(16)),
-          pad2(Math.round(b).toString(16))
-        ];
-        return hex.join("");
-      }
-      tinycolor.equals = function(color1, color2) {
-        if (!color1 || !color2)
-          return false;
-        return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
-      };
-      tinycolor.random = function() {
-        return tinycolor.fromRatio({
-          r: Math.random(),
-          g: Math.random(),
-          b: Math.random()
-        });
-      };
-      function desaturate(color, amount) {
-        amount = amount === 0 ? 0 : amount || 10;
-        var hsl = tinycolor(color).toHsl();
-        hsl.s -= amount / 100;
-        hsl.s = clamp01(hsl.s);
-        return tinycolor(hsl);
-      }
-      function saturate(color, amount) {
-        amount = amount === 0 ? 0 : amount || 10;
-        var hsl = tinycolor(color).toHsl();
-        hsl.s += amount / 100;
-        hsl.s = clamp01(hsl.s);
-        return tinycolor(hsl);
-      }
-      function greyscale(color) {
-        return tinycolor(color).desaturate(100);
-      }
-      function lighten(color, amount) {
-        amount = amount === 0 ? 0 : amount || 10;
-        var hsl = tinycolor(color).toHsl();
-        hsl.l += amount / 100;
-        hsl.l = clamp01(hsl.l);
-        return tinycolor(hsl);
-      }
-      function brighten(color, amount) {
-        amount = amount === 0 ? 0 : amount || 10;
-        var rgb = tinycolor(color).toRgb();
-        rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
-        rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
-        rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
-        return tinycolor(rgb);
-      }
-      function darken(color, amount) {
-        amount = amount === 0 ? 0 : amount || 10;
-        var hsl = tinycolor(color).toHsl();
-        hsl.l -= amount / 100;
-        hsl.l = clamp01(hsl.l);
-        return tinycolor(hsl);
-      }
-      function spin(color, amount) {
-        var hsl = tinycolor(color).toHsl();
-        var hue = (hsl.h + amount) % 360;
-        hsl.h = hue < 0 ? 360 + hue : hue;
-        return tinycolor(hsl);
-      }
-      function complement(color) {
-        var hsl = tinycolor(color).toHsl();
-        hsl.h = (hsl.h + 180) % 360;
-        return tinycolor(hsl);
-      }
-      function polyad(color, number) {
-        if (isNaN(number) || number <= 0) {
-          throw new Error("Argument to polyad must be a positive number");
-        }
-        var hsl = tinycolor(color).toHsl();
-        var result = [tinycolor(color)];
-        var step = 360 / number;
-        for (var i = 1; i < number; i++) {
-          result.push(tinycolor({ h: (hsl.h + i * step) % 360, s: hsl.s, l: hsl.l }));
-        }
-        return result;
-      }
-      function splitcomplement(color) {
-        var hsl = tinycolor(color).toHsl();
-        var h = hsl.h;
-        return [
-          tinycolor(color),
-          tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l }),
-          tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l })
-        ];
-      }
-      function analogous(color, results, slices) {
-        results = results || 6;
-        slices = slices || 30;
-        var hsl = tinycolor(color).toHsl();
-        var part = 360 / slices;
-        var ret = [tinycolor(color)];
-        for (hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results; ) {
-          hsl.h = (hsl.h + part) % 360;
-          ret.push(tinycolor(hsl));
-        }
-        return ret;
-      }
-      function monochromatic(color, results) {
-        results = results || 6;
-        var hsv = tinycolor(color).toHsv();
-        var h = hsv.h, s = hsv.s, v = hsv.v;
-        var ret = [];
-        var modification = 1 / results;
-        while (results--) {
-          ret.push(tinycolor({ h, s, v }));
-          v = (v + modification) % 1;
-        }
-        return ret;
-      }
-      tinycolor.mix = function(color1, color2, amount) {
-        amount = amount === 0 ? 0 : amount || 50;
-        var rgb1 = tinycolor(color1).toRgb();
-        var rgb2 = tinycolor(color2).toRgb();
-        var p = amount / 100;
-        var rgba = {
-          r: (rgb2.r - rgb1.r) * p + rgb1.r,
-          g: (rgb2.g - rgb1.g) * p + rgb1.g,
-          b: (rgb2.b - rgb1.b) * p + rgb1.b,
-          a: (rgb2.a - rgb1.a) * p + rgb1.a
-        };
-        return tinycolor(rgba);
-      };
-      tinycolor.readability = function(color1, color2) {
-        var c1 = tinycolor(color1);
-        var c2 = tinycolor(color2);
-        return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
-      };
-      tinycolor.isReadable = function(color1, color2, wcag2) {
-        var readability = tinycolor.readability(color1, color2);
-        var wcag2Parms, out;
-        out = false;
-        wcag2Parms = validateWCAG2Parms(wcag2);
-        switch (wcag2Parms.level + wcag2Parms.size) {
-          case "AAsmall":
-          case "AAAlarge":
-            out = readability >= 4.5;
-            break;
-          case "AAlarge":
-            out = readability >= 3;
-            break;
-          case "AAAsmall":
-            out = readability >= 7;
-            break;
-        }
-        return out;
-      };
-      tinycolor.mostReadable = function(baseColor, colorList, args) {
-        var bestColor = null;
-        var bestScore = 0;
-        var readability;
-        var includeFallbackColors, level, size;
-        args = args || {};
-        includeFallbackColors = args.includeFallbackColors;
-        level = args.level;
-        size = args.size;
-        for (var i = 0; i < colorList.length; i++) {
-          readability = tinycolor.readability(baseColor, colorList[i]);
-          if (readability > bestScore) {
-            bestScore = readability;
-            bestColor = tinycolor(colorList[i]);
-          }
-        }
-        if (tinycolor.isReadable(baseColor, bestColor, {
-          level,
-          size
-        }) || !includeFallbackColors) {
-          return bestColor;
-        } else {
-          args.includeFallbackColors = false;
-          return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
-        }
-      };
-      var names = tinycolor.names = {
-        aliceblue: "f0f8ff",
-        antiquewhite: "faebd7",
-        aqua: "0ff",
-        aquamarine: "7fffd4",
-        azure: "f0ffff",
-        beige: "f5f5dc",
-        bisque: "ffe4c4",
-        black: "000",
-        blanchedalmond: "ffebcd",
-        blue: "00f",
-        blueviolet: "8a2be2",
-        brown: "a52a2a",
-        burlywood: "deb887",
-        burntsienna: "ea7e5d",
-        cadetblue: "5f9ea0",
-        chartreuse: "7fff00",
-        chocolate: "d2691e",
-        coral: "ff7f50",
-        cornflowerblue: "6495ed",
-        cornsilk: "fff8dc",
-        crimson: "dc143c",
-        cyan: "0ff",
-        darkblue: "00008b",
-        darkcyan: "008b8b",
-        darkgoldenrod: "b8860b",
-        darkgray: "a9a9a9",
-        darkgreen: "006400",
-        darkgrey: "a9a9a9",
-        darkkhaki: "bdb76b",
-        darkmagenta: "8b008b",
-        darkolivegreen: "556b2f",
-        darkorange: "ff8c00",
-        darkorchid: "9932cc",
-        darkred: "8b0000",
-        darksalmon: "e9967a",
-        darkseagreen: "8fbc8f",
-        darkslateblue: "483d8b",
-        darkslategray: "2f4f4f",
-        darkslategrey: "2f4f4f",
-        darkturquoise: "00ced1",
-        darkviolet: "9400d3",
-        deeppink: "ff1493",
-        deepskyblue: "00bfff",
-        dimgray: "696969",
-        dimgrey: "696969",
-        dodgerblue: "1e90ff",
-        firebrick: "b22222",
-        floralwhite: "fffaf0",
-        forestgreen: "228b22",
-        fuchsia: "f0f",
-        gainsboro: "dcdcdc",
-        ghostwhite: "f8f8ff",
-        gold: "ffd700",
-        goldenrod: "daa520",
-        gray: "808080",
-        green: "008000",
-        greenyellow: "adff2f",
-        grey: "808080",
-        honeydew: "f0fff0",
-        hotpink: "ff69b4",
-        indianred: "cd5c5c",
-        indigo: "4b0082",
-        ivory: "fffff0",
-        khaki: "f0e68c",
-        lavender: "e6e6fa",
-        lavenderblush: "fff0f5",
-        lawngreen: "7cfc00",
-        lemonchiffon: "fffacd",
-        lightblue: "add8e6",
-        lightcoral: "f08080",
-        lightcyan: "e0ffff",
-        lightgoldenrodyellow: "fafad2",
-        lightgray: "d3d3d3",
-        lightgreen: "90ee90",
-        lightgrey: "d3d3d3",
-        lightpink: "ffb6c1",
-        lightsalmon: "ffa07a",
-        lightseagreen: "20b2aa",
-        lightskyblue: "87cefa",
-        lightslategray: "789",
-        lightslategrey: "789",
-        lightsteelblue: "b0c4de",
-        lightyellow: "ffffe0",
-        lime: "0f0",
-        limegreen: "32cd32",
-        linen: "faf0e6",
-        magenta: "f0f",
-        maroon: "800000",
-        mediumaquamarine: "66cdaa",
-        mediumblue: "0000cd",
-        mediumorchid: "ba55d3",
-        mediumpurple: "9370db",
-        mediumseagreen: "3cb371",
-        mediumslateblue: "7b68ee",
-        mediumspringgreen: "00fa9a",
-        mediumturquoise: "48d1cc",
-        mediumvioletred: "c71585",
-        midnightblue: "191970",
-        mintcream: "f5fffa",
-        mistyrose: "ffe4e1",
-        moccasin: "ffe4b5",
-        navajowhite: "ffdead",
-        navy: "000080",
-        oldlace: "fdf5e6",
-        olive: "808000",
-        olivedrab: "6b8e23",
-        orange: "ffa500",
-        orangered: "ff4500",
-        orchid: "da70d6",
-        palegoldenrod: "eee8aa",
-        palegreen: "98fb98",
-        paleturquoise: "afeeee",
-        palevioletred: "db7093",
-        papayawhip: "ffefd5",
-        peachpuff: "ffdab9",
-        peru: "cd853f",
-        pink: "ffc0cb",
-        plum: "dda0dd",
-        powderblue: "b0e0e6",
-        purple: "800080",
-        rebeccapurple: "663399",
-        red: "f00",
-        rosybrown: "bc8f8f",
-        royalblue: "4169e1",
-        saddlebrown: "8b4513",
-        salmon: "fa8072",
-        sandybrown: "f4a460",
-        seagreen: "2e8b57",
-        seashell: "fff5ee",
-        sienna: "a0522d",
-        silver: "c0c0c0",
-        skyblue: "87ceeb",
-        slateblue: "6a5acd",
-        slategray: "708090",
-        slategrey: "708090",
-        snow: "fffafa",
-        springgreen: "00ff7f",
-        steelblue: "4682b4",
-        tan: "d2b48c",
-        teal: "008080",
-        thistle: "d8bfd8",
-        tomato: "ff6347",
-        turquoise: "40e0d0",
-        violet: "ee82ee",
-        wheat: "f5deb3",
-        white: "fff",
-        whitesmoke: "f5f5f5",
-        yellow: "ff0",
-        yellowgreen: "9acd32"
-      };
-      var hexNames = tinycolor.hexNames = flip(names);
-      function flip(o) {
-        var flipped = {};
-        for (var i in o) {
-          if (o.hasOwnProperty(i)) {
-            flipped[o[i]] = i;
-          }
-        }
-        return flipped;
-      }
-      function boundAlpha(a) {
-        a = parseFloat(a);
-        if (isNaN(a) || a < 0 || a > 1) {
-          a = 1;
-        }
-        return a;
-      }
-      function bound01(n, max) {
-        if (isOnePointZero(n))
-          n = "100%";
-        var processPercent = isPercentage(n);
-        n = Math.min(max, Math.max(0, parseFloat(n)));
-        if (processPercent) {
-          n = parseInt(n * max, 10) / 100;
-        }
-        if (Math.abs(n - max) < 1e-6) {
-          return 1;
-        }
-        return n % max / parseFloat(max);
-      }
-      function clamp01(val) {
-        return Math.min(1, Math.max(0, val));
-      }
-      function parseIntFromHex(val) {
-        return parseInt(val, 16);
-      }
-      function isOnePointZero(n) {
-        return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
-      }
-      function isPercentage(n) {
-        return typeof n === "string" && n.indexOf("%") != -1;
-      }
-      function pad2(c) {
-        return c.length == 1 ? "0" + c : "" + c;
-      }
-      function convertToPercentage(n) {
-        if (n <= 1) {
-          n = n * 100 + "%";
-        }
-        return n;
-      }
-      function convertDecimalToHex(d) {
-        return Math.round(parseFloat(d) * 255).toString(16);
-      }
-      function convertHexToDecimal(h) {
-        return parseIntFromHex(h) / 255;
-      }
-      var matchers = function() {
-        var CSS_INTEGER = "[-\\+]?\\d+%?";
-        var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
-        var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
-        var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-        var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
-        return {
-          CSS_UNIT: new RegExp(CSS_UNIT),
-          rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
-          rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
-          hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
-          hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
-          hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
-          hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
-          hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-          hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-          hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-          hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
-        };
-      }();
-      function isValidCSSUnit(color) {
-        return !!matchers.CSS_UNIT.exec(color);
-      }
-      function stringInputToObject(color) {
-        color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
-        var named = false;
-        if (names[color]) {
-          color = names[color];
-          named = true;
-        } else if (color == "transparent") {
-          return { r: 0, g: 0, b: 0, a: 0, format: "name" };
-        }
-        var match;
-        if (match = matchers.rgb.exec(color)) {
-          return { r: match[1], g: match[2], b: match[3] };
-        }
-        if (match = matchers.rgba.exec(color)) {
-          return { r: match[1], g: match[2], b: match[3], a: match[4] };
-        }
-        if (match = matchers.hsl.exec(color)) {
-          return { h: match[1], s: match[2], l: match[3] };
-        }
-        if (match = matchers.hsla.exec(color)) {
-          return { h: match[1], s: match[2], l: match[3], a: match[4] };
-        }
-        if (match = matchers.hsv.exec(color)) {
-          return { h: match[1], s: match[2], v: match[3] };
-        }
-        if (match = matchers.hsva.exec(color)) {
-          return { h: match[1], s: match[2], v: match[3], a: match[4] };
-        }
-        if (match = matchers.hex8.exec(color)) {
-          return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            a: convertHexToDecimal(match[4]),
-            format: named ? "name" : "hex8"
-          };
-        }
-        if (match = matchers.hex6.exec(color)) {
-          return {
-            r: parseIntFromHex(match[1]),
-            g: parseIntFromHex(match[2]),
-            b: parseIntFromHex(match[3]),
-            format: named ? "name" : "hex"
-          };
-        }
-        if (match = matchers.hex4.exec(color)) {
-          return {
-            r: parseIntFromHex(match[1] + "" + match[1]),
-            g: parseIntFromHex(match[2] + "" + match[2]),
-            b: parseIntFromHex(match[3] + "" + match[3]),
-            a: convertHexToDecimal(match[4] + "" + match[4]),
-            format: named ? "name" : "hex8"
-          };
-        }
-        if (match = matchers.hex3.exec(color)) {
-          return {
-            r: parseIntFromHex(match[1] + "" + match[1]),
-            g: parseIntFromHex(match[2] + "" + match[2]),
-            b: parseIntFromHex(match[3] + "" + match[3]),
-            format: named ? "name" : "hex"
-          };
-        }
-        return false;
-      }
-      function validateWCAG2Parms(parms) {
-        var level, size;
-        parms = parms || { level: "AA", size: "small" };
-        level = (parms.level || "AA").toUpperCase();
-        size = (parms.size || "small").toLowerCase();
-        if (level !== "AA" && level !== "AAA") {
-          level = "AA";
-        }
-        if (size !== "small" && size !== "large") {
-          size = "small";
-        }
-        return { level, size };
-      }
-      return tinycolor;
-    });
-  }
-});
-
-// node_modules/tinygradient/index.js
-var require_tinygradient = __commonJS({
-  "node_modules/tinygradient/index.js"(exports, module2) {
-    var tinycolor = require_tinycolor();
-    var RGBA_MAX = { r: 256, g: 256, b: 256, a: 1 };
-    var HSVA_MAX = { h: 360, s: 1, v: 1, a: 1 };
-    function stepize(start, end, steps) {
-      let step = {};
-      for (let k in start) {
-        if (start.hasOwnProperty(k)) {
-          step[k] = steps === 0 ? 0 : (end[k] - start[k]) / steps;
-        }
-      }
-      return step;
-    }
-    function interpolate(step, start, i, max) {
-      let color = {};
-      for (let k in start) {
-        if (start.hasOwnProperty(k)) {
-          color[k] = step[k] * i + start[k];
-          color[k] = color[k] < 0 ? color[k] + max[k] : max[k] !== 1 ? color[k] % max[k] : color[k];
-        }
-      }
-      return color;
-    }
-    function interpolateRgb(stop1, stop2, steps) {
-      const start = stop1.color.toRgb();
-      const end = stop2.color.toRgb();
-      const step = stepize(start, end, steps);
-      let gradient3 = [stop1.color];
-      for (let i = 1; i < steps; i++) {
-        const color = interpolate(step, start, i, RGBA_MAX);
-        gradient3.push(tinycolor(color));
-      }
-      return gradient3;
-    }
-    function interpolateHsv(stop1, stop2, steps, mode) {
-      const start = stop1.color.toHsv();
-      const end = stop2.color.toHsv();
-      if (start.s === 0 || end.s === 0) {
-        return interpolateRgb(stop1, stop2, steps);
-      }
-      let trigonometric;
-      if (typeof mode === "boolean") {
-        trigonometric = mode;
-      } else {
-        const trigShortest = start.h < end.h && end.h - start.h < 180 || start.h > end.h && start.h - end.h > 180;
-        trigonometric = mode === "long" && trigShortest || mode === "short" && !trigShortest;
-      }
-      const step = stepize(start, end, steps);
-      let gradient3 = [stop1.color];
-      let diff;
-      if (start.h <= end.h && !trigonometric || start.h >= end.h && trigonometric) {
-        diff = end.h - start.h;
-      } else if (trigonometric) {
-        diff = 360 - end.h + start.h;
-      } else {
-        diff = 360 - start.h + end.h;
-      }
-      step.h = Math.pow(-1, trigonometric ? 1 : 0) * Math.abs(diff) / steps;
-      for (let i = 1; i < steps; i++) {
-        const color = interpolate(step, start, i, HSVA_MAX);
-        gradient3.push(tinycolor(color));
-      }
-      return gradient3;
-    }
-    function computeSubsteps(stops, steps) {
-      const l = stops.length;
-      steps = parseInt(steps, 10);
-      if (isNaN(steps) || steps < 2) {
-        throw new Error("Invalid number of steps (< 2)");
-      }
-      if (steps < l) {
-        throw new Error("Number of steps cannot be inferior to number of stops");
-      }
-      let substeps = [];
-      for (let i = 1; i < l; i++) {
-        const step = (steps - 1) * (stops[i].pos - stops[i - 1].pos);
-        substeps.push(Math.max(1, Math.round(step)));
-      }
-      let totalSubsteps = 1;
-      for (let n = l - 1; n--; )
-        totalSubsteps += substeps[n];
-      while (totalSubsteps !== steps) {
-        if (totalSubsteps < steps) {
-          const min = Math.min.apply(null, substeps);
-          substeps[substeps.indexOf(min)]++;
-          totalSubsteps++;
-        } else {
-          const max = Math.max.apply(null, substeps);
-          substeps[substeps.indexOf(max)]--;
-          totalSubsteps--;
-        }
-      }
-      return substeps;
-    }
-    function computeAt(stops, pos, method, max) {
-      if (pos < 0 || pos > 1) {
-        throw new Error("Position must be between 0 and 1");
-      }
-      let start, end;
-      for (let i = 0, l = stops.length; i < l - 1; i++) {
-        if (pos >= stops[i].pos && pos < stops[i + 1].pos) {
-          start = stops[i];
-          end = stops[i + 1];
-          break;
-        }
-      }
-      if (!start) {
-        start = end = stops[stops.length - 1];
-      }
-      const step = stepize(start.color[method](), end.color[method](), (end.pos - start.pos) * 100);
-      const color = interpolate(step, start.color[method](), (pos - start.pos) * 100, max);
-      return tinycolor(color);
-    }
-    var TinyGradient = class {
-      constructor(stops) {
-        if (stops.length < 2) {
-          throw new Error("Invalid number of stops (< 2)");
-        }
-        const havingPositions = stops[0].pos !== void 0;
-        let l = stops.length;
-        let p = -1;
-        let lastColorLess = false;
-        this.stops = stops.map((stop, i) => {
-          const hasPosition = stop.pos !== void 0;
-          if (havingPositions ^ hasPosition) {
-            throw new Error("Cannot mix positionned and not posionned color stops");
-          }
-          if (hasPosition) {
-            const hasColor = stop.color !== void 0;
-            if (!hasColor && (lastColorLess || i === 0 || i === l - 1)) {
-              throw new Error("Cannot define two consecutive position-only stops");
-            }
-            lastColorLess = !hasColor;
-            stop = {
-              color: hasColor ? tinycolor(stop.color) : null,
-              colorLess: !hasColor,
-              pos: stop.pos
-            };
-            if (stop.pos < 0 || stop.pos > 1) {
-              throw new Error("Color stops positions must be between 0 and 1");
-            } else if (stop.pos < p) {
-              throw new Error("Color stops positions are not ordered");
-            }
-            p = stop.pos;
-          } else {
-            stop = {
-              color: tinycolor(stop.color !== void 0 ? stop.color : stop),
-              pos: i / (l - 1)
-            };
-          }
-          return stop;
-        });
-        if (this.stops[0].pos !== 0) {
-          this.stops.unshift({
-            color: this.stops[0].color,
-            pos: 0
-          });
-          l++;
-        }
-        if (this.stops[l - 1].pos !== 1) {
-          this.stops.push({
-            color: this.stops[l - 1].color,
-            pos: 1
-          });
-        }
-      }
-      reverse() {
-        let stops = [];
-        this.stops.forEach(function(stop) {
-          stops.push({
-            color: stop.color,
-            pos: 1 - stop.pos
-          });
-        });
-        return new TinyGradient(stops.reverse());
-      }
-      loop() {
-        let stops1 = [];
-        let stops2 = [];
-        this.stops.forEach((stop) => {
-          stops1.push({
-            color: stop.color,
-            pos: stop.pos / 2
-          });
-        });
-        this.stops.slice(0, -1).forEach((stop) => {
-          stops2.push({
-            color: stop.color,
-            pos: 1 - stop.pos / 2
-          });
-        });
-        return new TinyGradient(stops1.concat(stops2.reverse()));
-      }
-      rgb(steps) {
-        const substeps = computeSubsteps(this.stops, steps);
-        let gradient3 = [];
-        this.stops.forEach((stop, i) => {
-          if (stop.colorLess) {
-            stop.color = interpolateRgb(this.stops[i - 1], this.stops[i + 1], 2)[1];
-          }
-        });
-        for (let i = 0, l = this.stops.length; i < l - 1; i++) {
-          const rgb = interpolateRgb(this.stops[i], this.stops[i + 1], substeps[i]);
-          gradient3.splice(gradient3.length, 0, ...rgb);
-        }
-        gradient3.push(this.stops[this.stops.length - 1].color);
-        return gradient3;
-      }
-      hsv(steps, mode) {
-        const substeps = computeSubsteps(this.stops, steps);
-        let gradient3 = [];
-        this.stops.forEach((stop, i) => {
-          if (stop.colorLess) {
-            stop.color = interpolateHsv(this.stops[i - 1], this.stops[i + 1], 2, mode)[1];
-          }
-        });
-        for (let i = 0, l = this.stops.length; i < l - 1; i++) {
-          const hsv = interpolateHsv(this.stops[i], this.stops[i + 1], substeps[i], mode);
-          gradient3.splice(gradient3.length, 0, ...hsv);
-        }
-        gradient3.push(this.stops[this.stops.length - 1].color);
-        return gradient3;
-      }
-      css(mode, direction) {
-        mode = mode || "linear";
-        direction = direction || (mode === "linear" ? "to right" : "ellipse at center");
-        let css = mode + "-gradient(" + direction;
-        this.stops.forEach(function(stop) {
-          css += ", " + (stop.colorLess ? "" : stop.color.toRgbString() + " ") + stop.pos * 100 + "%";
-        });
-        css += ")";
-        return css;
-      }
-      rgbAt(pos) {
-        return computeAt(this.stops, pos, "toRgb", RGBA_MAX);
-      }
-      hsvAt(pos) {
-        return computeAt(this.stops, pos, "toHsv", HSVA_MAX);
-      }
-    };
-    module2.exports = function(stops) {
-      if (arguments.length === 1) {
-        if (!Array.isArray(arguments[0])) {
-          throw new Error('"stops" is not an array');
-        }
-        stops = arguments[0];
-      } else {
-        stops = Array.prototype.slice.call(arguments);
-      }
-      return new TinyGradient(stops);
-    };
-  }
-});
-
-// node_modules/gradient-string/index.js
-var require_gradient_string = __commonJS({
-  "node_modules/gradient-string/index.js"(exports, module2) {
-    "use strict";
-    var chalk3 = require_source();
-    var tinygradient = require_tinygradient();
-    var forbiddenChars = /\s/g;
-    function InitGradient(...args) {
-      const grad = tinygradient.apply(this, args);
-      const ret = (str, opts) => applyGradient(str ? str.toString() : "", grad, opts);
-      ret.multiline = (str, opts) => multilineGradient(str ? str.toString() : "", grad, opts);
-      return ret;
-    }
-    var getColors = (gradient3, options, count) => options.interpolation.toLowerCase() === "hsv" ? gradient3.hsv(count, options.hsvSpin.toLowerCase()) : gradient3.rgb(count);
-    function applyGradient(str, gradient3, opts) {
-      const options = validateOptions(opts);
-      const colorsCount = Math.max(str.replace(forbiddenChars, "").length, gradient3.stops.length);
-      const colors = getColors(gradient3, options, colorsCount);
-      let result = "";
-      for (const s of str) {
-        result += s.match(forbiddenChars) ? s : chalk3.hex(colors.shift().toHex())(s);
-      }
-      return result;
-    }
-    function multilineGradient(str, gradient3, opts) {
-      const options = validateOptions(opts);
-      const lines = str.split("\n");
-      const maxLength = Math.max.apply(null, lines.map((l) => l.length).concat([gradient3.stops.length]));
-      const colors = getColors(gradient3, options, maxLength);
-      const results = [];
-      for (const line of lines) {
-        const lineColors = colors.slice(0);
-        let lineResult = "";
-        for (const l of line) {
-          lineResult += chalk3.hex(lineColors.shift().toHex())(l);
-        }
-        results.push(lineResult);
-      }
-      return results.join("\n");
-    }
-    function validateOptions(opts) {
-      const options = { interpolation: "rgb", hsvSpin: "short", ...opts };
-      if (opts !== void 0 && typeof opts !== "object") {
-        throw new TypeError(`Expected \`options\` to be an \`object\`, got \`${typeof opts}\``);
-      }
-      if (typeof options.interpolation !== "string") {
-        throw new TypeError(`Expected \`options.interpolation\` to be a \`string\`, got \`${typeof options.interpolation}\``);
-      }
-      if (options.interpolation.toLowerCase() === "hsv" && typeof options.hsvSpin !== "string") {
-        throw new TypeError(`Expected \`options.hsvSpin\` to be a \`string\`, got \`${typeof options.hsvSpin}\``);
-      }
-      return options;
-    }
-    var aliases2 = {
-      atlas: { colors: ["#feac5e", "#c779d0", "#4bc0c8"], options: {} },
-      cristal: { colors: ["#bdfff3", "#4ac29a"], options: {} },
-      teen: { colors: ["#77a1d3", "#79cbca", "#e684ae"], options: {} },
-      mind: { colors: ["#473b7b", "#3584a7", "#30d2be"], options: {} },
-      morning: { colors: ["#ff5f6d", "#ffc371"], options: { interpolation: "hsv" } },
-      vice: { colors: ["#5ee7df", "#b490ca"], options: { interpolation: "hsv" } },
-      passion: { colors: ["#f43b47", "#453a94"], options: {} },
-      fruit: { colors: ["#ff4e50", "#f9d423"], options: {} },
-      instagram: { colors: ["#833ab4", "#fd1d1d", "#fcb045"], options: {} },
-      retro: { colors: ["#3f51b1", "#5a55ae", "#7b5fac", "#8f6aae", "#a86aa4", "#cc6b8e", "#f18271", "#f3a469", "#f7c978"], options: {} },
-      summer: { colors: ["#fdbb2d", "#22c1c3"], options: {} },
-      rainbow: { colors: ["#ff0000", "#ff0100"], options: { interpolation: "hsv", hsvSpin: "long" } },
-      pastel: { colors: ["#74ebd5", "#74ecd5"], options: { interpolation: "hsv", hsvSpin: "long" } }
-    };
-    module2.exports = InitGradient;
-    for (const a in aliases2) {
-      module2.exports[a] = (str) => new InitGradient(aliases2[a].colors)(str, aliases2[a].options);
-      module2.exports[a].multiline = (str) => new InitGradient(aliases2[a].colors).multiline(str, aliases2[a].options);
-    }
-  }
-});
-
-// node_modules/chalk-animation/node_modules/color-name/index.js
-var require_color_name2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/color-name/index.js"(exports, module2) {
-    "use strict";
-    module2.exports = {
-      "aliceblue": [240, 248, 255],
-      "antiquewhite": [250, 235, 215],
-      "aqua": [0, 255, 255],
-      "aquamarine": [127, 255, 212],
-      "azure": [240, 255, 255],
-      "beige": [245, 245, 220],
-      "bisque": [255, 228, 196],
-      "black": [0, 0, 0],
-      "blanchedalmond": [255, 235, 205],
-      "blue": [0, 0, 255],
-      "blueviolet": [138, 43, 226],
-      "brown": [165, 42, 42],
-      "burlywood": [222, 184, 135],
-      "cadetblue": [95, 158, 160],
-      "chartreuse": [127, 255, 0],
-      "chocolate": [210, 105, 30],
-      "coral": [255, 127, 80],
-      "cornflowerblue": [100, 149, 237],
-      "cornsilk": [255, 248, 220],
-      "crimson": [220, 20, 60],
-      "cyan": [0, 255, 255],
-      "darkblue": [0, 0, 139],
-      "darkcyan": [0, 139, 139],
-      "darkgoldenrod": [184, 134, 11],
-      "darkgray": [169, 169, 169],
-      "darkgreen": [0, 100, 0],
-      "darkgrey": [169, 169, 169],
-      "darkkhaki": [189, 183, 107],
-      "darkmagenta": [139, 0, 139],
-      "darkolivegreen": [85, 107, 47],
-      "darkorange": [255, 140, 0],
-      "darkorchid": [153, 50, 204],
-      "darkred": [139, 0, 0],
-      "darksalmon": [233, 150, 122],
-      "darkseagreen": [143, 188, 143],
-      "darkslateblue": [72, 61, 139],
-      "darkslategray": [47, 79, 79],
-      "darkslategrey": [47, 79, 79],
-      "darkturquoise": [0, 206, 209],
-      "darkviolet": [148, 0, 211],
-      "deeppink": [255, 20, 147],
-      "deepskyblue": [0, 191, 255],
-      "dimgray": [105, 105, 105],
-      "dimgrey": [105, 105, 105],
-      "dodgerblue": [30, 144, 255],
-      "firebrick": [178, 34, 34],
-      "floralwhite": [255, 250, 240],
-      "forestgreen": [34, 139, 34],
-      "fuchsia": [255, 0, 255],
-      "gainsboro": [220, 220, 220],
-      "ghostwhite": [248, 248, 255],
-      "gold": [255, 215, 0],
-      "goldenrod": [218, 165, 32],
-      "gray": [128, 128, 128],
-      "green": [0, 128, 0],
-      "greenyellow": [173, 255, 47],
-      "grey": [128, 128, 128],
-      "honeydew": [240, 255, 240],
-      "hotpink": [255, 105, 180],
-      "indianred": [205, 92, 92],
-      "indigo": [75, 0, 130],
-      "ivory": [255, 255, 240],
-      "khaki": [240, 230, 140],
-      "lavender": [230, 230, 250],
-      "lavenderblush": [255, 240, 245],
-      "lawngreen": [124, 252, 0],
-      "lemonchiffon": [255, 250, 205],
-      "lightblue": [173, 216, 230],
-      "lightcoral": [240, 128, 128],
-      "lightcyan": [224, 255, 255],
-      "lightgoldenrodyellow": [250, 250, 210],
-      "lightgray": [211, 211, 211],
-      "lightgreen": [144, 238, 144],
-      "lightgrey": [211, 211, 211],
-      "lightpink": [255, 182, 193],
-      "lightsalmon": [255, 160, 122],
-      "lightseagreen": [32, 178, 170],
-      "lightskyblue": [135, 206, 250],
-      "lightslategray": [119, 136, 153],
-      "lightslategrey": [119, 136, 153],
-      "lightsteelblue": [176, 196, 222],
-      "lightyellow": [255, 255, 224],
-      "lime": [0, 255, 0],
-      "limegreen": [50, 205, 50],
-      "linen": [250, 240, 230],
-      "magenta": [255, 0, 255],
-      "maroon": [128, 0, 0],
-      "mediumaquamarine": [102, 205, 170],
-      "mediumblue": [0, 0, 205],
-      "mediumorchid": [186, 85, 211],
-      "mediumpurple": [147, 112, 219],
-      "mediumseagreen": [60, 179, 113],
-      "mediumslateblue": [123, 104, 238],
-      "mediumspringgreen": [0, 250, 154],
-      "mediumturquoise": [72, 209, 204],
-      "mediumvioletred": [199, 21, 133],
-      "midnightblue": [25, 25, 112],
-      "mintcream": [245, 255, 250],
-      "mistyrose": [255, 228, 225],
-      "moccasin": [255, 228, 181],
-      "navajowhite": [255, 222, 173],
-      "navy": [0, 0, 128],
-      "oldlace": [253, 245, 230],
-      "olive": [128, 128, 0],
-      "olivedrab": [107, 142, 35],
-      "orange": [255, 165, 0],
-      "orangered": [255, 69, 0],
-      "orchid": [218, 112, 214],
-      "palegoldenrod": [238, 232, 170],
-      "palegreen": [152, 251, 152],
-      "paleturquoise": [175, 238, 238],
-      "palevioletred": [219, 112, 147],
-      "papayawhip": [255, 239, 213],
-      "peachpuff": [255, 218, 185],
-      "peru": [205, 133, 63],
-      "pink": [255, 192, 203],
-      "plum": [221, 160, 221],
-      "powderblue": [176, 224, 230],
-      "purple": [128, 0, 128],
-      "rebeccapurple": [102, 51, 153],
-      "red": [255, 0, 0],
-      "rosybrown": [188, 143, 143],
-      "royalblue": [65, 105, 225],
-      "saddlebrown": [139, 69, 19],
-      "salmon": [250, 128, 114],
-      "sandybrown": [244, 164, 96],
-      "seagreen": [46, 139, 87],
-      "seashell": [255, 245, 238],
-      "sienna": [160, 82, 45],
-      "silver": [192, 192, 192],
-      "skyblue": [135, 206, 235],
-      "slateblue": [106, 90, 205],
-      "slategray": [112, 128, 144],
-      "slategrey": [112, 128, 144],
-      "snow": [255, 250, 250],
-      "springgreen": [0, 255, 127],
-      "steelblue": [70, 130, 180],
-      "tan": [210, 180, 140],
-      "teal": [0, 128, 128],
-      "thistle": [216, 191, 216],
-      "tomato": [255, 99, 71],
-      "turquoise": [64, 224, 208],
-      "violet": [238, 130, 238],
-      "wheat": [245, 222, 179],
-      "white": [255, 255, 255],
-      "whitesmoke": [245, 245, 245],
-      "yellow": [255, 255, 0],
-      "yellowgreen": [154, 205, 50]
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/color-convert/conversions.js
-var require_conversions2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/color-convert/conversions.js"(exports, module2) {
-    var cssKeywords = require_color_name2();
-    var reverseKeywords = {};
-    for (const key of Object.keys(cssKeywords)) {
-      reverseKeywords[cssKeywords[key]] = key;
-    }
-    var convert = {
-      rgb: { channels: 3, labels: "rgb" },
-      hsl: { channels: 3, labels: "hsl" },
-      hsv: { channels: 3, labels: "hsv" },
-      hwb: { channels: 3, labels: "hwb" },
-      cmyk: { channels: 4, labels: "cmyk" },
-      xyz: { channels: 3, labels: "xyz" },
-      lab: { channels: 3, labels: "lab" },
-      lch: { channels: 3, labels: "lch" },
-      hex: { channels: 1, labels: ["hex"] },
-      keyword: { channels: 1, labels: ["keyword"] },
-      ansi16: { channels: 1, labels: ["ansi16"] },
-      ansi256: { channels: 1, labels: ["ansi256"] },
-      hcg: { channels: 3, labels: ["h", "c", "g"] },
-      apple: { channels: 3, labels: ["r16", "g16", "b16"] },
-      gray: { channels: 1, labels: ["gray"] }
-    };
-    module2.exports = convert;
-    for (const model of Object.keys(convert)) {
-      if (!("channels" in convert[model])) {
-        throw new Error("missing channels property: " + model);
-      }
-      if (!("labels" in convert[model])) {
-        throw new Error("missing channel labels property: " + model);
-      }
-      if (convert[model].labels.length !== convert[model].channels) {
-        throw new Error("channel and label counts mismatch: " + model);
-      }
-      const { channels, labels } = convert[model];
-      delete convert[model].channels;
-      delete convert[model].labels;
-      Object.defineProperty(convert[model], "channels", { value: channels });
-      Object.defineProperty(convert[model], "labels", { value: labels });
-    }
-    convert.rgb.hsl = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const min = Math.min(r, g, b);
-      const max = Math.max(r, g, b);
-      const delta = max - min;
-      let h;
-      let s;
-      if (max === min) {
-        h = 0;
-      } else if (r === max) {
-        h = (g - b) / delta;
-      } else if (g === max) {
-        h = 2 + (b - r) / delta;
-      } else if (b === max) {
-        h = 4 + (r - g) / delta;
-      }
-      h = Math.min(h * 60, 360);
-      if (h < 0) {
-        h += 360;
-      }
-      const l = (min + max) / 2;
-      if (max === min) {
-        s = 0;
-      } else if (l <= 0.5) {
-        s = delta / (max + min);
-      } else {
-        s = delta / (2 - max - min);
-      }
-      return [h, s * 100, l * 100];
-    };
-    convert.rgb.hsv = function(rgb) {
-      let rdif;
-      let gdif;
-      let bdif;
-      let h;
-      let s;
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const v = Math.max(r, g, b);
-      const diff = v - Math.min(r, g, b);
-      const diffc = function(c) {
-        return (v - c) / 6 / diff + 1 / 2;
-      };
-      if (diff === 0) {
-        h = 0;
-        s = 0;
-      } else {
-        s = diff / v;
-        rdif = diffc(r);
-        gdif = diffc(g);
-        bdif = diffc(b);
-        if (r === v) {
-          h = bdif - gdif;
-        } else if (g === v) {
-          h = 1 / 3 + rdif - bdif;
-        } else if (b === v) {
-          h = 2 / 3 + gdif - rdif;
-        }
-        if (h < 0) {
-          h += 1;
-        } else if (h > 1) {
-          h -= 1;
-        }
-      }
-      return [
-        h * 360,
-        s * 100,
-        v * 100
-      ];
-    };
-    convert.rgb.hwb = function(rgb) {
-      const r = rgb[0];
-      const g = rgb[1];
-      let b = rgb[2];
-      const h = convert.rgb.hsl(rgb)[0];
-      const w = 1 / 255 * Math.min(r, Math.min(g, b));
-      b = 1 - 1 / 255 * Math.max(r, Math.max(g, b));
-      return [h, w * 100, b * 100];
-    };
-    convert.rgb.cmyk = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const k = Math.min(1 - r, 1 - g, 1 - b);
-      const c = (1 - r - k) / (1 - k) || 0;
-      const m = (1 - g - k) / (1 - k) || 0;
-      const y = (1 - b - k) / (1 - k) || 0;
-      return [c * 100, m * 100, y * 100, k * 100];
-    };
-    function comparativeDistance(x, y) {
-      return (x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2 + (x[2] - y[2]) ** 2;
-    }
-    convert.rgb.keyword = function(rgb) {
-      const reversed = reverseKeywords[rgb];
-      if (reversed) {
-        return reversed;
-      }
-      let currentClosestDistance = Infinity;
-      let currentClosestKeyword;
-      for (const keyword of Object.keys(cssKeywords)) {
-        const value = cssKeywords[keyword];
-        const distance = comparativeDistance(rgb, value);
-        if (distance < currentClosestDistance) {
-          currentClosestDistance = distance;
-          currentClosestKeyword = keyword;
-        }
-      }
-      return currentClosestKeyword;
-    };
-    convert.keyword.rgb = function(keyword) {
-      return cssKeywords[keyword];
-    };
-    convert.rgb.xyz = function(rgb) {
-      let r = rgb[0] / 255;
-      let g = rgb[1] / 255;
-      let b = rgb[2] / 255;
-      r = r > 0.04045 ? ((r + 0.055) / 1.055) ** 2.4 : r / 12.92;
-      g = g > 0.04045 ? ((g + 0.055) / 1.055) ** 2.4 : g / 12.92;
-      b = b > 0.04045 ? ((b + 0.055) / 1.055) ** 2.4 : b / 12.92;
-      const x = r * 0.4124 + g * 0.3576 + b * 0.1805;
-      const y = r * 0.2126 + g * 0.7152 + b * 0.0722;
-      const z = r * 0.0193 + g * 0.1192 + b * 0.9505;
-      return [x * 100, y * 100, z * 100];
-    };
-    convert.rgb.lab = function(rgb) {
-      const xyz = convert.rgb.xyz(rgb);
-      let x = xyz[0];
-      let y = xyz[1];
-      let z = xyz[2];
-      x /= 95.047;
-      y /= 100;
-      z /= 108.883;
-      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
-      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
-      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
-      const l = 116 * y - 16;
-      const a = 500 * (x - y);
-      const b = 200 * (y - z);
-      return [l, a, b];
-    };
-    convert.hsl.rgb = function(hsl) {
-      const h = hsl[0] / 360;
-      const s = hsl[1] / 100;
-      const l = hsl[2] / 100;
-      let t2;
-      let t3;
-      let val;
-      if (s === 0) {
-        val = l * 255;
-        return [val, val, val];
-      }
-      if (l < 0.5) {
-        t2 = l * (1 + s);
-      } else {
-        t2 = l + s - l * s;
-      }
-      const t1 = 2 * l - t2;
-      const rgb = [0, 0, 0];
-      for (let i = 0; i < 3; i++) {
-        t3 = h + 1 / 3 * -(i - 1);
-        if (t3 < 0) {
-          t3++;
-        }
-        if (t3 > 1) {
-          t3--;
-        }
-        if (6 * t3 < 1) {
-          val = t1 + (t2 - t1) * 6 * t3;
-        } else if (2 * t3 < 1) {
-          val = t2;
-        } else if (3 * t3 < 2) {
-          val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
-        } else {
-          val = t1;
-        }
-        rgb[i] = val * 255;
-      }
-      return rgb;
-    };
-    convert.hsl.hsv = function(hsl) {
-      const h = hsl[0];
-      let s = hsl[1] / 100;
-      let l = hsl[2] / 100;
-      let smin = s;
-      const lmin = Math.max(l, 0.01);
-      l *= 2;
-      s *= l <= 1 ? l : 2 - l;
-      smin *= lmin <= 1 ? lmin : 2 - lmin;
-      const v = (l + s) / 2;
-      const sv = l === 0 ? 2 * smin / (lmin + smin) : 2 * s / (l + s);
-      return [h, sv * 100, v * 100];
-    };
-    convert.hsv.rgb = function(hsv) {
-      const h = hsv[0] / 60;
-      const s = hsv[1] / 100;
-      let v = hsv[2] / 100;
-      const hi = Math.floor(h) % 6;
-      const f = h - Math.floor(h);
-      const p = 255 * v * (1 - s);
-      const q = 255 * v * (1 - s * f);
-      const t = 255 * v * (1 - s * (1 - f));
-      v *= 255;
-      switch (hi) {
-        case 0:
-          return [v, t, p];
-        case 1:
-          return [q, v, p];
-        case 2:
-          return [p, v, t];
-        case 3:
-          return [p, q, v];
-        case 4:
-          return [t, p, v];
-        case 5:
-          return [v, p, q];
-      }
-    };
-    convert.hsv.hsl = function(hsv) {
-      const h = hsv[0];
-      const s = hsv[1] / 100;
-      const v = hsv[2] / 100;
-      const vmin = Math.max(v, 0.01);
-      let sl;
-      let l;
-      l = (2 - s) * v;
-      const lmin = (2 - s) * vmin;
-      sl = s * vmin;
-      sl /= lmin <= 1 ? lmin : 2 - lmin;
-      sl = sl || 0;
-      l /= 2;
-      return [h, sl * 100, l * 100];
-    };
-    convert.hwb.rgb = function(hwb) {
-      const h = hwb[0] / 360;
-      let wh = hwb[1] / 100;
-      let bl = hwb[2] / 100;
-      const ratio = wh + bl;
-      let f;
-      if (ratio > 1) {
-        wh /= ratio;
-        bl /= ratio;
-      }
-      const i = Math.floor(6 * h);
-      const v = 1 - bl;
-      f = 6 * h - i;
-      if ((i & 1) !== 0) {
-        f = 1 - f;
-      }
-      const n = wh + f * (v - wh);
-      let r;
-      let g;
-      let b;
-      switch (i) {
-        default:
-        case 6:
-        case 0:
-          r = v;
-          g = n;
-          b = wh;
-          break;
-        case 1:
-          r = n;
-          g = v;
-          b = wh;
-          break;
-        case 2:
-          r = wh;
-          g = v;
-          b = n;
-          break;
-        case 3:
-          r = wh;
-          g = n;
-          b = v;
-          break;
-        case 4:
-          r = n;
-          g = wh;
-          b = v;
-          break;
-        case 5:
-          r = v;
-          g = wh;
-          b = n;
-          break;
-      }
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.cmyk.rgb = function(cmyk) {
-      const c = cmyk[0] / 100;
-      const m = cmyk[1] / 100;
-      const y = cmyk[2] / 100;
-      const k = cmyk[3] / 100;
-      const r = 1 - Math.min(1, c * (1 - k) + k);
-      const g = 1 - Math.min(1, m * (1 - k) + k);
-      const b = 1 - Math.min(1, y * (1 - k) + k);
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.xyz.rgb = function(xyz) {
-      const x = xyz[0] / 100;
-      const y = xyz[1] / 100;
-      const z = xyz[2] / 100;
-      let r;
-      let g;
-      let b;
-      r = x * 3.2406 + y * -1.5372 + z * -0.4986;
-      g = x * -0.9689 + y * 1.8758 + z * 0.0415;
-      b = x * 0.0557 + y * -0.204 + z * 1.057;
-      r = r > 31308e-7 ? 1.055 * r ** (1 / 2.4) - 0.055 : r * 12.92;
-      g = g > 31308e-7 ? 1.055 * g ** (1 / 2.4) - 0.055 : g * 12.92;
-      b = b > 31308e-7 ? 1.055 * b ** (1 / 2.4) - 0.055 : b * 12.92;
-      r = Math.min(Math.max(0, r), 1);
-      g = Math.min(Math.max(0, g), 1);
-      b = Math.min(Math.max(0, b), 1);
-      return [r * 255, g * 255, b * 255];
-    };
-    convert.xyz.lab = function(xyz) {
-      let x = xyz[0];
-      let y = xyz[1];
-      let z = xyz[2];
-      x /= 95.047;
-      y /= 100;
-      z /= 108.883;
-      x = x > 8856e-6 ? x ** (1 / 3) : 7.787 * x + 16 / 116;
-      y = y > 8856e-6 ? y ** (1 / 3) : 7.787 * y + 16 / 116;
-      z = z > 8856e-6 ? z ** (1 / 3) : 7.787 * z + 16 / 116;
-      const l = 116 * y - 16;
-      const a = 500 * (x - y);
-      const b = 200 * (y - z);
-      return [l, a, b];
-    };
-    convert.lab.xyz = function(lab) {
-      const l = lab[0];
-      const a = lab[1];
-      const b = lab[2];
-      let x;
-      let y;
-      let z;
-      y = (l + 16) / 116;
-      x = a / 500 + y;
-      z = y - b / 200;
-      const y2 = y ** 3;
-      const x2 = x ** 3;
-      const z2 = z ** 3;
-      y = y2 > 8856e-6 ? y2 : (y - 16 / 116) / 7.787;
-      x = x2 > 8856e-6 ? x2 : (x - 16 / 116) / 7.787;
-      z = z2 > 8856e-6 ? z2 : (z - 16 / 116) / 7.787;
-      x *= 95.047;
-      y *= 100;
-      z *= 108.883;
-      return [x, y, z];
-    };
-    convert.lab.lch = function(lab) {
-      const l = lab[0];
-      const a = lab[1];
-      const b = lab[2];
-      let h;
-      const hr = Math.atan2(b, a);
-      h = hr * 360 / 2 / Math.PI;
-      if (h < 0) {
-        h += 360;
-      }
-      const c = Math.sqrt(a * a + b * b);
-      return [l, c, h];
-    };
-    convert.lch.lab = function(lch) {
-      const l = lch[0];
-      const c = lch[1];
-      const h = lch[2];
-      const hr = h / 360 * 2 * Math.PI;
-      const a = c * Math.cos(hr);
-      const b = c * Math.sin(hr);
-      return [l, a, b];
-    };
-    convert.rgb.ansi16 = function(args, saturation = null) {
-      const [r, g, b] = args;
-      let value = saturation === null ? convert.rgb.hsv(args)[2] : saturation;
-      value = Math.round(value / 50);
-      if (value === 0) {
-        return 30;
-      }
-      let ansi = 30 + (Math.round(b / 255) << 2 | Math.round(g / 255) << 1 | Math.round(r / 255));
-      if (value === 2) {
-        ansi += 60;
-      }
-      return ansi;
-    };
-    convert.hsv.ansi16 = function(args) {
-      return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
-    };
-    convert.rgb.ansi256 = function(args) {
-      const r = args[0];
-      const g = args[1];
-      const b = args[2];
-      if (r === g && g === b) {
-        if (r < 8) {
-          return 16;
-        }
-        if (r > 248) {
-          return 231;
-        }
-        return Math.round((r - 8) / 247 * 24) + 232;
-      }
-      const ansi = 16 + 36 * Math.round(r / 255 * 5) + 6 * Math.round(g / 255 * 5) + Math.round(b / 255 * 5);
-      return ansi;
-    };
-    convert.ansi16.rgb = function(args) {
-      let color = args % 10;
-      if (color === 0 || color === 7) {
-        if (args > 50) {
-          color += 3.5;
-        }
-        color = color / 10.5 * 255;
-        return [color, color, color];
-      }
-      const mult = (~~(args > 50) + 1) * 0.5;
-      const r = (color & 1) * mult * 255;
-      const g = (color >> 1 & 1) * mult * 255;
-      const b = (color >> 2 & 1) * mult * 255;
-      return [r, g, b];
-    };
-    convert.ansi256.rgb = function(args) {
-      if (args >= 232) {
-        const c = (args - 232) * 10 + 8;
-        return [c, c, c];
-      }
-      args -= 16;
-      let rem;
-      const r = Math.floor(args / 36) / 5 * 255;
-      const g = Math.floor((rem = args % 36) / 6) / 5 * 255;
-      const b = rem % 6 / 5 * 255;
-      return [r, g, b];
-    };
-    convert.rgb.hex = function(args) {
-      const integer = ((Math.round(args[0]) & 255) << 16) + ((Math.round(args[1]) & 255) << 8) + (Math.round(args[2]) & 255);
-      const string = integer.toString(16).toUpperCase();
-      return "000000".substring(string.length) + string;
-    };
-    convert.hex.rgb = function(args) {
-      const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!match) {
-        return [0, 0, 0];
-      }
-      let colorString = match[0];
-      if (match[0].length === 3) {
-        colorString = colorString.split("").map((char) => {
-          return char + char;
-        }).join("");
-      }
-      const integer = parseInt(colorString, 16);
-      const r = integer >> 16 & 255;
-      const g = integer >> 8 & 255;
-      const b = integer & 255;
-      return [r, g, b];
-    };
-    convert.rgb.hcg = function(rgb) {
-      const r = rgb[0] / 255;
-      const g = rgb[1] / 255;
-      const b = rgb[2] / 255;
-      const max = Math.max(Math.max(r, g), b);
-      const min = Math.min(Math.min(r, g), b);
-      const chroma = max - min;
-      let grayscale;
-      let hue;
-      if (chroma < 1) {
-        grayscale = min / (1 - chroma);
-      } else {
-        grayscale = 0;
-      }
-      if (chroma <= 0) {
-        hue = 0;
-      } else if (max === r) {
-        hue = (g - b) / chroma % 6;
-      } else if (max === g) {
-        hue = 2 + (b - r) / chroma;
-      } else {
-        hue = 4 + (r - g) / chroma;
-      }
-      hue /= 6;
-      hue %= 1;
-      return [hue * 360, chroma * 100, grayscale * 100];
-    };
-    convert.hsl.hcg = function(hsl) {
-      const s = hsl[1] / 100;
-      const l = hsl[2] / 100;
-      const c = l < 0.5 ? 2 * s * l : 2 * s * (1 - l);
-      let f = 0;
-      if (c < 1) {
-        f = (l - 0.5 * c) / (1 - c);
-      }
-      return [hsl[0], c * 100, f * 100];
-    };
-    convert.hsv.hcg = function(hsv) {
-      const s = hsv[1] / 100;
-      const v = hsv[2] / 100;
-      const c = s * v;
-      let f = 0;
-      if (c < 1) {
-        f = (v - c) / (1 - c);
-      }
-      return [hsv[0], c * 100, f * 100];
-    };
-    convert.hcg.rgb = function(hcg) {
-      const h = hcg[0] / 360;
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      if (c === 0) {
-        return [g * 255, g * 255, g * 255];
-      }
-      const pure = [0, 0, 0];
-      const hi = h % 1 * 6;
-      const v = hi % 1;
-      const w = 1 - v;
-      let mg = 0;
-      switch (Math.floor(hi)) {
-        case 0:
-          pure[0] = 1;
-          pure[1] = v;
-          pure[2] = 0;
-          break;
-        case 1:
-          pure[0] = w;
-          pure[1] = 1;
-          pure[2] = 0;
-          break;
-        case 2:
-          pure[0] = 0;
-          pure[1] = 1;
-          pure[2] = v;
-          break;
-        case 3:
-          pure[0] = 0;
-          pure[1] = w;
-          pure[2] = 1;
-          break;
-        case 4:
-          pure[0] = v;
-          pure[1] = 0;
-          pure[2] = 1;
-          break;
-        default:
-          pure[0] = 1;
-          pure[1] = 0;
-          pure[2] = w;
-      }
-      mg = (1 - c) * g;
-      return [
-        (c * pure[0] + mg) * 255,
-        (c * pure[1] + mg) * 255,
-        (c * pure[2] + mg) * 255
-      ];
-    };
-    convert.hcg.hsv = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const v = c + g * (1 - c);
-      let f = 0;
-      if (v > 0) {
-        f = c / v;
-      }
-      return [hcg[0], f * 100, v * 100];
-    };
-    convert.hcg.hsl = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const l = g * (1 - c) + 0.5 * c;
-      let s = 0;
-      if (l > 0 && l < 0.5) {
-        s = c / (2 * l);
-      } else if (l >= 0.5 && l < 1) {
-        s = c / (2 * (1 - l));
-      }
-      return [hcg[0], s * 100, l * 100];
-    };
-    convert.hcg.hwb = function(hcg) {
-      const c = hcg[1] / 100;
-      const g = hcg[2] / 100;
-      const v = c + g * (1 - c);
-      return [hcg[0], (v - c) * 100, (1 - v) * 100];
-    };
-    convert.hwb.hcg = function(hwb) {
-      const w = hwb[1] / 100;
-      const b = hwb[2] / 100;
-      const v = 1 - b;
-      const c = v - w;
-      let g = 0;
-      if (c < 1) {
-        g = (v - c) / (1 - c);
-      }
-      return [hwb[0], c * 100, g * 100];
-    };
-    convert.apple.rgb = function(apple) {
-      return [apple[0] / 65535 * 255, apple[1] / 65535 * 255, apple[2] / 65535 * 255];
-    };
-    convert.rgb.apple = function(rgb) {
-      return [rgb[0] / 255 * 65535, rgb[1] / 255 * 65535, rgb[2] / 255 * 65535];
-    };
-    convert.gray.rgb = function(args) {
-      return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
-    };
-    convert.gray.hsl = function(args) {
-      return [0, 0, args[0]];
-    };
-    convert.gray.hsv = convert.gray.hsl;
-    convert.gray.hwb = function(gray) {
-      return [0, 100, gray[0]];
-    };
-    convert.gray.cmyk = function(gray) {
-      return [0, 0, 0, gray[0]];
-    };
-    convert.gray.lab = function(gray) {
-      return [gray[0], 0, 0];
-    };
-    convert.gray.hex = function(gray) {
-      const val = Math.round(gray[0] / 100 * 255) & 255;
-      const integer = (val << 16) + (val << 8) + val;
-      const string = integer.toString(16).toUpperCase();
-      return "000000".substring(string.length) + string;
-    };
-    convert.rgb.gray = function(rgb) {
-      const val = (rgb[0] + rgb[1] + rgb[2]) / 3;
-      return [val / 255 * 100];
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/color-convert/route.js
-var require_route2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/color-convert/route.js"(exports, module2) {
-    var conversions = require_conversions2();
-    function buildGraph() {
-      const graph = {};
-      const models = Object.keys(conversions);
-      for (let len = models.length, i = 0; i < len; i++) {
-        graph[models[i]] = {
-          distance: -1,
-          parent: null
-        };
-      }
-      return graph;
-    }
-    function deriveBFS(fromModel) {
-      const graph = buildGraph();
-      const queue = [fromModel];
-      graph[fromModel].distance = 0;
-      while (queue.length) {
-        const current = queue.pop();
-        const adjacents = Object.keys(conversions[current]);
-        for (let len = adjacents.length, i = 0; i < len; i++) {
-          const adjacent = adjacents[i];
-          const node = graph[adjacent];
-          if (node.distance === -1) {
-            node.distance = graph[current].distance + 1;
-            node.parent = current;
-            queue.unshift(adjacent);
-          }
-        }
-      }
-      return graph;
-    }
-    function link(from3, to) {
-      return function(args) {
-        return to(from3(args));
-      };
-    }
-    function wrapConversion(toModel, graph) {
-      const path3 = [graph[toModel].parent, toModel];
-      let fn = conversions[graph[toModel].parent][toModel];
-      let cur = graph[toModel].parent;
-      while (graph[cur].parent) {
-        path3.unshift(graph[cur].parent);
-        fn = link(conversions[graph[cur].parent][cur], fn);
-        cur = graph[cur].parent;
-      }
-      fn.conversion = path3;
-      return fn;
-    }
-    module2.exports = function(fromModel) {
-      const graph = deriveBFS(fromModel);
-      const conversion = {};
-      const models = Object.keys(graph);
-      for (let len = models.length, i = 0; i < len; i++) {
-        const toModel = models[i];
-        const node = graph[toModel];
-        if (node.parent === null) {
-          continue;
-        }
-        conversion[toModel] = wrapConversion(toModel, graph);
-      }
-      return conversion;
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/color-convert/index.js
-var require_color_convert2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/color-convert/index.js"(exports, module2) {
-    var conversions = require_conversions2();
-    var route = require_route2();
-    var convert = {};
-    var models = Object.keys(conversions);
-    function wrapRaw(fn) {
-      const wrappedFn = function(...args) {
-        const arg0 = args[0];
-        if (arg0 === void 0 || arg0 === null) {
-          return arg0;
-        }
-        if (arg0.length > 1) {
-          args = arg0;
-        }
-        return fn(args);
-      };
-      if ("conversion" in fn) {
-        wrappedFn.conversion = fn.conversion;
-      }
-      return wrappedFn;
-    }
-    function wrapRounded(fn) {
-      const wrappedFn = function(...args) {
-        const arg0 = args[0];
-        if (arg0 === void 0 || arg0 === null) {
-          return arg0;
-        }
-        if (arg0.length > 1) {
-          args = arg0;
-        }
-        const result = fn(args);
-        if (typeof result === "object") {
-          for (let len = result.length, i = 0; i < len; i++) {
-            result[i] = Math.round(result[i]);
-          }
-        }
-        return result;
-      };
-      if ("conversion" in fn) {
-        wrappedFn.conversion = fn.conversion;
-      }
-      return wrappedFn;
-    }
-    models.forEach((fromModel) => {
-      convert[fromModel] = {};
-      Object.defineProperty(convert[fromModel], "channels", { value: conversions[fromModel].channels });
-      Object.defineProperty(convert[fromModel], "labels", { value: conversions[fromModel].labels });
-      const routes = route(fromModel);
-      const routeModels = Object.keys(routes);
-      routeModels.forEach((toModel) => {
-        const fn = routes[toModel];
-        convert[fromModel][toModel] = wrapRounded(fn);
-        convert[fromModel][toModel].raw = wrapRaw(fn);
-      });
-    });
-    module2.exports = convert;
-  }
-});
-
-// node_modules/chalk-animation/node_modules/ansi-styles/index.js
-var require_ansi_styles2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/ansi-styles/index.js"(exports, module2) {
-    "use strict";
-    var wrapAnsi163 = (fn, offset) => (...args) => {
-      const code = fn(...args);
-      return `\x1B[${code + offset}m`;
-    };
-    var wrapAnsi2563 = (fn, offset) => (...args) => {
-      const code = fn(...args);
-      return `\x1B[${38 + offset};5;${code}m`;
-    };
-    var wrapAnsi16m3 = (fn, offset) => (...args) => {
-      const rgb = fn(...args);
-      return `\x1B[${38 + offset};2;${rgb[0]};${rgb[1]};${rgb[2]}m`;
-    };
-    var ansi2ansi = (n) => n;
-    var rgb2rgb = (r, g, b) => [r, g, b];
-    var setLazyProperty = (object, property, get2) => {
-      Object.defineProperty(object, property, {
-        get: () => {
-          const value = get2();
-          Object.defineProperty(object, property, {
-            value,
-            enumerable: true,
-            configurable: true
-          });
-          return value;
-        },
-        enumerable: true,
-        configurable: true
-      });
-    };
-    var colorConvert;
-    var makeDynamicStyles = (wrap, targetSpace, identity, isBackground) => {
-      if (colorConvert === void 0) {
-        colorConvert = require_color_convert2();
-      }
-      const offset = isBackground ? 10 : 0;
-      const styles4 = {};
-      for (const [sourceSpace, suite] of Object.entries(colorConvert)) {
-        const name = sourceSpace === "ansi16" ? "ansi" : sourceSpace;
-        if (sourceSpace === targetSpace) {
-          styles4[name] = wrap(identity, offset);
-        } else if (typeof suite === "object") {
-          styles4[name] = wrap(suite[targetSpace], offset);
-        }
-      }
-      return styles4;
-    };
-    function assembleStyles3() {
-      const codes = /* @__PURE__ */ new Map();
-      const styles4 = {
-        modifier: {
-          reset: [0, 0],
-          bold: [1, 22],
-          dim: [2, 22],
-          italic: [3, 23],
-          underline: [4, 24],
-          inverse: [7, 27],
-          hidden: [8, 28],
-          strikethrough: [9, 29]
-        },
-        color: {
-          black: [30, 39],
-          red: [31, 39],
-          green: [32, 39],
-          yellow: [33, 39],
-          blue: [34, 39],
-          magenta: [35, 39],
-          cyan: [36, 39],
-          white: [37, 39],
-          blackBright: [90, 39],
-          redBright: [91, 39],
-          greenBright: [92, 39],
-          yellowBright: [93, 39],
-          blueBright: [94, 39],
-          magentaBright: [95, 39],
-          cyanBright: [96, 39],
-          whiteBright: [97, 39]
-        },
-        bgColor: {
-          bgBlack: [40, 49],
-          bgRed: [41, 49],
-          bgGreen: [42, 49],
-          bgYellow: [43, 49],
-          bgBlue: [44, 49],
-          bgMagenta: [45, 49],
-          bgCyan: [46, 49],
-          bgWhite: [47, 49],
-          bgBlackBright: [100, 49],
-          bgRedBright: [101, 49],
-          bgGreenBright: [102, 49],
-          bgYellowBright: [103, 49],
-          bgBlueBright: [104, 49],
-          bgMagentaBright: [105, 49],
-          bgCyanBright: [106, 49],
-          bgWhiteBright: [107, 49]
-        }
-      };
-      styles4.color.gray = styles4.color.blackBright;
-      styles4.bgColor.bgGray = styles4.bgColor.bgBlackBright;
-      styles4.color.grey = styles4.color.blackBright;
-      styles4.bgColor.bgGrey = styles4.bgColor.bgBlackBright;
-      for (const [groupName, group] of Object.entries(styles4)) {
-        for (const [styleName, style] of Object.entries(group)) {
-          styles4[styleName] = {
-            open: `\x1B[${style[0]}m`,
-            close: `\x1B[${style[1]}m`
-          };
-          group[styleName] = styles4[styleName];
-          codes.set(style[0], style[1]);
-        }
-        Object.defineProperty(styles4, groupName, {
-          value: group,
-          enumerable: false
-        });
-      }
-      Object.defineProperty(styles4, "codes", {
-        value: codes,
-        enumerable: false
-      });
-      styles4.color.close = "\x1B[39m";
-      styles4.bgColor.close = "\x1B[49m";
-      setLazyProperty(styles4.color, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, false));
-      setLazyProperty(styles4.color, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, false));
-      setLazyProperty(styles4.color, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, false));
-      setLazyProperty(styles4.bgColor, "ansi", () => makeDynamicStyles(wrapAnsi163, "ansi16", ansi2ansi, true));
-      setLazyProperty(styles4.bgColor, "ansi256", () => makeDynamicStyles(wrapAnsi2563, "ansi256", ansi2ansi, true));
-      setLazyProperty(styles4.bgColor, "ansi16m", () => makeDynamicStyles(wrapAnsi16m3, "rgb", rgb2rgb, true));
-      return styles4;
-    }
-    Object.defineProperty(module2, "exports", {
-      enumerable: true,
-      get: assembleStyles3
-    });
-  }
-});
-
-// node_modules/chalk-animation/node_modules/has-flag/index.js
-var require_has_flag2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/has-flag/index.js"(exports, module2) {
-    "use strict";
-    module2.exports = (flag, argv = process.argv) => {
-      const prefix = flag.startsWith("-") ? "" : flag.length === 1 ? "-" : "--";
-      const position = argv.indexOf(prefix + flag);
-      const terminatorPosition = argv.indexOf("--");
-      return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/supports-color/index.js
-var require_supports_color2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/supports-color/index.js"(exports, module2) {
-    "use strict";
-    var os3 = require("os");
-    var tty2 = require("tty");
-    var hasFlag2 = require_has_flag2();
-    var { env: env2 } = process;
-    var forceColor;
-    if (hasFlag2("no-color") || hasFlag2("no-colors") || hasFlag2("color=false") || hasFlag2("color=never")) {
-      forceColor = 0;
-    } else if (hasFlag2("color") || hasFlag2("colors") || hasFlag2("color=true") || hasFlag2("color=always")) {
-      forceColor = 1;
-    }
-    if ("FORCE_COLOR" in env2) {
-      if (env2.FORCE_COLOR === "true") {
-        forceColor = 1;
-      } else if (env2.FORCE_COLOR === "false") {
-        forceColor = 0;
-      } else {
-        forceColor = env2.FORCE_COLOR.length === 0 ? 1 : Math.min(parseInt(env2.FORCE_COLOR, 10), 3);
-      }
-    }
-    function translateLevel2(level) {
-      if (level === 0) {
-        return false;
-      }
-      return {
-        level,
-        hasBasic: true,
-        has256: level >= 2,
-        has16m: level >= 3
-      };
-    }
-    function supportsColor2(haveStream, streamIsTTY) {
-      if (forceColor === 0) {
-        return 0;
-      }
-      if (hasFlag2("color=16m") || hasFlag2("color=full") || hasFlag2("color=truecolor")) {
-        return 3;
-      }
-      if (hasFlag2("color=256")) {
-        return 2;
-      }
-      if (haveStream && !streamIsTTY && forceColor === void 0) {
-        return 0;
-      }
-      const min = forceColor || 0;
-      if (env2.TERM === "dumb") {
-        return min;
-      }
-      if (process.platform === "win32") {
-        const osRelease = os3.release().split(".");
-        if (Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) {
-          return Number(osRelease[2]) >= 14931 ? 3 : 2;
-        }
-        return 1;
-      }
-      if ("CI" in env2) {
-        if (["TRAVIS", "CIRCLECI", "APPVEYOR", "GITLAB_CI", "GITHUB_ACTIONS", "BUILDKITE"].some((sign) => sign in env2) || env2.CI_NAME === "codeship") {
-          return 1;
-        }
-        return min;
-      }
-      if ("TEAMCITY_VERSION" in env2) {
-        return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test(env2.TEAMCITY_VERSION) ? 1 : 0;
-      }
-      if (env2.COLORTERM === "truecolor") {
-        return 3;
-      }
-      if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
-        switch (env2.TERM_PROGRAM) {
-          case "iTerm.app":
-            return version >= 3 ? 3 : 2;
-          case "Apple_Terminal":
-            return 2;
-        }
-      }
-      if (/-256(color)?$/i.test(env2.TERM)) {
-        return 2;
-      }
-      if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(env2.TERM)) {
-        return 1;
-      }
-      if ("COLORTERM" in env2) {
-        return 1;
-      }
-      return min;
-    }
-    function getSupportLevel(stream) {
-      const level = supportsColor2(stream, stream && stream.isTTY);
-      return translateLevel2(level);
-    }
-    module2.exports = {
-      supportsColor: getSupportLevel,
-      stdout: translateLevel2(supportsColor2(true, tty2.isatty(1))),
-      stderr: translateLevel2(supportsColor2(true, tty2.isatty(2)))
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/chalk/source/util.js
-var require_util2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/chalk/source/util.js"(exports, module2) {
-    "use strict";
-    var stringReplaceAll2 = (string, substring, replacer) => {
-      let index = string.indexOf(substring);
-      if (index === -1) {
-        return string;
-      }
-      const substringLength = substring.length;
-      let endIndex = 0;
-      let returnValue = "";
-      do {
-        returnValue += string.substr(endIndex, index - endIndex) + substring + replacer;
-        endIndex = index + substringLength;
-        index = string.indexOf(substring, endIndex);
-      } while (index !== -1);
-      returnValue += string.substr(endIndex);
-      return returnValue;
-    };
-    var stringEncaseCRLFWithFirstIndex2 = (string, prefix, postfix, index) => {
-      let endIndex = 0;
-      let returnValue = "";
-      do {
-        const gotCR = string[index - 1] === "\r";
-        returnValue += string.substr(endIndex, (gotCR ? index - 1 : index) - endIndex) + prefix + (gotCR ? "\r\n" : "\n") + postfix;
-        endIndex = index + 1;
-        index = string.indexOf("\n", endIndex);
-      } while (index !== -1);
-      returnValue += string.substr(endIndex);
-      return returnValue;
-    };
-    module2.exports = {
-      stringReplaceAll: stringReplaceAll2,
-      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/chalk/source/templates.js
-var require_templates2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/chalk/source/templates.js"(exports, module2) {
-    "use strict";
-    var TEMPLATE_REGEX = /(?:\\(u(?:[a-f\d]{4}|\{[a-f\d]{1,6}\})|x[a-f\d]{2}|.))|(?:\{(~)?(\w+(?:\([^)]*\))?(?:\.\w+(?:\([^)]*\))?)*)(?:[ \t]|(?=\r?\n)))|(\})|((?:.|[\r\n\f])+?)/gi;
-    var STYLE_REGEX = /(?:^|\.)(\w+)(?:\(([^)]*)\))?/g;
-    var STRING_REGEX = /^(['"])((?:\\.|(?!\1)[^\\])*)\1$/;
-    var ESCAPE_REGEX = /\\(u(?:[a-f\d]{4}|{[a-f\d]{1,6}})|x[a-f\d]{2}|.)|([^\\])/gi;
-    var ESCAPES2 = /* @__PURE__ */ new Map([
-      ["n", "\n"],
-      ["r", "\r"],
-      ["t", "	"],
-      ["b", "\b"],
-      ["f", "\f"],
-      ["v", "\v"],
-      ["0", "\0"],
-      ["\\", "\\"],
-      ["e", "\x1B"],
-      ["a", "\x07"]
-    ]);
-    function unescape(c) {
-      const u = c[0] === "u";
-      const bracket = c[1] === "{";
-      if (u && !bracket && c.length === 5 || c[0] === "x" && c.length === 3) {
-        return String.fromCharCode(parseInt(c.slice(1), 16));
-      }
-      if (u && bracket) {
-        return String.fromCodePoint(parseInt(c.slice(2, -1), 16));
-      }
-      return ESCAPES2.get(c) || c;
-    }
-    function parseArguments(name, arguments_) {
-      const results = [];
-      const chunks = arguments_.trim().split(/\s*,\s*/g);
-      let matches;
-      for (const chunk of chunks) {
-        const number = Number(chunk);
-        if (!Number.isNaN(number)) {
-          results.push(number);
-        } else if (matches = chunk.match(STRING_REGEX)) {
-          results.push(matches[2].replace(ESCAPE_REGEX, (m, escape, character) => escape ? unescape(escape) : character));
-        } else {
-          throw new Error(`Invalid Chalk template style argument: ${chunk} (in style '${name}')`);
-        }
-      }
-      return results;
-    }
-    function parseStyle(style) {
-      STYLE_REGEX.lastIndex = 0;
-      const results = [];
-      let matches;
-      while ((matches = STYLE_REGEX.exec(style)) !== null) {
-        const name = matches[1];
-        if (matches[2]) {
-          const args = parseArguments(name, matches[2]);
-          results.push([name].concat(args));
-        } else {
-          results.push([name]);
-        }
-      }
-      return results;
-    }
-    function buildStyle(chalk3, styles4) {
-      const enabled = {};
-      for (const layer of styles4) {
-        for (const style of layer.styles) {
-          enabled[style[0]] = layer.inverse ? null : style.slice(1);
-        }
-      }
-      let current = chalk3;
-      for (const [styleName, styles5] of Object.entries(enabled)) {
-        if (!Array.isArray(styles5)) {
-          continue;
-        }
-        if (!(styleName in current)) {
-          throw new Error(`Unknown Chalk style: ${styleName}`);
-        }
-        current = styles5.length > 0 ? current[styleName](...styles5) : current[styleName];
-      }
-      return current;
-    }
-    module2.exports = (chalk3, temporary) => {
-      const styles4 = [];
-      const chunks = [];
-      let chunk = [];
-      temporary.replace(TEMPLATE_REGEX, (m, escapeCharacter, inverse, style, close, character) => {
-        if (escapeCharacter) {
-          chunk.push(unescape(escapeCharacter));
-        } else if (style) {
-          const string = chunk.join("");
-          chunk = [];
-          chunks.push(styles4.length === 0 ? string : buildStyle(chalk3, styles4)(string));
-          styles4.push({ inverse, styles: parseStyle(style) });
-        } else if (close) {
-          if (styles4.length === 0) {
-            throw new Error("Found extraneous } in Chalk template literal");
-          }
-          chunks.push(buildStyle(chalk3, styles4)(chunk.join("")));
-          chunk = [];
-          styles4.pop();
-        } else {
-          chunk.push(character);
-        }
-      });
-      chunks.push(chunk.join(""));
-      if (styles4.length > 0) {
-        const errMessage = `Chalk template literal is missing ${styles4.length} closing bracket${styles4.length === 1 ? "" : "s"} (\`}\`)`;
-        throw new Error(errMessage);
-      }
-      return chunks.join("");
-    };
-  }
-});
-
-// node_modules/chalk-animation/node_modules/chalk/source/index.js
-var require_source2 = __commonJS({
-  "node_modules/chalk-animation/node_modules/chalk/source/index.js"(exports, module2) {
-    "use strict";
-    var ansiStyles3 = require_ansi_styles2();
-    var { stdout: stdoutColor2, stderr: stderrColor2 } = require_supports_color2();
-    var {
-      stringReplaceAll: stringReplaceAll2,
-      stringEncaseCRLFWithFirstIndex: stringEncaseCRLFWithFirstIndex2
-    } = require_util2();
-    var { isArray } = Array;
-    var levelMapping2 = [
-      "ansi",
-      "ansi",
-      "ansi256",
-      "ansi16m"
-    ];
-    var styles4 = /* @__PURE__ */ Object.create(null);
-    var applyOptions2 = (object, options = {}) => {
-      if (options.level && !(Number.isInteger(options.level) && options.level >= 0 && options.level <= 3)) {
-        throw new Error("The `level` option should be an integer from 0 to 3");
-      }
-      const colorLevel = stdoutColor2 ? stdoutColor2.level : 0;
-      object.level = options.level === void 0 ? colorLevel : options.level;
-    };
-    var ChalkClass = class {
-      constructor(options) {
-        return chalkFactory2(options);
-      }
-    };
-    var chalkFactory2 = (options) => {
-      const chalk4 = {};
-      applyOptions2(chalk4, options);
-      chalk4.template = (...arguments_) => chalkTag(chalk4.template, ...arguments_);
-      Object.setPrototypeOf(chalk4, Chalk.prototype);
-      Object.setPrototypeOf(chalk4.template, chalk4);
-      chalk4.template.constructor = () => {
-        throw new Error("`chalk.constructor()` is deprecated. Use `new chalk.Instance()` instead.");
-      };
-      chalk4.template.Instance = ChalkClass;
-      return chalk4.template;
-    };
-    function Chalk(options) {
-      return chalkFactory2(options);
-    }
-    for (const [styleName, style] of Object.entries(ansiStyles3)) {
-      styles4[styleName] = {
-        get() {
-          const builder = createBuilder2(this, createStyler2(style.open, style.close, this._styler), this._isEmpty);
-          Object.defineProperty(this, styleName, { value: builder });
-          return builder;
-        }
-      };
-    }
-    styles4.visible = {
-      get() {
-        const builder = createBuilder2(this, this._styler, true);
-        Object.defineProperty(this, "visible", { value: builder });
-        return builder;
-      }
-    };
-    var usedModels2 = ["rgb", "hex", "keyword", "hsl", "hsv", "hwb", "ansi", "ansi256"];
-    for (const model of usedModels2) {
-      styles4[model] = {
-        get() {
-          const { level } = this;
-          return function(...arguments_) {
-            const styler = createStyler2(ansiStyles3.color[levelMapping2[level]][model](...arguments_), ansiStyles3.color.close, this._styler);
-            return createBuilder2(this, styler, this._isEmpty);
-          };
-        }
-      };
-    }
-    for (const model of usedModels2) {
-      const bgModel = "bg" + model[0].toUpperCase() + model.slice(1);
-      styles4[bgModel] = {
-        get() {
-          const { level } = this;
-          return function(...arguments_) {
-            const styler = createStyler2(ansiStyles3.bgColor[levelMapping2[level]][model](...arguments_), ansiStyles3.bgColor.close, this._styler);
-            return createBuilder2(this, styler, this._isEmpty);
-          };
-        }
-      };
-    }
-    var proto2 = Object.defineProperties(() => {
-    }, {
-      ...styles4,
-      level: {
-        enumerable: true,
-        get() {
-          return this._generator.level;
-        },
-        set(level) {
-          this._generator.level = level;
-        }
-      }
-    });
-    var createStyler2 = (open, close, parent) => {
-      let openAll;
-      let closeAll;
-      if (parent === void 0) {
-        openAll = open;
-        closeAll = close;
-      } else {
-        openAll = parent.openAll + open;
-        closeAll = close + parent.closeAll;
-      }
-      return {
-        open,
-        close,
-        openAll,
-        closeAll,
-        parent
-      };
-    };
-    var createBuilder2 = (self2, _styler, _isEmpty) => {
-      const builder = (...arguments_) => {
-        if (isArray(arguments_[0]) && isArray(arguments_[0].raw)) {
-          return applyStyle2(builder, chalkTag(builder, ...arguments_));
-        }
-        return applyStyle2(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
-      };
-      Object.setPrototypeOf(builder, proto2);
-      builder._generator = self2;
-      builder._styler = _styler;
-      builder._isEmpty = _isEmpty;
-      return builder;
-    };
-    var applyStyle2 = (self2, string) => {
-      if (self2.level <= 0 || !string) {
-        return self2._isEmpty ? "" : string;
-      }
-      let styler = self2._styler;
-      if (styler === void 0) {
-        return string;
-      }
-      const { openAll, closeAll } = styler;
-      if (string.indexOf("\x1B") !== -1) {
-        while (styler !== void 0) {
-          string = stringReplaceAll2(string, styler.close, styler.open);
-          styler = styler.parent;
-        }
-      }
-      const lfIndex = string.indexOf("\n");
-      if (lfIndex !== -1) {
-        string = stringEncaseCRLFWithFirstIndex2(string, closeAll, openAll, lfIndex);
-      }
-      return openAll + string + closeAll;
-    };
-    var template;
-    var chalkTag = (chalk4, ...strings) => {
-      const [firstString] = strings;
-      if (!isArray(firstString) || !isArray(firstString.raw)) {
-        return strings.join(" ");
-      }
-      const arguments_ = strings.slice(1);
-      const parts = [firstString.raw[0]];
-      for (let i = 1; i < firstString.length; i++) {
-        parts.push(String(arguments_[i - 1]).replace(/[{}\\]/g, "\\$&"), String(firstString.raw[i]));
-      }
-      if (template === void 0) {
-        template = require_templates2();
-      }
-      return template(chalk4, parts.join(""));
-    };
-    Object.defineProperties(Chalk.prototype, styles4);
-    var chalk3 = Chalk();
-    chalk3.supportsColor = stdoutColor2;
-    chalk3.stderr = Chalk({ level: stderrColor2 ? stderrColor2.level : 0 });
-    chalk3.stderr.supportsColor = stderrColor2;
-    module2.exports = chalk3;
-  }
-});
-
-// node_modules/figlet/lib/figlet.js
-var require_figlet = __commonJS({
-  "node_modules/figlet/lib/figlet.js"(exports, module2) {
-    "use strict";
-    var figlet2 = figlet2 || function() {
-      var FULL_WIDTH = 0, FITTING = 1, SMUSHING = 2, CONTROLLED_SMUSHING = 3;
-      var figFonts = {};
-      var figDefaults = {
-        font: "Standard",
-        fontPath: "./fonts"
-      };
-      function getSmushingRules(oldLayout, newLayout) {
-        var rules = {};
-        var val, index, len, code;
-        var codes = [
-          [16384, "vLayout", SMUSHING],
-          [8192, "vLayout", FITTING],
-          [4096, "vRule5", true],
-          [2048, "vRule4", true],
-          [1024, "vRule3", true],
-          [512, "vRule2", true],
-          [256, "vRule1", true],
-          [128, "hLayout", SMUSHING],
-          [64, "hLayout", FITTING],
-          [32, "hRule6", true],
-          [16, "hRule5", true],
-          [8, "hRule4", true],
-          [4, "hRule3", true],
-          [2, "hRule2", true],
-          [1, "hRule1", true]
-        ];
-        val = newLayout !== null ? newLayout : oldLayout;
-        index = 0;
-        len = codes.length;
-        while (index < len) {
-          code = codes[index];
-          if (val >= code[0]) {
-            val = val - code[0];
-            rules[code[1]] = typeof rules[code[1]] === "undefined" ? code[2] : rules[code[1]];
-          } else if (code[1] !== "vLayout" && code[1] !== "hLayout") {
-            rules[code[1]] = false;
-          }
-          index++;
-        }
-        if (typeof rules["hLayout"] === "undefined") {
-          if (oldLayout === 0) {
-            rules["hLayout"] = FITTING;
-          } else if (oldLayout === -1) {
-            rules["hLayout"] = FULL_WIDTH;
-          } else {
-            if (rules["hRule1"] || rules["hRule2"] || rules["hRule3"] || rules["hRule4"] || rules["hRule5"] || rules["hRule6"]) {
-              rules["hLayout"] = CONTROLLED_SMUSHING;
-            } else {
-              rules["hLayout"] = SMUSHING;
-            }
-          }
-        } else if (rules["hLayout"] === SMUSHING) {
-          if (rules["hRule1"] || rules["hRule2"] || rules["hRule3"] || rules["hRule4"] || rules["hRule5"] || rules["hRule6"]) {
-            rules["hLayout"] = CONTROLLED_SMUSHING;
-          }
-        }
-        if (typeof rules["vLayout"] === "undefined") {
-          if (rules["vRule1"] || rules["vRule2"] || rules["vRule3"] || rules["vRule4"] || rules["vRule5"]) {
-            rules["vLayout"] = CONTROLLED_SMUSHING;
-          } else {
-            rules["vLayout"] = FULL_WIDTH;
-          }
-        } else if (rules["vLayout"] === SMUSHING) {
-          if (rules["vRule1"] || rules["vRule2"] || rules["vRule3"] || rules["vRule4"] || rules["vRule5"]) {
-            rules["vLayout"] = CONTROLLED_SMUSHING;
-          }
-        }
-        return rules;
-      }
-      function hRule1_Smush(ch1, ch2, hardBlank) {
-        if (ch1 === ch2 && ch1 !== hardBlank) {
-          return ch1;
-        }
-        return false;
-      }
-      function hRule2_Smush(ch1, ch2) {
-        var rule2Str = "|/\\[]{}()<>";
-        if (ch1 === "_") {
-          if (rule2Str.indexOf(ch2) !== -1) {
-            return ch2;
-          }
-        } else if (ch2 === "_") {
-          if (rule2Str.indexOf(ch1) !== -1) {
-            return ch1;
-          }
-        }
-        return false;
-      }
-      function hRule3_Smush(ch1, ch2) {
-        var rule3Classes = "| /\\ [] {} () <>";
-        var r3_pos1 = rule3Classes.indexOf(ch1);
-        var r3_pos2 = rule3Classes.indexOf(ch2);
-        if (r3_pos1 !== -1 && r3_pos2 !== -1) {
-          if (r3_pos1 !== r3_pos2 && Math.abs(r3_pos1 - r3_pos2) !== 1) {
-            return rule3Classes.substr(Math.max(r3_pos1, r3_pos2), 1);
-          }
-        }
-        return false;
-      }
-      function hRule4_Smush(ch1, ch2) {
-        var rule4Str = "[] {} ()";
-        var r4_pos1 = rule4Str.indexOf(ch1);
-        var r4_pos2 = rule4Str.indexOf(ch2);
-        if (r4_pos1 !== -1 && r4_pos2 !== -1) {
-          if (Math.abs(r4_pos1 - r4_pos2) <= 1) {
-            return "|";
-          }
-        }
-        return false;
-      }
-      function hRule5_Smush(ch1, ch2) {
-        var rule5Str = "/\\ \\/ ><";
-        var rule5Hash = { "0": "|", "3": "Y", "6": "X" };
-        var r5_pos1 = rule5Str.indexOf(ch1);
-        var r5_pos2 = rule5Str.indexOf(ch2);
-        if (r5_pos1 !== -1 && r5_pos2 !== -1) {
-          if (r5_pos2 - r5_pos1 === 1) {
-            return rule5Hash[r5_pos1];
-          }
-        }
-        return false;
-      }
-      function hRule6_Smush(ch1, ch2, hardBlank) {
-        if (ch1 === hardBlank && ch2 === hardBlank) {
-          return hardBlank;
-        }
-        return false;
-      }
-      function vRule1_Smush(ch1, ch2) {
-        if (ch1 === ch2) {
-          return ch1;
-        }
-        return false;
-      }
-      function vRule2_Smush(ch1, ch2) {
-        var rule2Str = "|/\\[]{}()<>";
-        if (ch1 === "_") {
-          if (rule2Str.indexOf(ch2) !== -1) {
-            return ch2;
-          }
-        } else if (ch2 === "_") {
-          if (rule2Str.indexOf(ch1) !== -1) {
-            return ch1;
-          }
-        }
-        return false;
-      }
-      function vRule3_Smush(ch1, ch2) {
-        var rule3Classes = "| /\\ [] {} () <>";
-        var r3_pos1 = rule3Classes.indexOf(ch1);
-        var r3_pos2 = rule3Classes.indexOf(ch2);
-        if (r3_pos1 !== -1 && r3_pos2 !== -1) {
-          if (r3_pos1 !== r3_pos2 && Math.abs(r3_pos1 - r3_pos2) !== 1) {
-            return rule3Classes.substr(Math.max(r3_pos1, r3_pos2), 1);
-          }
-        }
-        return false;
-      }
-      function vRule4_Smush(ch1, ch2) {
-        if (ch1 === "-" && ch2 === "_" || ch1 === "_" && ch2 === "-") {
-          return "=";
-        }
-        return false;
-      }
-      function vRule5_Smush(ch1, ch2) {
-        if (ch1 === "|" && ch2 === "|") {
-          return "|";
-        }
-        return false;
-      }
-      function uni_Smush(ch1, ch2, hardBlank) {
-        if (ch2 === " " || ch2 === "") {
-          return ch1;
-        } else if (ch2 === hardBlank && ch1 !== " ") {
-          return ch1;
-        } else {
-          return ch2;
-        }
-      }
-      function canVerticalSmush(txt1, txt2, opts) {
-        if (opts.fittingRules.vLayout === FULL_WIDTH) {
-          return "invalid";
-        }
-        var ii, len = Math.min(txt1.length, txt2.length);
-        var ch1, ch2, endSmush = false, validSmush;
-        if (len === 0) {
-          return "invalid";
-        }
-        for (ii = 0; ii < len; ii++) {
-          ch1 = txt1.substr(ii, 1);
-          ch2 = txt2.substr(ii, 1);
-          if (ch1 !== " " && ch2 !== " ") {
-            if (opts.fittingRules.vLayout === FITTING) {
-              return "invalid";
-            } else if (opts.fittingRules.vLayout === SMUSHING) {
-              return "end";
-            } else {
-              if (vRule5_Smush(ch1, ch2)) {
-                endSmush = endSmush || false;
-                continue;
-              }
-              validSmush = false;
-              validSmush = opts.fittingRules.vRule1 ? vRule1_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule2 ? vRule2_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule3 ? vRule3_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule4 ? vRule4_Smush(ch1, ch2) : validSmush;
-              endSmush = true;
-              if (!validSmush) {
-                return "invalid";
-              }
-            }
-          }
-        }
-        if (endSmush) {
-          return "end";
-        } else {
-          return "valid";
-        }
-      }
-      function getVerticalSmushDist(lines1, lines2, opts) {
-        var maxDist = lines1.length;
-        var len1 = lines1.length;
-        var len2 = lines2.length;
-        var subLines1, subLines2, slen;
-        var curDist = 1;
-        var ii, ret, result;
-        while (curDist <= maxDist) {
-          subLines1 = lines1.slice(Math.max(0, len1 - curDist), len1);
-          subLines2 = lines2.slice(0, Math.min(maxDist, curDist));
-          slen = subLines2.length;
-          result = "";
-          for (ii = 0; ii < slen; ii++) {
-            ret = canVerticalSmush(subLines1[ii], subLines2[ii], opts);
-            if (ret === "end") {
-              result = ret;
-            } else if (ret === "invalid") {
-              result = ret;
-              break;
-            } else {
-              if (result === "") {
-                result = "valid";
-              }
-            }
-          }
-          if (result === "invalid") {
-            curDist--;
-            break;
-          }
-          if (result === "end") {
-            break;
-          }
-          if (result === "valid") {
-            curDist++;
-          }
-        }
-        return Math.min(maxDist, curDist);
-      }
-      function verticallySmushLines(line1, line2, opts) {
-        var ii, len = Math.min(line1.length, line2.length);
-        var ch1, ch2, result = "", validSmush;
-        for (ii = 0; ii < len; ii++) {
-          ch1 = line1.substr(ii, 1);
-          ch2 = line2.substr(ii, 1);
-          if (ch1 !== " " && ch2 !== " ") {
-            if (opts.fittingRules.vLayout === FITTING) {
-              result += uni_Smush(ch1, ch2);
-            } else if (opts.fittingRules.vLayout === SMUSHING) {
-              result += uni_Smush(ch1, ch2);
-            } else {
-              validSmush = false;
-              validSmush = opts.fittingRules.vRule5 ? vRule5_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule1 ? vRule1_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule2 ? vRule2_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule3 ? vRule3_Smush(ch1, ch2) : validSmush;
-              validSmush = !validSmush && opts.fittingRules.vRule4 ? vRule4_Smush(ch1, ch2) : validSmush;
-              result += validSmush;
-            }
-          } else {
-            result += uni_Smush(ch1, ch2);
-          }
-        }
-        return result;
-      }
-      function verticalSmush(lines1, lines2, overlap, opts) {
-        var len1 = lines1.length;
-        var len2 = lines2.length;
-        var piece1 = lines1.slice(0, Math.max(0, len1 - overlap));
-        var piece2_1 = lines1.slice(Math.max(0, len1 - overlap), len1);
-        var piece2_2 = lines2.slice(0, Math.min(overlap, len2));
-        var ii, len, line, piece2 = [], piece3, result = [];
-        len = piece2_1.length;
-        for (ii = 0; ii < len; ii++) {
-          if (ii >= len2) {
-            line = piece2_1[ii];
-          } else {
-            line = verticallySmushLines(piece2_1[ii], piece2_2[ii], opts);
-          }
-          piece2.push(line);
-        }
-        piece3 = lines2.slice(Math.min(overlap, len2), len2);
-        return result.concat(piece1, piece2, piece3);
-      }
-      function padLines(lines, numSpaces) {
-        var ii, len = lines.length, padding = "";
-        for (ii = 0; ii < numSpaces; ii++) {
-          padding += " ";
-        }
-        for (ii = 0; ii < len; ii++) {
-          lines[ii] += padding;
-        }
-      }
-      function smushVerticalFigLines(output, lines, opts) {
-        var len1 = output[0].length;
-        var len2 = lines[0].length;
-        var overlap;
-        if (len1 > len2) {
-          padLines(lines, len1 - len2);
-        } else if (len2 > len1) {
-          padLines(output, len2 - len1);
-        }
-        overlap = getVerticalSmushDist(output, lines, opts);
-        return verticalSmush(output, lines, overlap, opts);
-      }
-      function getHorizontalSmushLength(txt1, txt2, opts) {
-        if (opts.fittingRules.hLayout === FULL_WIDTH) {
-          return 0;
-        }
-        var ii, len1 = txt1.length, len2 = txt2.length;
-        var maxDist = len1;
-        var curDist = 1;
-        var breakAfter = false;
-        var validSmush = false;
-        var seg1, seg2, ch1, ch2;
-        if (len1 === 0) {
-          return 0;
-        }
-        distCal:
-          while (curDist <= maxDist) {
-            seg1 = txt1.substr(len1 - curDist, curDist);
-            seg2 = txt2.substr(0, Math.min(curDist, len2));
-            for (ii = 0; ii < Math.min(curDist, len2); ii++) {
-              ch1 = seg1.substr(ii, 1);
-              ch2 = seg2.substr(ii, 1);
-              if (ch1 !== " " && ch2 !== " ") {
-                if (opts.fittingRules.hLayout === FITTING) {
-                  curDist = curDist - 1;
-                  break distCal;
-                } else if (opts.fittingRules.hLayout === SMUSHING) {
-                  if (ch1 === opts.hardBlank || ch2 === opts.hardBlank) {
-                    curDist = curDist - 1;
-                  }
-                  break distCal;
-                } else {
-                  breakAfter = true;
-                  validSmush = false;
-                  validSmush = opts.fittingRules.hRule1 ? hRule1_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  validSmush = !validSmush && opts.fittingRules.hRule2 ? hRule2_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  validSmush = !validSmush && opts.fittingRules.hRule3 ? hRule3_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  validSmush = !validSmush && opts.fittingRules.hRule4 ? hRule4_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  validSmush = !validSmush && opts.fittingRules.hRule5 ? hRule5_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  validSmush = !validSmush && opts.fittingRules.hRule6 ? hRule6_Smush(ch1, ch2, opts.hardBlank) : validSmush;
-                  if (!validSmush) {
-                    curDist = curDist - 1;
-                    break distCal;
-                  }
-                }
-              }
-            }
-            if (breakAfter) {
-              break;
-            }
-            curDist++;
-          }
-        return Math.min(maxDist, curDist);
-      }
-      function horizontalSmush(textBlock1, textBlock2, overlap, opts) {
-        var ii, jj, ch, outputFig = [], overlapStart, piece1, piece2, piece3, len1, len2, txt1, txt2;
-        for (ii = 0; ii < opts.height; ii++) {
-          txt1 = textBlock1[ii];
-          txt2 = textBlock2[ii];
-          len1 = txt1.length;
-          len2 = txt2.length;
-          overlapStart = len1 - overlap;
-          piece1 = txt1.substr(0, Math.max(0, overlapStart));
-          piece2 = "";
-          var seg1 = txt1.substr(Math.max(0, len1 - overlap), overlap);
-          var seg2 = txt2.substr(0, Math.min(overlap, len2));
-          for (jj = 0; jj < overlap; jj++) {
-            var ch1 = jj < len1 ? seg1.substr(jj, 1) : " ";
-            var ch2 = jj < len2 ? seg2.substr(jj, 1) : " ";
-            if (ch1 !== " " && ch2 !== " ") {
-              if (opts.fittingRules.hLayout === FITTING) {
-                piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
-              } else if (opts.fittingRules.hLayout === SMUSHING) {
-                piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
-              } else {
-                var nextCh = "";
-                nextCh = !nextCh && opts.fittingRules.hRule1 ? hRule1_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = !nextCh && opts.fittingRules.hRule2 ? hRule2_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = !nextCh && opts.fittingRules.hRule3 ? hRule3_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = !nextCh && opts.fittingRules.hRule4 ? hRule4_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = !nextCh && opts.fittingRules.hRule5 ? hRule5_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = !nextCh && opts.fittingRules.hRule6 ? hRule6_Smush(ch1, ch2, opts.hardBlank) : nextCh;
-                nextCh = nextCh || uni_Smush(ch1, ch2, opts.hardBlank);
-                piece2 += nextCh;
-              }
-            } else {
-              piece2 += uni_Smush(ch1, ch2, opts.hardBlank);
-            }
-          }
-          if (overlap >= len2) {
-            piece3 = "";
-          } else {
-            piece3 = txt2.substr(overlap, Math.max(0, len2 - overlap));
-          }
-          outputFig[ii] = piece1 + piece2 + piece3;
-        }
-        return outputFig;
-      }
-      function newFigChar(len) {
-        var outputFigText = [], row;
-        for (row = 0; row < len; row++) {
-          outputFigText[row] = "";
-        }
-        return outputFigText;
-      }
-      function joinFigArray(array, len, opts) {
-        return array.reduce(function(acc, data) {
-          return horizontalSmush(acc, data.fig, data.overlap, opts);
-        }, newFigChar(len));
-      }
-      function breakWord(figChars, len, opts) {
-        var result = {};
-        for (var i = figChars.length; --i; ) {
-          var w = joinFigArray(figChars.slice(0, i), len, opts);
-          if (figLinesWidth(w) <= opts.width) {
-            result.outputFigText = w;
-            if (i < figChars.length) {
-              result.chars = figChars.slice(i);
-            } else {
-              result.chars = [];
-            }
-            break;
-          }
-        }
-        return result;
-      }
-      function generateFigTextLines(txt, figChars, opts) {
-        var charIndex, figChar, spaceIndex, overlap = 0, row, outputFigText, len, height2 = opts.height, outputFigLines = [], maxWidth, prevWidth, nextFigChars, figWords = [], char, isSpace, textFigWord, textFigLine, tmpBreak;
-        outputFigText = newFigChar(height2);
-        if (opts.width > 0 && opts.whitespaceBreak) {
-          nextFigChars = {
-            chars: [],
-            overlap
-          };
-        }
-        if (opts.printDirection === 1) {
-          txt = txt.split("").reverse().join("");
-        }
-        len = txt.length;
-        for (charIndex = 0; charIndex < len; charIndex++) {
-          char = txt.substr(charIndex, 1);
-          isSpace = char.match(/\s/);
-          figChar = figChars[char.charCodeAt(0)];
-          textFigLine = null;
-          if (figChar) {
-            if (opts.fittingRules.hLayout !== FULL_WIDTH) {
-              overlap = 1e4;
-              for (row = 0; row < opts.height; row++) {
-                overlap = Math.min(overlap, getHorizontalSmushLength(outputFigText[row], figChar[row], opts));
-              }
-              overlap = overlap === 1e4 ? 0 : overlap;
-            }
-            if (opts.width > 0) {
-              if (opts.whitespaceBreak) {
-                textFigWord = joinFigArray(nextFigChars.chars.concat([{
-                  fig: figChar,
-                  overlap
-                }]), height2, opts);
-                textFigLine = joinFigArray(figWords.concat([{
-                  fig: textFigWord,
-                  overlap: nextFigChars.overlap
-                }]), height2, opts);
-                maxWidth = figLinesWidth(textFigLine);
-              } else {
-                textFigLine = horizontalSmush(outputFigText, figChar, overlap, opts);
-                maxWidth = figLinesWidth(textFigLine);
-              }
-              if (maxWidth >= opts.width && charIndex > 0) {
-                if (opts.whitespaceBreak) {
-                  outputFigText = joinFigArray(figWords.slice(0, -1), height2, opts);
-                  if (figWords.length > 1) {
-                    outputFigLines.push(outputFigText);
-                    outputFigText = newFigChar(height2);
-                  }
-                  figWords = [];
-                } else {
-                  outputFigLines.push(outputFigText);
-                  outputFigText = newFigChar(height2);
-                }
-              }
-            }
-            if (opts.width > 0 && opts.whitespaceBreak) {
-              if (!isSpace || charIndex === len - 1) {
-                nextFigChars.chars.push({ fig: figChar, overlap });
-              }
-              if (isSpace || charIndex === len - 1) {
-                tmpBreak = null;
-                while (true) {
-                  textFigLine = joinFigArray(nextFigChars.chars, height2, opts);
-                  maxWidth = figLinesWidth(textFigLine);
-                  if (maxWidth >= opts.width) {
-                    tmpBreak = breakWord(nextFigChars.chars, height2, opts);
-                    nextFigChars = { chars: tmpBreak.chars };
-                    outputFigLines.push(tmpBreak.outputFigText);
-                  } else {
-                    break;
-                  }
-                }
-                if (maxWidth > 0) {
-                  if (tmpBreak) {
-                    figWords.push({ fig: textFigLine, overlap: 1 });
-                  } else {
-                    figWords.push({
-                      fig: textFigLine,
-                      overlap: nextFigChars.overlap
-                    });
-                  }
-                }
-                if (isSpace) {
-                  figWords.push({ fig: figChar, overlap });
-                  outputFigText = newFigChar(height2);
-                }
-                if (charIndex === len - 1) {
-                  outputFigText = joinFigArray(figWords, height2, opts);
-                }
-                nextFigChars = {
-                  chars: [],
-                  overlap
-                };
-                continue;
-              }
-            }
-            outputFigText = horizontalSmush(outputFigText, figChar, overlap, opts);
-          }
-        }
-        if (figLinesWidth(outputFigText) > 0) {
-          outputFigLines.push(outputFigText);
-        }
-        if (opts.showHardBlanks !== true) {
-          outputFigLines.forEach(function(outputFigText2) {
-            len = outputFigText2.length;
-            for (row = 0; row < len; row++) {
-              outputFigText2[row] = outputFigText2[row].replace(new RegExp("\\" + opts.hardBlank, "g"), " ");
-            }
-          });
-        }
-        return outputFigLines;
-      }
-      var getHorizontalFittingRules = function(layout, options) {
-        var props = ["hLayout", "hRule1", "hRule2", "hRule3", "hRule4", "hRule5", "hRule6"], params = {}, prop, ii;
-        if (layout === "default") {
-          for (ii = 0; ii < props.length; ii++) {
-            params[props[ii]] = options.fittingRules[props[ii]];
-          }
-        } else if (layout === "full") {
-          params = { "hLayout": FULL_WIDTH, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
-        } else if (layout === "fitted") {
-          params = { "hLayout": FITTING, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
-        } else if (layout === "controlled smushing") {
-          params = { "hLayout": CONTROLLED_SMUSHING, "hRule1": true, "hRule2": true, "hRule3": true, "hRule4": true, "hRule5": true, "hRule6": true };
-        } else if (layout === "universal smushing") {
-          params = { "hLayout": SMUSHING, "hRule1": false, "hRule2": false, "hRule3": false, "hRule4": false, "hRule5": false, "hRule6": false };
-        } else {
-          return;
-        }
-        return params;
-      };
-      var getVerticalFittingRules = function(layout, options) {
-        var props = ["vLayout", "vRule1", "vRule2", "vRule3", "vRule4", "vRule5"], params = {}, prop, ii;
-        if (layout === "default") {
-          for (ii = 0; ii < props.length; ii++) {
-            params[props[ii]] = options.fittingRules[props[ii]];
-          }
-        } else if (layout === "full") {
-          params = { "vLayout": FULL_WIDTH, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
-        } else if (layout === "fitted") {
-          params = { "vLayout": FITTING, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
-        } else if (layout === "controlled smushing") {
-          params = { "vLayout": CONTROLLED_SMUSHING, "vRule1": true, "vRule2": true, "vRule3": true, "vRule4": true, "vRule5": true };
-        } else if (layout === "universal smushing") {
-          params = { "vLayout": SMUSHING, "vRule1": false, "vRule2": false, "vRule3": false, "vRule4": false, "vRule5": false };
-        } else {
-          return;
-        }
-        return params;
-      };
-      var figLinesWidth = function(textLines) {
-        return Math.max.apply(Math, textLines.map(function(line, i) {
-          return line.length;
-        }));
-      };
-      var generateText = function(fontName, options, txt) {
-        txt = txt.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-        var lines = txt.split("\n");
-        var figLines = [];
-        var ii, len, output;
-        len = lines.length;
-        for (ii = 0; ii < len; ii++) {
-          figLines = figLines.concat(generateFigTextLines(lines[ii], figFonts[fontName], options));
-        }
-        len = figLines.length;
-        output = figLines[0];
-        for (ii = 1; ii < len; ii++) {
-          output = smushVerticalFigLines(output, figLines[ii], options);
-        }
-        return output ? output.join("\n") : "";
-      };
-      var me = function(txt, options, next) {
-        me.text(txt, options, next);
-      };
-      me.text = function(txt, options, next) {
-        var fontName = "";
-        txt = txt + "";
-        if (typeof arguments[1] === "function") {
-          next = options;
-          options = {};
-          options.font = figDefaults.font;
-        }
-        if (typeof options === "string") {
-          fontName = options;
-          options = {};
-        } else {
-          options = options || {};
-          fontName = options.font || figDefaults.font;
-        }
-        me.loadFont(fontName, function(err, fontOpts) {
-          if (err) {
-            return next(err);
-          }
-          next(null, generateText(fontName, _reworkFontOpts(fontOpts, options), txt));
-        });
-      };
-      me.textSync = function(txt, options) {
-        var fontName = "";
-        txt = txt + "";
-        if (typeof options === "string") {
-          fontName = options;
-          options = {};
-        } else {
-          options = options || {};
-          fontName = options.font || figDefaults.font;
-        }
-        var fontOpts = _reworkFontOpts(me.loadFontSync(fontName), options);
-        return generateText(fontName, fontOpts, txt);
-      };
-      function _reworkFontOpts(fontOpts, options) {
-        var myOpts = JSON.parse(JSON.stringify(fontOpts)), params, prop;
-        if (typeof options.horizontalLayout !== "undefined") {
-          params = getHorizontalFittingRules(options.horizontalLayout, fontOpts);
-          for (prop in params) {
-            if (params.hasOwnProperty(prop)) {
-              myOpts.fittingRules[prop] = params[prop];
-            }
-          }
-        }
-        if (typeof options.verticalLayout !== "undefined") {
-          params = getVerticalFittingRules(options.verticalLayout, fontOpts);
-          for (prop in params) {
-            if (params.hasOwnProperty(prop)) {
-              myOpts.fittingRules[prop] = params[prop];
-            }
-          }
-        }
-        myOpts.printDirection = typeof options.printDirection !== "undefined" ? options.printDirection : fontOpts.printDirection;
-        myOpts.showHardBlanks = options.showHardBlanks || false;
-        myOpts.width = options.width || -1;
-        myOpts.whitespaceBreak = options.whitespaceBreak || false;
-        return myOpts;
-      }
-      me.metadata = function(fontName, next) {
-        fontName = fontName + "";
-        me.loadFont(fontName, function(err, fontOpts) {
-          if (err) {
-            next(err);
-            return;
-          }
-          next(null, fontOpts, figFonts[fontName].comment);
-        });
-      };
-      me.defaults = function(opts) {
-        if (typeof opts === "object" && opts !== null) {
-          for (var prop in opts) {
-            if (opts.hasOwnProperty(prop)) {
-              figDefaults[prop] = opts[prop];
-            }
-          }
-        }
-        return JSON.parse(JSON.stringify(figDefaults));
-      };
-      me.parseFont = function(fontName, data) {
-        data = data.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
-        figFonts[fontName] = {};
-        var lines = data.split("\n");
-        var headerData = lines.splice(0, 1)[0].split(" ");
-        var figFont = figFonts[fontName];
-        var opts = {};
-        opts.hardBlank = headerData[0].substr(5, 1);
-        opts.height = parseInt(headerData[1], 10);
-        opts.baseline = parseInt(headerData[2], 10);
-        opts.maxLength = parseInt(headerData[3], 10);
-        opts.oldLayout = parseInt(headerData[4], 10);
-        opts.numCommentLines = parseInt(headerData[5], 10);
-        opts.printDirection = headerData.length >= 6 ? parseInt(headerData[6], 10) : 0;
-        opts.fullLayout = headerData.length >= 7 ? parseInt(headerData[7], 10) : null;
-        opts.codeTagCount = headerData.length >= 8 ? parseInt(headerData[8], 10) : null;
-        opts.fittingRules = getSmushingRules(opts.oldLayout, opts.fullLayout);
-        figFont.options = opts;
-        if (opts.hardBlank.length !== 1 || isNaN(opts.height) || isNaN(opts.baseline) || isNaN(opts.maxLength) || isNaN(opts.oldLayout) || isNaN(opts.numCommentLines)) {
-          throw new Error("FIGlet header contains invalid values.");
-        }
-        var charNums = [], ii;
-        for (ii = 32; ii <= 126; ii++) {
-          charNums.push(ii);
-        }
-        charNums = charNums.concat(196, 214, 220, 228, 246, 252, 223);
-        if (lines.length < opts.numCommentLines + opts.height * charNums.length) {
-          throw new Error("FIGlet file is missing data.");
-        }
-        var cNum, endCharRegEx, parseError = false;
-        figFont.comment = lines.splice(0, opts.numCommentLines).join("\n");
-        figFont.numChars = 0;
-        while (lines.length > 0 && figFont.numChars < charNums.length) {
-          cNum = charNums[figFont.numChars];
-          figFont[cNum] = lines.splice(0, opts.height);
-          for (ii = 0; ii < opts.height; ii++) {
-            if (typeof figFont[cNum][ii] === "undefined") {
-              figFont[cNum][ii] = "";
-            } else {
-              endCharRegEx = new RegExp("\\" + figFont[cNum][ii].substr(figFont[cNum][ii].length - 1, 1) + "+$");
-              figFont[cNum][ii] = figFont[cNum][ii].replace(endCharRegEx, "");
-            }
-          }
-          figFont.numChars++;
-        }
-        while (lines.length > 0) {
-          cNum = lines.splice(0, 1)[0].split(" ")[0];
-          if (/^0[xX][0-9a-fA-F]+$/.test(cNum)) {
-            cNum = parseInt(cNum, 16);
-          } else if (/^0[0-7]+$/.test(cNum)) {
-            cNum = parseInt(cNum, 8);
-          } else if (/^[0-9]+$/.test(cNum)) {
-            cNum = parseInt(cNum, 10);
-          } else if (/^-0[xX][0-9a-fA-F]+$/.test(cNum)) {
-            cNum = parseInt(cNum, 16);
-          } else {
-            if (cNum === "") {
-              break;
-            }
-            console.log("Invalid data:" + cNum);
-            parseError = true;
-            break;
-          }
-          figFont[cNum] = lines.splice(0, opts.height);
-          for (ii = 0; ii < opts.height; ii++) {
-            if (typeof figFont[cNum][ii] === "undefined") {
-              figFont[cNum][ii] = "";
-            } else {
-              endCharRegEx = new RegExp("\\" + figFont[cNum][ii].substr(figFont[cNum][ii].length - 1, 1) + "+$");
-              figFont[cNum][ii] = figFont[cNum][ii].replace(endCharRegEx, "");
-            }
-          }
-          figFont.numChars++;
-        }
-        if (parseError === true) {
-          throw new Error("Error parsing data.");
-        }
-        return opts;
-      };
-      me.loadFont = function(fontName, next) {
-        if (figFonts[fontName]) {
-          next(null, figFonts[fontName].options);
-          return;
-        }
-        if (typeof fetch !== "function") {
-          console.error("figlet.js requires the fetch API or a fetch polyfill such as https://cdnjs.com/libraries/fetch");
-          throw new Error("fetch is required for figlet.js to work.");
-        }
-        fetch(figDefaults.fontPath + "/" + fontName + ".flf").then(function(response) {
-          if (response.ok) {
-            return response.text();
-          }
-          console.log("Unexpected response", response);
-          throw new Error("Network response was not ok.");
-        }).then(function(text) {
-          next(null, me.parseFont(fontName, text));
-        }).catch(next);
-      };
-      me.loadFontSync = function(name) {
-        if (figFonts[name]) {
-          return figFonts[name].options;
-        }
-        throw new Error("synchronous font loading is not implemented for the browser");
-      };
-      me.preloadFonts = function(fonts, next) {
-        var fontData = [];
-        fonts.reduce(function(promise, name) {
-          return promise.then(function() {
-            return fetch(figDefaults.fontPath + "/" + name + ".flf").then((response) => {
-              return response.text();
-            }).then(function(data) {
-              fontData.push(data);
-            });
-          });
-        }, Promise.resolve()).then(function(res) {
-          for (var i in fonts) {
-            if (fonts.hasOwnProperty(i)) {
-              me.parseFont(fonts[i], fontData[i]);
-            }
-          }
-          if (next)
-            next();
-        });
-      };
-      me.figFonts = figFonts;
-      return me;
-    }();
-    if (typeof module2 !== "undefined") {
-      if (typeof module2.exports !== "undefined") {
-        module2.exports = figlet2;
-      }
-    }
-  }
-});
-
-// node_modules/figlet/lib/node-figlet.js
-var require_node_figlet = __commonJS({
-  "node_modules/figlet/lib/node-figlet.js"(exports, module2) {
-    var figlet2 = require_figlet();
-    var fs = require("fs");
-    var path3 = require("path");
-    var fontDir = path3.join(__dirname, "/../fonts/");
-    figlet2.loadFont = function(name, next) {
-      if (figlet2.figFonts[name]) {
-        next(null, figlet2.figFonts[name].options);
-        return;
-      }
-      fs.readFile(path3.join(fontDir, name + ".flf"), { encoding: "utf-8" }, function(err, fontData) {
-        if (err) {
-          return next(err);
-        }
-        fontData = fontData + "";
-        try {
-          next(null, figlet2.parseFont(name, fontData));
-        } catch (error) {
-          next(error);
-        }
-      });
-    };
-    figlet2.loadFontSync = function(name) {
-      if (figlet2.figFonts[name]) {
-        return figlet2.figFonts[name].options;
-      }
-      var fontData = fs.readFileSync(path3.join(fontDir, name + ".flf"), { encoding: "utf-8" });
-      fontData = fontData + "";
-      return figlet2.parseFont(name, fontData);
-    };
-    figlet2.fonts = function(next) {
-      var fontList = [];
-      fs.readdir(fontDir, function(err, files) {
-        if (err) {
-          return next(err);
-        }
-        files.forEach(function(file) {
-          if (/\.flf$/.test(file)) {
-            fontList.push(file.replace(/\.flf$/, ""));
-          }
-        });
-        next(null, fontList);
-      });
-    };
-    figlet2.fontsSync = function() {
-      var fontList = [];
-      fs.readdirSync(fontDir).forEach(function(file) {
-        if (/\.flf$/.test(file)) {
-          fontList.push(file.replace(/\.flf$/, ""));
-        }
-      });
-      return fontList;
-    };
-    module2.exports = figlet2;
-  }
-});
-
-// node_modules/isexe/windows.js
-var require_windows = __commonJS({
-  "node_modules/isexe/windows.js"(exports, module2) {
-    module2.exports = isexe;
-    isexe.sync = sync;
-    var fs = require("fs");
-    function checkPathExt(path3, options) {
-      var pathext = options.pathExt !== void 0 ? options.pathExt : process.env.PATHEXT;
-      if (!pathext) {
-        return true;
-      }
-      pathext = pathext.split(";");
-      if (pathext.indexOf("") !== -1) {
-        return true;
-      }
-      for (var i = 0; i < pathext.length; i++) {
-        var p = pathext[i].toLowerCase();
-        if (p && path3.substr(-p.length).toLowerCase() === p) {
-          return true;
-        }
-      }
-      return false;
-    }
-    function checkStat(stat, path3, options) {
-      if (!stat.isSymbolicLink() && !stat.isFile()) {
-        return false;
-      }
-      return checkPathExt(path3, options);
-    }
-    function isexe(path3, options, cb) {
-      fs.stat(path3, function(er, stat) {
-        cb(er, er ? false : checkStat(stat, path3, options));
-      });
-    }
-    function sync(path3, options) {
-      return checkStat(fs.statSync(path3), path3, options);
-    }
-  }
-});
-
-// node_modules/isexe/mode.js
-var require_mode = __commonJS({
-  "node_modules/isexe/mode.js"(exports, module2) {
-    module2.exports = isexe;
-    isexe.sync = sync;
-    var fs = require("fs");
-    function isexe(path3, options, cb) {
-      fs.stat(path3, function(er, stat) {
-        cb(er, er ? false : checkStat(stat, options));
-      });
-    }
-    function sync(path3, options) {
-      return checkStat(fs.statSync(path3), options);
-    }
-    function checkStat(stat, options) {
-      return stat.isFile() && checkMode(stat, options);
-    }
-    function checkMode(stat, options) {
-      var mod = stat.mode;
-      var uid = stat.uid;
-      var gid = stat.gid;
-      var myUid = options.uid !== void 0 ? options.uid : process.getuid && process.getuid();
-      var myGid = options.gid !== void 0 ? options.gid : process.getgid && process.getgid();
-      var u = parseInt("100", 8);
-      var g = parseInt("010", 8);
-      var o = parseInt("001", 8);
-      var ug = u | g;
-      var ret = mod & o || mod & g && gid === myGid || mod & u && uid === myUid || mod & ug && myUid === 0;
-      return ret;
-    }
-  }
-});
-
-// node_modules/isexe/index.js
-var require_isexe = __commonJS({
-  "node_modules/isexe/index.js"(exports, module2) {
-    var fs = require("fs");
-    var core;
-    if (process.platform === "win32" || global.TESTING_WINDOWS) {
-      core = require_windows();
-    } else {
-      core = require_mode();
-    }
-    module2.exports = isexe;
-    isexe.sync = sync;
-    function isexe(path3, options, cb) {
-      if (typeof options === "function") {
-        cb = options;
-        options = {};
-      }
-      if (!cb) {
-        if (typeof Promise !== "function") {
-          throw new TypeError("callback not provided");
-        }
-        return new Promise(function(resolve, reject) {
-          isexe(path3, options || {}, function(er, is) {
-            if (er) {
-              reject(er);
-            } else {
-              resolve(is);
-            }
-          });
-        });
-      }
-      core(path3, options || {}, function(er, is) {
-        if (er) {
-          if (er.code === "EACCES" || options && options.ignoreErrors) {
-            er = null;
-            is = false;
-          }
-        }
-        cb(er, is);
-      });
-    }
-    function sync(path3, options) {
-      try {
-        return core.sync(path3, options || {});
-      } catch (er) {
-        if (options && options.ignoreErrors || er.code === "EACCES") {
-          return false;
-        } else {
-          throw er;
-        }
-      }
-    }
-  }
-});
-
-// node_modules/which/which.js
-var require_which = __commonJS({
-  "node_modules/which/which.js"(exports, module2) {
-    var isWindows = process.platform === "win32" || process.env.OSTYPE === "cygwin" || process.env.OSTYPE === "msys";
-    var path3 = require("path");
-    var COLON = isWindows ? ";" : ":";
-    var isexe = require_isexe();
-    var getNotFoundError = (cmd) => Object.assign(new Error(`not found: ${cmd}`), { code: "ENOENT" });
-    var getPathInfo = (cmd, opt) => {
-      const colon = opt.colon || COLON;
-      const pathEnv = cmd.match(/\//) || isWindows && cmd.match(/\\/) ? [""] : [
-        ...isWindows ? [process.cwd()] : [],
-        ...(opt.path || process.env.PATH || "").split(colon)
-      ];
-      const pathExtExe = isWindows ? opt.pathExt || process.env.PATHEXT || ".EXE;.CMD;.BAT;.COM" : "";
-      const pathExt = isWindows ? pathExtExe.split(colon) : [""];
-      if (isWindows) {
-        if (cmd.indexOf(".") !== -1 && pathExt[0] !== "")
-          pathExt.unshift("");
-      }
-      return {
-        pathEnv,
-        pathExt,
-        pathExtExe
-      };
-    };
-    var which = (cmd, opt, cb) => {
-      if (typeof opt === "function") {
-        cb = opt;
-        opt = {};
-      }
-      if (!opt)
-        opt = {};
-      const { pathEnv, pathExt, pathExtExe } = getPathInfo(cmd, opt);
-      const found = [];
-      const step = (i) => new Promise((resolve, reject) => {
-        if (i === pathEnv.length)
-          return opt.all && found.length ? resolve(found) : reject(getNotFoundError(cmd));
-        const ppRaw = pathEnv[i];
-        const pathPart = /^".*"$/.test(ppRaw) ? ppRaw.slice(1, -1) : ppRaw;
-        const pCmd = path3.join(pathPart, cmd);
-        const p = !pathPart && /^\.[\\\/]/.test(cmd) ? cmd.slice(0, 2) + pCmd : pCmd;
-        resolve(subStep(p, i, 0));
-      });
-      const subStep = (p, i, ii) => new Promise((resolve, reject) => {
-        if (ii === pathExt.length)
-          return resolve(step(i + 1));
-        const ext = pathExt[ii];
-        isexe(p + ext, { pathExt: pathExtExe }, (er, is) => {
-          if (!er && is) {
-            if (opt.all)
-              found.push(p + ext);
-            else
-              return resolve(p + ext);
-          }
-          return resolve(subStep(p, i, ii + 1));
-        });
-      });
-      return cb ? step(0).then((res) => cb(null, res), cb) : step(0);
-    };
-    var whichSync = (cmd, opt) => {
-      opt = opt || {};
-      const { pathEnv, pathExt, pathExtExe } = getPathInfo(cmd, opt);
-      const found = [];
-      for (let i = 0; i < pathEnv.length; i++) {
-        const ppRaw = pathEnv[i];
-        const pathPart = /^".*"$/.test(ppRaw) ? ppRaw.slice(1, -1) : ppRaw;
-        const pCmd = path3.join(pathPart, cmd);
-        const p = !pathPart && /^\.[\\\/]/.test(cmd) ? cmd.slice(0, 2) + pCmd : pCmd;
-        for (let j = 0; j < pathExt.length; j++) {
-          const cur = p + pathExt[j];
-          try {
-            const is = isexe.sync(cur, { pathExt: pathExtExe });
-            if (is) {
-              if (opt.all)
-                found.push(cur);
-              else
-                return cur;
-            }
-          } catch (ex) {
-          }
-        }
-      }
-      if (opt.all && found.length)
-        return found;
-      if (opt.nothrow)
-        return null;
-      throw getNotFoundError(cmd);
-    };
-    module2.exports = which;
-    which.sync = whichSync;
-  }
-});
-
-// node_modules/path-key/index.js
-var require_path_key = __commonJS({
-  "node_modules/path-key/index.js"(exports, module2) {
-    "use strict";
-    var pathKey2 = (options = {}) => {
-      const environment = options.env || process.env;
-      const platform2 = options.platform || process.platform;
-      if (platform2 !== "win32") {
-        return "PATH";
-      }
-      return Object.keys(environment).reverse().find((key) => key.toUpperCase() === "PATH") || "Path";
-    };
-    module2.exports = pathKey2;
-    module2.exports.default = pathKey2;
-  }
-});
-
-// node_modules/cross-spawn/lib/util/resolveCommand.js
-var require_resolveCommand = __commonJS({
-  "node_modules/cross-spawn/lib/util/resolveCommand.js"(exports, module2) {
-    "use strict";
-    var path3 = require("path");
-    var which = require_which();
-    var getPathKey = require_path_key();
-    function resolveCommandAttempt(parsed, withoutPathExt) {
-      const env2 = parsed.options.env || process.env;
-      const cwd = process.cwd();
-      const hasCustomCwd = parsed.options.cwd != null;
-      const shouldSwitchCwd = hasCustomCwd && process.chdir !== void 0 && !process.chdir.disabled;
-      if (shouldSwitchCwd) {
-        try {
-          process.chdir(parsed.options.cwd);
-        } catch (err) {
-        }
-      }
-      let resolved;
-      try {
-        resolved = which.sync(parsed.command, {
-          path: env2[getPathKey({ env: env2 })],
-          pathExt: withoutPathExt ? path3.delimiter : void 0
-        });
-      } catch (e) {
-      } finally {
-        if (shouldSwitchCwd) {
-          process.chdir(cwd);
-        }
-      }
-      if (resolved) {
-        resolved = path3.resolve(hasCustomCwd ? parsed.options.cwd : "", resolved);
-      }
-      return resolved;
-    }
-    function resolveCommand(parsed) {
-      return resolveCommandAttempt(parsed) || resolveCommandAttempt(parsed, true);
-    }
-    module2.exports = resolveCommand;
-  }
-});
-
-// node_modules/cross-spawn/lib/util/escape.js
-var require_escape = __commonJS({
-  "node_modules/cross-spawn/lib/util/escape.js"(exports, module2) {
-    "use strict";
-    var metaCharsRegExp = /([()\][%!^"`<>&|;, *?])/g;
-    function escapeCommand(arg) {
-      arg = arg.replace(metaCharsRegExp, "^$1");
-      return arg;
-    }
-    function escapeArgument(arg, doubleEscapeMetaChars) {
-      arg = `${arg}`;
-      arg = arg.replace(/(\\*)"/g, '$1$1\\"');
-      arg = arg.replace(/(\\*)$/, "$1$1");
-      arg = `"${arg}"`;
-      arg = arg.replace(metaCharsRegExp, "^$1");
-      if (doubleEscapeMetaChars) {
-        arg = arg.replace(metaCharsRegExp, "^$1");
-      }
-      return arg;
-    }
-    module2.exports.command = escapeCommand;
-    module2.exports.argument = escapeArgument;
-  }
-});
-
-// node_modules/shebang-regex/index.js
-var require_shebang_regex = __commonJS({
-  "node_modules/shebang-regex/index.js"(exports, module2) {
-    "use strict";
-    module2.exports = /^#!(.*)/;
-  }
-});
-
-// node_modules/shebang-command/index.js
-var require_shebang_command = __commonJS({
-  "node_modules/shebang-command/index.js"(exports, module2) {
-    "use strict";
-    var shebangRegex = require_shebang_regex();
-    module2.exports = (string = "") => {
-      const match = string.match(shebangRegex);
-      if (!match) {
-        return null;
-      }
-      const [path3, argument] = match[0].replace(/#! ?/, "").split(" ");
-      const binary = path3.split("/").pop();
-      if (binary === "env") {
-        return argument;
-      }
-      return argument ? `${binary} ${argument}` : binary;
-    };
-  }
-});
-
-// node_modules/cross-spawn/lib/util/readShebang.js
-var require_readShebang = __commonJS({
-  "node_modules/cross-spawn/lib/util/readShebang.js"(exports, module2) {
-    "use strict";
-    var fs = require("fs");
-    var shebangCommand = require_shebang_command();
-    function readShebang(command) {
-      const size = 150;
-      const buffer = Buffer.alloc(size);
-      let fd;
-      try {
-        fd = fs.openSync(command, "r");
-        fs.readSync(fd, buffer, 0, size, 0);
-        fs.closeSync(fd);
-      } catch (e) {
-      }
-      return shebangCommand(buffer.toString());
-    }
-    module2.exports = readShebang;
-  }
-});
-
-// node_modules/cross-spawn/lib/parse.js
-var require_parse = __commonJS({
-  "node_modules/cross-spawn/lib/parse.js"(exports, module2) {
-    "use strict";
-    var path3 = require("path");
-    var resolveCommand = require_resolveCommand();
-    var escape = require_escape();
-    var readShebang = require_readShebang();
-    var isWin = process.platform === "win32";
-    var isExecutableRegExp = /\.(?:com|exe)$/i;
-    var isCmdShimRegExp = /node_modules[\\/].bin[\\/][^\\/]+\.cmd$/i;
-    function detectShebang(parsed) {
-      parsed.file = resolveCommand(parsed);
-      const shebang = parsed.file && readShebang(parsed.file);
-      if (shebang) {
-        parsed.args.unshift(parsed.file);
-        parsed.command = shebang;
-        return resolveCommand(parsed);
-      }
-      return parsed.file;
-    }
-    function parseNonShell(parsed) {
-      if (!isWin) {
-        return parsed;
-      }
-      const commandFile = detectShebang(parsed);
-      const needsShell = !isExecutableRegExp.test(commandFile);
-      if (parsed.options.forceShell || needsShell) {
-        const needsDoubleEscapeMetaChars = isCmdShimRegExp.test(commandFile);
-        parsed.command = path3.normalize(parsed.command);
-        parsed.command = escape.command(parsed.command);
-        parsed.args = parsed.args.map((arg) => escape.argument(arg, needsDoubleEscapeMetaChars));
-        const shellCommand = [parsed.command].concat(parsed.args).join(" ");
-        parsed.args = ["/d", "/s", "/c", `"${shellCommand}"`];
-        parsed.command = process.env.comspec || "cmd.exe";
-        parsed.options.windowsVerbatimArguments = true;
-      }
-      return parsed;
-    }
-    function parse(command, args, options) {
-      if (args && !Array.isArray(args)) {
-        options = args;
-        args = null;
-      }
-      args = args ? args.slice(0) : [];
-      options = Object.assign({}, options);
-      const parsed = {
-        command,
-        args,
-        options,
-        file: void 0,
-        original: {
-          command,
-          args
-        }
-      };
-      return options.shell ? parsed : parseNonShell(parsed);
-    }
-    module2.exports = parse;
-  }
-});
-
-// node_modules/cross-spawn/lib/enoent.js
-var require_enoent = __commonJS({
-  "node_modules/cross-spawn/lib/enoent.js"(exports, module2) {
-    "use strict";
-    var isWin = process.platform === "win32";
-    function notFoundError(original, syscall) {
-      return Object.assign(new Error(`${syscall} ${original.command} ENOENT`), {
-        code: "ENOENT",
-        errno: "ENOENT",
-        syscall: `${syscall} ${original.command}`,
-        path: original.command,
-        spawnargs: original.args
-      });
-    }
-    function hookChildProcess(cp, parsed) {
-      if (!isWin) {
-        return;
-      }
-      const originalEmit = cp.emit;
-      cp.emit = function(name, arg1) {
-        if (name === "exit") {
-          const err = verifyENOENT(arg1, parsed, "spawn");
-          if (err) {
-            return originalEmit.call(cp, "error", err);
-          }
-        }
-        return originalEmit.apply(cp, arguments);
-      };
-    }
-    function verifyENOENT(status, parsed) {
-      if (isWin && status === 1 && !parsed.file) {
-        return notFoundError(parsed.original, "spawn");
-      }
-      return null;
-    }
-    function verifyENOENTSync(status, parsed) {
-      if (isWin && status === 1 && !parsed.file) {
-        return notFoundError(parsed.original, "spawnSync");
-      }
-      return null;
-    }
-    module2.exports = {
-      hookChildProcess,
-      verifyENOENT,
-      verifyENOENTSync,
-      notFoundError
-    };
-  }
-});
-
-// node_modules/cross-spawn/index.js
-var require_cross_spawn = __commonJS({
-  "node_modules/cross-spawn/index.js"(exports, module2) {
-    "use strict";
-    var cp = require("child_process");
-    var parse = require_parse();
-    var enoent = require_enoent();
-    function spawn(command, args, options) {
-      const parsed = parse(command, args, options);
-      const spawned = cp.spawn(parsed.command, parsed.args, parsed.options);
-      enoent.hookChildProcess(spawned, parsed);
-      return spawned;
-    }
-    function spawnSync(command, args, options) {
-      const parsed = parse(command, args, options);
-      const result = cp.spawnSync(parsed.command, parsed.args, parsed.options);
-      result.error = result.error || enoent.verifyENOENTSync(result.status, parsed);
-      return result;
-    }
-    module2.exports = spawn;
-    module2.exports.spawn = spawn;
-    module2.exports.sync = spawnSync;
-    module2.exports._parse = parse;
-    module2.exports._enoent = enoent;
-  }
-});
-
-// node_modules/get-stream/buffer-stream.js
-var require_buffer_stream = __commonJS({
-  "node_modules/get-stream/buffer-stream.js"(exports, module2) {
-    "use strict";
-    var { PassThrough: PassThroughStream } = require("stream");
-    module2.exports = (options) => {
-      options = { ...options };
-      const { array } = options;
-      let { encoding } = options;
-      const isBuffer = encoding === "buffer";
-      let objectMode = false;
-      if (array) {
-        objectMode = !(encoding || isBuffer);
-      } else {
-        encoding = encoding || "utf8";
-      }
-      if (isBuffer) {
-        encoding = null;
-      }
-      const stream = new PassThroughStream({ objectMode });
-      if (encoding) {
-        stream.setEncoding(encoding);
-      }
-      let length = 0;
-      const chunks = [];
-      stream.on("data", (chunk) => {
-        chunks.push(chunk);
-        if (objectMode) {
-          length = chunks.length;
-        } else {
-          length += chunk.length;
-        }
-      });
-      stream.getBufferedValue = () => {
-        if (array) {
-          return chunks;
-        }
-        return isBuffer ? Buffer.concat(chunks, length) : chunks.join("");
-      };
-      stream.getBufferedLength = () => length;
-      return stream;
-    };
-  }
-});
-
-// node_modules/get-stream/index.js
-var require_get_stream = __commonJS({
-  "node_modules/get-stream/index.js"(exports, module2) {
-    "use strict";
-    var { constants: BufferConstants } = require("buffer");
-    var stream = require("stream");
-    var { promisify } = require("util");
-    var bufferStream = require_buffer_stream();
-    var streamPipelinePromisified = promisify(stream.pipeline);
-    var MaxBufferError = class extends Error {
-      constructor() {
-        super("maxBuffer exceeded");
-        this.name = "MaxBufferError";
-      }
-    };
-    async function getStream2(inputStream, options) {
-      if (!inputStream) {
-        throw new Error("Expected a stream");
-      }
-      options = {
-        maxBuffer: Infinity,
-        ...options
-      };
-      const { maxBuffer } = options;
-      const stream2 = bufferStream(options);
-      await new Promise((resolve, reject) => {
-        const rejectPromise = (error) => {
-          if (error && stream2.getBufferedLength() <= BufferConstants.MAX_LENGTH) {
-            error.bufferedData = stream2.getBufferedValue();
-          }
-          reject(error);
-        };
-        (async () => {
-          try {
-            await streamPipelinePromisified(inputStream, stream2);
-            resolve();
-          } catch (error) {
-            rejectPromise(error);
-          }
-        })();
-        stream2.on("data", () => {
-          if (stream2.getBufferedLength() > maxBuffer) {
-            rejectPromise(new MaxBufferError());
-          }
-        });
-      });
-      return stream2.getBufferedValue();
-    }
-    module2.exports = getStream2;
-    module2.exports.buffer = (stream2, options) => getStream2(stream2, { ...options, encoding: "buffer" });
-    module2.exports.array = (stream2, options) => getStream2(stream2, { ...options, array: true });
-    module2.exports.MaxBufferError = MaxBufferError;
-  }
-});
-
-// node_modules/merge-stream/index.js
-var require_merge_stream = __commonJS({
-  "node_modules/merge-stream/index.js"(exports, module2) {
-    "use strict";
-    var { PassThrough } = require("stream");
-    module2.exports = function() {
-      var sources = [];
-      var output = new PassThrough({ objectMode: true });
-      output.setMaxListeners(0);
-      output.add = add;
-      output.isEmpty = isEmpty;
-      output.on("unpipe", remove);
-      Array.prototype.slice.call(arguments).forEach(add);
-      return output;
-      function add(source) {
-        if (Array.isArray(source)) {
-          source.forEach(add);
-          return this;
-        }
-        sources.push(source);
-        source.once("end", remove.bind(null, source));
-        source.once("error", output.emit.bind(output, "error"));
-        source.pipe(output, { end: false });
-        return this;
-      }
-      function isEmpty() {
-        return sources.length == 0;
-      }
-      function remove(source) {
-        sources = sources.filter(function(it) {
-          return it !== source;
-        });
-        if (!sources.length && output.readable) {
-          output.end();
-        }
-      }
-    };
-  }
-});
-
-// node_modules/picocolors/picocolors.js
-var require_picocolors = __commonJS({
-  "node_modules/picocolors/picocolors.js"(exports, module2) {
-    var tty2 = require("tty");
-    var isColorSupported = !("NO_COLOR" in process.env || process.argv.includes("--no-color")) && ("FORCE_COLOR" in process.env || process.argv.includes("--color") || process.platform === "win32" || tty2.isatty(1) && process.env.TERM !== "dumb" || "CI" in process.env);
-    var formatter = (open, close, replace = open) => (input) => {
-      let string = "" + input;
-      let index = string.indexOf(close, open.length);
-      return ~index ? open + replaceClose(string, close, replace, index) + close : open + string + close;
-    };
-    var replaceClose = (string, close, replace, index) => {
-      let start = string.substring(0, index) + replace;
-      let end = string.substring(index + close.length);
-      let nextIndex = end.indexOf(close);
-      return ~nextIndex ? start + replaceClose(end, close, replace, nextIndex) : start + end;
-    };
-    var createColors = (enabled = isColorSupported) => ({
-      isColorSupported: enabled,
-      reset: enabled ? (s) => `\x1B[0m${s}\x1B[0m` : String,
-      bold: enabled ? formatter("\x1B[1m", "\x1B[22m", "\x1B[22m\x1B[1m") : String,
-      dim: enabled ? formatter("\x1B[2m", "\x1B[22m", "\x1B[22m\x1B[2m") : String,
-      italic: enabled ? formatter("\x1B[3m", "\x1B[23m") : String,
-      underline: enabled ? formatter("\x1B[4m", "\x1B[24m") : String,
-      inverse: enabled ? formatter("\x1B[7m", "\x1B[27m") : String,
-      hidden: enabled ? formatter("\x1B[8m", "\x1B[28m") : String,
-      strikethrough: enabled ? formatter("\x1B[9m", "\x1B[29m") : String,
-      black: enabled ? formatter("\x1B[30m", "\x1B[39m") : String,
-      red: enabled ? formatter("\x1B[31m", "\x1B[39m") : String,
-      green: enabled ? formatter("\x1B[32m", "\x1B[39m") : String,
-      yellow: enabled ? formatter("\x1B[33m", "\x1B[39m") : String,
-      blue: enabled ? formatter("\x1B[34m", "\x1B[39m") : String,
-      magenta: enabled ? formatter("\x1B[35m", "\x1B[39m") : String,
-      cyan: enabled ? formatter("\x1B[36m", "\x1B[39m") : String,
-      white: enabled ? formatter("\x1B[37m", "\x1B[39m") : String,
-      gray: enabled ? formatter("\x1B[90m", "\x1B[39m") : String,
-      bgBlack: enabled ? formatter("\x1B[40m", "\x1B[49m") : String,
-      bgRed: enabled ? formatter("\x1B[41m", "\x1B[49m") : String,
-      bgGreen: enabled ? formatter("\x1B[42m", "\x1B[49m") : String,
-      bgYellow: enabled ? formatter("\x1B[43m", "\x1B[49m") : String,
-      bgBlue: enabled ? formatter("\x1B[44m", "\x1B[49m") : String,
-      bgMagenta: enabled ? formatter("\x1B[45m", "\x1B[49m") : String,
-      bgCyan: enabled ? formatter("\x1B[46m", "\x1B[49m") : String,
-      bgWhite: enabled ? formatter("\x1B[47m", "\x1B[49m") : String
-    });
-    module2.exports = createColors();
-    module2.exports.createColors = createColors;
-  }
-});
-
-// node_modules/nanospinner/consts.js
-var require_consts = __commonJS({
-  "node_modules/nanospinner/consts.js"(exports, module2) {
-    var tty2 = require("tty");
-    var isCI = process.env.CI || process.env.WT_SESSION || process.env.ConEmuTask === "{cmd::Cmder}" || process.env.TERM_PROGRAM === "vscode" || process.env.TERM === "xterm-256color" || process.env.TERM === "alacritty";
-    var isTTY = tty2.isatty(1) && process.env.TERM !== "dumb" && !("CI" in process.env);
-    var supportUnicode = process.platform !== "win32" ? process.env.TERM !== "linux" : isCI;
-    var symbols = {
-      frames: isTTY ? supportUnicode ? ["\u280B", "\u2819", "\u2839", "\u2838", "\u283C", "\u2834", "\u2826", "\u2827", "\u2807", "\u280F"] : ["-", "\\", "|", "/"] : ["-"],
-      tick: supportUnicode ? "\u2714" : "\u221A",
-      cross: supportUnicode ? "\u2716" : "\xD7",
-      warn: supportUnicode ? "\u26A0" : "!!"
-    };
-    module2.exports = { isTTY, symbols };
-  }
-});
-
-// node_modules/nanospinner/index.js
-var require_nanospinner = __commonJS({
-  "node_modules/nanospinner/index.js"(exports, module2) {
-    var pico = require_picocolors();
-    var { isTTY, symbols } = require_consts();
-    var { green, red, yellow } = pico;
-    function getLines(str = "", width = 80) {
-      return str.replace(/\u001b[^m]*?m/g, "").split("\n").reduce((col, line) => col += Math.max(1, Math.ceil(line.length / width)), 0);
-    }
-    function createSpinner2(text = "", opts = {}) {
-      let current = 0, interval = opts.interval || 50, stream = opts.stream || process.stderr, frames = opts.frames && opts.frames.length ? opts.frames : symbols.frames, color = opts.color || "yellow", lines = 0, timer;
-      let spinner = {
-        reset() {
-          current = 0;
-          lines = 0;
-          timer = clearTimeout(timer);
-        },
-        clear() {
-          spinner.write("\x1B[1G");
-          for (let i = 0; i < lines; i++) {
-            i > 0 && spinner.write("\x1B[1A");
-            spinner.write("\x1B[2K\x1B[1G");
-          }
-          lines = 0;
-          return spinner;
-        },
-        write(str, clear = false) {
-          if (clear && isTTY) {
-            spinner.clear();
-          }
-          stream.write(str);
-          return spinner;
-        },
-        render() {
-          let mark = pico[color](frames[current]);
-          let str = `${mark} ${text}`;
-          isTTY ? spinner.write(`\x1B[?25l`) : str += "\n";
-          spinner.write(str, true);
-          isTTY && (lines = getLines(str, stream.columns));
-        },
-        spin() {
-          spinner.render();
-          current = ++current % frames.length;
-          return spinner;
-        },
-        update(opts2 = {}) {
-          text = opts2.text || text;
-          frames = opts2.frames && opts2.frames.length ? opts2.frames : frames;
-          interval = opts2.interval || interval;
-          color = opts2.color || color;
-          if (frames.length - 1 < current) {
-            current = 0;
-          }
-          return spinner;
-        },
-        loop() {
-          isTTY && (timer = setTimeout(() => spinner.loop(), interval));
-          return spinner.spin();
-        },
-        start(opts2 = {}) {
-          timer && spinner.reset();
-          return spinner.update({ text: opts2.text, color: opts2.color }).loop();
-        },
-        stop(opts2 = {}) {
-          timer = clearTimeout(timer);
-          let mark = pico[opts2.color || color](frames[current]);
-          let optsMark = opts2.mark && opts2.color ? pico[opts2.color](opts2.mark) : opts2.mark;
-          spinner.write(`${optsMark || mark} ${opts2.text || text}
-`, true);
-          return isTTY ? spinner.write(`\x1B[?25h`) : spinner;
-        },
-        success(opts2 = {}) {
-          let mark = green(symbols.tick);
-          return spinner.stop({ mark, ...opts2 });
-        },
-        error(opts2 = {}) {
-          let mark = red(symbols.cross);
-          return spinner.stop({ mark, ...opts2 });
-        },
-        warn(opts2 = {}) {
-          let mark = yellow(symbols.warn);
-          return spinner.stop({ mark, ...opts2 });
-        }
-      };
-      return spinner;
-    }
-    module2.exports = {
-      createSpinner: createSpinner2
-    };
-  }
-});
-
 // node_modules/commander/esm.mjs
 var import_index = __toESM(require_commander(), 1);
 var {
@@ -40796,2677 +40796,11 @@ var chalk = createChalk();
 var chalkStderr = createChalk({ level: stderrColor ? stderrColor.level : 0 });
 var source_default = chalk;
 
-// node_modules/figures/index.js
-var import_node_process3 = __toESM(require("node:process"), 1);
-
-// node_modules/is-unicode-supported/index.js
-var import_node_process2 = __toESM(require("node:process"), 1);
-function isUnicodeSupported() {
-  if (import_node_process2.default.platform !== "win32") {
-    return import_node_process2.default.env.TERM !== "linux";
-  }
-  return Boolean(import_node_process2.default.env.CI) || Boolean(import_node_process2.default.env.WT_SESSION) || Boolean(import_node_process2.default.env.TERMINUS_SUBLIME) || import_node_process2.default.env.ConEmuTask === "{cmd::Cmder}" || import_node_process2.default.env.TERM_PROGRAM === "Terminus-Sublime" || import_node_process2.default.env.TERM_PROGRAM === "vscode" || import_node_process2.default.env.TERM === "xterm-256color" || import_node_process2.default.env.TERM === "alacritty" || import_node_process2.default.env.TERMINAL_EMULATOR === "JetBrains-JediTerm";
-}
-
-// node_modules/figures/index.js
-var { platform } = import_node_process3.default;
-var common = {
-  square: "\u2588",
-  squareDarkShade: "\u2593",
-  squareMediumShade: "\u2592",
-  squareLightShade: "\u2591",
-  squareTop: "\u2580",
-  squareBottom: "\u2584",
-  squareLeft: "\u258C",
-  squareRight: "\u2590",
-  squareCenter: "\u25A0",
-  bullet: "\u25CF",
-  dot: "\u2024",
-  ellipsis: "\u2026",
-  pointerSmall: "\u203A",
-  triangleUp: "\u25B2",
-  triangleUpSmall: "\u25B4",
-  triangleDown: "\u25BC",
-  triangleDownSmall: "\u25BE",
-  triangleLeftSmall: "\u25C2",
-  triangleRightSmall: "\u25B8",
-  home: "\u2302",
-  heart: "\u2665",
-  musicNote: "\u266A",
-  musicNoteBeamed: "\u266B",
-  arrowUp: "\u2191",
-  arrowDown: "\u2193",
-  arrowLeft: "\u2190",
-  arrowRight: "\u2192",
-  arrowLeftRight: "\u2194",
-  arrowUpDown: "\u2195",
-  almostEqual: "\u2248",
-  notEqual: "\u2260",
-  lessOrEqual: "\u2264",
-  greaterOrEqual: "\u2265",
-  identical: "\u2261",
-  infinity: "\u221E",
-  subscriptZero: "\u2080",
-  subscriptOne: "\u2081",
-  subscriptTwo: "\u2082",
-  subscriptThree: "\u2083",
-  subscriptFour: "\u2084",
-  subscriptFive: "\u2085",
-  subscriptSix: "\u2086",
-  subscriptSeven: "\u2087",
-  subscriptEight: "\u2088",
-  subscriptNine: "\u2089",
-  oneHalf: "\xBD",
-  oneThird: "\u2153",
-  oneQuarter: "\xBC",
-  oneFifth: "\u2155",
-  oneSixth: "\u2159",
-  oneEighth: "\u215B",
-  twoThirds: "\u2154",
-  twoFifths: "\u2156",
-  threeQuarters: "\xBE",
-  threeFifths: "\u2157",
-  threeEighths: "\u215C",
-  fourFifths: "\u2158",
-  fiveSixths: "\u215A",
-  fiveEighths: "\u215D",
-  sevenEighths: "\u215E",
-  line: "\u2500",
-  lineBold: "\u2501",
-  lineDouble: "\u2550",
-  lineDashed0: "\u2504",
-  lineDashed1: "\u2505",
-  lineDashed2: "\u2508",
-  lineDashed3: "\u2509",
-  lineDashed4: "\u254C",
-  lineDashed5: "\u254D",
-  lineDashed6: "\u2574",
-  lineDashed7: "\u2576",
-  lineDashed8: "\u2578",
-  lineDashed9: "\u257A",
-  lineDashed10: "\u257C",
-  lineDashed11: "\u257E",
-  lineDashed12: "\u2212",
-  lineDashed13: "\u2013",
-  lineDashed14: "\u2010",
-  lineDashed15: "\u2043",
-  lineVertical: "\u2502",
-  lineVerticalBold: "\u2503",
-  lineVerticalDouble: "\u2551",
-  lineVerticalDashed0: "\u2506",
-  lineVerticalDashed1: "\u2507",
-  lineVerticalDashed2: "\u250A",
-  lineVerticalDashed3: "\u250B",
-  lineVerticalDashed4: "\u254E",
-  lineVerticalDashed5: "\u254F",
-  lineVerticalDashed6: "\u2575",
-  lineVerticalDashed7: "\u2577",
-  lineVerticalDashed8: "\u2579",
-  lineVerticalDashed9: "\u257B",
-  lineVerticalDashed10: "\u257D",
-  lineVerticalDashed11: "\u257F",
-  lineDownLeft: "\u2510",
-  lineDownLeftArc: "\u256E",
-  lineDownBoldLeftBold: "\u2513",
-  lineDownBoldLeft: "\u2512",
-  lineDownLeftBold: "\u2511",
-  lineDownDoubleLeftDouble: "\u2557",
-  lineDownDoubleLeft: "\u2556",
-  lineDownLeftDouble: "\u2555",
-  lineDownRight: "\u250C",
-  lineDownRightArc: "\u256D",
-  lineDownBoldRightBold: "\u250F",
-  lineDownBoldRight: "\u250E",
-  lineDownRightBold: "\u250D",
-  lineDownDoubleRightDouble: "\u2554",
-  lineDownDoubleRight: "\u2553",
-  lineDownRightDouble: "\u2552",
-  lineUpLeft: "\u2518",
-  lineUpLeftArc: "\u256F",
-  lineUpBoldLeftBold: "\u251B",
-  lineUpBoldLeft: "\u251A",
-  lineUpLeftBold: "\u2519",
-  lineUpDoubleLeftDouble: "\u255D",
-  lineUpDoubleLeft: "\u255C",
-  lineUpLeftDouble: "\u255B",
-  lineUpRight: "\u2514",
-  lineUpRightArc: "\u2570",
-  lineUpBoldRightBold: "\u2517",
-  lineUpBoldRight: "\u2516",
-  lineUpRightBold: "\u2515",
-  lineUpDoubleRightDouble: "\u255A",
-  lineUpDoubleRight: "\u2559",
-  lineUpRightDouble: "\u2558",
-  lineUpDownLeft: "\u2524",
-  lineUpBoldDownBoldLeftBold: "\u252B",
-  lineUpBoldDownBoldLeft: "\u2528",
-  lineUpDownLeftBold: "\u2525",
-  lineUpBoldDownLeftBold: "\u2529",
-  lineUpDownBoldLeftBold: "\u252A",
-  lineUpDownBoldLeft: "\u2527",
-  lineUpBoldDownLeft: "\u2526",
-  lineUpDoubleDownDoubleLeftDouble: "\u2563",
-  lineUpDoubleDownDoubleLeft: "\u2562",
-  lineUpDownLeftDouble: "\u2561",
-  lineUpDownRight: "\u251C",
-  lineUpBoldDownBoldRightBold: "\u2523",
-  lineUpBoldDownBoldRight: "\u2520",
-  lineUpDownRightBold: "\u251D",
-  lineUpBoldDownRightBold: "\u2521",
-  lineUpDownBoldRightBold: "\u2522",
-  lineUpDownBoldRight: "\u251F",
-  lineUpBoldDownRight: "\u251E",
-  lineUpDoubleDownDoubleRightDouble: "\u2560",
-  lineUpDoubleDownDoubleRight: "\u255F",
-  lineUpDownRightDouble: "\u255E",
-  lineDownLeftRight: "\u252C",
-  lineDownBoldLeftBoldRightBold: "\u2533",
-  lineDownLeftBoldRightBold: "\u252F",
-  lineDownBoldLeftRight: "\u2530",
-  lineDownBoldLeftBoldRight: "\u2531",
-  lineDownBoldLeftRightBold: "\u2532",
-  lineDownLeftRightBold: "\u252E",
-  lineDownLeftBoldRight: "\u252D",
-  lineDownDoubleLeftDoubleRightDouble: "\u2566",
-  lineDownDoubleLeftRight: "\u2565",
-  lineDownLeftDoubleRightDouble: "\u2564",
-  lineUpLeftRight: "\u2534",
-  lineUpBoldLeftBoldRightBold: "\u253B",
-  lineUpLeftBoldRightBold: "\u2537",
-  lineUpBoldLeftRight: "\u2538",
-  lineUpBoldLeftBoldRight: "\u2539",
-  lineUpBoldLeftRightBold: "\u253A",
-  lineUpLeftRightBold: "\u2536",
-  lineUpLeftBoldRight: "\u2535",
-  lineUpDoubleLeftDoubleRightDouble: "\u2569",
-  lineUpDoubleLeftRight: "\u2568",
-  lineUpLeftDoubleRightDouble: "\u2567",
-  lineUpDownLeftRight: "\u253C",
-  lineUpBoldDownBoldLeftBoldRightBold: "\u254B",
-  lineUpDownBoldLeftBoldRightBold: "\u2548",
-  lineUpBoldDownLeftBoldRightBold: "\u2547",
-  lineUpBoldDownBoldLeftRightBold: "\u254A",
-  lineUpBoldDownBoldLeftBoldRight: "\u2549",
-  lineUpBoldDownLeftRight: "\u2540",
-  lineUpDownBoldLeftRight: "\u2541",
-  lineUpDownLeftBoldRight: "\u253D",
-  lineUpDownLeftRightBold: "\u253E",
-  lineUpBoldDownBoldLeftRight: "\u2542",
-  lineUpDownLeftBoldRightBold: "\u253F",
-  lineUpBoldDownLeftBoldRight: "\u2543",
-  lineUpBoldDownLeftRightBold: "\u2544",
-  lineUpDownBoldLeftBoldRight: "\u2545",
-  lineUpDownBoldLeftRightBold: "\u2546",
-  lineUpDoubleDownDoubleLeftDoubleRightDouble: "\u256C",
-  lineUpDoubleDownDoubleLeftRight: "\u256B",
-  lineUpDownLeftDoubleRightDouble: "\u256A",
-  lineCross: "\u2573",
-  lineBackslash: "\u2572",
-  lineSlash: "\u2571"
-};
-var mainSymbols = {
-  ...common,
-  ...platform === "linux" ? {
-    circleQuestionMark: "?\u20DD",
-    questionMarkPrefix: "?\u20DD"
-  } : {
-    circleQuestionMark: "?",
-    questionMarkPrefix: "?"
-  },
-  tick: "\u2714",
-  info: "\u2139",
-  warning: "\u26A0",
-  cross: "\u2718",
-  squareSmall: "\u25FB",
-  squareSmallFilled: "\u25FC",
-  circle: "\u25EF",
-  circleFilled: "\u25C9",
-  circleDotted: "\u25CC",
-  circleDouble: "\u25CE",
-  circleCircle: "\u24DE",
-  circleCross: "\u24E7",
-  circlePipe: "\u24BE",
-  radioOn: "\u25C9",
-  radioOff: "\u25EF",
-  checkboxOn: "\u2612",
-  checkboxOff: "\u2610",
-  checkboxCircleOn: "\u24E7",
-  checkboxCircleOff: "\u24BE",
-  pointer: "\u276F",
-  triangleUpOutline: "\u25B3",
-  triangleLeft: "\u25C0",
-  triangleRight: "\u25B6",
-  lozenge: "\u25C6",
-  lozengeOutline: "\u25C7",
-  hamburger: "\u2630",
-  smiley: "\u32E1",
-  mustache: "\u0DF4",
-  star: "\u2605",
-  play: "\u25B6",
-  nodejs: "\u2B22",
-  oneSeventh: "\u2150",
-  oneNinth: "\u2151",
-  oneTenth: "\u2152"
-};
-var fallbackSymbols = {
-  ...common,
-  tick: "\u221A",
-  info: "i",
-  warning: "\u203C",
-  cross: "\xD7",
-  squareSmall: "\u25A1",
-  squareSmallFilled: "\u25A0",
-  circle: "( )",
-  circleFilled: "(*)",
-  circleDotted: "( )",
-  circleDouble: "( )",
-  circleCircle: "(\u25CB)",
-  circleCross: "(\xD7)",
-  circlePipe: "(\u2502)",
-  circleQuestionMark: "(?)",
-  radioOn: "(*)",
-  radioOff: "( )",
-  checkboxOn: "[\xD7]",
-  checkboxOff: "[ ]",
-  checkboxCircleOn: "(\xD7)",
-  checkboxCircleOff: "( )",
-  questionMarkPrefix: "\uFF1F",
-  pointer: ">",
-  triangleUpOutline: "\u2206",
-  triangleLeft: "\u25C4",
-  triangleRight: "\u25BA",
-  lozenge: "\u2666",
-  lozengeOutline: "\u25CA",
-  hamburger: "\u2261",
-  smiley: "\u263A",
-  mustache: "\u250C\u2500\u2510",
-  star: "\u2736",
-  play: "\u25BA",
-  nodejs: "\u2666",
-  oneSeventh: "1/7",
-  oneNinth: "1/9",
-  oneTenth: "1/10"
-};
-var shouldUseMain = isUnicodeSupported();
-var figures = shouldUseMain ? mainSymbols : fallbackSymbols;
-var figures_default = figures;
-
-// node_modules/cli-cursor/index.js
-var import_node_process5 = __toESM(require("node:process"), 1);
-
-// node_modules/restore-cursor/index.js
-var import_node_process4 = __toESM(require("node:process"), 1);
-var import_onetime = __toESM(require_onetime(), 1);
-var import_signal_exit = __toESM(require_signal_exit(), 1);
-var restoreCursor = (0, import_onetime.default)(() => {
-  (0, import_signal_exit.default)(() => {
-    import_node_process4.default.stderr.write("\x1B[?25h");
-  }, { alwaysLast: true });
-});
-var restore_cursor_default = restoreCursor;
-
-// node_modules/cli-cursor/index.js
-var isHidden = false;
-var cliCursor = {};
-cliCursor.show = (writableStream = import_node_process5.default.stderr) => {
-  if (!writableStream.isTTY) {
-    return;
-  }
-  isHidden = false;
-  writableStream.write("\x1B[?25h");
-};
-cliCursor.hide = (writableStream = import_node_process5.default.stderr) => {
-  if (!writableStream.isTTY) {
-    return;
-  }
-  restore_cursor_default();
-  isHidden = true;
-  writableStream.write("\x1B[?25l");
-};
-cliCursor.toggle = (force, writableStream) => {
-  if (force !== void 0) {
-    isHidden = force;
-  }
-  if (isHidden) {
-    cliCursor.show(writableStream);
-  } else {
-    cliCursor.hide(writableStream);
-  }
-};
-var cli_cursor_default = cliCursor;
-
-// node_modules/inquirer/lib/prompts/list.js
-var import_run_async2 = __toESM(require_run_async(), 1);
-var import_rxjs4 = __toESM(require_cjs(), 1);
-
-// node_modules/inquirer/lib/prompts/base.js
-var import_defaults = __toESM(require_defaults(), 1);
-var import_clone = __toESM(require_clone(), 1);
-var import_run_async = __toESM(require_run_async(), 1);
-var import_rxjs = __toESM(require_cjs(), 1);
-
-// node_modules/inquirer/lib/objects/choices.js
-var import_node_assert = __toESM(require("node:assert"), 1);
-var import_lodash = __toESM(require_lodash(), 1);
-
-// node_modules/inquirer/lib/objects/separator.js
-var Separator = class {
-  constructor(line) {
-    this.type = "separator";
-    this.line = source_default.dim(line || new Array(15).join(figures_default.line));
-  }
-  static exclude(obj) {
-    return obj.type !== "separator";
-  }
-  toString() {
-    return this.line;
-  }
-};
-
-// node_modules/inquirer/lib/objects/choice.js
-var Choice = class {
-  constructor(val, answers) {
-    if (val instanceof Choice || val.type === "separator") {
-      return val;
-    }
-    if (typeof val === "string" || typeof val === "number") {
-      this.name = String(val);
-      this.value = val;
-      this.short = String(val);
-    } else {
-      Object.assign(this, val, {
-        name: val.name || val.value,
-        value: "value" in val ? val.value : val.name,
-        short: val.short || val.name || val.value
-      });
-    }
-    if (typeof val.disabled === "function") {
-      this.disabled = val.disabled(answers);
-    } else {
-      this.disabled = val.disabled;
-    }
-  }
-};
-
-// node_modules/inquirer/lib/objects/choices.js
-var Choices = class {
-  constructor(choices, answers) {
-    this.choices = choices.map((val) => {
-      if (val.type === "separator") {
-        if (!(val instanceof Separator)) {
-          val = new Separator(val.line);
-        }
-        return val;
-      }
-      return new Choice(val, answers);
-    });
-    this.realChoices = this.choices.filter(Separator.exclude).filter((item) => !item.disabled);
-    Object.defineProperty(this, "length", {
-      get() {
-        return this.choices.length;
-      },
-      set(val) {
-        this.choices.length = val;
-      }
-    });
-    Object.defineProperty(this, "realLength", {
-      get() {
-        return this.realChoices.length;
-      },
-      set() {
-        throw new Error("Cannot set `realLength` of a Choices collection");
-      }
-    });
-  }
-  getChoice(selector) {
-    (0, import_node_assert.default)(typeof selector === "number");
-    return this.realChoices[selector];
-  }
-  get(selector) {
-    (0, import_node_assert.default)(typeof selector === "number");
-    return this.choices[selector];
-  }
-  where(whereClause) {
-    return import_lodash.default.filter(this.realChoices, whereClause);
-  }
-  pluck(propertyName) {
-    return import_lodash.default.map(this.realChoices, propertyName);
-  }
-  indexOf(...args) {
-    return this.choices.indexOf(...args);
-  }
-  forEach(...args) {
-    return this.choices.forEach(...args);
-  }
-  filter(...args) {
-    return this.choices.filter(...args);
-  }
-  reduce(...args) {
-    return this.choices.reduce(...args);
-  }
-  find(func) {
-    return this.choices.find(func);
-  }
-  push(...args) {
-    const objs = args.map((val) => new Choice(val));
-    this.choices.push(...objs);
-    this.realChoices = this.choices.filter(Separator.exclude).filter((item) => !item.disabled);
-    return this.choices;
-  }
-};
-
-// node_modules/ansi-escapes/index.js
-var import_node_process6 = __toESM(require("node:process"), 1);
-var ESC = "\x1B[";
-var OSC = "\x1B]";
-var BEL = "\x07";
-var SEP = ";";
-var isTerminalApp = import_node_process6.default.env.TERM_PROGRAM === "Apple_Terminal";
-var ansiEscapes = {};
-ansiEscapes.cursorTo = (x, y) => {
-  if (typeof x !== "number") {
-    throw new TypeError("The `x` argument is required");
-  }
-  if (typeof y !== "number") {
-    return ESC + (x + 1) + "G";
-  }
-  return ESC + (y + 1) + SEP + (x + 1) + "H";
-};
-ansiEscapes.cursorMove = (x, y) => {
-  if (typeof x !== "number") {
-    throw new TypeError("The `x` argument is required");
-  }
-  let returnValue = "";
-  if (x < 0) {
-    returnValue += ESC + -x + "D";
-  } else if (x > 0) {
-    returnValue += ESC + x + "C";
-  }
-  if (y < 0) {
-    returnValue += ESC + -y + "A";
-  } else if (y > 0) {
-    returnValue += ESC + y + "B";
-  }
-  return returnValue;
-};
-ansiEscapes.cursorUp = (count = 1) => ESC + count + "A";
-ansiEscapes.cursorDown = (count = 1) => ESC + count + "B";
-ansiEscapes.cursorForward = (count = 1) => ESC + count + "C";
-ansiEscapes.cursorBackward = (count = 1) => ESC + count + "D";
-ansiEscapes.cursorLeft = ESC + "G";
-ansiEscapes.cursorSavePosition = isTerminalApp ? "\x1B7" : ESC + "s";
-ansiEscapes.cursorRestorePosition = isTerminalApp ? "\x1B8" : ESC + "u";
-ansiEscapes.cursorGetPosition = ESC + "6n";
-ansiEscapes.cursorNextLine = ESC + "E";
-ansiEscapes.cursorPrevLine = ESC + "F";
-ansiEscapes.cursorHide = ESC + "?25l";
-ansiEscapes.cursorShow = ESC + "?25h";
-ansiEscapes.eraseLines = (count) => {
-  let clear = "";
-  for (let i = 0; i < count; i++) {
-    clear += ansiEscapes.eraseLine + (i < count - 1 ? ansiEscapes.cursorUp() : "");
-  }
-  if (count) {
-    clear += ansiEscapes.cursorLeft;
-  }
-  return clear;
-};
-ansiEscapes.eraseEndLine = ESC + "K";
-ansiEscapes.eraseStartLine = ESC + "1K";
-ansiEscapes.eraseLine = ESC + "2K";
-ansiEscapes.eraseDown = ESC + "J";
-ansiEscapes.eraseUp = ESC + "1J";
-ansiEscapes.eraseScreen = ESC + "2J";
-ansiEscapes.scrollUp = ESC + "S";
-ansiEscapes.scrollDown = ESC + "T";
-ansiEscapes.clearScreen = "\x1Bc";
-ansiEscapes.clearTerminal = import_node_process6.default.platform === "win32" ? `${ansiEscapes.eraseScreen}${ESC}0f` : `${ansiEscapes.eraseScreen}${ESC}3J${ESC}H`;
-ansiEscapes.beep = BEL;
-ansiEscapes.link = (text, url2) => [
-  OSC,
-  "8",
-  SEP,
-  SEP,
-  url2,
-  BEL,
-  text,
-  OSC,
-  "8",
-  SEP,
-  SEP,
-  BEL
-].join("");
-ansiEscapes.image = (buffer, options = {}) => {
-  let returnValue = `${OSC}1337;File=inline=1`;
-  if (options.width) {
-    returnValue += `;width=${options.width}`;
-  }
-  if (options.height) {
-    returnValue += `;height=${options.height}`;
-  }
-  if (options.preserveAspectRatio === false) {
-    returnValue += ";preserveAspectRatio=0";
-  }
-  return returnValue + ":" + buffer.toString("base64") + BEL;
-};
-ansiEscapes.iTerm = {
-  setCwd: (cwd = import_node_process6.default.cwd()) => `${OSC}50;CurrentDir=${cwd}${BEL}`,
-  annotation(message, options = {}) {
-    let returnValue = `${OSC}1337;`;
-    const hasX = typeof options.x !== "undefined";
-    const hasY = typeof options.y !== "undefined";
-    if ((hasX || hasY) && !(hasX && hasY && typeof options.length !== "undefined")) {
-      throw new Error("`x`, `y` and `length` must be defined when `x` or `y` is defined");
-    }
-    message = message.replace(/\|/g, "");
-    returnValue += options.isHidden ? "AddHiddenAnnotation=" : "AddAnnotation=";
-    if (options.length > 0) {
-      returnValue += (hasX ? [message, options.length, options.x, options.y] : [options.length, message]).join("|");
-    } else {
-      returnValue += message;
-    }
-    return returnValue + BEL;
-  }
-};
-var ansi_escapes_default = ansiEscapes;
-
-// node_modules/inquirer/lib/utils/readline.js
-var left = function(rl, x) {
-  rl.output.write(ansi_escapes_default.cursorBackward(x));
-};
-var right = function(rl, x) {
-  rl.output.write(ansi_escapes_default.cursorForward(x));
-};
-var up = function(rl, x) {
-  rl.output.write(ansi_escapes_default.cursorUp(x));
-};
-var down = function(rl, x) {
-  rl.output.write(ansi_escapes_default.cursorDown(x));
-};
-var clearLine = function(rl, len) {
-  rl.output.write(ansi_escapes_default.eraseLines(len));
-};
-
-// node_modules/inquirer/lib/utils/screen-manager.js
-var import_cli_width = __toESM(require_cli_width(), 1);
-
-// node_modules/ansi-regex/index.js
-function ansiRegex({ onlyFirst = false } = {}) {
-  const pattern = [
-    "[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]+)*|[a-zA-Z\\d]+(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)",
-    "(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))"
-  ].join("|");
-  return new RegExp(pattern, onlyFirst ? void 0 : "g");
-}
-
-// node_modules/strip-ansi/index.js
-function stripAnsi(string) {
-  if (typeof string !== "string") {
-    throw new TypeError(`Expected a \`string\`, got \`${typeof string}\``);
-  }
-  return string.replace(ansiRegex(), "");
-}
-
-// node_modules/string-width/index.js
-var import_eastasianwidth = __toESM(require_eastasianwidth(), 1);
-var import_emoji_regex = __toESM(require_emoji_regex(), 1);
-function stringWidth(string, options = {}) {
-  if (typeof string !== "string" || string.length === 0) {
-    return 0;
-  }
-  options = {
-    ambiguousIsNarrow: true,
-    ...options
-  };
-  string = stripAnsi(string);
-  if (string.length === 0) {
-    return 0;
-  }
-  string = string.replace((0, import_emoji_regex.default)(), "  ");
-  const ambiguousCharacterWidth = options.ambiguousIsNarrow ? 1 : 2;
-  let width = 0;
-  for (const character of string) {
-    const codePoint = character.codePointAt(0);
-    if (codePoint <= 31 || codePoint >= 127 && codePoint <= 159) {
-      continue;
-    }
-    if (codePoint >= 768 && codePoint <= 879) {
-      continue;
-    }
-    const code = import_eastasianwidth.default.eastAsianWidth(character);
-    switch (code) {
-      case "F":
-      case "W":
-        width += 2;
-        break;
-      case "A":
-        width += ambiguousCharacterWidth;
-        break;
-      default:
-        width += 1;
-    }
-  }
-  return width;
-}
-
-// node_modules/ansi-styles/index.js
-var ANSI_BACKGROUND_OFFSET2 = 10;
-var wrapAnsi162 = (offset = 0) => (code) => `\x1B[${code + offset}m`;
-var wrapAnsi2562 = (offset = 0) => (code) => `\x1B[${38 + offset};5;${code}m`;
-var wrapAnsi16m2 = (offset = 0) => (red, green, blue) => `\x1B[${38 + offset};2;${red};${green};${blue}m`;
-var styles3 = {
-  modifier: {
-    reset: [0, 0],
-    bold: [1, 22],
-    dim: [2, 22],
-    italic: [3, 23],
-    underline: [4, 24],
-    overline: [53, 55],
-    inverse: [7, 27],
-    hidden: [8, 28],
-    strikethrough: [9, 29]
-  },
-  color: {
-    black: [30, 39],
-    red: [31, 39],
-    green: [32, 39],
-    yellow: [33, 39],
-    blue: [34, 39],
-    magenta: [35, 39],
-    cyan: [36, 39],
-    white: [37, 39],
-    blackBright: [90, 39],
-    gray: [90, 39],
-    grey: [90, 39],
-    redBright: [91, 39],
-    greenBright: [92, 39],
-    yellowBright: [93, 39],
-    blueBright: [94, 39],
-    magentaBright: [95, 39],
-    cyanBright: [96, 39],
-    whiteBright: [97, 39]
-  },
-  bgColor: {
-    bgBlack: [40, 49],
-    bgRed: [41, 49],
-    bgGreen: [42, 49],
-    bgYellow: [43, 49],
-    bgBlue: [44, 49],
-    bgMagenta: [45, 49],
-    bgCyan: [46, 49],
-    bgWhite: [47, 49],
-    bgBlackBright: [100, 49],
-    bgGray: [100, 49],
-    bgGrey: [100, 49],
-    bgRedBright: [101, 49],
-    bgGreenBright: [102, 49],
-    bgYellowBright: [103, 49],
-    bgBlueBright: [104, 49],
-    bgMagentaBright: [105, 49],
-    bgCyanBright: [106, 49],
-    bgWhiteBright: [107, 49]
-  }
-};
-var modifierNames2 = Object.keys(styles3.modifier);
-var foregroundColorNames2 = Object.keys(styles3.color);
-var backgroundColorNames2 = Object.keys(styles3.bgColor);
-var colorNames2 = [...foregroundColorNames2, ...backgroundColorNames2];
-function assembleStyles2() {
-  const codes = /* @__PURE__ */ new Map();
-  for (const [groupName, group] of Object.entries(styles3)) {
-    for (const [styleName, style] of Object.entries(group)) {
-      styles3[styleName] = {
-        open: `\x1B[${style[0]}m`,
-        close: `\x1B[${style[1]}m`
-      };
-      group[styleName] = styles3[styleName];
-      codes.set(style[0], style[1]);
-    }
-    Object.defineProperty(styles3, groupName, {
-      value: group,
-      enumerable: false
-    });
-  }
-  Object.defineProperty(styles3, "codes", {
-    value: codes,
-    enumerable: false
-  });
-  styles3.color.close = "\x1B[39m";
-  styles3.bgColor.close = "\x1B[49m";
-  styles3.color.ansi = wrapAnsi162();
-  styles3.color.ansi256 = wrapAnsi2562();
-  styles3.color.ansi16m = wrapAnsi16m2();
-  styles3.bgColor.ansi = wrapAnsi162(ANSI_BACKGROUND_OFFSET2);
-  styles3.bgColor.ansi256 = wrapAnsi2562(ANSI_BACKGROUND_OFFSET2);
-  styles3.bgColor.ansi16m = wrapAnsi16m2(ANSI_BACKGROUND_OFFSET2);
-  Object.defineProperties(styles3, {
-    rgbToAnsi256: {
-      value: (red, green, blue) => {
-        if (red === green && green === blue) {
-          if (red < 8) {
-            return 16;
-          }
-          if (red > 248) {
-            return 231;
-          }
-          return Math.round((red - 8) / 247 * 24) + 232;
-        }
-        return 16 + 36 * Math.round(red / 255 * 5) + 6 * Math.round(green / 255 * 5) + Math.round(blue / 255 * 5);
-      },
-      enumerable: false
-    },
-    hexToRgb: {
-      value: (hex) => {
-        const matches = /[a-f\d]{6}|[a-f\d]{3}/i.exec(hex.toString(16));
-        if (!matches) {
-          return [0, 0, 0];
-        }
-        let [colorString] = matches;
-        if (colorString.length === 3) {
-          colorString = [...colorString].map((character) => character + character).join("");
-        }
-        const integer = Number.parseInt(colorString, 16);
-        return [
-          integer >> 16 & 255,
-          integer >> 8 & 255,
-          integer & 255
-        ];
-      },
-      enumerable: false
-    },
-    hexToAnsi256: {
-      value: (hex) => styles3.rgbToAnsi256(...styles3.hexToRgb(hex)),
-      enumerable: false
-    },
-    ansi256ToAnsi: {
-      value: (code) => {
-        if (code < 8) {
-          return 30 + code;
-        }
-        if (code < 16) {
-          return 90 + (code - 8);
-        }
-        let red;
-        let green;
-        let blue;
-        if (code >= 232) {
-          red = ((code - 232) * 10 + 8) / 255;
-          green = red;
-          blue = red;
-        } else {
-          code -= 16;
-          const remainder = code % 36;
-          red = Math.floor(code / 36) / 5;
-          green = Math.floor(remainder / 6) / 5;
-          blue = remainder % 6 / 5;
-        }
-        const value = Math.max(red, green, blue) * 2;
-        if (value === 0) {
-          return 30;
-        }
-        let result = 30 + (Math.round(blue) << 2 | Math.round(green) << 1 | Math.round(red));
-        if (value === 2) {
-          result += 60;
-        }
-        return result;
-      },
-      enumerable: false
-    },
-    rgbToAnsi: {
-      value: (red, green, blue) => styles3.ansi256ToAnsi(styles3.rgbToAnsi256(red, green, blue)),
-      enumerable: false
-    },
-    hexToAnsi: {
-      value: (hex) => styles3.ansi256ToAnsi(styles3.hexToAnsi256(hex)),
-      enumerable: false
-    }
-  });
-  return styles3;
-}
-var ansiStyles2 = assembleStyles2();
-var ansi_styles_default2 = ansiStyles2;
-
-// node_modules/wrap-ansi/index.js
-var ESCAPES = /* @__PURE__ */ new Set([
-  "\x1B",
-  "\x9B"
-]);
-var END_CODE = 39;
-var ANSI_ESCAPE_BELL = "\x07";
-var ANSI_CSI = "[";
-var ANSI_OSC = "]";
-var ANSI_SGR_TERMINATOR = "m";
-var ANSI_ESCAPE_LINK = `${ANSI_OSC}8;;`;
-var wrapAnsiCode = (code) => `${ESCAPES.values().next().value}${ANSI_CSI}${code}${ANSI_SGR_TERMINATOR}`;
-var wrapAnsiHyperlink = (uri) => `${ESCAPES.values().next().value}${ANSI_ESCAPE_LINK}${uri}${ANSI_ESCAPE_BELL}`;
-var wordLengths = (string) => string.split(" ").map((character) => stringWidth(character));
-var wrapWord = (rows, word, columns) => {
-  const characters = [...word];
-  let isInsideEscape = false;
-  let isInsideLinkEscape = false;
-  let visible = stringWidth(stripAnsi(rows[rows.length - 1]));
-  for (const [index, character] of characters.entries()) {
-    const characterLength = stringWidth(character);
-    if (visible + characterLength <= columns) {
-      rows[rows.length - 1] += character;
-    } else {
-      rows.push(character);
-      visible = 0;
-    }
-    if (ESCAPES.has(character)) {
-      isInsideEscape = true;
-      isInsideLinkEscape = characters.slice(index + 1).join("").startsWith(ANSI_ESCAPE_LINK);
-    }
-    if (isInsideEscape) {
-      if (isInsideLinkEscape) {
-        if (character === ANSI_ESCAPE_BELL) {
-          isInsideEscape = false;
-          isInsideLinkEscape = false;
-        }
-      } else if (character === ANSI_SGR_TERMINATOR) {
-        isInsideEscape = false;
-      }
-      continue;
-    }
-    visible += characterLength;
-    if (visible === columns && index < characters.length - 1) {
-      rows.push("");
-      visible = 0;
-    }
-  }
-  if (!visible && rows[rows.length - 1].length > 0 && rows.length > 1) {
-    rows[rows.length - 2] += rows.pop();
-  }
-};
-var stringVisibleTrimSpacesRight = (string) => {
-  const words = string.split(" ");
-  let last = words.length;
-  while (last > 0) {
-    if (stringWidth(words[last - 1]) > 0) {
-      break;
-    }
-    last--;
-  }
-  if (last === words.length) {
-    return string;
-  }
-  return words.slice(0, last).join(" ") + words.slice(last).join("");
-};
-var exec = (string, columns, options = {}) => {
-  if (options.trim !== false && string.trim() === "") {
-    return "";
-  }
-  let returnValue = "";
-  let escapeCode;
-  let escapeUrl;
-  const lengths = wordLengths(string);
-  let rows = [""];
-  for (const [index, word] of string.split(" ").entries()) {
-    if (options.trim !== false) {
-      rows[rows.length - 1] = rows[rows.length - 1].trimStart();
-    }
-    let rowLength = stringWidth(rows[rows.length - 1]);
-    if (index !== 0) {
-      if (rowLength >= columns && (options.wordWrap === false || options.trim === false)) {
-        rows.push("");
-        rowLength = 0;
-      }
-      if (rowLength > 0 || options.trim === false) {
-        rows[rows.length - 1] += " ";
-        rowLength++;
-      }
-    }
-    if (options.hard && lengths[index] > columns) {
-      const remainingColumns = columns - rowLength;
-      const breaksStartingThisLine = 1 + Math.floor((lengths[index] - remainingColumns - 1) / columns);
-      const breaksStartingNextLine = Math.floor((lengths[index] - 1) / columns);
-      if (breaksStartingNextLine < breaksStartingThisLine) {
-        rows.push("");
-      }
-      wrapWord(rows, word, columns);
-      continue;
-    }
-    if (rowLength + lengths[index] > columns && rowLength > 0 && lengths[index] > 0) {
-      if (options.wordWrap === false && rowLength < columns) {
-        wrapWord(rows, word, columns);
-        continue;
-      }
-      rows.push("");
-    }
-    if (rowLength + lengths[index] > columns && options.wordWrap === false) {
-      wrapWord(rows, word, columns);
-      continue;
-    }
-    rows[rows.length - 1] += word;
-  }
-  if (options.trim !== false) {
-    rows = rows.map((row) => stringVisibleTrimSpacesRight(row));
-  }
-  const pre = [...rows.join("\n")];
-  for (const [index, character] of pre.entries()) {
-    returnValue += character;
-    if (ESCAPES.has(character)) {
-      const { groups } = new RegExp(`(?:\\${ANSI_CSI}(?<code>\\d+)m|\\${ANSI_ESCAPE_LINK}(?<uri>.*)${ANSI_ESCAPE_BELL})`).exec(pre.slice(index).join("")) || { groups: {} };
-      if (groups.code !== void 0) {
-        const code2 = Number.parseFloat(groups.code);
-        escapeCode = code2 === END_CODE ? void 0 : code2;
-      } else if (groups.uri !== void 0) {
-        escapeUrl = groups.uri.length === 0 ? void 0 : groups.uri;
-      }
-    }
-    const code = ansi_styles_default2.codes.get(Number(escapeCode));
-    if (pre[index + 1] === "\n") {
-      if (escapeUrl) {
-        returnValue += wrapAnsiHyperlink("");
-      }
-      if (escapeCode && code) {
-        returnValue += wrapAnsiCode(code);
-      }
-    } else if (character === "\n") {
-      if (escapeCode && code) {
-        returnValue += wrapAnsiCode(escapeCode);
-      }
-      if (escapeUrl) {
-        returnValue += wrapAnsiHyperlink(escapeUrl);
-      }
-    }
-  }
-  return returnValue;
-};
-function wrapAnsi(string, columns, options) {
-  return String(string).normalize().replace(/\r\n/g, "\n").split("\n").map((line) => exec(line, columns, options)).join("\n");
-}
-
-// node_modules/ora/index.js
-var import_node_process8 = __toESM(require("node:process"), 1);
-var import_cli_spinners = __toESM(require_cli_spinners(), 1);
-
-// node_modules/log-symbols/index.js
-var main = {
-  info: source_default.blue("\u2139"),
-  success: source_default.green("\u2714"),
-  warning: source_default.yellow("\u26A0"),
-  error: source_default.red("\u2716")
-};
-var fallback = {
-  info: source_default.blue("i"),
-  success: source_default.green("\u221A"),
-  warning: source_default.yellow("\u203C"),
-  error: source_default.red("\xD7")
-};
-var logSymbols = isUnicodeSupported() ? main : fallback;
-var log_symbols_default = logSymbols;
-
-// node_modules/ora/index.js
-var import_wcwidth = __toESM(require_wcwidth(), 1);
-
-// node_modules/is-interactive/index.js
-function isInteractive({ stream = process.stdout } = {}) {
-  return Boolean(stream && stream.isTTY && process.env.TERM !== "dumb" && !("CI" in process.env));
-}
-
-// node_modules/ora/utilities.js
-var import_node_process7 = __toESM(require("node:process"), 1);
-var import_node_readline = __toESM(require("node:readline"), 1);
-var import_bl = __toESM(require_bl(), 1);
-var ASCII_ETX_CODE = 3;
-var StdinDiscarder = class {
-  #requests = 0;
-  #mutedStream = new import_bl.BufferListStream();
-  #ourEmit;
-  #rl;
-  constructor() {
-    this.#mutedStream.pipe(import_node_process7.default.stdout);
-    const self2 = this;
-    this.#ourEmit = function(event, data, ...args) {
-      const { stdin } = import_node_process7.default;
-      if (self2.#requests > 0 || stdin.emit === self2.#ourEmit) {
-        if (event === "keypress") {
-          return;
-        }
-        if (event === "data" && data.includes(ASCII_ETX_CODE)) {
-          import_node_process7.default.emit("SIGINT");
-        }
-        Reflect.apply(self2.#ourEmit, this, [event, data, ...args]);
-      } else {
-        Reflect.apply(import_node_process7.default.stdin.emit, this, [event, data, ...args]);
-      }
-    };
-  }
-  start() {
-    this.#requests++;
-    if (this.#requests === 1) {
-      this._realStart();
-    }
-  }
-  stop() {
-    if (this.#requests <= 0) {
-      throw new Error("`stop` called more times than `start`");
-    }
-    this.#requests--;
-    if (this.#requests === 0) {
-      this._realStop();
-    }
-  }
-  _realStart() {
-    if (import_node_process7.default.platform === "win32") {
-      return;
-    }
-    this.#rl = import_node_readline.default.createInterface({
-      input: import_node_process7.default.stdin,
-      output: this.#mutedStream
-    });
-    this.#rl.on("SIGINT", () => {
-      if (import_node_process7.default.listenerCount("SIGINT") === 0) {
-        import_node_process7.default.emit("SIGINT");
-      } else {
-        this.#rl.close();
-        import_node_process7.default.kill(import_node_process7.default.pid, "SIGINT");
-      }
-    });
-  }
-  _realStop() {
-    if (import_node_process7.default.platform === "win32") {
-      return;
-    }
-    this.#rl.close();
-    this.#rl = void 0;
-  }
-};
-
-// node_modules/ora/index.js
-var stdinDiscarder;
-var Ora = class {
-  #linesToClear = 0;
-  #isDiscardingStdin = false;
-  #lineCount = 0;
-  #frameIndex = 0;
-  #options;
-  #spinner;
-  #stream;
-  #id;
-  #initialInterval;
-  #isEnabled;
-  #isSilent;
-  #indent;
-  #text;
-  #prefixText;
-  color;
-  constructor(options) {
-    if (!stdinDiscarder) {
-      stdinDiscarder = new StdinDiscarder();
-    }
-    if (typeof options === "string") {
-      options = {
-        text: options
-      };
-    }
-    this.#options = {
-      color: "cyan",
-      stream: import_node_process8.default.stderr,
-      discardStdin: true,
-      hideCursor: true,
-      ...options
-    };
-    this.color = this.#options.color;
-    this.spinner = this.#options.spinner;
-    this.#initialInterval = this.#options.interval;
-    this.#stream = this.#options.stream;
-    this.#isEnabled = typeof this.#options.isEnabled === "boolean" ? this.#options.isEnabled : isInteractive({ stream: this.#stream });
-    this.#isSilent = typeof this.#options.isSilent === "boolean" ? this.#options.isSilent : false;
-    this.text = this.#options.text;
-    this.prefixText = this.#options.prefixText;
-    this.indent = this.#options.indent;
-    if (import_node_process8.default.env.NODE_ENV === "test") {
-      this._stream = this.#stream;
-      this._isEnabled = this.#isEnabled;
-      Object.defineProperty(this, "_linesToClear", {
-        get() {
-          return this.#linesToClear;
-        },
-        set(newValue) {
-          this.#linesToClear = newValue;
-        }
-      });
-      Object.defineProperty(this, "_frameIndex", {
-        get() {
-          return this.#frameIndex;
-        }
-      });
-      Object.defineProperty(this, "_lineCount", {
-        get() {
-          return this.#lineCount;
-        }
-      });
-    }
-  }
-  get indent() {
-    return this.#indent;
-  }
-  set indent(indent = 0) {
-    if (!(indent >= 0 && Number.isInteger(indent))) {
-      throw new Error("The `indent` option must be an integer from 0 and up");
-    }
-    this.#indent = indent;
-    this.updateLineCount();
-  }
-  get interval() {
-    return this.#initialInterval || this.#spinner.interval || 100;
-  }
-  get spinner() {
-    return this.#spinner;
-  }
-  set spinner(spinner) {
-    this.#frameIndex = 0;
-    this.#initialInterval = void 0;
-    if (typeof spinner === "object") {
-      if (spinner.frames === void 0) {
-        throw new Error("The given spinner must have a `frames` property");
-      }
-      this.#spinner = spinner;
-    } else if (!isUnicodeSupported()) {
-      this.#spinner = import_cli_spinners.default.line;
-    } else if (spinner === void 0) {
-      this.#spinner = import_cli_spinners.default.dots;
-    } else if (spinner !== "default" && import_cli_spinners.default[spinner]) {
-      this.#spinner = import_cli_spinners.default[spinner];
-    } else {
-      throw new Error(`There is no built-in spinner named '${spinner}'. See https://github.com/sindresorhus/cli-spinners/blob/main/spinners.json for a full list.`);
-    }
-  }
-  get text() {
-    return this.#text;
-  }
-  set text(value) {
-    this.#text = value || "";
-    this.updateLineCount();
-  }
-  get prefixText() {
-    return this.#prefixText;
-  }
-  set prefixText(value) {
-    this.#prefixText = value || "";
-    this.updateLineCount();
-  }
-  get isSpinning() {
-    return this.#id !== void 0;
-  }
-  getFullPrefixText(prefixText = this.#prefixText, postfix = " ") {
-    if (typeof prefixText === "string" && prefixText !== "") {
-      return prefixText + postfix;
-    }
-    if (typeof prefixText === "function") {
-      return prefixText() + postfix;
-    }
-    return "";
-  }
-  updateLineCount() {
-    const columns = this.#stream.columns || 80;
-    const fullPrefixText = this.getFullPrefixText(this.#prefixText, "-");
-    this.#lineCount = 0;
-    for (const line of stripAnsi(" ".repeat(this.#indent) + fullPrefixText + "--" + this.#text).split("\n")) {
-      this.#lineCount += Math.max(1, Math.ceil((0, import_wcwidth.default)(line) / columns));
-    }
-  }
-  get isEnabled() {
-    return this.#isEnabled && !this.#isSilent;
-  }
-  set isEnabled(value) {
-    if (typeof value !== "boolean") {
-      throw new TypeError("The `isEnabled` option must be a boolean");
-    }
-    this.#isEnabled = value;
-  }
-  get isSilent() {
-    return this.#isSilent;
-  }
-  set isSilent(value) {
-    if (typeof value !== "boolean") {
-      throw new TypeError("The `isSilent` option must be a boolean");
-    }
-    this.#isSilent = value;
-  }
-  frame() {
-    const { frames } = this.#spinner;
-    let frame = frames[this.#frameIndex];
-    if (this.color) {
-      frame = source_default[this.color](frame);
-    }
-    this.#frameIndex = ++this.#frameIndex % frames.length;
-    const fullPrefixText = typeof this.#prefixText === "string" && this.#prefixText !== "" ? this.#prefixText + " " : "";
-    const fullText = typeof this.text === "string" ? " " + this.text : "";
-    return fullPrefixText + frame + fullText;
-  }
-  clear() {
-    if (!this.#isEnabled || !this.#stream.isTTY) {
-      return this;
-    }
-    this.#stream.cursorTo(0);
-    for (let index = 0; index < this.#linesToClear; index++) {
-      if (index > 0) {
-        this.#stream.moveCursor(0, -1);
-      }
-      this.#stream.clearLine(1);
-    }
-    if (this.#indent || this.lastIndent !== this.#indent) {
-      this.#stream.cursorTo(this.#indent);
-    }
-    this.lastIndent = this.#indent;
-    this.#linesToClear = 0;
-    return this;
-  }
-  render() {
-    if (this.#isSilent) {
-      return this;
-    }
-    this.clear();
-    this.#stream.write(this.frame());
-    this.#linesToClear = this.#lineCount;
-    return this;
-  }
-  start(text) {
-    if (text) {
-      this.text = text;
-    }
-    if (this.#isSilent) {
-      return this;
-    }
-    if (!this.#isEnabled) {
-      if (this.text) {
-        this.#stream.write(`- ${this.text}
-`);
-      }
-      return this;
-    }
-    if (this.isSpinning) {
-      return this;
-    }
-    if (this.#options.hideCursor) {
-      cli_cursor_default.hide(this.#stream);
-    }
-    if (this.#options.discardStdin && import_node_process8.default.stdin.isTTY) {
-      this.#isDiscardingStdin = true;
-      stdinDiscarder.start();
-    }
-    this.render();
-    this.#id = setInterval(this.render.bind(this), this.interval);
-    return this;
-  }
-  stop() {
-    if (!this.#isEnabled) {
-      return this;
-    }
-    clearInterval(this.#id);
-    this.#id = void 0;
-    this.#frameIndex = 0;
-    this.clear();
-    if (this.#options.hideCursor) {
-      cli_cursor_default.show(this.#stream);
-    }
-    if (this.#options.discardStdin && import_node_process8.default.stdin.isTTY && this.#isDiscardingStdin) {
-      stdinDiscarder.stop();
-      this.#isDiscardingStdin = false;
-    }
-    return this;
-  }
-  succeed(text) {
-    return this.stopAndPersist({ symbol: log_symbols_default.success, text });
-  }
-  fail(text) {
-    return this.stopAndPersist({ symbol: log_symbols_default.error, text });
-  }
-  warn(text) {
-    return this.stopAndPersist({ symbol: log_symbols_default.warning, text });
-  }
-  info(text) {
-    return this.stopAndPersist({ symbol: log_symbols_default.info, text });
-  }
-  stopAndPersist(options = {}) {
-    if (this.#isSilent) {
-      return this;
-    }
-    const prefixText = options.prefixText || this.#prefixText;
-    const text = options.text || this.text;
-    const fullText = typeof text === "string" ? " " + text : "";
-    this.stop();
-    this.#stream.write(`${this.getFullPrefixText(prefixText, " ")}${options.symbol || " "}${fullText}
-`);
-    return this;
-  }
-};
-function ora(options) {
-  return new Ora(options);
-}
-
-// node_modules/inquirer/lib/utils/screen-manager.js
-function height(content) {
-  return content.split("\n").length;
-}
-function lastLine(content) {
-  return content.split("\n").pop();
-}
-var ScreenManager = class {
-  constructor(rl) {
-    this.height = 0;
-    this.extraLinesUnderPrompt = 0;
-    this.rl = rl;
-  }
-  renderWithSpinner(content, bottomContent) {
-    if (this.spinnerId) {
-      clearInterval(this.spinnerId);
-    }
-    let spinner;
-    let contentFunc;
-    let bottomContentFunc;
-    if (bottomContent) {
-      spinner = ora(bottomContent);
-      contentFunc = () => content;
-      bottomContentFunc = () => spinner.frame();
-    } else {
-      spinner = ora(content);
-      contentFunc = () => spinner.frame();
-      bottomContentFunc = () => "";
-    }
-    this.spinnerId = setInterval(() => this.render(contentFunc(), bottomContentFunc(), true), spinner.interval);
-  }
-  render(content, bottomContent, spinning = false) {
-    if (this.spinnerId && !spinning) {
-      clearInterval(this.spinnerId);
-    }
-    this.rl.output.unmute();
-    this.clean(this.extraLinesUnderPrompt);
-    const promptLine = lastLine(content);
-    const rawPromptLine = stripAnsi(promptLine);
-    let prompt2 = rawPromptLine;
-    if (this.rl.line.length) {
-      prompt2 = prompt2.slice(0, -this.rl.line.length);
-    }
-    this.rl.setPrompt(prompt2);
-    const cursorPos = this.rl._getCursorPos();
-    const width = this.normalizedCliWidth();
-    content = this.forceLineReturn(content, width);
-    if (bottomContent) {
-      bottomContent = this.forceLineReturn(bottomContent, width);
-    }
-    if (rawPromptLine.length % width === 0) {
-      content += "\n";
-    }
-    const fullContent = content + (bottomContent ? "\n" + bottomContent : "");
-    this.rl.output.write(fullContent);
-    const promptLineUpDiff = Math.floor(rawPromptLine.length / width) - cursorPos.rows;
-    const bottomContentHeight = promptLineUpDiff + (bottomContent ? height(bottomContent) : 0);
-    if (bottomContentHeight > 0) {
-      up(this.rl, bottomContentHeight);
-    }
-    left(this.rl, stringWidth(lastLine(fullContent)));
-    if (cursorPos.cols > 0) {
-      right(this.rl, cursorPos.cols);
-    }
-    this.extraLinesUnderPrompt = bottomContentHeight;
-    this.height = height(fullContent);
-    this.rl.output.mute();
-  }
-  clean(extraLines) {
-    if (extraLines > 0) {
-      down(this.rl, extraLines);
-    }
-    clearLine(this.rl, this.height);
-  }
-  done() {
-    this.rl.setPrompt("");
-    this.rl.output.unmute();
-    this.rl.output.write("\n");
-  }
-  releaseCursor() {
-    if (this.extraLinesUnderPrompt > 0) {
-      down(this.rl, this.extraLinesUnderPrompt);
-    }
-  }
-  normalizedCliWidth() {
-    const width = (0, import_cli_width.default)({
-      defaultWidth: 80,
-      output: this.rl.output
-    });
-    return width;
-  }
-  breakLines(lines, width = this.normalizedCliWidth()) {
-    return lines.map((line) => wrapAnsi(line, width, { trim: false, hard: true }).split("\n"));
-  }
-  forceLineReturn(content, width = this.normalizedCliWidth()) {
-    return this.breakLines(content.split("\n"), width).flat().join("\n");
-  }
-};
-
-// node_modules/inquirer/lib/prompts/base.js
-var _2 = {
-  defaults: import_defaults.default,
-  clone: import_clone.default
-};
-var Prompt = class {
-  constructor(question, rl, answers) {
-    Object.assign(this, {
-      answers,
-      status: "pending"
-    });
-    this.opt = _2.defaults(_2.clone(question), {
-      validate: () => true,
-      validatingText: "",
-      filter: (val) => val,
-      filteringText: "",
-      when: () => true,
-      suffix: "",
-      prefix: source_default.green("?")
-    });
-    if (!this.opt.name) {
-      this.throwParamError("name");
-    }
-    if (!this.opt.message) {
-      this.opt.message = this.opt.name + ":";
-    }
-    if (Array.isArray(this.opt.choices)) {
-      this.opt.choices = new Choices(this.opt.choices, answers);
-    }
-    this.rl = rl;
-    this.screen = new ScreenManager(this.rl);
-  }
-  run() {
-    return new Promise((resolve, reject) => {
-      this._run((value) => resolve(value), (error) => reject(error));
-    });
-  }
-  _run(cb) {
-    cb();
-  }
-  throwParamError(name) {
-    throw new Error("You must provide a `" + name + "` parameter");
-  }
-  close() {
-    this.screen.releaseCursor();
-  }
-  handleSubmitEvents(submit) {
-    const self2 = this;
-    const validate = (0, import_run_async.default)(this.opt.validate);
-    const asyncFilter = (0, import_run_async.default)(this.opt.filter);
-    const validation = submit.pipe((0, import_rxjs.flatMap)((value) => {
-      this.startSpinner(value, this.opt.filteringText);
-      return asyncFilter(value, self2.answers).then((filteredValue) => {
-        this.startSpinner(filteredValue, this.opt.validatingText);
-        return validate(filteredValue, self2.answers).then((isValid) => ({ isValid, value: filteredValue }), (err) => ({ isValid: err, value: filteredValue }));
-      }, (err) => ({ isValid: err }));
-    }), (0, import_rxjs.share)());
-    const success = validation.pipe((0, import_rxjs.filter)((state) => state.isValid === true), (0, import_rxjs.take)(1));
-    const error = validation.pipe((0, import_rxjs.filter)((state) => state.isValid !== true), (0, import_rxjs.takeUntil)(success));
-    return {
-      success,
-      error
-    };
-  }
-  startSpinner(value, bottomContent) {
-    value = this.getSpinningValue(value);
-    const content = bottomContent ? this.getQuestion() + value : this.getQuestion().slice(this.opt.prefix.length + 1) + value;
-    this.screen.renderWithSpinner(content, bottomContent);
-  }
-  getSpinningValue(value) {
-    return value;
-  }
-  getQuestion() {
-    let message = (this.opt.prefix ? this.opt.prefix + " " : "") + source_default.bold(this.opt.message) + this.opt.suffix + source_default.reset(" ");
-    if (this.opt.default != null && this.status !== "touched" && this.status !== "answered") {
-      if (this.opt.type === "password") {
-        message += source_default.italic.dim("[hidden] ");
-      } else {
-        message += source_default.dim("(" + this.opt.default + ") ");
-      }
-    }
-    return message;
-  }
-};
-
-// node_modules/inquirer/lib/utils/events.js
-var import_rxjs2 = __toESM(require_cjs(), 1);
-var import_rxjs3 = __toESM(require_cjs(), 1);
-function normalizeKeypressEvents(value, key) {
-  return { value, key: key || {} };
-}
-function events_default(rl) {
-  const keypress = (0, import_rxjs2.fromEvent)(rl.input, "keypress", normalizeKeypressEvents).pipe((0, import_rxjs3.takeUntil)((0, import_rxjs2.fromEvent)(rl, "close"))).pipe((0, import_rxjs3.filter)(({ key }) => key.name !== "enter" && key.name !== "return"));
-  return {
-    line: (0, import_rxjs2.fromEvent)(rl, "line"),
-    keypress,
-    normalizedUpKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key.name === "up" || key.name === "k" || key.name === "p" && key.ctrl), (0, import_rxjs3.share)()),
-    normalizedDownKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key.name === "down" || key.name === "j" || key.name === "n" && key.ctrl), (0, import_rxjs3.share)()),
-    numberKey: keypress.pipe((0, import_rxjs3.filter)((e) => e.value && "123456789".indexOf(e.value) >= 0), (0, import_rxjs3.map)((e) => Number(e.value)), (0, import_rxjs3.share)()),
-    spaceKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "space"), (0, import_rxjs3.share)()),
-    aKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "a"), (0, import_rxjs3.share)()),
-    iKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "i"), (0, import_rxjs3.share)())
-  };
-}
-
-// node_modules/inquirer/lib/utils/paginator.js
-var Paginator = class {
-  constructor(screen, options = {}) {
-    const { isInfinite = true } = options;
-    this.lastIndex = 0;
-    this.screen = screen;
-    this.isInfinite = isInfinite;
-  }
-  paginate(output, active, pageSize) {
-    pageSize = pageSize || 7;
-    let lines = output.split("\n");
-    if (this.screen) {
-      lines = this.screen.breakLines(lines);
-      active = lines.map((lineParts) => lineParts.length).splice(0, active).reduce((a, b) => a + b, 0);
-      lines = lines.flat();
-    }
-    if (lines.length <= pageSize) {
-      return output;
-    }
-    const visibleLines = this.isInfinite ? this.getInfiniteLines(lines, active, pageSize) : this.getFiniteLines(lines, active, pageSize);
-    this.lastIndex = active;
-    return visibleLines.join("\n") + "\n" + source_default.dim("(Move up and down to reveal more choices)");
-  }
-  getInfiniteLines(lines, active, pageSize) {
-    if (this.pointer === void 0) {
-      this.pointer = 0;
-    }
-    const middleOfList = Math.floor(pageSize / 2);
-    if (this.pointer < middleOfList && this.lastIndex < active && active - this.lastIndex < pageSize) {
-      this.pointer = Math.min(middleOfList, this.pointer + active - this.lastIndex);
-    }
-    const infinite = [lines, lines, lines].flat();
-    const topIndex = Math.max(0, active + lines.length - this.pointer);
-    return infinite.splice(topIndex, pageSize);
-  }
-  getFiniteLines(lines, active, pageSize) {
-    let topIndex = active - pageSize / 2;
-    if (topIndex < 0) {
-      topIndex = 0;
-    } else if (topIndex + pageSize > lines.length) {
-      topIndex = lines.length - pageSize;
-    }
-    return lines.splice(topIndex, pageSize);
-  }
-};
-
-// node_modules/inquirer/lib/utils/incrementListIndex.js
-function incrementListIndex(current, dir, opt) {
-  const len = opt.choices.realLength;
-  const shouldLoop = "loop" in opt ? Boolean(opt.loop) : true;
-  if (dir === "up") {
-    if (current > 0) {
-      return current - 1;
-    }
-    return shouldLoop ? len - 1 : current;
-  }
-  if (dir === "down") {
-    if (current < len - 1) {
-      return current + 1;
-    }
-    return shouldLoop ? 0 : current;
-  }
-  throw new Error("dir must be up or down");
-}
-
-// node_modules/inquirer/lib/prompts/list.js
-var ListPrompt = class extends Prompt {
-  constructor(questions, rl, answers) {
-    super(questions, rl, answers);
-    if (!this.opt.choices) {
-      this.throwParamError("choices");
-    }
-    this.firstRender = true;
-    this.selected = 0;
-    const def = this.opt.default;
-    if (typeof def === "number" && def >= 0 && def < this.opt.choices.realLength) {
-      this.selected = def;
-    } else if (typeof def !== "number" && def != null) {
-      const index = this.opt.choices.realChoices.findIndex(({ value }) => value === def);
-      this.selected = Math.max(index, 0);
-    }
-    this.opt.default = null;
-    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
-    this.paginator = new Paginator(this.screen, { isInfinite: shouldLoop });
-  }
-  _run(cb) {
-    this.done = cb;
-    const self2 = this;
-    const events = events_default(this.rl);
-    events.normalizedUpKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onUpKey.bind(this));
-    events.normalizedDownKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onDownKey.bind(this));
-    events.numberKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onNumberKey.bind(this));
-    events.line.pipe((0, import_rxjs4.take)(1), (0, import_rxjs4.map)(this.getCurrentValue.bind(this)), (0, import_rxjs4.flatMap)((value) => (0, import_run_async2.default)(self2.opt.filter)(value, self2.answers).catch((err) => err))).forEach(this.onSubmit.bind(this));
-    cli_cursor_default.hide();
-    this.render();
-    return this;
-  }
-  render() {
-    let message = this.getQuestion();
-    if (this.firstRender) {
-      message += source_default.dim("(Use arrow keys)");
-    }
-    if (this.status === "answered") {
-      message += source_default.cyan(this.opt.choices.getChoice(this.selected).short);
-    } else {
-      const choicesStr = listRender(this.opt.choices, this.selected);
-      const indexPosition = this.opt.choices.indexOf(this.opt.choices.getChoice(this.selected));
-      const realIndexPosition = this.opt.choices.reduce((acc, value, i) => {
-        if (i > indexPosition) {
-          return acc;
-        }
-        if (value.type === "separator") {
-          return acc + 1;
-        }
-        let l = value.name;
-        if (typeof l !== "string") {
-          return acc + 1;
-        }
-        l = l.split("\n");
-        return acc + l.length;
-      }, 0) - 1;
-      message += "\n" + this.paginator.paginate(choicesStr, realIndexPosition, this.opt.pageSize);
-    }
-    this.firstRender = false;
-    this.screen.render(message);
-  }
-  onSubmit(value) {
-    this.status = "answered";
-    this.render();
-    this.screen.done();
-    cli_cursor_default.show();
-    this.done(value);
-  }
-  getCurrentValue() {
-    return this.opt.choices.getChoice(this.selected).value;
-  }
-  onUpKey() {
-    this.selected = incrementListIndex(this.selected, "up", this.opt);
-    this.render();
-  }
-  onDownKey() {
-    this.selected = incrementListIndex(this.selected, "down", this.opt);
-    this.render();
-  }
-  onNumberKey(input) {
-    if (input <= this.opt.choices.realLength) {
-      this.selected = input - 1;
-    }
-    this.render();
-  }
-};
-function listRender(choices, pointer) {
-  let output = "";
-  let separatorOffset = 0;
-  choices.forEach((choice, i) => {
-    if (choice.type === "separator") {
-      separatorOffset++;
-      output += "  " + choice + "\n";
-      return;
-    }
-    if (choice.disabled) {
-      separatorOffset++;
-      output += "  - " + choice.name;
-      output += ` (${typeof choice.disabled === "string" ? choice.disabled : "Disabled"})`;
-      output += "\n";
-      return;
-    }
-    const isSelected = i - separatorOffset === pointer;
-    let line = (isSelected ? figures_default.pointer + " " : "  ") + choice.name;
-    if (isSelected) {
-      line = source_default.cyan(line);
-    }
-    output += line + " \n";
-  });
-  return output.replace(/\n$/, "");
-}
-
-// node_modules/inquirer/lib/prompts/input.js
-var import_rxjs5 = __toESM(require_cjs(), 1);
-var InputPrompt = class extends Prompt {
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    const submit = events.line.pipe((0, import_rxjs5.map)(this.filterInput.bind(this)));
-    const validation = this.handleSubmitEvents(submit);
-    validation.success.forEach(this.onEnd.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    events.keypress.pipe((0, import_rxjs5.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
-    this.render();
-    return this;
-  }
-  render(error) {
-    let bottomContent = "";
-    let appendContent = "";
-    let message = this.getQuestion();
-    const { transformer } = this.opt;
-    const isFinal = this.status === "answered";
-    if (isFinal) {
-      appendContent = this.answer;
-    } else {
-      appendContent = this.rl.line;
-    }
-    if (transformer) {
-      message += transformer(appendContent, this.answers, { isFinal });
-    } else {
-      message += isFinal ? source_default.cyan(appendContent) : appendContent;
-    }
-    if (error) {
-      bottomContent = source_default.red(">> ") + error;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  filterInput(input) {
-    if (!input) {
-      return this.opt.default == null ? "" : this.opt.default;
-    }
-    return input;
-  }
-  onEnd(state) {
-    this.answer = state.value;
-    this.status = "answered";
-    this.render();
-    this.screen.done();
-    this.done(state.value);
-  }
-  onError({ value = "", isValid }) {
-    this.rl.line += value;
-    this.rl.cursor += value.length;
-    this.render(isValid);
-  }
-  onKeypress() {
-    this.status = "touched";
-    this.render();
-  }
-};
-
-// node_modules/inquirer/lib/prompts/number.js
-var NumberPrompt = class extends InputPrompt {
-  filterInput(input) {
-    if (input && typeof input === "string") {
-      input = input.trim();
-      const numberMatch = input.match(/(^-?\d+|^-?\d+\.\d*|^\d*\.\d+)(e\d+)?$/);
-      if (numberMatch) {
-        return Number(numberMatch[0]);
-      }
-    }
-    return this.opt.default == null ? NaN : this.opt.default;
-  }
-};
-
-// node_modules/inquirer/lib/prompts/confirm.js
-var import_rxjs6 = __toESM(require_cjs(), 1);
-var ConfirmPrompt = class extends Prompt {
-  constructor(questions, rl, answers) {
-    super(questions, rl, answers);
-    let rawDefault = true;
-    Object.assign(this.opt, {
-      filter(input) {
-        let value = rawDefault;
-        if (input != null && input !== "") {
-          value = /^y(es)?/i.test(input);
-        }
-        return value;
-      }
-    });
-    if (this.opt.default != null) {
-      rawDefault = Boolean(this.opt.default);
-    }
-    this.opt.default = rawDefault ? "Y/n" : "y/N";
-  }
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    events.keypress.pipe((0, import_rxjs6.takeUntil)(events.line)).forEach(this.onKeypress.bind(this));
-    events.line.pipe((0, import_rxjs6.take)(1)).forEach(this.onEnd.bind(this));
-    this.render();
-    return this;
-  }
-  render(answer) {
-    let message = this.getQuestion();
-    if (typeof answer === "boolean") {
-      message += source_default.cyan(answer ? "Yes" : "No");
-    } else {
-      message += this.rl.line;
-    }
-    this.screen.render(message);
-    return this;
-  }
-  onEnd(input) {
-    this.status = "answered";
-    const output = this.opt.filter(input);
-    this.render(output);
-    this.screen.done();
-    this.done(output);
-  }
-  onKeypress() {
-    this.render();
-  }
-};
-
-// node_modules/inquirer/lib/prompts/rawlist.js
-var import_rxjs7 = __toESM(require_cjs(), 1);
-var RawListPrompt = class extends Prompt {
-  constructor(questions, rl, answers) {
-    super(questions, rl, answers);
-    this.hiddenLine = "";
-    this.lastKey = "";
-    if (!this.opt.choices) {
-      this.throwParamError("choices");
-    }
-    this.opt.validChoices = this.opt.choices.filter(Separator.exclude);
-    this.selected = 0;
-    this.rawDefault = 0;
-    Object.assign(this.opt, {
-      validate(val) {
-        return val != null;
-      }
-    });
-    const def = this.opt.default;
-    if (typeof def === "number" && def >= 0 && def < this.opt.choices.realLength) {
-      this.selected = def;
-      this.rawDefault = def;
-    } else if (typeof def !== "number" && def != null) {
-      const index = this.opt.choices.realChoices.findIndex(({ value }) => value === def);
-      const safeIndex = Math.max(index, 0);
-      this.selected = safeIndex;
-      this.rawDefault = safeIndex;
-    }
-    this.opt.default = null;
-    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
-    this.paginator = new Paginator(void 0, { isInfinite: shouldLoop });
-  }
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    const submit = events.line.pipe((0, import_rxjs7.map)(this.getCurrentValue.bind(this)));
-    const validation = this.handleSubmitEvents(submit);
-    validation.success.forEach(this.onEnd.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    events.normalizedUpKey.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onUpKey.bind(this));
-    events.normalizedDownKey.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onDownKey.bind(this));
-    events.keypress.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
-    this.render();
-    return this;
-  }
-  render(error) {
-    let message = this.getQuestion();
-    let bottomContent = "";
-    if (this.status === "answered") {
-      message += source_default.cyan(this.opt.choices.getChoice(this.selected).short);
-    } else {
-      const choicesStr = renderChoices(this.opt.choices, this.selected);
-      message += "\n" + this.paginator.paginate(choicesStr, this.selected, this.opt.pageSize);
-      message += "\n  Answer: ";
-    }
-    message += this.rl.line;
-    if (error) {
-      bottomContent = "\n" + source_default.red(">> ") + error;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  getCurrentValue(index) {
-    if (index == null) {
-      index = this.rawDefault;
-    } else if (index === "") {
-      this.selected = this.selected === void 0 ? -1 : this.selected;
-      index = this.selected;
-    } else {
-      index -= 1;
-    }
-    const choice = this.opt.choices.getChoice(index);
-    return choice ? choice.value : null;
-  }
-  onEnd(state) {
-    this.status = "answered";
-    this.answer = state.value;
-    this.render();
-    this.screen.done();
-    this.done(state.value);
-  }
-  onError() {
-    this.render("Please enter a valid index");
-  }
-  onKeypress() {
-    let index;
-    if (this.lastKey === "arrow") {
-      index = this.hiddenLine.length ? Number(this.hiddenLine) - 1 : 0;
-    } else {
-      index = this.rl.line.length ? Number(this.rl.line) - 1 : 0;
-    }
-    this.lastKey = "";
-    if (this.opt.choices.getChoice(index)) {
-      this.selected = index;
-    } else {
-      this.selected = void 0;
-    }
-    this.render();
-  }
-  onUpKey() {
-    this.onArrowKey("up");
-  }
-  onDownKey() {
-    this.onArrowKey("down");
-  }
-  onArrowKey(type) {
-    this.selected = incrementListIndex(this.selected, type, this.opt) || 0;
-    this.hiddenLine = String(this.selected + 1);
-    this.rl.line = "";
-    this.lastKey = "arrow";
-  }
-};
-function renderChoices(choices, pointer) {
-  let output = "";
-  let separatorOffset = 0;
-  choices.forEach((choice, i) => {
-    output += output ? "\n  " : "  ";
-    if (choice.type === "separator") {
-      separatorOffset++;
-      output += " " + choice;
-      return;
-    }
-    const index = i - separatorOffset;
-    let display = index + 1 + ") " + choice.name;
-    if (index === pointer) {
-      display = source_default.cyan(display);
-    }
-    output += display;
-  });
-  return output;
-}
-
-// node_modules/inquirer/lib/prompts/expand.js
-var import_rxjs8 = __toESM(require_cjs(), 1);
-var ExpandPrompt = class extends Prompt {
-  constructor(questions, rl, answers) {
-    super(questions, rl, answers);
-    if (!this.opt.choices) {
-      this.throwParamError("choices");
-    }
-    this.validateChoices(this.opt.choices);
-    this.opt.choices.push({
-      key: "h",
-      name: "Help, list all options",
-      value: "help"
-    });
-    this.opt.validate = (choice) => {
-      if (choice == null) {
-        return "Please enter a valid command";
-      }
-      return choice !== "help";
-    };
-    this.opt.default = this.generateChoicesString(this.opt.choices, this.opt.default);
-    this.paginator = new Paginator(this.screen);
-  }
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    const validation = this.handleSubmitEvents(events.line.pipe((0, import_rxjs8.map)(this.getCurrentValue.bind(this))));
-    validation.success.forEach(this.onSubmit.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    this.keypressObs = events.keypress.pipe((0, import_rxjs8.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
-    this.render();
-    return this;
-  }
-  render(error, hint) {
-    let message = this.getQuestion();
-    let bottomContent = "";
-    if (this.status === "answered") {
-      message += source_default.cyan(this.answer);
-    } else if (this.status === "expanded") {
-      const choicesStr = renderChoices2(this.opt.choices, this.selectedKey);
-      message += this.paginator.paginate(choicesStr, this.selectedKey, this.opt.pageSize);
-      message += "\n  Answer: ";
-    }
-    message += this.rl.line;
-    if (error) {
-      bottomContent = source_default.red(">> ") + error;
-    }
-    if (hint) {
-      bottomContent = source_default.cyan(">> ") + hint;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  getCurrentValue(input) {
-    if (!input) {
-      input = this.rawDefault;
-    }
-    const selected = this.opt.choices.where({ key: input.toLowerCase().trim() })[0];
-    if (!selected) {
-      return null;
-    }
-    return selected.value;
-  }
-  getChoices() {
-    let output = "";
-    this.opt.choices.forEach((choice) => {
-      output += "\n  ";
-      if (choice.type === "separator") {
-        output += " " + choice;
-        return;
-      }
-      let choiceStr = choice.key + ") " + choice.name;
-      if (this.selectedKey === choice.key) {
-        choiceStr = source_default.cyan(choiceStr);
-      }
-      output += choiceStr;
-    });
-    return output;
-  }
-  onError(state) {
-    if (state.value === "help") {
-      this.selectedKey = "";
-      this.status = "expanded";
-      this.render();
-      return;
-    }
-    this.render(state.isValid);
-  }
-  onSubmit(state) {
-    this.status = "answered";
-    const choice = this.opt.choices.where({ value: state.value })[0];
-    this.answer = choice.short || choice.name;
-    this.render();
-    this.screen.done();
-    this.done(state.value);
-  }
-  onKeypress() {
-    this.selectedKey = this.rl.line.toLowerCase();
-    const selected = this.opt.choices.where({ key: this.selectedKey })[0];
-    if (this.status === "expanded") {
-      this.render();
-    } else {
-      this.render(null, selected ? selected.name : null);
-    }
-  }
-  validateChoices(choices) {
-    let formatError;
-    const errors = [];
-    const keymap = {};
-    choices.filter(Separator.exclude).forEach((choice) => {
-      if (!choice.key || choice.key.length !== 1) {
-        formatError = true;
-      }
-      choice.key = String(choice.key).toLowerCase();
-      if (keymap[choice.key]) {
-        errors.push(choice.key);
-      }
-      keymap[choice.key] = true;
-    });
-    if (formatError) {
-      throw new Error("Format error: `key` param must be a single letter and is required.");
-    }
-    if (keymap.h) {
-      throw new Error("Reserved key error: `key` param cannot be `h` - this value is reserved.");
-    }
-    if (errors.length) {
-      throw new Error("Duplicate key error: `key` param must be unique. Duplicates: " + [...new Set(errors)].join(","));
-    }
-  }
-  generateChoicesString(choices, defaultChoice) {
-    let defIndex = choices.realLength - 1;
-    if (typeof defaultChoice === "number" && this.opt.choices.getChoice(defaultChoice)) {
-      defIndex = defaultChoice;
-    } else if (typeof defaultChoice === "string") {
-      const index = choices.realChoices.findIndex(({ value }) => value === defaultChoice);
-      defIndex = index === -1 ? defIndex : index;
-    }
-    const defStr = this.opt.choices.pluck("key");
-    this.rawDefault = defStr[defIndex];
-    defStr[defIndex] = String(defStr[defIndex]).toUpperCase();
-    return defStr.join("");
-  }
-};
-function renderChoices2(choices, pointer) {
-  let output = "";
-  choices.forEach((choice) => {
-    output += "\n  ";
-    if (choice.type === "separator") {
-      output += " " + choice;
-      return;
-    }
-    let choiceStr = choice.key + ") " + choice.name;
-    if (pointer === choice.key) {
-      choiceStr = source_default.cyan(choiceStr);
-    }
-    output += choiceStr;
-  });
-  return output;
-}
-
-// node_modules/inquirer/lib/prompts/checkbox.js
-var import_rxjs9 = __toESM(require_cjs(), 1);
-var CheckboxPrompt = class extends Prompt {
-  constructor(questions, rl, answers) {
-    super(questions, rl, answers);
-    if (!this.opt.choices) {
-      this.throwParamError("choices");
-    }
-    if (Array.isArray(this.opt.default)) {
-      this.opt.choices.forEach(function(choice) {
-        if (this.opt.default.indexOf(choice.value) >= 0) {
-          choice.checked = true;
-        }
-      }, this);
-    }
-    this.pointer = 0;
-    this.opt.default = null;
-    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
-    this.paginator = new Paginator(this.screen, { isInfinite: shouldLoop });
-  }
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    const validation = this.handleSubmitEvents(events.line.pipe((0, import_rxjs9.map)(this.getCurrentValue.bind(this))));
-    validation.success.forEach(this.onEnd.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    events.normalizedUpKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onUpKey.bind(this));
-    events.normalizedDownKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onDownKey.bind(this));
-    events.numberKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onNumberKey.bind(this));
-    events.spaceKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onSpaceKey.bind(this));
-    events.aKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onAllKey.bind(this));
-    events.iKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onInverseKey.bind(this));
-    cli_cursor_default.hide();
-    this.render();
-    this.firstRender = false;
-    return this;
-  }
-  render(error) {
-    let message = this.getQuestion();
-    let bottomContent = "";
-    if (!this.dontShowHints) {
-      message += "(Press " + source_default.cyan.bold("<space>") + " to select, " + source_default.cyan.bold("<a>") + " to toggle all, " + source_default.cyan.bold("<i>") + " to invert selection, and " + source_default.cyan.bold("<enter>") + " to proceed)";
-    }
-    if (this.status === "answered") {
-      message += source_default.cyan(this.selection.join(", "));
-    } else {
-      const choicesStr = renderChoices3(this.opt.choices, this.pointer);
-      const indexPosition = this.opt.choices.indexOf(this.opt.choices.getChoice(this.pointer));
-      const realIndexPosition = this.opt.choices.reduce((acc, value, i) => {
-        if (i > indexPosition) {
-          return acc;
-        }
-        if (value.type === "separator") {
-          return acc + 1;
-        }
-        let l = value.name;
-        if (typeof l !== "string") {
-          return acc + 1;
-        }
-        l = l.split("\n");
-        return acc + l.length;
-      }, 0) - 1;
-      message += "\n" + this.paginator.paginate(choicesStr, realIndexPosition, this.opt.pageSize);
-    }
-    if (error) {
-      bottomContent = source_default.red(">> ") + error;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  onEnd(state) {
-    this.status = "answered";
-    this.dontShowHints = true;
-    this.render();
-    this.screen.done();
-    cli_cursor_default.show();
-    this.done(state.value);
-  }
-  onError(state) {
-    this.render(state.isValid);
-  }
-  getCurrentValue() {
-    const choices = this.opt.choices.filter((choice) => Boolean(choice.checked) && !choice.disabled);
-    this.selection = choices.map((choice) => choice.short);
-    return choices.map((choice) => choice.value);
-  }
-  onUpKey() {
-    this.pointer = incrementListIndex(this.pointer, "up", this.opt);
-    this.render();
-  }
-  onDownKey() {
-    this.pointer = incrementListIndex(this.pointer, "down", this.opt);
-    this.render();
-  }
-  onNumberKey(input) {
-    if (input <= this.opt.choices.realLength) {
-      this.pointer = input - 1;
-      this.toggleChoice(this.pointer);
-    }
-    this.render();
-  }
-  onSpaceKey() {
-    this.toggleChoice(this.pointer);
-    this.render();
-  }
-  onAllKey() {
-    const shouldBeChecked = Boolean(this.opt.choices.find((choice) => choice.type !== "separator" && !choice.checked));
-    this.opt.choices.forEach((choice) => {
-      if (choice.type !== "separator") {
-        choice.checked = shouldBeChecked;
-      }
-    });
-    this.render();
-  }
-  onInverseKey() {
-    this.opt.choices.forEach((choice) => {
-      if (choice.type !== "separator") {
-        choice.checked = !choice.checked;
-      }
-    });
-    this.render();
-  }
-  toggleChoice(index) {
-    const item = this.opt.choices.getChoice(index);
-    if (item !== void 0) {
-      this.opt.choices.getChoice(index).checked = !item.checked;
-    }
-  }
-};
-function renderChoices3(choices, pointer) {
-  let output = "";
-  let separatorOffset = 0;
-  choices.forEach((choice, i) => {
-    if (choice.type === "separator") {
-      separatorOffset++;
-      output += " " + choice + "\n";
-      return;
-    }
-    if (choice.disabled) {
-      separatorOffset++;
-      output += " - " + choice.name;
-      output += ` (${typeof choice.disabled === "string" ? choice.disabled : "Disabled"})`;
-    } else {
-      const line = getCheckbox(choice.checked) + " " + choice.name;
-      if (i - separatorOffset === pointer) {
-        output += source_default.cyan(figures_default.pointer + line);
-      } else {
-        output += " " + line;
-      }
-    }
-    output += "\n";
-  });
-  return output.replace(/\n$/, "");
-}
-function getCheckbox(checked) {
-  return checked ? source_default.green(figures_default.radioOn) : figures_default.radioOff;
-}
-
-// node_modules/inquirer/lib/prompts/password.js
-var import_rxjs10 = __toESM(require_cjs(), 1);
-function mask(input, maskChar) {
-  input = String(input);
-  maskChar = typeof maskChar === "string" ? maskChar : "*";
-  if (input.length === 0) {
-    return "";
-  }
-  return new Array(input.length + 1).join(maskChar);
-}
-var PasswordPrompt = class extends Prompt {
-  _run(cb) {
-    this.done = cb;
-    const events = events_default(this.rl);
-    const submit = events.line.pipe((0, import_rxjs10.map)(this.filterInput.bind(this)));
-    const validation = this.handleSubmitEvents(submit);
-    validation.success.forEach(this.onEnd.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    events.keypress.pipe((0, import_rxjs10.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
-    this.render();
-    return this;
-  }
-  render(error) {
-    let message = this.getQuestion();
-    let bottomContent = "";
-    if (this.status === "answered") {
-      message += this.getMaskedValue(this.answer);
-    } else {
-      message += this.getMaskedValue(this.rl.line || "");
-    }
-    if (error) {
-      bottomContent = "\n" + source_default.red(">> ") + error;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  getMaskedValue(value) {
-    if (this.status === "answered") {
-      return this.opt.mask ? source_default.cyan(mask(value, this.opt.mask)) : source_default.italic.dim("[hidden]");
-    }
-    return this.opt.mask ? mask(value, this.opt.mask) : source_default.italic.dim("[input is hidden] ");
-  }
-  getSpinningValue(value) {
-    return this.getMaskedValue(value);
-  }
-  filterInput(input) {
-    if (!input) {
-      return this.opt.default == null ? "" : this.opt.default;
-    }
-    return input;
-  }
-  onEnd(state) {
-    this.status = "answered";
-    this.answer = state.value;
-    this.render();
-    this.screen.done();
-    this.done(state.value);
-  }
-  onError(state) {
-    this.render(state.isValid);
-  }
-  onKeypress() {
-    if (this.opt.default) {
-      this.opt.default = void 0;
-    }
-    this.render();
-  }
-};
-
-// node_modules/inquirer/lib/prompts/editor.js
-var import_external_editor = __toESM(require_main(), 1);
-var import_rxjs11 = __toESM(require_cjs(), 1);
-var EditorPrompt = class extends Prompt {
-  _run(cb) {
-    this.done = cb;
-    this.editorResult = new import_rxjs11.Subject();
-    const events = events_default(this.rl);
-    this.lineSubscription = events.line.subscribe(this.startExternalEditor.bind(this));
-    const waitUserInput = this.opt.waitUserInput === void 0 ? true : this.opt.waitUserInput;
-    if (!waitUserInput) {
-      this.startExternalEditor();
-    }
-    const validation = this.handleSubmitEvents(this.editorResult);
-    validation.success.forEach(this.onEnd.bind(this));
-    validation.error.forEach(this.onError.bind(this));
-    this.currentText = this.opt.default;
-    this.opt.default = null;
-    this.render();
-    return this;
-  }
-  render(error) {
-    let bottomContent = "";
-    let message = this.getQuestion();
-    if (this.status === "answered") {
-      message += source_default.dim("Received");
-    } else {
-      message += source_default.dim("Press <enter> to launch your preferred editor.");
-    }
-    if (error) {
-      bottomContent = source_default.red(">> ") + error;
-    }
-    this.screen.render(message, bottomContent);
-  }
-  startExternalEditor() {
-    this.rl.pause();
-    (0, import_external_editor.editAsync)(this.currentText, this.endExternalEditor.bind(this));
-  }
-  endExternalEditor(error, result) {
-    this.rl.resume();
-    if (error) {
-      this.editorResult.error(error);
-    } else {
-      this.editorResult.next(result);
-    }
-  }
-  onEnd(state) {
-    this.editorResult.unsubscribe();
-    this.lineSubscription.unsubscribe();
-    this.answer = state.value;
-    this.status = "answered";
-    this.render();
-    this.screen.done();
-    this.done(this.answer);
-  }
-  onError(state) {
-    this.render(state.isValid);
-  }
-};
-
-// node_modules/inquirer/lib/ui/bottom-bar.js
-var import_through = __toESM(require_through(), 1);
-
-// node_modules/inquirer/lib/ui/baseUI.js
-var import_mute_stream = __toESM(require_mute(), 1);
-var import_node_readline2 = __toESM(require("node:readline"), 1);
-var UI = class {
-  constructor(opt) {
-    if (!this.rl) {
-      this.rl = import_node_readline2.default.createInterface(setupReadlineOptions(opt));
-    }
-    this.rl.resume();
-    this.onForceClose = this.onForceClose.bind(this);
-    process.on("exit", this.onForceClose);
-    this.rl.on("SIGINT", this.onForceClose);
-  }
-  onForceClose() {
-    this.close();
-    process.kill(process.pid, "SIGINT");
-    console.log("");
-  }
-  close() {
-    this.rl.removeListener("SIGINT", this.onForceClose);
-    process.removeListener("exit", this.onForceClose);
-    this.rl.output.unmute();
-    if (this.activePrompt && typeof this.activePrompt.close === "function") {
-      this.activePrompt.close();
-    }
-    this.rl.output.end();
-    this.rl.pause();
-    this.rl.close();
-  }
-};
-function setupReadlineOptions(opt = {}) {
-  opt.skipTTYChecks = opt.skipTTYChecks === void 0 ? true : opt.skipTTYChecks;
-  const input = opt.input || process.stdin;
-  if (!opt.skipTTYChecks && !input.isTTY) {
-    const nonTtyError = new Error("Prompts can not be meaningfully rendered in non-TTY environments");
-    nonTtyError.isTtyError = true;
-    throw nonTtyError;
-  }
-  const ms = new import_mute_stream.default();
-  ms.pipe(opt.output || process.stdout);
-  const output = ms;
-  return {
-    terminal: true,
-    ...opt,
-    input,
-    output
-  };
-}
-
-// node_modules/inquirer/lib/ui/bottom-bar.js
-var BottomBar = class extends UI {
-  constructor(opt = {}) {
-    super(opt);
-    this.log = (0, import_through.default)(this.writeLog.bind(this));
-    this.bottomBar = opt.bottomBar || "";
-    this.render();
-  }
-  render() {
-    this.write(this.bottomBar);
-    return this;
-  }
-  clean() {
-    clearLine(this.rl, this.bottomBar.split("\n").length);
-    return this;
-  }
-  updateBottomBar(bottomBar) {
-    clearLine(this.rl, 1);
-    this.rl.output.unmute();
-    this.clean();
-    this.bottomBar = bottomBar;
-    this.render();
-    this.rl.output.mute();
-    return this;
-  }
-  writeLog(data) {
-    this.rl.output.unmute();
-    this.clean();
-    this.rl.output.write(this.enforceLF(data.toString()));
-    this.render();
-    this.rl.output.mute();
-    return this;
-  }
-  enforceLF(str) {
-    return str.match(/[\r\n]$/) ? str : str + "\n";
-  }
-  write(message) {
-    const msgLines = message.split(/\n/);
-    this.height = msgLines.length;
-    this.rl.setPrompt(msgLines[msgLines.length - 1]);
-    if (this.rl.output.rows === 0 && this.rl.output.columns === 0) {
-      left(this.rl, message.length + this.rl.line.length);
-    }
-    this.rl.output.write(message);
-  }
-};
-
-// node_modules/inquirer/lib/ui/prompt.js
-var import_isPlainObject = __toESM(require_isPlainObject(), 1);
-var import_get = __toESM(require_get(), 1);
-var import_set = __toESM(require_set(), 1);
-var import_rxjs13 = __toESM(require_cjs(), 1);
-var import_rxjs14 = __toESM(require_cjs(), 1);
-var import_run_async4 = __toESM(require_run_async(), 1);
-
-// node_modules/inquirer/lib/utils/utils.js
-var import_rxjs12 = __toESM(require_cjs(), 1);
-var import_run_async3 = __toESM(require_run_async(), 1);
-var fetchAsyncQuestionProperty = function(question, prop, answers) {
-  if (typeof question[prop] !== "function") {
-    return (0, import_rxjs12.of)(question);
-  }
-  return (0, import_rxjs12.from)((0, import_run_async3.default)(question[prop])(answers).then((value) => {
-    question[prop] = value;
-    return question;
-  }));
-};
-
-// node_modules/inquirer/lib/ui/prompt.js
-var _3 = {
-  isPlainObject: import_isPlainObject.default,
-  set: import_set.default,
-  get: import_get.default
-};
-var PromptUI = class extends UI {
-  constructor(prompts, opt) {
-    super(opt);
-    this.prompts = prompts;
-  }
-  run(questions, answers) {
-    if (_3.isPlainObject(answers)) {
-      this.answers = { ...answers };
-    } else {
-      this.answers = {};
-    }
-    if (_3.isPlainObject(questions)) {
-      questions = Object.values(questions).every((v) => _3.isPlainObject(v) && v.name === void 0) ? Object.entries(questions).map(([name, question]) => ({ name, ...question })) : [questions];
-    }
-    const obs = Array.isArray(questions) ? (0, import_rxjs13.from)(questions) : questions;
-    this.process = obs.pipe((0, import_rxjs14.concatMap)(this.processQuestion.bind(this)), (0, import_rxjs14.publish)());
-    this.process.connect();
-    return this.process.pipe((0, import_rxjs14.reduce)((answers2, answer) => {
-      _3.set(answers2, answer.name, answer.answer);
-      return answers2;
-    }, this.answers)).toPromise(Promise).then(this.onCompletion.bind(this), this.onError.bind(this));
-  }
-  onCompletion() {
-    this.close();
-    return this.answers;
-  }
-  onError(error) {
-    this.close();
-    return Promise.reject(error);
-  }
-  processQuestion(question) {
-    question = { ...question };
-    return (0, import_rxjs13.defer)(() => {
-      const obs = (0, import_rxjs13.of)(question);
-      return obs.pipe((0, import_rxjs14.concatMap)(this.setDefaultType.bind(this)), (0, import_rxjs14.concatMap)(this.filterIfRunnable.bind(this)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "message", this.answers)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "default", this.answers)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "choices", this.answers)), (0, import_rxjs14.concatMap)(this.fetchAnswer.bind(this)));
-    });
-  }
-  fetchAnswer(question) {
-    const Prompt2 = this.prompts[question.type];
-    this.activePrompt = new Prompt2(question, this.rl, this.answers);
-    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.from)(this.activePrompt.run().then((answer) => ({ name: question.name, answer }))));
-  }
-  setDefaultType(question) {
-    if (!this.prompts[question.type]) {
-      question.type = "input";
-    }
-    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.of)(question));
-  }
-  filterIfRunnable(question) {
-    if (question.askAnswered !== true && _3.get(this.answers, question.name) !== void 0) {
-      return (0, import_rxjs13.empty)();
-    }
-    if (question.when === false) {
-      return (0, import_rxjs13.empty)();
-    }
-    if (typeof question.when !== "function") {
-      return (0, import_rxjs13.of)(question);
-    }
-    const { answers } = this;
-    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.from)((0, import_run_async4.default)(question.when)(answers).then((shouldRun) => {
-      if (shouldRun) {
-        return question;
-      }
-    })).pipe((0, import_rxjs14.filter)((val) => val != null)));
-  }
-};
-
-// node_modules/inquirer/lib/inquirer.js
-function createPromptModule(opt) {
-  const promptModule = function(questions, answers) {
-    let uiInstance;
-    try {
-      uiInstance = new PromptUI(promptModule.prompts, opt);
-    } catch (error) {
-      return Promise.reject(error);
-    }
-    const promise = uiInstance.run(questions, answers);
-    promise.ui = uiInstance;
-    return promise;
-  };
-  promptModule.prompts = {};
-  promptModule.registerPrompt = function(name, prompt2) {
-    promptModule.prompts[name] = prompt2;
-    return this;
-  };
-  promptModule.restoreDefaultPrompts = function() {
-    this.registerPrompt("list", ListPrompt);
-    this.registerPrompt("input", InputPrompt);
-    this.registerPrompt("number", NumberPrompt);
-    this.registerPrompt("confirm", ConfirmPrompt);
-    this.registerPrompt("rawlist", RawListPrompt);
-    this.registerPrompt("expand", ExpandPrompt);
-    this.registerPrompt("checkbox", CheckboxPrompt);
-    this.registerPrompt("password", PasswordPrompt);
-    this.registerPrompt("editor", EditorPrompt);
-  };
-  promptModule.restoreDefaultPrompts();
-  return promptModule;
-}
-var prompt = createPromptModule();
-function registerPrompt(name, newPrompt) {
-  prompt.registerPrompt(name, newPrompt);
-}
-function restoreDefaultPrompts() {
-  prompt.restoreDefaultPrompts();
-}
-var inquirer = {
-  prompt,
-  ui: {
-    BottomBar,
-    Prompt: PromptUI
-  },
-  createPromptModule,
-  registerPrompt,
-  restoreDefaultPrompts,
-  Separator
-};
-var inquirer_default = inquirer;
-
-// src/multi-sig.ts
+// src/deploy.ts
 var gradient2 = __toESM(require_gradient_string());
 
 // node_modules/chalk-animation/index.js
-var import_chalk14 = __toESM(require_source2(), 1);
+var import_chalk = __toESM(require_source2(), 1);
 var import_gradient_string = __toESM(require_gradient_string(), 1);
 var log = console.log;
 var currentAnimation = null;
@@ -43498,10 +40832,10 @@ var effects = {
     const on = "#ff1010";
     const off = "#e6e6e6";
     if (frame >= 2 * transition + duration) {
-      return import_chalk14.default.hex(off)(str);
+      return import_chalk.default.hex(off)(str);
     }
     if (frame >= transition && frame <= transition + duration) {
-      return import_chalk14.default.hex(on)(str);
+      return import_chalk.default.hex(on)(str);
     }
     frame = frame >= transition + duration ? 2 * transition + duration - frame : frame;
     const g = frame <= transition / 2 ? (0, import_gradient_string.default)([
@@ -43551,7 +40885,7 @@ var effects = {
       const pos = -(i - globalPos);
       if (pos > 0 && pos <= depth - 1) {
         const shade = (depth - pos) * step;
-        chars.push(import_chalk14.default.rgb(shade, shade, shade)(str[i]));
+        chars.push(import_chalk.default.rgb(shade, shade, shade)(str[i]));
       } else {
         chars.push(" ");
       }
@@ -43559,15 +40893,15 @@ var effects = {
     return chars.join("");
   },
   neon(str, frame) {
-    const color = frame % 2 === 0 ? import_chalk14.default.dim.rgb(88, 80, 85) : import_chalk14.default.bold.rgb(213, 70, 242);
+    const color = frame % 2 === 0 ? import_chalk.default.dim.rgb(88, 80, 85) : import_chalk.default.bold.rgb(213, 70, 242);
     return color(str);
   },
   karaoke(str, frame) {
     const chars = frame % (str.length + 20) - 10;
     if (chars < 0) {
-      return import_chalk14.default.white(str);
+      return import_chalk.default.white(str);
     }
-    return import_chalk14.default.rgb(255, 187, 0).bold(str.substr(0, chars)) + import_chalk14.default.white(str.substr(chars));
+    return import_chalk.default.rgb(255, 187, 0).bold(str.substr(0, chars)) + import_chalk.default.white(str.substr(chars));
   }
 };
 function animateString(str, effect, delay, speed) {
@@ -43636,14 +40970,14 @@ var chalkAnimation = {
 };
 var chalk_animation_default = chalkAnimation;
 
-// src/multi-sig.ts
+// src/deploy.ts
 var import_figlet = __toESM(require_node_figlet());
 
 // node_modules/execa/index.js
 var import_node_buffer = require("node:buffer");
 var import_node_path2 = __toESM(require("node:path"), 1);
 var import_node_child_process = __toESM(require("node:child_process"), 1);
-var import_node_process10 = __toESM(require("node:process"), 1);
+var import_node_process3 = __toESM(require("node:process"), 1);
 var import_cross_spawn = __toESM(require_cross_spawn(), 1);
 
 // node_modules/strip-final-newline/index.js
@@ -43660,7 +40994,7 @@ function stripFinalNewline(input) {
 }
 
 // node_modules/npm-run-path/index.js
-var import_node_process9 = __toESM(require("node:process"), 1);
+var import_node_process2 = __toESM(require("node:process"), 1);
 var import_node_path = __toESM(require("node:path"), 1);
 var import_node_url = __toESM(require("node:url"), 1);
 
@@ -43679,9 +41013,9 @@ function pathKey(options = {}) {
 // node_modules/npm-run-path/index.js
 function npmRunPath(options = {}) {
   const {
-    cwd = import_node_process9.default.cwd(),
-    path: path_ = import_node_process9.default.env[pathKey()],
-    execPath = import_node_process9.default.execPath
+    cwd = import_node_process2.default.cwd(),
+    path: path_ = import_node_process2.default.env[pathKey()],
+    execPath = import_node_process2.default.execPath
   } = options;
   let previous;
   const cwdString = cwd instanceof URL ? import_node_url.default.fileURLToPath(cwd) : cwd;
@@ -43695,7 +41029,7 @@ function npmRunPath(options = {}) {
   result.push(import_node_path.default.resolve(cwdString, execPath, ".."));
   return [...result, path_].join(import_node_path.default.delimiter);
 }
-function npmRunPathEnv({ env: env2 = import_node_process9.default.env, ...options } = {}) {
+function npmRunPathEnv({ env: env2 = import_node_process2.default.env, ...options } = {}) {
   env2 = { ...env2 };
   const path3 = pathKey({ env: env2 });
   options.path = env2[path3];
@@ -43750,7 +41084,7 @@ function mimicFunction(to, from3, { ignoreNonConfigurable = false } = {}) {
 
 // node_modules/onetime/index.js
 var calledFunctions = /* @__PURE__ */ new WeakMap();
-var onetime2 = (function_, options = {}) => {
+var onetime = (function_, options = {}) => {
   if (typeof function_ !== "function") {
     throw new TypeError("Expected a function");
   }
@@ -43771,13 +41105,13 @@ var onetime2 = (function_, options = {}) => {
   calledFunctions.set(onetime3, callCount);
   return onetime3;
 };
-onetime2.callCount = (function_) => {
+onetime.callCount = (function_) => {
   if (!calledFunctions.has(function_)) {
     throw new Error(`The given function \`${function_.name}\` is not wrapped by the \`onetime\` package`);
   }
   return calledFunctions.get(function_);
 };
-var onetime_default = onetime2;
+var onetime_default = onetime;
 
 // node_modules/human-signals/build/src/main.js
 var import_os2 = require("os");
@@ -44238,7 +41572,7 @@ var normalizeStdio = (options) => {
 
 // node_modules/execa/lib/kill.js
 var import_node_os2 = __toESM(require("node:os"), 1);
-var import_signal_exit2 = __toESM(require_signal_exit(), 1);
+var import_signal_exit = __toESM(require_signal_exit(), 1);
 var DEFAULT_FORCE_KILL_TIMEOUT = 1e3 * 5;
 var spawnedKill = (kill, signal = "SIGTERM", options = {}) => {
   const killResult = kill(signal);
@@ -44302,7 +41636,7 @@ var setExitHandler = async (spawned, { cleanup, detached }, timedPromise) => {
   if (!cleanup || detached) {
     return timedPromise;
   }
-  const removeExitHandler = (0, import_signal_exit2.default)(() => {
+  const removeExitHandler = (0, import_signal_exit.default)(() => {
     spawned.kill();
   });
   return timedPromise.finally(() => {
@@ -44426,7 +41760,7 @@ var getEscapedCommand = (file, args) => normalizeArgs(file, args).map((arg) => e
 // node_modules/execa/index.js
 var DEFAULT_MAX_BUFFER = 1e3 * 1e3 * 100;
 var getEnv = ({ env: envOption, extendEnv, preferLocal, localDir, execPath }) => {
-  const env2 = extendEnv ? { ...import_node_process10.default.env, ...envOption } : envOption;
+  const env2 = extendEnv ? { ...import_node_process3.default.env, ...envOption } : envOption;
   if (preferLocal) {
     return npmRunPathEnv({ env: env2, cwd: localDir, execPath });
   }
@@ -44443,8 +41777,8 @@ var handleArguments = (file, args, options = {}) => {
     stripFinalNewline: true,
     extendEnv: true,
     preferLocal: false,
-    localDir: options.cwd || import_node_process10.default.cwd(),
-    execPath: import_node_process10.default.execPath,
+    localDir: options.cwd || import_node_process3.default.cwd(),
+    execPath: import_node_process3.default.execPath,
     encoding: "utf8",
     reject: true,
     cleanup: true,
@@ -44454,7 +41788,7 @@ var handleArguments = (file, args, options = {}) => {
   };
   options.env = getEnv(options);
   options.stdio = normalizeStdio(options);
-  if (import_node_process10.default.platform === "win32" && import_node_path2.default.basename(file, ".exe") === "cmd") {
+  if (import_node_process3.default.platform === "win32" && import_node_path2.default.basename(file, ".exe") === "cmd") {
     args.unshift("/q");
   }
   return { file, args, options, parsed };
@@ -44542,7 +41876,7 @@ function execa(file, args, options) {
   return mergePromise(spawned, handlePromiseOnce);
 }
 
-// src/multi-sig.ts
+// src/deploy.ts
 var import_nanospinner = __toESM(require_nanospinner());
 
 // node_modules/figlet/importable-fonts/Standard.js
@@ -46784,78 +44118,18 @@ Font modified May 20, 2012 by patorjk to add the 0xCA0 character
          @@
          `;
 
-// src/multi-sig.ts
-var dao_name;
-var member_principal;
-var token_principal = "";
+// src/deploy.ts
 var sleep = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var MultiSig = class {
   constructor(program4, config2) {
     this.program = program4;
     this.config = config2;
   }
-  welcome() {
+  title() {
     return __async(this, null, function* () {
-      const rainbowTitle = chalk_animation_default.rainbow("Welcome To My Little Protocol \n");
+      const rainbowTitle = chalk_animation_default.rainbow("Deploying... \n");
       yield sleep();
       rainbowTitle.stop();
-    });
-  }
-  askDao() {
-    return __async(this, null, function* () {
-      var _a;
-      if ((_a = this.config) == null ? void 0 : _a.dao_name) {
-        dao_name = this.config.dao_name;
-        console.log(`Dao Name: ${dao_name}`);
-      } else {
-        const answers = yield inquirer_default.prompt({
-          name: "dao_name",
-          type: "input",
-          message: "What is your dao's name?",
-          default() {
-            return "dao name";
-          }
-        });
-        dao_name = answers.dao_name;
-      }
-    });
-  }
-  askMember() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      if ((_a = this.config) == null ? void 0 : _a.member_principal) {
-        member_principal = (_b = this.config) == null ? void 0 : _b.member_principal;
-        console.log(`Dao Member: ${member_principal}`);
-      } else {
-        const answers = yield inquirer_default.prompt({
-          name: "member_principal",
-          type: "input",
-          message: "You need to add at least 1 member",
-          default() {
-            return "principal";
-          }
-        });
-        member_principal = answers.member_principal;
-      }
-    });
-  }
-  askToken() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      if ((_a = this.config) == null ? void 0 : _a.token_principal) {
-        token_principal = (_b = this.config) == null ? void 0 : _b.token_principal;
-        console.log(`Token Pricipal: ${token_principal}`);
-      } else {
-        const answers = yield inquirer_default.prompt({
-          name: "token_principal",
-          type: "input",
-          message: "The principal for your governace token",
-          default() {
-            return "principal";
-          }
-        });
-        token_principal = answers.token_principal;
-      }
     });
   }
   install_dfx() {
@@ -46868,20 +44142,61 @@ var MultiSig = class {
           this.program.error("unable to install dfx, maybe install it manually?", { code: "1" });
         }
         ;
-        spinner.success({ text: `successfuly installed dfx`, mark: ":)" });
+        spinner.success({ text: `successfuly installed dfx` });
       }
       spinner.success({ text: `dfx already installed` });
     });
   }
-  deploy_multi_sig() {
+  install_azle() {
     return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("Installing azle...").start();
+      const install_npm = yield execa("npm", ["init", "-y"]);
+      const install_azle = yield execa("npm", ["install", "azle"]);
+      if (install_npm.exitCode !== 0 && install_azle.exitCode !== 0) {
+        this.program.error("unable to install azle, maybe install it manually?", { code: "1" });
+      }
+      ;
+      spinner.success({ text: `successfuly installed azle` });
+    });
+  }
+  install_multi_sig() {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("Installing multisig canister...").start();
+      const multi_sig = yield execa("npm", ["install", "@cigdao/multi-sig"]);
+      if (multi_sig.exitCode !== 0) {
+        this.program.error("unable to install multi_sig, maybe install it manually?", { code: "1" });
+      }
+      ;
+      spinner.success({ text: `successfuly installed multi_sig` });
+    });
+  }
+  deploy() {
+    return __async(this, null, function* () {
+      var _a, _b;
       const spinner = (0, import_nanospinner.createSpinner)("deploying canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${member_principal}",`, `"${token_principal}"`, ")");
+      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${(_b = this.config) == null ? void 0 : _b.token_principal}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed canister`, mark: ":)" });
+          spinner.success({ text: `successfuly deployed canister` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy canister", { code: "1" });
+      }
+    });
+  }
+  deploy_local() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      const spinner = (0, import_nanospinner.createSpinner)("deploying canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${(_b = this.config) == null ? void 0 : _b.token_principal}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed canister` });
         }
       } catch (e) {
         console.error(e);
@@ -46890,8 +44205,9 @@ var MultiSig = class {
     });
   }
   finish() {
+    var _a;
     import_figlet.default.parseFont("Standard", Standard_default);
-    (0, import_figlet.default)(`Congrats , ${dao_name} !
+    (0, import_figlet.default)(`Congrats , ${(_a = this.config) == null ? void 0 : _a.dao_name} !
  Let's Make Crypto Great Again`, {
       font: "Standard"
     }, (err, data) => {
@@ -46901,10 +44217,2676 @@ var MultiSig = class {
   }
 };
 
+// node_modules/figures/index.js
+var import_node_process5 = __toESM(require("node:process"), 1);
+
+// node_modules/is-unicode-supported/index.js
+var import_node_process4 = __toESM(require("node:process"), 1);
+function isUnicodeSupported() {
+  if (import_node_process4.default.platform !== "win32") {
+    return import_node_process4.default.env.TERM !== "linux";
+  }
+  return Boolean(import_node_process4.default.env.CI) || Boolean(import_node_process4.default.env.WT_SESSION) || Boolean(import_node_process4.default.env.TERMINUS_SUBLIME) || import_node_process4.default.env.ConEmuTask === "{cmd::Cmder}" || import_node_process4.default.env.TERM_PROGRAM === "Terminus-Sublime" || import_node_process4.default.env.TERM_PROGRAM === "vscode" || import_node_process4.default.env.TERM === "xterm-256color" || import_node_process4.default.env.TERM === "alacritty" || import_node_process4.default.env.TERMINAL_EMULATOR === "JetBrains-JediTerm";
+}
+
+// node_modules/figures/index.js
+var { platform } = import_node_process5.default;
+var common = {
+  square: "\u2588",
+  squareDarkShade: "\u2593",
+  squareMediumShade: "\u2592",
+  squareLightShade: "\u2591",
+  squareTop: "\u2580",
+  squareBottom: "\u2584",
+  squareLeft: "\u258C",
+  squareRight: "\u2590",
+  squareCenter: "\u25A0",
+  bullet: "\u25CF",
+  dot: "\u2024",
+  ellipsis: "\u2026",
+  pointerSmall: "\u203A",
+  triangleUp: "\u25B2",
+  triangleUpSmall: "\u25B4",
+  triangleDown: "\u25BC",
+  triangleDownSmall: "\u25BE",
+  triangleLeftSmall: "\u25C2",
+  triangleRightSmall: "\u25B8",
+  home: "\u2302",
+  heart: "\u2665",
+  musicNote: "\u266A",
+  musicNoteBeamed: "\u266B",
+  arrowUp: "\u2191",
+  arrowDown: "\u2193",
+  arrowLeft: "\u2190",
+  arrowRight: "\u2192",
+  arrowLeftRight: "\u2194",
+  arrowUpDown: "\u2195",
+  almostEqual: "\u2248",
+  notEqual: "\u2260",
+  lessOrEqual: "\u2264",
+  greaterOrEqual: "\u2265",
+  identical: "\u2261",
+  infinity: "\u221E",
+  subscriptZero: "\u2080",
+  subscriptOne: "\u2081",
+  subscriptTwo: "\u2082",
+  subscriptThree: "\u2083",
+  subscriptFour: "\u2084",
+  subscriptFive: "\u2085",
+  subscriptSix: "\u2086",
+  subscriptSeven: "\u2087",
+  subscriptEight: "\u2088",
+  subscriptNine: "\u2089",
+  oneHalf: "\xBD",
+  oneThird: "\u2153",
+  oneQuarter: "\xBC",
+  oneFifth: "\u2155",
+  oneSixth: "\u2159",
+  oneEighth: "\u215B",
+  twoThirds: "\u2154",
+  twoFifths: "\u2156",
+  threeQuarters: "\xBE",
+  threeFifths: "\u2157",
+  threeEighths: "\u215C",
+  fourFifths: "\u2158",
+  fiveSixths: "\u215A",
+  fiveEighths: "\u215D",
+  sevenEighths: "\u215E",
+  line: "\u2500",
+  lineBold: "\u2501",
+  lineDouble: "\u2550",
+  lineDashed0: "\u2504",
+  lineDashed1: "\u2505",
+  lineDashed2: "\u2508",
+  lineDashed3: "\u2509",
+  lineDashed4: "\u254C",
+  lineDashed5: "\u254D",
+  lineDashed6: "\u2574",
+  lineDashed7: "\u2576",
+  lineDashed8: "\u2578",
+  lineDashed9: "\u257A",
+  lineDashed10: "\u257C",
+  lineDashed11: "\u257E",
+  lineDashed12: "\u2212",
+  lineDashed13: "\u2013",
+  lineDashed14: "\u2010",
+  lineDashed15: "\u2043",
+  lineVertical: "\u2502",
+  lineVerticalBold: "\u2503",
+  lineVerticalDouble: "\u2551",
+  lineVerticalDashed0: "\u2506",
+  lineVerticalDashed1: "\u2507",
+  lineVerticalDashed2: "\u250A",
+  lineVerticalDashed3: "\u250B",
+  lineVerticalDashed4: "\u254E",
+  lineVerticalDashed5: "\u254F",
+  lineVerticalDashed6: "\u2575",
+  lineVerticalDashed7: "\u2577",
+  lineVerticalDashed8: "\u2579",
+  lineVerticalDashed9: "\u257B",
+  lineVerticalDashed10: "\u257D",
+  lineVerticalDashed11: "\u257F",
+  lineDownLeft: "\u2510",
+  lineDownLeftArc: "\u256E",
+  lineDownBoldLeftBold: "\u2513",
+  lineDownBoldLeft: "\u2512",
+  lineDownLeftBold: "\u2511",
+  lineDownDoubleLeftDouble: "\u2557",
+  lineDownDoubleLeft: "\u2556",
+  lineDownLeftDouble: "\u2555",
+  lineDownRight: "\u250C",
+  lineDownRightArc: "\u256D",
+  lineDownBoldRightBold: "\u250F",
+  lineDownBoldRight: "\u250E",
+  lineDownRightBold: "\u250D",
+  lineDownDoubleRightDouble: "\u2554",
+  lineDownDoubleRight: "\u2553",
+  lineDownRightDouble: "\u2552",
+  lineUpLeft: "\u2518",
+  lineUpLeftArc: "\u256F",
+  lineUpBoldLeftBold: "\u251B",
+  lineUpBoldLeft: "\u251A",
+  lineUpLeftBold: "\u2519",
+  lineUpDoubleLeftDouble: "\u255D",
+  lineUpDoubleLeft: "\u255C",
+  lineUpLeftDouble: "\u255B",
+  lineUpRight: "\u2514",
+  lineUpRightArc: "\u2570",
+  lineUpBoldRightBold: "\u2517",
+  lineUpBoldRight: "\u2516",
+  lineUpRightBold: "\u2515",
+  lineUpDoubleRightDouble: "\u255A",
+  lineUpDoubleRight: "\u2559",
+  lineUpRightDouble: "\u2558",
+  lineUpDownLeft: "\u2524",
+  lineUpBoldDownBoldLeftBold: "\u252B",
+  lineUpBoldDownBoldLeft: "\u2528",
+  lineUpDownLeftBold: "\u2525",
+  lineUpBoldDownLeftBold: "\u2529",
+  lineUpDownBoldLeftBold: "\u252A",
+  lineUpDownBoldLeft: "\u2527",
+  lineUpBoldDownLeft: "\u2526",
+  lineUpDoubleDownDoubleLeftDouble: "\u2563",
+  lineUpDoubleDownDoubleLeft: "\u2562",
+  lineUpDownLeftDouble: "\u2561",
+  lineUpDownRight: "\u251C",
+  lineUpBoldDownBoldRightBold: "\u2523",
+  lineUpBoldDownBoldRight: "\u2520",
+  lineUpDownRightBold: "\u251D",
+  lineUpBoldDownRightBold: "\u2521",
+  lineUpDownBoldRightBold: "\u2522",
+  lineUpDownBoldRight: "\u251F",
+  lineUpBoldDownRight: "\u251E",
+  lineUpDoubleDownDoubleRightDouble: "\u2560",
+  lineUpDoubleDownDoubleRight: "\u255F",
+  lineUpDownRightDouble: "\u255E",
+  lineDownLeftRight: "\u252C",
+  lineDownBoldLeftBoldRightBold: "\u2533",
+  lineDownLeftBoldRightBold: "\u252F",
+  lineDownBoldLeftRight: "\u2530",
+  lineDownBoldLeftBoldRight: "\u2531",
+  lineDownBoldLeftRightBold: "\u2532",
+  lineDownLeftRightBold: "\u252E",
+  lineDownLeftBoldRight: "\u252D",
+  lineDownDoubleLeftDoubleRightDouble: "\u2566",
+  lineDownDoubleLeftRight: "\u2565",
+  lineDownLeftDoubleRightDouble: "\u2564",
+  lineUpLeftRight: "\u2534",
+  lineUpBoldLeftBoldRightBold: "\u253B",
+  lineUpLeftBoldRightBold: "\u2537",
+  lineUpBoldLeftRight: "\u2538",
+  lineUpBoldLeftBoldRight: "\u2539",
+  lineUpBoldLeftRightBold: "\u253A",
+  lineUpLeftRightBold: "\u2536",
+  lineUpLeftBoldRight: "\u2535",
+  lineUpDoubleLeftDoubleRightDouble: "\u2569",
+  lineUpDoubleLeftRight: "\u2568",
+  lineUpLeftDoubleRightDouble: "\u2567",
+  lineUpDownLeftRight: "\u253C",
+  lineUpBoldDownBoldLeftBoldRightBold: "\u254B",
+  lineUpDownBoldLeftBoldRightBold: "\u2548",
+  lineUpBoldDownLeftBoldRightBold: "\u2547",
+  lineUpBoldDownBoldLeftRightBold: "\u254A",
+  lineUpBoldDownBoldLeftBoldRight: "\u2549",
+  lineUpBoldDownLeftRight: "\u2540",
+  lineUpDownBoldLeftRight: "\u2541",
+  lineUpDownLeftBoldRight: "\u253D",
+  lineUpDownLeftRightBold: "\u253E",
+  lineUpBoldDownBoldLeftRight: "\u2542",
+  lineUpDownLeftBoldRightBold: "\u253F",
+  lineUpBoldDownLeftBoldRight: "\u2543",
+  lineUpBoldDownLeftRightBold: "\u2544",
+  lineUpDownBoldLeftBoldRight: "\u2545",
+  lineUpDownBoldLeftRightBold: "\u2546",
+  lineUpDoubleDownDoubleLeftDoubleRightDouble: "\u256C",
+  lineUpDoubleDownDoubleLeftRight: "\u256B",
+  lineUpDownLeftDoubleRightDouble: "\u256A",
+  lineCross: "\u2573",
+  lineBackslash: "\u2572",
+  lineSlash: "\u2571"
+};
+var mainSymbols = {
+  ...common,
+  ...platform === "linux" ? {
+    circleQuestionMark: "?\u20DD",
+    questionMarkPrefix: "?\u20DD"
+  } : {
+    circleQuestionMark: "?",
+    questionMarkPrefix: "?"
+  },
+  tick: "\u2714",
+  info: "\u2139",
+  warning: "\u26A0",
+  cross: "\u2718",
+  squareSmall: "\u25FB",
+  squareSmallFilled: "\u25FC",
+  circle: "\u25EF",
+  circleFilled: "\u25C9",
+  circleDotted: "\u25CC",
+  circleDouble: "\u25CE",
+  circleCircle: "\u24DE",
+  circleCross: "\u24E7",
+  circlePipe: "\u24BE",
+  radioOn: "\u25C9",
+  radioOff: "\u25EF",
+  checkboxOn: "\u2612",
+  checkboxOff: "\u2610",
+  checkboxCircleOn: "\u24E7",
+  checkboxCircleOff: "\u24BE",
+  pointer: "\u276F",
+  triangleUpOutline: "\u25B3",
+  triangleLeft: "\u25C0",
+  triangleRight: "\u25B6",
+  lozenge: "\u25C6",
+  lozengeOutline: "\u25C7",
+  hamburger: "\u2630",
+  smiley: "\u32E1",
+  mustache: "\u0DF4",
+  star: "\u2605",
+  play: "\u25B6",
+  nodejs: "\u2B22",
+  oneSeventh: "\u2150",
+  oneNinth: "\u2151",
+  oneTenth: "\u2152"
+};
+var fallbackSymbols = {
+  ...common,
+  tick: "\u221A",
+  info: "i",
+  warning: "\u203C",
+  cross: "\xD7",
+  squareSmall: "\u25A1",
+  squareSmallFilled: "\u25A0",
+  circle: "( )",
+  circleFilled: "(*)",
+  circleDotted: "( )",
+  circleDouble: "( )",
+  circleCircle: "(\u25CB)",
+  circleCross: "(\xD7)",
+  circlePipe: "(\u2502)",
+  circleQuestionMark: "(?)",
+  radioOn: "(*)",
+  radioOff: "( )",
+  checkboxOn: "[\xD7]",
+  checkboxOff: "[ ]",
+  checkboxCircleOn: "(\xD7)",
+  checkboxCircleOff: "( )",
+  questionMarkPrefix: "\uFF1F",
+  pointer: ">",
+  triangleUpOutline: "\u2206",
+  triangleLeft: "\u25C4",
+  triangleRight: "\u25BA",
+  lozenge: "\u2666",
+  lozengeOutline: "\u25CA",
+  hamburger: "\u2261",
+  smiley: "\u263A",
+  mustache: "\u250C\u2500\u2510",
+  star: "\u2736",
+  play: "\u25BA",
+  nodejs: "\u2666",
+  oneSeventh: "1/7",
+  oneNinth: "1/9",
+  oneTenth: "1/10"
+};
+var shouldUseMain = isUnicodeSupported();
+var figures = shouldUseMain ? mainSymbols : fallbackSymbols;
+var figures_default = figures;
+
+// node_modules/cli-cursor/index.js
+var import_node_process7 = __toESM(require("node:process"), 1);
+
+// node_modules/restore-cursor/index.js
+var import_node_process6 = __toESM(require("node:process"), 1);
+var import_onetime2 = __toESM(require_onetime(), 1);
+var import_signal_exit2 = __toESM(require_signal_exit(), 1);
+var restoreCursor = (0, import_onetime2.default)(() => {
+  (0, import_signal_exit2.default)(() => {
+    import_node_process6.default.stderr.write("\x1B[?25h");
+  }, { alwaysLast: true });
+});
+var restore_cursor_default = restoreCursor;
+
+// node_modules/cli-cursor/index.js
+var isHidden = false;
+var cliCursor = {};
+cliCursor.show = (writableStream = import_node_process7.default.stderr) => {
+  if (!writableStream.isTTY) {
+    return;
+  }
+  isHidden = false;
+  writableStream.write("\x1B[?25h");
+};
+cliCursor.hide = (writableStream = import_node_process7.default.stderr) => {
+  if (!writableStream.isTTY) {
+    return;
+  }
+  restore_cursor_default();
+  isHidden = true;
+  writableStream.write("\x1B[?25l");
+};
+cliCursor.toggle = (force, writableStream) => {
+  if (force !== void 0) {
+    isHidden = force;
+  }
+  if (isHidden) {
+    cliCursor.show(writableStream);
+  } else {
+    cliCursor.hide(writableStream);
+  }
+};
+var cli_cursor_default = cliCursor;
+
+// node_modules/inquirer/lib/prompts/list.js
+var import_run_async2 = __toESM(require_run_async(), 1);
+var import_rxjs4 = __toESM(require_cjs(), 1);
+
+// node_modules/inquirer/lib/prompts/base.js
+var import_defaults = __toESM(require_defaults(), 1);
+var import_clone = __toESM(require_clone(), 1);
+var import_run_async = __toESM(require_run_async(), 1);
+var import_rxjs = __toESM(require_cjs(), 1);
+
+// node_modules/inquirer/lib/objects/choices.js
+var import_node_assert = __toESM(require("node:assert"), 1);
+var import_lodash = __toESM(require_lodash(), 1);
+
+// node_modules/inquirer/lib/objects/separator.js
+var Separator = class {
+  constructor(line) {
+    this.type = "separator";
+    this.line = source_default.dim(line || new Array(15).join(figures_default.line));
+  }
+  static exclude(obj) {
+    return obj.type !== "separator";
+  }
+  toString() {
+    return this.line;
+  }
+};
+
+// node_modules/inquirer/lib/objects/choice.js
+var Choice = class {
+  constructor(val, answers) {
+    if (val instanceof Choice || val.type === "separator") {
+      return val;
+    }
+    if (typeof val === "string" || typeof val === "number") {
+      this.name = String(val);
+      this.value = val;
+      this.short = String(val);
+    } else {
+      Object.assign(this, val, {
+        name: val.name || val.value,
+        value: "value" in val ? val.value : val.name,
+        short: val.short || val.name || val.value
+      });
+    }
+    if (typeof val.disabled === "function") {
+      this.disabled = val.disabled(answers);
+    } else {
+      this.disabled = val.disabled;
+    }
+  }
+};
+
+// node_modules/inquirer/lib/objects/choices.js
+var Choices = class {
+  constructor(choices, answers) {
+    this.choices = choices.map((val) => {
+      if (val.type === "separator") {
+        if (!(val instanceof Separator)) {
+          val = new Separator(val.line);
+        }
+        return val;
+      }
+      return new Choice(val, answers);
+    });
+    this.realChoices = this.choices.filter(Separator.exclude).filter((item) => !item.disabled);
+    Object.defineProperty(this, "length", {
+      get() {
+        return this.choices.length;
+      },
+      set(val) {
+        this.choices.length = val;
+      }
+    });
+    Object.defineProperty(this, "realLength", {
+      get() {
+        return this.realChoices.length;
+      },
+      set() {
+        throw new Error("Cannot set `realLength` of a Choices collection");
+      }
+    });
+  }
+  getChoice(selector) {
+    (0, import_node_assert.default)(typeof selector === "number");
+    return this.realChoices[selector];
+  }
+  get(selector) {
+    (0, import_node_assert.default)(typeof selector === "number");
+    return this.choices[selector];
+  }
+  where(whereClause) {
+    return import_lodash.default.filter(this.realChoices, whereClause);
+  }
+  pluck(propertyName) {
+    return import_lodash.default.map(this.realChoices, propertyName);
+  }
+  indexOf(...args) {
+    return this.choices.indexOf(...args);
+  }
+  forEach(...args) {
+    return this.choices.forEach(...args);
+  }
+  filter(...args) {
+    return this.choices.filter(...args);
+  }
+  reduce(...args) {
+    return this.choices.reduce(...args);
+  }
+  find(func) {
+    return this.choices.find(func);
+  }
+  push(...args) {
+    const objs = args.map((val) => new Choice(val));
+    this.choices.push(...objs);
+    this.realChoices = this.choices.filter(Separator.exclude).filter((item) => !item.disabled);
+    return this.choices;
+  }
+};
+
+// node_modules/ansi-escapes/index.js
+var import_node_process8 = __toESM(require("node:process"), 1);
+var ESC = "\x1B[";
+var OSC = "\x1B]";
+var BEL = "\x07";
+var SEP = ";";
+var isTerminalApp = import_node_process8.default.env.TERM_PROGRAM === "Apple_Terminal";
+var ansiEscapes = {};
+ansiEscapes.cursorTo = (x, y) => {
+  if (typeof x !== "number") {
+    throw new TypeError("The `x` argument is required");
+  }
+  if (typeof y !== "number") {
+    return ESC + (x + 1) + "G";
+  }
+  return ESC + (y + 1) + SEP + (x + 1) + "H";
+};
+ansiEscapes.cursorMove = (x, y) => {
+  if (typeof x !== "number") {
+    throw new TypeError("The `x` argument is required");
+  }
+  let returnValue = "";
+  if (x < 0) {
+    returnValue += ESC + -x + "D";
+  } else if (x > 0) {
+    returnValue += ESC + x + "C";
+  }
+  if (y < 0) {
+    returnValue += ESC + -y + "A";
+  } else if (y > 0) {
+    returnValue += ESC + y + "B";
+  }
+  return returnValue;
+};
+ansiEscapes.cursorUp = (count = 1) => ESC + count + "A";
+ansiEscapes.cursorDown = (count = 1) => ESC + count + "B";
+ansiEscapes.cursorForward = (count = 1) => ESC + count + "C";
+ansiEscapes.cursorBackward = (count = 1) => ESC + count + "D";
+ansiEscapes.cursorLeft = ESC + "G";
+ansiEscapes.cursorSavePosition = isTerminalApp ? "\x1B7" : ESC + "s";
+ansiEscapes.cursorRestorePosition = isTerminalApp ? "\x1B8" : ESC + "u";
+ansiEscapes.cursorGetPosition = ESC + "6n";
+ansiEscapes.cursorNextLine = ESC + "E";
+ansiEscapes.cursorPrevLine = ESC + "F";
+ansiEscapes.cursorHide = ESC + "?25l";
+ansiEscapes.cursorShow = ESC + "?25h";
+ansiEscapes.eraseLines = (count) => {
+  let clear = "";
+  for (let i = 0; i < count; i++) {
+    clear += ansiEscapes.eraseLine + (i < count - 1 ? ansiEscapes.cursorUp() : "");
+  }
+  if (count) {
+    clear += ansiEscapes.cursorLeft;
+  }
+  return clear;
+};
+ansiEscapes.eraseEndLine = ESC + "K";
+ansiEscapes.eraseStartLine = ESC + "1K";
+ansiEscapes.eraseLine = ESC + "2K";
+ansiEscapes.eraseDown = ESC + "J";
+ansiEscapes.eraseUp = ESC + "1J";
+ansiEscapes.eraseScreen = ESC + "2J";
+ansiEscapes.scrollUp = ESC + "S";
+ansiEscapes.scrollDown = ESC + "T";
+ansiEscapes.clearScreen = "\x1Bc";
+ansiEscapes.clearTerminal = import_node_process8.default.platform === "win32" ? `${ansiEscapes.eraseScreen}${ESC}0f` : `${ansiEscapes.eraseScreen}${ESC}3J${ESC}H`;
+ansiEscapes.beep = BEL;
+ansiEscapes.link = (text, url2) => [
+  OSC,
+  "8",
+  SEP,
+  SEP,
+  url2,
+  BEL,
+  text,
+  OSC,
+  "8",
+  SEP,
+  SEP,
+  BEL
+].join("");
+ansiEscapes.image = (buffer, options = {}) => {
+  let returnValue = `${OSC}1337;File=inline=1`;
+  if (options.width) {
+    returnValue += `;width=${options.width}`;
+  }
+  if (options.height) {
+    returnValue += `;height=${options.height}`;
+  }
+  if (options.preserveAspectRatio === false) {
+    returnValue += ";preserveAspectRatio=0";
+  }
+  return returnValue + ":" + buffer.toString("base64") + BEL;
+};
+ansiEscapes.iTerm = {
+  setCwd: (cwd = import_node_process8.default.cwd()) => `${OSC}50;CurrentDir=${cwd}${BEL}`,
+  annotation(message, options = {}) {
+    let returnValue = `${OSC}1337;`;
+    const hasX = typeof options.x !== "undefined";
+    const hasY = typeof options.y !== "undefined";
+    if ((hasX || hasY) && !(hasX && hasY && typeof options.length !== "undefined")) {
+      throw new Error("`x`, `y` and `length` must be defined when `x` or `y` is defined");
+    }
+    message = message.replace(/\|/g, "");
+    returnValue += options.isHidden ? "AddHiddenAnnotation=" : "AddAnnotation=";
+    if (options.length > 0) {
+      returnValue += (hasX ? [message, options.length, options.x, options.y] : [options.length, message]).join("|");
+    } else {
+      returnValue += message;
+    }
+    return returnValue + BEL;
+  }
+};
+var ansi_escapes_default = ansiEscapes;
+
+// node_modules/inquirer/lib/utils/readline.js
+var left = function(rl, x) {
+  rl.output.write(ansi_escapes_default.cursorBackward(x));
+};
+var right = function(rl, x) {
+  rl.output.write(ansi_escapes_default.cursorForward(x));
+};
+var up = function(rl, x) {
+  rl.output.write(ansi_escapes_default.cursorUp(x));
+};
+var down = function(rl, x) {
+  rl.output.write(ansi_escapes_default.cursorDown(x));
+};
+var clearLine = function(rl, len) {
+  rl.output.write(ansi_escapes_default.eraseLines(len));
+};
+
+// node_modules/inquirer/lib/utils/screen-manager.js
+var import_cli_width = __toESM(require_cli_width(), 1);
+
+// node_modules/ansi-regex/index.js
+function ansiRegex({ onlyFirst = false } = {}) {
+  const pattern = [
+    "[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]+)*|[a-zA-Z\\d]+(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)",
+    "(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))"
+  ].join("|");
+  return new RegExp(pattern, onlyFirst ? void 0 : "g");
+}
+
+// node_modules/strip-ansi/index.js
+function stripAnsi(string) {
+  if (typeof string !== "string") {
+    throw new TypeError(`Expected a \`string\`, got \`${typeof string}\``);
+  }
+  return string.replace(ansiRegex(), "");
+}
+
+// node_modules/string-width/index.js
+var import_eastasianwidth = __toESM(require_eastasianwidth(), 1);
+var import_emoji_regex = __toESM(require_emoji_regex(), 1);
+function stringWidth(string, options = {}) {
+  if (typeof string !== "string" || string.length === 0) {
+    return 0;
+  }
+  options = {
+    ambiguousIsNarrow: true,
+    ...options
+  };
+  string = stripAnsi(string);
+  if (string.length === 0) {
+    return 0;
+  }
+  string = string.replace((0, import_emoji_regex.default)(), "  ");
+  const ambiguousCharacterWidth = options.ambiguousIsNarrow ? 1 : 2;
+  let width = 0;
+  for (const character of string) {
+    const codePoint = character.codePointAt(0);
+    if (codePoint <= 31 || codePoint >= 127 && codePoint <= 159) {
+      continue;
+    }
+    if (codePoint >= 768 && codePoint <= 879) {
+      continue;
+    }
+    const code = import_eastasianwidth.default.eastAsianWidth(character);
+    switch (code) {
+      case "F":
+      case "W":
+        width += 2;
+        break;
+      case "A":
+        width += ambiguousCharacterWidth;
+        break;
+      default:
+        width += 1;
+    }
+  }
+  return width;
+}
+
+// node_modules/ansi-styles/index.js
+var ANSI_BACKGROUND_OFFSET2 = 10;
+var wrapAnsi162 = (offset = 0) => (code) => `\x1B[${code + offset}m`;
+var wrapAnsi2562 = (offset = 0) => (code) => `\x1B[${38 + offset};5;${code}m`;
+var wrapAnsi16m2 = (offset = 0) => (red, green, blue) => `\x1B[${38 + offset};2;${red};${green};${blue}m`;
+var styles3 = {
+  modifier: {
+    reset: [0, 0],
+    bold: [1, 22],
+    dim: [2, 22],
+    italic: [3, 23],
+    underline: [4, 24],
+    overline: [53, 55],
+    inverse: [7, 27],
+    hidden: [8, 28],
+    strikethrough: [9, 29]
+  },
+  color: {
+    black: [30, 39],
+    red: [31, 39],
+    green: [32, 39],
+    yellow: [33, 39],
+    blue: [34, 39],
+    magenta: [35, 39],
+    cyan: [36, 39],
+    white: [37, 39],
+    blackBright: [90, 39],
+    gray: [90, 39],
+    grey: [90, 39],
+    redBright: [91, 39],
+    greenBright: [92, 39],
+    yellowBright: [93, 39],
+    blueBright: [94, 39],
+    magentaBright: [95, 39],
+    cyanBright: [96, 39],
+    whiteBright: [97, 39]
+  },
+  bgColor: {
+    bgBlack: [40, 49],
+    bgRed: [41, 49],
+    bgGreen: [42, 49],
+    bgYellow: [43, 49],
+    bgBlue: [44, 49],
+    bgMagenta: [45, 49],
+    bgCyan: [46, 49],
+    bgWhite: [47, 49],
+    bgBlackBright: [100, 49],
+    bgGray: [100, 49],
+    bgGrey: [100, 49],
+    bgRedBright: [101, 49],
+    bgGreenBright: [102, 49],
+    bgYellowBright: [103, 49],
+    bgBlueBright: [104, 49],
+    bgMagentaBright: [105, 49],
+    bgCyanBright: [106, 49],
+    bgWhiteBright: [107, 49]
+  }
+};
+var modifierNames2 = Object.keys(styles3.modifier);
+var foregroundColorNames2 = Object.keys(styles3.color);
+var backgroundColorNames2 = Object.keys(styles3.bgColor);
+var colorNames2 = [...foregroundColorNames2, ...backgroundColorNames2];
+function assembleStyles2() {
+  const codes = /* @__PURE__ */ new Map();
+  for (const [groupName, group] of Object.entries(styles3)) {
+    for (const [styleName, style] of Object.entries(group)) {
+      styles3[styleName] = {
+        open: `\x1B[${style[0]}m`,
+        close: `\x1B[${style[1]}m`
+      };
+      group[styleName] = styles3[styleName];
+      codes.set(style[0], style[1]);
+    }
+    Object.defineProperty(styles3, groupName, {
+      value: group,
+      enumerable: false
+    });
+  }
+  Object.defineProperty(styles3, "codes", {
+    value: codes,
+    enumerable: false
+  });
+  styles3.color.close = "\x1B[39m";
+  styles3.bgColor.close = "\x1B[49m";
+  styles3.color.ansi = wrapAnsi162();
+  styles3.color.ansi256 = wrapAnsi2562();
+  styles3.color.ansi16m = wrapAnsi16m2();
+  styles3.bgColor.ansi = wrapAnsi162(ANSI_BACKGROUND_OFFSET2);
+  styles3.bgColor.ansi256 = wrapAnsi2562(ANSI_BACKGROUND_OFFSET2);
+  styles3.bgColor.ansi16m = wrapAnsi16m2(ANSI_BACKGROUND_OFFSET2);
+  Object.defineProperties(styles3, {
+    rgbToAnsi256: {
+      value: (red, green, blue) => {
+        if (red === green && green === blue) {
+          if (red < 8) {
+            return 16;
+          }
+          if (red > 248) {
+            return 231;
+          }
+          return Math.round((red - 8) / 247 * 24) + 232;
+        }
+        return 16 + 36 * Math.round(red / 255 * 5) + 6 * Math.round(green / 255 * 5) + Math.round(blue / 255 * 5);
+      },
+      enumerable: false
+    },
+    hexToRgb: {
+      value: (hex) => {
+        const matches = /[a-f\d]{6}|[a-f\d]{3}/i.exec(hex.toString(16));
+        if (!matches) {
+          return [0, 0, 0];
+        }
+        let [colorString] = matches;
+        if (colorString.length === 3) {
+          colorString = [...colorString].map((character) => character + character).join("");
+        }
+        const integer = Number.parseInt(colorString, 16);
+        return [
+          integer >> 16 & 255,
+          integer >> 8 & 255,
+          integer & 255
+        ];
+      },
+      enumerable: false
+    },
+    hexToAnsi256: {
+      value: (hex) => styles3.rgbToAnsi256(...styles3.hexToRgb(hex)),
+      enumerable: false
+    },
+    ansi256ToAnsi: {
+      value: (code) => {
+        if (code < 8) {
+          return 30 + code;
+        }
+        if (code < 16) {
+          return 90 + (code - 8);
+        }
+        let red;
+        let green;
+        let blue;
+        if (code >= 232) {
+          red = ((code - 232) * 10 + 8) / 255;
+          green = red;
+          blue = red;
+        } else {
+          code -= 16;
+          const remainder = code % 36;
+          red = Math.floor(code / 36) / 5;
+          green = Math.floor(remainder / 6) / 5;
+          blue = remainder % 6 / 5;
+        }
+        const value = Math.max(red, green, blue) * 2;
+        if (value === 0) {
+          return 30;
+        }
+        let result = 30 + (Math.round(blue) << 2 | Math.round(green) << 1 | Math.round(red));
+        if (value === 2) {
+          result += 60;
+        }
+        return result;
+      },
+      enumerable: false
+    },
+    rgbToAnsi: {
+      value: (red, green, blue) => styles3.ansi256ToAnsi(styles3.rgbToAnsi256(red, green, blue)),
+      enumerable: false
+    },
+    hexToAnsi: {
+      value: (hex) => styles3.ansi256ToAnsi(styles3.hexToAnsi256(hex)),
+      enumerable: false
+    }
+  });
+  return styles3;
+}
+var ansiStyles2 = assembleStyles2();
+var ansi_styles_default2 = ansiStyles2;
+
+// node_modules/wrap-ansi/index.js
+var ESCAPES = /* @__PURE__ */ new Set([
+  "\x1B",
+  "\x9B"
+]);
+var END_CODE = 39;
+var ANSI_ESCAPE_BELL = "\x07";
+var ANSI_CSI = "[";
+var ANSI_OSC = "]";
+var ANSI_SGR_TERMINATOR = "m";
+var ANSI_ESCAPE_LINK = `${ANSI_OSC}8;;`;
+var wrapAnsiCode = (code) => `${ESCAPES.values().next().value}${ANSI_CSI}${code}${ANSI_SGR_TERMINATOR}`;
+var wrapAnsiHyperlink = (uri) => `${ESCAPES.values().next().value}${ANSI_ESCAPE_LINK}${uri}${ANSI_ESCAPE_BELL}`;
+var wordLengths = (string) => string.split(" ").map((character) => stringWidth(character));
+var wrapWord = (rows, word, columns) => {
+  const characters = [...word];
+  let isInsideEscape = false;
+  let isInsideLinkEscape = false;
+  let visible = stringWidth(stripAnsi(rows[rows.length - 1]));
+  for (const [index, character] of characters.entries()) {
+    const characterLength = stringWidth(character);
+    if (visible + characterLength <= columns) {
+      rows[rows.length - 1] += character;
+    } else {
+      rows.push(character);
+      visible = 0;
+    }
+    if (ESCAPES.has(character)) {
+      isInsideEscape = true;
+      isInsideLinkEscape = characters.slice(index + 1).join("").startsWith(ANSI_ESCAPE_LINK);
+    }
+    if (isInsideEscape) {
+      if (isInsideLinkEscape) {
+        if (character === ANSI_ESCAPE_BELL) {
+          isInsideEscape = false;
+          isInsideLinkEscape = false;
+        }
+      } else if (character === ANSI_SGR_TERMINATOR) {
+        isInsideEscape = false;
+      }
+      continue;
+    }
+    visible += characterLength;
+    if (visible === columns && index < characters.length - 1) {
+      rows.push("");
+      visible = 0;
+    }
+  }
+  if (!visible && rows[rows.length - 1].length > 0 && rows.length > 1) {
+    rows[rows.length - 2] += rows.pop();
+  }
+};
+var stringVisibleTrimSpacesRight = (string) => {
+  const words = string.split(" ");
+  let last = words.length;
+  while (last > 0) {
+    if (stringWidth(words[last - 1]) > 0) {
+      break;
+    }
+    last--;
+  }
+  if (last === words.length) {
+    return string;
+  }
+  return words.slice(0, last).join(" ") + words.slice(last).join("");
+};
+var exec = (string, columns, options = {}) => {
+  if (options.trim !== false && string.trim() === "") {
+    return "";
+  }
+  let returnValue = "";
+  let escapeCode;
+  let escapeUrl;
+  const lengths = wordLengths(string);
+  let rows = [""];
+  for (const [index, word] of string.split(" ").entries()) {
+    if (options.trim !== false) {
+      rows[rows.length - 1] = rows[rows.length - 1].trimStart();
+    }
+    let rowLength = stringWidth(rows[rows.length - 1]);
+    if (index !== 0) {
+      if (rowLength >= columns && (options.wordWrap === false || options.trim === false)) {
+        rows.push("");
+        rowLength = 0;
+      }
+      if (rowLength > 0 || options.trim === false) {
+        rows[rows.length - 1] += " ";
+        rowLength++;
+      }
+    }
+    if (options.hard && lengths[index] > columns) {
+      const remainingColumns = columns - rowLength;
+      const breaksStartingThisLine = 1 + Math.floor((lengths[index] - remainingColumns - 1) / columns);
+      const breaksStartingNextLine = Math.floor((lengths[index] - 1) / columns);
+      if (breaksStartingNextLine < breaksStartingThisLine) {
+        rows.push("");
+      }
+      wrapWord(rows, word, columns);
+      continue;
+    }
+    if (rowLength + lengths[index] > columns && rowLength > 0 && lengths[index] > 0) {
+      if (options.wordWrap === false && rowLength < columns) {
+        wrapWord(rows, word, columns);
+        continue;
+      }
+      rows.push("");
+    }
+    if (rowLength + lengths[index] > columns && options.wordWrap === false) {
+      wrapWord(rows, word, columns);
+      continue;
+    }
+    rows[rows.length - 1] += word;
+  }
+  if (options.trim !== false) {
+    rows = rows.map((row) => stringVisibleTrimSpacesRight(row));
+  }
+  const pre = [...rows.join("\n")];
+  for (const [index, character] of pre.entries()) {
+    returnValue += character;
+    if (ESCAPES.has(character)) {
+      const { groups } = new RegExp(`(?:\\${ANSI_CSI}(?<code>\\d+)m|\\${ANSI_ESCAPE_LINK}(?<uri>.*)${ANSI_ESCAPE_BELL})`).exec(pre.slice(index).join("")) || { groups: {} };
+      if (groups.code !== void 0) {
+        const code2 = Number.parseFloat(groups.code);
+        escapeCode = code2 === END_CODE ? void 0 : code2;
+      } else if (groups.uri !== void 0) {
+        escapeUrl = groups.uri.length === 0 ? void 0 : groups.uri;
+      }
+    }
+    const code = ansi_styles_default2.codes.get(Number(escapeCode));
+    if (pre[index + 1] === "\n") {
+      if (escapeUrl) {
+        returnValue += wrapAnsiHyperlink("");
+      }
+      if (escapeCode && code) {
+        returnValue += wrapAnsiCode(code);
+      }
+    } else if (character === "\n") {
+      if (escapeCode && code) {
+        returnValue += wrapAnsiCode(escapeCode);
+      }
+      if (escapeUrl) {
+        returnValue += wrapAnsiHyperlink(escapeUrl);
+      }
+    }
+  }
+  return returnValue;
+};
+function wrapAnsi(string, columns, options) {
+  return String(string).normalize().replace(/\r\n/g, "\n").split("\n").map((line) => exec(line, columns, options)).join("\n");
+}
+
+// node_modules/ora/index.js
+var import_node_process10 = __toESM(require("node:process"), 1);
+var import_cli_spinners = __toESM(require_cli_spinners(), 1);
+
+// node_modules/log-symbols/index.js
+var main = {
+  info: source_default.blue("\u2139"),
+  success: source_default.green("\u2714"),
+  warning: source_default.yellow("\u26A0"),
+  error: source_default.red("\u2716")
+};
+var fallback = {
+  info: source_default.blue("i"),
+  success: source_default.green("\u221A"),
+  warning: source_default.yellow("\u203C"),
+  error: source_default.red("\xD7")
+};
+var logSymbols = isUnicodeSupported() ? main : fallback;
+var log_symbols_default = logSymbols;
+
+// node_modules/ora/index.js
+var import_wcwidth = __toESM(require_wcwidth(), 1);
+
+// node_modules/is-interactive/index.js
+function isInteractive({ stream = process.stdout } = {}) {
+  return Boolean(stream && stream.isTTY && process.env.TERM !== "dumb" && !("CI" in process.env));
+}
+
+// node_modules/ora/utilities.js
+var import_node_process9 = __toESM(require("node:process"), 1);
+var import_node_readline = __toESM(require("node:readline"), 1);
+var import_bl = __toESM(require_bl(), 1);
+var ASCII_ETX_CODE = 3;
+var StdinDiscarder = class {
+  #requests = 0;
+  #mutedStream = new import_bl.BufferListStream();
+  #ourEmit;
+  #rl;
+  constructor() {
+    this.#mutedStream.pipe(import_node_process9.default.stdout);
+    const self2 = this;
+    this.#ourEmit = function(event, data, ...args) {
+      const { stdin } = import_node_process9.default;
+      if (self2.#requests > 0 || stdin.emit === self2.#ourEmit) {
+        if (event === "keypress") {
+          return;
+        }
+        if (event === "data" && data.includes(ASCII_ETX_CODE)) {
+          import_node_process9.default.emit("SIGINT");
+        }
+        Reflect.apply(self2.#ourEmit, this, [event, data, ...args]);
+      } else {
+        Reflect.apply(import_node_process9.default.stdin.emit, this, [event, data, ...args]);
+      }
+    };
+  }
+  start() {
+    this.#requests++;
+    if (this.#requests === 1) {
+      this._realStart();
+    }
+  }
+  stop() {
+    if (this.#requests <= 0) {
+      throw new Error("`stop` called more times than `start`");
+    }
+    this.#requests--;
+    if (this.#requests === 0) {
+      this._realStop();
+    }
+  }
+  _realStart() {
+    if (import_node_process9.default.platform === "win32") {
+      return;
+    }
+    this.#rl = import_node_readline.default.createInterface({
+      input: import_node_process9.default.stdin,
+      output: this.#mutedStream
+    });
+    this.#rl.on("SIGINT", () => {
+      if (import_node_process9.default.listenerCount("SIGINT") === 0) {
+        import_node_process9.default.emit("SIGINT");
+      } else {
+        this.#rl.close();
+        import_node_process9.default.kill(import_node_process9.default.pid, "SIGINT");
+      }
+    });
+  }
+  _realStop() {
+    if (import_node_process9.default.platform === "win32") {
+      return;
+    }
+    this.#rl.close();
+    this.#rl = void 0;
+  }
+};
+
+// node_modules/ora/index.js
+var stdinDiscarder;
+var Ora = class {
+  #linesToClear = 0;
+  #isDiscardingStdin = false;
+  #lineCount = 0;
+  #frameIndex = 0;
+  #options;
+  #spinner;
+  #stream;
+  #id;
+  #initialInterval;
+  #isEnabled;
+  #isSilent;
+  #indent;
+  #text;
+  #prefixText;
+  color;
+  constructor(options) {
+    if (!stdinDiscarder) {
+      stdinDiscarder = new StdinDiscarder();
+    }
+    if (typeof options === "string") {
+      options = {
+        text: options
+      };
+    }
+    this.#options = {
+      color: "cyan",
+      stream: import_node_process10.default.stderr,
+      discardStdin: true,
+      hideCursor: true,
+      ...options
+    };
+    this.color = this.#options.color;
+    this.spinner = this.#options.spinner;
+    this.#initialInterval = this.#options.interval;
+    this.#stream = this.#options.stream;
+    this.#isEnabled = typeof this.#options.isEnabled === "boolean" ? this.#options.isEnabled : isInteractive({ stream: this.#stream });
+    this.#isSilent = typeof this.#options.isSilent === "boolean" ? this.#options.isSilent : false;
+    this.text = this.#options.text;
+    this.prefixText = this.#options.prefixText;
+    this.indent = this.#options.indent;
+    if (import_node_process10.default.env.NODE_ENV === "test") {
+      this._stream = this.#stream;
+      this._isEnabled = this.#isEnabled;
+      Object.defineProperty(this, "_linesToClear", {
+        get() {
+          return this.#linesToClear;
+        },
+        set(newValue) {
+          this.#linesToClear = newValue;
+        }
+      });
+      Object.defineProperty(this, "_frameIndex", {
+        get() {
+          return this.#frameIndex;
+        }
+      });
+      Object.defineProperty(this, "_lineCount", {
+        get() {
+          return this.#lineCount;
+        }
+      });
+    }
+  }
+  get indent() {
+    return this.#indent;
+  }
+  set indent(indent = 0) {
+    if (!(indent >= 0 && Number.isInteger(indent))) {
+      throw new Error("The `indent` option must be an integer from 0 and up");
+    }
+    this.#indent = indent;
+    this.updateLineCount();
+  }
+  get interval() {
+    return this.#initialInterval || this.#spinner.interval || 100;
+  }
+  get spinner() {
+    return this.#spinner;
+  }
+  set spinner(spinner) {
+    this.#frameIndex = 0;
+    this.#initialInterval = void 0;
+    if (typeof spinner === "object") {
+      if (spinner.frames === void 0) {
+        throw new Error("The given spinner must have a `frames` property");
+      }
+      this.#spinner = spinner;
+    } else if (!isUnicodeSupported()) {
+      this.#spinner = import_cli_spinners.default.line;
+    } else if (spinner === void 0) {
+      this.#spinner = import_cli_spinners.default.dots;
+    } else if (spinner !== "default" && import_cli_spinners.default[spinner]) {
+      this.#spinner = import_cli_spinners.default[spinner];
+    } else {
+      throw new Error(`There is no built-in spinner named '${spinner}'. See https://github.com/sindresorhus/cli-spinners/blob/main/spinners.json for a full list.`);
+    }
+  }
+  get text() {
+    return this.#text;
+  }
+  set text(value) {
+    this.#text = value || "";
+    this.updateLineCount();
+  }
+  get prefixText() {
+    return this.#prefixText;
+  }
+  set prefixText(value) {
+    this.#prefixText = value || "";
+    this.updateLineCount();
+  }
+  get isSpinning() {
+    return this.#id !== void 0;
+  }
+  getFullPrefixText(prefixText = this.#prefixText, postfix = " ") {
+    if (typeof prefixText === "string" && prefixText !== "") {
+      return prefixText + postfix;
+    }
+    if (typeof prefixText === "function") {
+      return prefixText() + postfix;
+    }
+    return "";
+  }
+  updateLineCount() {
+    const columns = this.#stream.columns || 80;
+    const fullPrefixText = this.getFullPrefixText(this.#prefixText, "-");
+    this.#lineCount = 0;
+    for (const line of stripAnsi(" ".repeat(this.#indent) + fullPrefixText + "--" + this.#text).split("\n")) {
+      this.#lineCount += Math.max(1, Math.ceil((0, import_wcwidth.default)(line) / columns));
+    }
+  }
+  get isEnabled() {
+    return this.#isEnabled && !this.#isSilent;
+  }
+  set isEnabled(value) {
+    if (typeof value !== "boolean") {
+      throw new TypeError("The `isEnabled` option must be a boolean");
+    }
+    this.#isEnabled = value;
+  }
+  get isSilent() {
+    return this.#isSilent;
+  }
+  set isSilent(value) {
+    if (typeof value !== "boolean") {
+      throw new TypeError("The `isSilent` option must be a boolean");
+    }
+    this.#isSilent = value;
+  }
+  frame() {
+    const { frames } = this.#spinner;
+    let frame = frames[this.#frameIndex];
+    if (this.color) {
+      frame = source_default[this.color](frame);
+    }
+    this.#frameIndex = ++this.#frameIndex % frames.length;
+    const fullPrefixText = typeof this.#prefixText === "string" && this.#prefixText !== "" ? this.#prefixText + " " : "";
+    const fullText = typeof this.text === "string" ? " " + this.text : "";
+    return fullPrefixText + frame + fullText;
+  }
+  clear() {
+    if (!this.#isEnabled || !this.#stream.isTTY) {
+      return this;
+    }
+    this.#stream.cursorTo(0);
+    for (let index = 0; index < this.#linesToClear; index++) {
+      if (index > 0) {
+        this.#stream.moveCursor(0, -1);
+      }
+      this.#stream.clearLine(1);
+    }
+    if (this.#indent || this.lastIndent !== this.#indent) {
+      this.#stream.cursorTo(this.#indent);
+    }
+    this.lastIndent = this.#indent;
+    this.#linesToClear = 0;
+    return this;
+  }
+  render() {
+    if (this.#isSilent) {
+      return this;
+    }
+    this.clear();
+    this.#stream.write(this.frame());
+    this.#linesToClear = this.#lineCount;
+    return this;
+  }
+  start(text) {
+    if (text) {
+      this.text = text;
+    }
+    if (this.#isSilent) {
+      return this;
+    }
+    if (!this.#isEnabled) {
+      if (this.text) {
+        this.#stream.write(`- ${this.text}
+`);
+      }
+      return this;
+    }
+    if (this.isSpinning) {
+      return this;
+    }
+    if (this.#options.hideCursor) {
+      cli_cursor_default.hide(this.#stream);
+    }
+    if (this.#options.discardStdin && import_node_process10.default.stdin.isTTY) {
+      this.#isDiscardingStdin = true;
+      stdinDiscarder.start();
+    }
+    this.render();
+    this.#id = setInterval(this.render.bind(this), this.interval);
+    return this;
+  }
+  stop() {
+    if (!this.#isEnabled) {
+      return this;
+    }
+    clearInterval(this.#id);
+    this.#id = void 0;
+    this.#frameIndex = 0;
+    this.clear();
+    if (this.#options.hideCursor) {
+      cli_cursor_default.show(this.#stream);
+    }
+    if (this.#options.discardStdin && import_node_process10.default.stdin.isTTY && this.#isDiscardingStdin) {
+      stdinDiscarder.stop();
+      this.#isDiscardingStdin = false;
+    }
+    return this;
+  }
+  succeed(text) {
+    return this.stopAndPersist({ symbol: log_symbols_default.success, text });
+  }
+  fail(text) {
+    return this.stopAndPersist({ symbol: log_symbols_default.error, text });
+  }
+  warn(text) {
+    return this.stopAndPersist({ symbol: log_symbols_default.warning, text });
+  }
+  info(text) {
+    return this.stopAndPersist({ symbol: log_symbols_default.info, text });
+  }
+  stopAndPersist(options = {}) {
+    if (this.#isSilent) {
+      return this;
+    }
+    const prefixText = options.prefixText || this.#prefixText;
+    const text = options.text || this.text;
+    const fullText = typeof text === "string" ? " " + text : "";
+    this.stop();
+    this.#stream.write(`${this.getFullPrefixText(prefixText, " ")}${options.symbol || " "}${fullText}
+`);
+    return this;
+  }
+};
+function ora(options) {
+  return new Ora(options);
+}
+
+// node_modules/inquirer/lib/utils/screen-manager.js
+function height(content) {
+  return content.split("\n").length;
+}
+function lastLine(content) {
+  return content.split("\n").pop();
+}
+var ScreenManager = class {
+  constructor(rl) {
+    this.height = 0;
+    this.extraLinesUnderPrompt = 0;
+    this.rl = rl;
+  }
+  renderWithSpinner(content, bottomContent) {
+    if (this.spinnerId) {
+      clearInterval(this.spinnerId);
+    }
+    let spinner;
+    let contentFunc;
+    let bottomContentFunc;
+    if (bottomContent) {
+      spinner = ora(bottomContent);
+      contentFunc = () => content;
+      bottomContentFunc = () => spinner.frame();
+    } else {
+      spinner = ora(content);
+      contentFunc = () => spinner.frame();
+      bottomContentFunc = () => "";
+    }
+    this.spinnerId = setInterval(() => this.render(contentFunc(), bottomContentFunc(), true), spinner.interval);
+  }
+  render(content, bottomContent, spinning = false) {
+    if (this.spinnerId && !spinning) {
+      clearInterval(this.spinnerId);
+    }
+    this.rl.output.unmute();
+    this.clean(this.extraLinesUnderPrompt);
+    const promptLine = lastLine(content);
+    const rawPromptLine = stripAnsi(promptLine);
+    let prompt2 = rawPromptLine;
+    if (this.rl.line.length) {
+      prompt2 = prompt2.slice(0, -this.rl.line.length);
+    }
+    this.rl.setPrompt(prompt2);
+    const cursorPos = this.rl._getCursorPos();
+    const width = this.normalizedCliWidth();
+    content = this.forceLineReturn(content, width);
+    if (bottomContent) {
+      bottomContent = this.forceLineReturn(bottomContent, width);
+    }
+    if (rawPromptLine.length % width === 0) {
+      content += "\n";
+    }
+    const fullContent = content + (bottomContent ? "\n" + bottomContent : "");
+    this.rl.output.write(fullContent);
+    const promptLineUpDiff = Math.floor(rawPromptLine.length / width) - cursorPos.rows;
+    const bottomContentHeight = promptLineUpDiff + (bottomContent ? height(bottomContent) : 0);
+    if (bottomContentHeight > 0) {
+      up(this.rl, bottomContentHeight);
+    }
+    left(this.rl, stringWidth(lastLine(fullContent)));
+    if (cursorPos.cols > 0) {
+      right(this.rl, cursorPos.cols);
+    }
+    this.extraLinesUnderPrompt = bottomContentHeight;
+    this.height = height(fullContent);
+    this.rl.output.mute();
+  }
+  clean(extraLines) {
+    if (extraLines > 0) {
+      down(this.rl, extraLines);
+    }
+    clearLine(this.rl, this.height);
+  }
+  done() {
+    this.rl.setPrompt("");
+    this.rl.output.unmute();
+    this.rl.output.write("\n");
+  }
+  releaseCursor() {
+    if (this.extraLinesUnderPrompt > 0) {
+      down(this.rl, this.extraLinesUnderPrompt);
+    }
+  }
+  normalizedCliWidth() {
+    const width = (0, import_cli_width.default)({
+      defaultWidth: 80,
+      output: this.rl.output
+    });
+    return width;
+  }
+  breakLines(lines, width = this.normalizedCliWidth()) {
+    return lines.map((line) => wrapAnsi(line, width, { trim: false, hard: true }).split("\n"));
+  }
+  forceLineReturn(content, width = this.normalizedCliWidth()) {
+    return this.breakLines(content.split("\n"), width).flat().join("\n");
+  }
+};
+
+// node_modules/inquirer/lib/prompts/base.js
+var _2 = {
+  defaults: import_defaults.default,
+  clone: import_clone.default
+};
+var Prompt = class {
+  constructor(question, rl, answers) {
+    Object.assign(this, {
+      answers,
+      status: "pending"
+    });
+    this.opt = _2.defaults(_2.clone(question), {
+      validate: () => true,
+      validatingText: "",
+      filter: (val) => val,
+      filteringText: "",
+      when: () => true,
+      suffix: "",
+      prefix: source_default.green("?")
+    });
+    if (!this.opt.name) {
+      this.throwParamError("name");
+    }
+    if (!this.opt.message) {
+      this.opt.message = this.opt.name + ":";
+    }
+    if (Array.isArray(this.opt.choices)) {
+      this.opt.choices = new Choices(this.opt.choices, answers);
+    }
+    this.rl = rl;
+    this.screen = new ScreenManager(this.rl);
+  }
+  run() {
+    return new Promise((resolve, reject) => {
+      this._run((value) => resolve(value), (error) => reject(error));
+    });
+  }
+  _run(cb) {
+    cb();
+  }
+  throwParamError(name) {
+    throw new Error("You must provide a `" + name + "` parameter");
+  }
+  close() {
+    this.screen.releaseCursor();
+  }
+  handleSubmitEvents(submit) {
+    const self2 = this;
+    const validate = (0, import_run_async.default)(this.opt.validate);
+    const asyncFilter = (0, import_run_async.default)(this.opt.filter);
+    const validation = submit.pipe((0, import_rxjs.flatMap)((value) => {
+      this.startSpinner(value, this.opt.filteringText);
+      return asyncFilter(value, self2.answers).then((filteredValue) => {
+        this.startSpinner(filteredValue, this.opt.validatingText);
+        return validate(filteredValue, self2.answers).then((isValid) => ({ isValid, value: filteredValue }), (err) => ({ isValid: err, value: filteredValue }));
+      }, (err) => ({ isValid: err }));
+    }), (0, import_rxjs.share)());
+    const success = validation.pipe((0, import_rxjs.filter)((state) => state.isValid === true), (0, import_rxjs.take)(1));
+    const error = validation.pipe((0, import_rxjs.filter)((state) => state.isValid !== true), (0, import_rxjs.takeUntil)(success));
+    return {
+      success,
+      error
+    };
+  }
+  startSpinner(value, bottomContent) {
+    value = this.getSpinningValue(value);
+    const content = bottomContent ? this.getQuestion() + value : this.getQuestion().slice(this.opt.prefix.length + 1) + value;
+    this.screen.renderWithSpinner(content, bottomContent);
+  }
+  getSpinningValue(value) {
+    return value;
+  }
+  getQuestion() {
+    let message = (this.opt.prefix ? this.opt.prefix + " " : "") + source_default.bold(this.opt.message) + this.opt.suffix + source_default.reset(" ");
+    if (this.opt.default != null && this.status !== "touched" && this.status !== "answered") {
+      if (this.opt.type === "password") {
+        message += source_default.italic.dim("[hidden] ");
+      } else {
+        message += source_default.dim("(" + this.opt.default + ") ");
+      }
+    }
+    return message;
+  }
+};
+
+// node_modules/inquirer/lib/utils/events.js
+var import_rxjs2 = __toESM(require_cjs(), 1);
+var import_rxjs3 = __toESM(require_cjs(), 1);
+function normalizeKeypressEvents(value, key) {
+  return { value, key: key || {} };
+}
+function events_default(rl) {
+  const keypress = (0, import_rxjs2.fromEvent)(rl.input, "keypress", normalizeKeypressEvents).pipe((0, import_rxjs3.takeUntil)((0, import_rxjs2.fromEvent)(rl, "close"))).pipe((0, import_rxjs3.filter)(({ key }) => key.name !== "enter" && key.name !== "return"));
+  return {
+    line: (0, import_rxjs2.fromEvent)(rl, "line"),
+    keypress,
+    normalizedUpKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key.name === "up" || key.name === "k" || key.name === "p" && key.ctrl), (0, import_rxjs3.share)()),
+    normalizedDownKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key.name === "down" || key.name === "j" || key.name === "n" && key.ctrl), (0, import_rxjs3.share)()),
+    numberKey: keypress.pipe((0, import_rxjs3.filter)((e) => e.value && "123456789".indexOf(e.value) >= 0), (0, import_rxjs3.map)((e) => Number(e.value)), (0, import_rxjs3.share)()),
+    spaceKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "space"), (0, import_rxjs3.share)()),
+    aKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "a"), (0, import_rxjs3.share)()),
+    iKey: keypress.pipe((0, import_rxjs3.filter)(({ key }) => key && key.name === "i"), (0, import_rxjs3.share)())
+  };
+}
+
+// node_modules/inquirer/lib/utils/paginator.js
+var Paginator = class {
+  constructor(screen, options = {}) {
+    const { isInfinite = true } = options;
+    this.lastIndex = 0;
+    this.screen = screen;
+    this.isInfinite = isInfinite;
+  }
+  paginate(output, active, pageSize) {
+    pageSize = pageSize || 7;
+    let lines = output.split("\n");
+    if (this.screen) {
+      lines = this.screen.breakLines(lines);
+      active = lines.map((lineParts) => lineParts.length).splice(0, active).reduce((a, b) => a + b, 0);
+      lines = lines.flat();
+    }
+    if (lines.length <= pageSize) {
+      return output;
+    }
+    const visibleLines = this.isInfinite ? this.getInfiniteLines(lines, active, pageSize) : this.getFiniteLines(lines, active, pageSize);
+    this.lastIndex = active;
+    return visibleLines.join("\n") + "\n" + source_default.dim("(Move up and down to reveal more choices)");
+  }
+  getInfiniteLines(lines, active, pageSize) {
+    if (this.pointer === void 0) {
+      this.pointer = 0;
+    }
+    const middleOfList = Math.floor(pageSize / 2);
+    if (this.pointer < middleOfList && this.lastIndex < active && active - this.lastIndex < pageSize) {
+      this.pointer = Math.min(middleOfList, this.pointer + active - this.lastIndex);
+    }
+    const infinite = [lines, lines, lines].flat();
+    const topIndex = Math.max(0, active + lines.length - this.pointer);
+    return infinite.splice(topIndex, pageSize);
+  }
+  getFiniteLines(lines, active, pageSize) {
+    let topIndex = active - pageSize / 2;
+    if (topIndex < 0) {
+      topIndex = 0;
+    } else if (topIndex + pageSize > lines.length) {
+      topIndex = lines.length - pageSize;
+    }
+    return lines.splice(topIndex, pageSize);
+  }
+};
+
+// node_modules/inquirer/lib/utils/incrementListIndex.js
+function incrementListIndex(current, dir, opt) {
+  const len = opt.choices.realLength;
+  const shouldLoop = "loop" in opt ? Boolean(opt.loop) : true;
+  if (dir === "up") {
+    if (current > 0) {
+      return current - 1;
+    }
+    return shouldLoop ? len - 1 : current;
+  }
+  if (dir === "down") {
+    if (current < len - 1) {
+      return current + 1;
+    }
+    return shouldLoop ? 0 : current;
+  }
+  throw new Error("dir must be up or down");
+}
+
+// node_modules/inquirer/lib/prompts/list.js
+var ListPrompt = class extends Prompt {
+  constructor(questions, rl, answers) {
+    super(questions, rl, answers);
+    if (!this.opt.choices) {
+      this.throwParamError("choices");
+    }
+    this.firstRender = true;
+    this.selected = 0;
+    const def = this.opt.default;
+    if (typeof def === "number" && def >= 0 && def < this.opt.choices.realLength) {
+      this.selected = def;
+    } else if (typeof def !== "number" && def != null) {
+      const index = this.opt.choices.realChoices.findIndex(({ value }) => value === def);
+      this.selected = Math.max(index, 0);
+    }
+    this.opt.default = null;
+    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
+    this.paginator = new Paginator(this.screen, { isInfinite: shouldLoop });
+  }
+  _run(cb) {
+    this.done = cb;
+    const self2 = this;
+    const events = events_default(this.rl);
+    events.normalizedUpKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onUpKey.bind(this));
+    events.normalizedDownKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onDownKey.bind(this));
+    events.numberKey.pipe((0, import_rxjs4.takeUntil)(events.line)).forEach(this.onNumberKey.bind(this));
+    events.line.pipe((0, import_rxjs4.take)(1), (0, import_rxjs4.map)(this.getCurrentValue.bind(this)), (0, import_rxjs4.flatMap)((value) => (0, import_run_async2.default)(self2.opt.filter)(value, self2.answers).catch((err) => err))).forEach(this.onSubmit.bind(this));
+    cli_cursor_default.hide();
+    this.render();
+    return this;
+  }
+  render() {
+    let message = this.getQuestion();
+    if (this.firstRender) {
+      message += source_default.dim("(Use arrow keys)");
+    }
+    if (this.status === "answered") {
+      message += source_default.cyan(this.opt.choices.getChoice(this.selected).short);
+    } else {
+      const choicesStr = listRender(this.opt.choices, this.selected);
+      const indexPosition = this.opt.choices.indexOf(this.opt.choices.getChoice(this.selected));
+      const realIndexPosition = this.opt.choices.reduce((acc, value, i) => {
+        if (i > indexPosition) {
+          return acc;
+        }
+        if (value.type === "separator") {
+          return acc + 1;
+        }
+        let l = value.name;
+        if (typeof l !== "string") {
+          return acc + 1;
+        }
+        l = l.split("\n");
+        return acc + l.length;
+      }, 0) - 1;
+      message += "\n" + this.paginator.paginate(choicesStr, realIndexPosition, this.opt.pageSize);
+    }
+    this.firstRender = false;
+    this.screen.render(message);
+  }
+  onSubmit(value) {
+    this.status = "answered";
+    this.render();
+    this.screen.done();
+    cli_cursor_default.show();
+    this.done(value);
+  }
+  getCurrentValue() {
+    return this.opt.choices.getChoice(this.selected).value;
+  }
+  onUpKey() {
+    this.selected = incrementListIndex(this.selected, "up", this.opt);
+    this.render();
+  }
+  onDownKey() {
+    this.selected = incrementListIndex(this.selected, "down", this.opt);
+    this.render();
+  }
+  onNumberKey(input) {
+    if (input <= this.opt.choices.realLength) {
+      this.selected = input - 1;
+    }
+    this.render();
+  }
+};
+function listRender(choices, pointer) {
+  let output = "";
+  let separatorOffset = 0;
+  choices.forEach((choice, i) => {
+    if (choice.type === "separator") {
+      separatorOffset++;
+      output += "  " + choice + "\n";
+      return;
+    }
+    if (choice.disabled) {
+      separatorOffset++;
+      output += "  - " + choice.name;
+      output += ` (${typeof choice.disabled === "string" ? choice.disabled : "Disabled"})`;
+      output += "\n";
+      return;
+    }
+    const isSelected = i - separatorOffset === pointer;
+    let line = (isSelected ? figures_default.pointer + " " : "  ") + choice.name;
+    if (isSelected) {
+      line = source_default.cyan(line);
+    }
+    output += line + " \n";
+  });
+  return output.replace(/\n$/, "");
+}
+
+// node_modules/inquirer/lib/prompts/input.js
+var import_rxjs5 = __toESM(require_cjs(), 1);
+var InputPrompt = class extends Prompt {
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    const submit = events.line.pipe((0, import_rxjs5.map)(this.filterInput.bind(this)));
+    const validation = this.handleSubmitEvents(submit);
+    validation.success.forEach(this.onEnd.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    events.keypress.pipe((0, import_rxjs5.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
+    this.render();
+    return this;
+  }
+  render(error) {
+    let bottomContent = "";
+    let appendContent = "";
+    let message = this.getQuestion();
+    const { transformer } = this.opt;
+    const isFinal = this.status === "answered";
+    if (isFinal) {
+      appendContent = this.answer;
+    } else {
+      appendContent = this.rl.line;
+    }
+    if (transformer) {
+      message += transformer(appendContent, this.answers, { isFinal });
+    } else {
+      message += isFinal ? source_default.cyan(appendContent) : appendContent;
+    }
+    if (error) {
+      bottomContent = source_default.red(">> ") + error;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  filterInput(input) {
+    if (!input) {
+      return this.opt.default == null ? "" : this.opt.default;
+    }
+    return input;
+  }
+  onEnd(state) {
+    this.answer = state.value;
+    this.status = "answered";
+    this.render();
+    this.screen.done();
+    this.done(state.value);
+  }
+  onError({ value = "", isValid }) {
+    this.rl.line += value;
+    this.rl.cursor += value.length;
+    this.render(isValid);
+  }
+  onKeypress() {
+    this.status = "touched";
+    this.render();
+  }
+};
+
+// node_modules/inquirer/lib/prompts/number.js
+var NumberPrompt = class extends InputPrompt {
+  filterInput(input) {
+    if (input && typeof input === "string") {
+      input = input.trim();
+      const numberMatch = input.match(/(^-?\d+|^-?\d+\.\d*|^\d*\.\d+)(e\d+)?$/);
+      if (numberMatch) {
+        return Number(numberMatch[0]);
+      }
+    }
+    return this.opt.default == null ? NaN : this.opt.default;
+  }
+};
+
+// node_modules/inquirer/lib/prompts/confirm.js
+var import_rxjs6 = __toESM(require_cjs(), 1);
+var ConfirmPrompt = class extends Prompt {
+  constructor(questions, rl, answers) {
+    super(questions, rl, answers);
+    let rawDefault = true;
+    Object.assign(this.opt, {
+      filter(input) {
+        let value = rawDefault;
+        if (input != null && input !== "") {
+          value = /^y(es)?/i.test(input);
+        }
+        return value;
+      }
+    });
+    if (this.opt.default != null) {
+      rawDefault = Boolean(this.opt.default);
+    }
+    this.opt.default = rawDefault ? "Y/n" : "y/N";
+  }
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    events.keypress.pipe((0, import_rxjs6.takeUntil)(events.line)).forEach(this.onKeypress.bind(this));
+    events.line.pipe((0, import_rxjs6.take)(1)).forEach(this.onEnd.bind(this));
+    this.render();
+    return this;
+  }
+  render(answer) {
+    let message = this.getQuestion();
+    if (typeof answer === "boolean") {
+      message += source_default.cyan(answer ? "Yes" : "No");
+    } else {
+      message += this.rl.line;
+    }
+    this.screen.render(message);
+    return this;
+  }
+  onEnd(input) {
+    this.status = "answered";
+    const output = this.opt.filter(input);
+    this.render(output);
+    this.screen.done();
+    this.done(output);
+  }
+  onKeypress() {
+    this.render();
+  }
+};
+
+// node_modules/inquirer/lib/prompts/rawlist.js
+var import_rxjs7 = __toESM(require_cjs(), 1);
+var RawListPrompt = class extends Prompt {
+  constructor(questions, rl, answers) {
+    super(questions, rl, answers);
+    this.hiddenLine = "";
+    this.lastKey = "";
+    if (!this.opt.choices) {
+      this.throwParamError("choices");
+    }
+    this.opt.validChoices = this.opt.choices.filter(Separator.exclude);
+    this.selected = 0;
+    this.rawDefault = 0;
+    Object.assign(this.opt, {
+      validate(val) {
+        return val != null;
+      }
+    });
+    const def = this.opt.default;
+    if (typeof def === "number" && def >= 0 && def < this.opt.choices.realLength) {
+      this.selected = def;
+      this.rawDefault = def;
+    } else if (typeof def !== "number" && def != null) {
+      const index = this.opt.choices.realChoices.findIndex(({ value }) => value === def);
+      const safeIndex = Math.max(index, 0);
+      this.selected = safeIndex;
+      this.rawDefault = safeIndex;
+    }
+    this.opt.default = null;
+    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
+    this.paginator = new Paginator(void 0, { isInfinite: shouldLoop });
+  }
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    const submit = events.line.pipe((0, import_rxjs7.map)(this.getCurrentValue.bind(this)));
+    const validation = this.handleSubmitEvents(submit);
+    validation.success.forEach(this.onEnd.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    events.normalizedUpKey.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onUpKey.bind(this));
+    events.normalizedDownKey.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onDownKey.bind(this));
+    events.keypress.pipe((0, import_rxjs7.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
+    this.render();
+    return this;
+  }
+  render(error) {
+    let message = this.getQuestion();
+    let bottomContent = "";
+    if (this.status === "answered") {
+      message += source_default.cyan(this.opt.choices.getChoice(this.selected).short);
+    } else {
+      const choicesStr = renderChoices(this.opt.choices, this.selected);
+      message += "\n" + this.paginator.paginate(choicesStr, this.selected, this.opt.pageSize);
+      message += "\n  Answer: ";
+    }
+    message += this.rl.line;
+    if (error) {
+      bottomContent = "\n" + source_default.red(">> ") + error;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  getCurrentValue(index) {
+    if (index == null) {
+      index = this.rawDefault;
+    } else if (index === "") {
+      this.selected = this.selected === void 0 ? -1 : this.selected;
+      index = this.selected;
+    } else {
+      index -= 1;
+    }
+    const choice = this.opt.choices.getChoice(index);
+    return choice ? choice.value : null;
+  }
+  onEnd(state) {
+    this.status = "answered";
+    this.answer = state.value;
+    this.render();
+    this.screen.done();
+    this.done(state.value);
+  }
+  onError() {
+    this.render("Please enter a valid index");
+  }
+  onKeypress() {
+    let index;
+    if (this.lastKey === "arrow") {
+      index = this.hiddenLine.length ? Number(this.hiddenLine) - 1 : 0;
+    } else {
+      index = this.rl.line.length ? Number(this.rl.line) - 1 : 0;
+    }
+    this.lastKey = "";
+    if (this.opt.choices.getChoice(index)) {
+      this.selected = index;
+    } else {
+      this.selected = void 0;
+    }
+    this.render();
+  }
+  onUpKey() {
+    this.onArrowKey("up");
+  }
+  onDownKey() {
+    this.onArrowKey("down");
+  }
+  onArrowKey(type) {
+    this.selected = incrementListIndex(this.selected, type, this.opt) || 0;
+    this.hiddenLine = String(this.selected + 1);
+    this.rl.line = "";
+    this.lastKey = "arrow";
+  }
+};
+function renderChoices(choices, pointer) {
+  let output = "";
+  let separatorOffset = 0;
+  choices.forEach((choice, i) => {
+    output += output ? "\n  " : "  ";
+    if (choice.type === "separator") {
+      separatorOffset++;
+      output += " " + choice;
+      return;
+    }
+    const index = i - separatorOffset;
+    let display = index + 1 + ") " + choice.name;
+    if (index === pointer) {
+      display = source_default.cyan(display);
+    }
+    output += display;
+  });
+  return output;
+}
+
+// node_modules/inquirer/lib/prompts/expand.js
+var import_rxjs8 = __toESM(require_cjs(), 1);
+var ExpandPrompt = class extends Prompt {
+  constructor(questions, rl, answers) {
+    super(questions, rl, answers);
+    if (!this.opt.choices) {
+      this.throwParamError("choices");
+    }
+    this.validateChoices(this.opt.choices);
+    this.opt.choices.push({
+      key: "h",
+      name: "Help, list all options",
+      value: "help"
+    });
+    this.opt.validate = (choice) => {
+      if (choice == null) {
+        return "Please enter a valid command";
+      }
+      return choice !== "help";
+    };
+    this.opt.default = this.generateChoicesString(this.opt.choices, this.opt.default);
+    this.paginator = new Paginator(this.screen);
+  }
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    const validation = this.handleSubmitEvents(events.line.pipe((0, import_rxjs8.map)(this.getCurrentValue.bind(this))));
+    validation.success.forEach(this.onSubmit.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    this.keypressObs = events.keypress.pipe((0, import_rxjs8.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
+    this.render();
+    return this;
+  }
+  render(error, hint) {
+    let message = this.getQuestion();
+    let bottomContent = "";
+    if (this.status === "answered") {
+      message += source_default.cyan(this.answer);
+    } else if (this.status === "expanded") {
+      const choicesStr = renderChoices2(this.opt.choices, this.selectedKey);
+      message += this.paginator.paginate(choicesStr, this.selectedKey, this.opt.pageSize);
+      message += "\n  Answer: ";
+    }
+    message += this.rl.line;
+    if (error) {
+      bottomContent = source_default.red(">> ") + error;
+    }
+    if (hint) {
+      bottomContent = source_default.cyan(">> ") + hint;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  getCurrentValue(input) {
+    if (!input) {
+      input = this.rawDefault;
+    }
+    const selected = this.opt.choices.where({ key: input.toLowerCase().trim() })[0];
+    if (!selected) {
+      return null;
+    }
+    return selected.value;
+  }
+  getChoices() {
+    let output = "";
+    this.opt.choices.forEach((choice) => {
+      output += "\n  ";
+      if (choice.type === "separator") {
+        output += " " + choice;
+        return;
+      }
+      let choiceStr = choice.key + ") " + choice.name;
+      if (this.selectedKey === choice.key) {
+        choiceStr = source_default.cyan(choiceStr);
+      }
+      output += choiceStr;
+    });
+    return output;
+  }
+  onError(state) {
+    if (state.value === "help") {
+      this.selectedKey = "";
+      this.status = "expanded";
+      this.render();
+      return;
+    }
+    this.render(state.isValid);
+  }
+  onSubmit(state) {
+    this.status = "answered";
+    const choice = this.opt.choices.where({ value: state.value })[0];
+    this.answer = choice.short || choice.name;
+    this.render();
+    this.screen.done();
+    this.done(state.value);
+  }
+  onKeypress() {
+    this.selectedKey = this.rl.line.toLowerCase();
+    const selected = this.opt.choices.where({ key: this.selectedKey })[0];
+    if (this.status === "expanded") {
+      this.render();
+    } else {
+      this.render(null, selected ? selected.name : null);
+    }
+  }
+  validateChoices(choices) {
+    let formatError;
+    const errors = [];
+    const keymap = {};
+    choices.filter(Separator.exclude).forEach((choice) => {
+      if (!choice.key || choice.key.length !== 1) {
+        formatError = true;
+      }
+      choice.key = String(choice.key).toLowerCase();
+      if (keymap[choice.key]) {
+        errors.push(choice.key);
+      }
+      keymap[choice.key] = true;
+    });
+    if (formatError) {
+      throw new Error("Format error: `key` param must be a single letter and is required.");
+    }
+    if (keymap.h) {
+      throw new Error("Reserved key error: `key` param cannot be `h` - this value is reserved.");
+    }
+    if (errors.length) {
+      throw new Error("Duplicate key error: `key` param must be unique. Duplicates: " + [...new Set(errors)].join(","));
+    }
+  }
+  generateChoicesString(choices, defaultChoice) {
+    let defIndex = choices.realLength - 1;
+    if (typeof defaultChoice === "number" && this.opt.choices.getChoice(defaultChoice)) {
+      defIndex = defaultChoice;
+    } else if (typeof defaultChoice === "string") {
+      const index = choices.realChoices.findIndex(({ value }) => value === defaultChoice);
+      defIndex = index === -1 ? defIndex : index;
+    }
+    const defStr = this.opt.choices.pluck("key");
+    this.rawDefault = defStr[defIndex];
+    defStr[defIndex] = String(defStr[defIndex]).toUpperCase();
+    return defStr.join("");
+  }
+};
+function renderChoices2(choices, pointer) {
+  let output = "";
+  choices.forEach((choice) => {
+    output += "\n  ";
+    if (choice.type === "separator") {
+      output += " " + choice;
+      return;
+    }
+    let choiceStr = choice.key + ") " + choice.name;
+    if (pointer === choice.key) {
+      choiceStr = source_default.cyan(choiceStr);
+    }
+    output += choiceStr;
+  });
+  return output;
+}
+
+// node_modules/inquirer/lib/prompts/checkbox.js
+var import_rxjs9 = __toESM(require_cjs(), 1);
+var CheckboxPrompt = class extends Prompt {
+  constructor(questions, rl, answers) {
+    super(questions, rl, answers);
+    if (!this.opt.choices) {
+      this.throwParamError("choices");
+    }
+    if (Array.isArray(this.opt.default)) {
+      this.opt.choices.forEach(function(choice) {
+        if (this.opt.default.indexOf(choice.value) >= 0) {
+          choice.checked = true;
+        }
+      }, this);
+    }
+    this.pointer = 0;
+    this.opt.default = null;
+    const shouldLoop = this.opt.loop === void 0 ? true : this.opt.loop;
+    this.paginator = new Paginator(this.screen, { isInfinite: shouldLoop });
+  }
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    const validation = this.handleSubmitEvents(events.line.pipe((0, import_rxjs9.map)(this.getCurrentValue.bind(this))));
+    validation.success.forEach(this.onEnd.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    events.normalizedUpKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onUpKey.bind(this));
+    events.normalizedDownKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onDownKey.bind(this));
+    events.numberKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onNumberKey.bind(this));
+    events.spaceKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onSpaceKey.bind(this));
+    events.aKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onAllKey.bind(this));
+    events.iKey.pipe((0, import_rxjs9.takeUntil)(validation.success)).forEach(this.onInverseKey.bind(this));
+    cli_cursor_default.hide();
+    this.render();
+    this.firstRender = false;
+    return this;
+  }
+  render(error) {
+    let message = this.getQuestion();
+    let bottomContent = "";
+    if (!this.dontShowHints) {
+      message += "(Press " + source_default.cyan.bold("<space>") + " to select, " + source_default.cyan.bold("<a>") + " to toggle all, " + source_default.cyan.bold("<i>") + " to invert selection, and " + source_default.cyan.bold("<enter>") + " to proceed)";
+    }
+    if (this.status === "answered") {
+      message += source_default.cyan(this.selection.join(", "));
+    } else {
+      const choicesStr = renderChoices3(this.opt.choices, this.pointer);
+      const indexPosition = this.opt.choices.indexOf(this.opt.choices.getChoice(this.pointer));
+      const realIndexPosition = this.opt.choices.reduce((acc, value, i) => {
+        if (i > indexPosition) {
+          return acc;
+        }
+        if (value.type === "separator") {
+          return acc + 1;
+        }
+        let l = value.name;
+        if (typeof l !== "string") {
+          return acc + 1;
+        }
+        l = l.split("\n");
+        return acc + l.length;
+      }, 0) - 1;
+      message += "\n" + this.paginator.paginate(choicesStr, realIndexPosition, this.opt.pageSize);
+    }
+    if (error) {
+      bottomContent = source_default.red(">> ") + error;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  onEnd(state) {
+    this.status = "answered";
+    this.dontShowHints = true;
+    this.render();
+    this.screen.done();
+    cli_cursor_default.show();
+    this.done(state.value);
+  }
+  onError(state) {
+    this.render(state.isValid);
+  }
+  getCurrentValue() {
+    const choices = this.opt.choices.filter((choice) => Boolean(choice.checked) && !choice.disabled);
+    this.selection = choices.map((choice) => choice.short);
+    return choices.map((choice) => choice.value);
+  }
+  onUpKey() {
+    this.pointer = incrementListIndex(this.pointer, "up", this.opt);
+    this.render();
+  }
+  onDownKey() {
+    this.pointer = incrementListIndex(this.pointer, "down", this.opt);
+    this.render();
+  }
+  onNumberKey(input) {
+    if (input <= this.opt.choices.realLength) {
+      this.pointer = input - 1;
+      this.toggleChoice(this.pointer);
+    }
+    this.render();
+  }
+  onSpaceKey() {
+    this.toggleChoice(this.pointer);
+    this.render();
+  }
+  onAllKey() {
+    const shouldBeChecked = Boolean(this.opt.choices.find((choice) => choice.type !== "separator" && !choice.checked));
+    this.opt.choices.forEach((choice) => {
+      if (choice.type !== "separator") {
+        choice.checked = shouldBeChecked;
+      }
+    });
+    this.render();
+  }
+  onInverseKey() {
+    this.opt.choices.forEach((choice) => {
+      if (choice.type !== "separator") {
+        choice.checked = !choice.checked;
+      }
+    });
+    this.render();
+  }
+  toggleChoice(index) {
+    const item = this.opt.choices.getChoice(index);
+    if (item !== void 0) {
+      this.opt.choices.getChoice(index).checked = !item.checked;
+    }
+  }
+};
+function renderChoices3(choices, pointer) {
+  let output = "";
+  let separatorOffset = 0;
+  choices.forEach((choice, i) => {
+    if (choice.type === "separator") {
+      separatorOffset++;
+      output += " " + choice + "\n";
+      return;
+    }
+    if (choice.disabled) {
+      separatorOffset++;
+      output += " - " + choice.name;
+      output += ` (${typeof choice.disabled === "string" ? choice.disabled : "Disabled"})`;
+    } else {
+      const line = getCheckbox(choice.checked) + " " + choice.name;
+      if (i - separatorOffset === pointer) {
+        output += source_default.cyan(figures_default.pointer + line);
+      } else {
+        output += " " + line;
+      }
+    }
+    output += "\n";
+  });
+  return output.replace(/\n$/, "");
+}
+function getCheckbox(checked) {
+  return checked ? source_default.green(figures_default.radioOn) : figures_default.radioOff;
+}
+
+// node_modules/inquirer/lib/prompts/password.js
+var import_rxjs10 = __toESM(require_cjs(), 1);
+function mask(input, maskChar) {
+  input = String(input);
+  maskChar = typeof maskChar === "string" ? maskChar : "*";
+  if (input.length === 0) {
+    return "";
+  }
+  return new Array(input.length + 1).join(maskChar);
+}
+var PasswordPrompt = class extends Prompt {
+  _run(cb) {
+    this.done = cb;
+    const events = events_default(this.rl);
+    const submit = events.line.pipe((0, import_rxjs10.map)(this.filterInput.bind(this)));
+    const validation = this.handleSubmitEvents(submit);
+    validation.success.forEach(this.onEnd.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    events.keypress.pipe((0, import_rxjs10.takeUntil)(validation.success)).forEach(this.onKeypress.bind(this));
+    this.render();
+    return this;
+  }
+  render(error) {
+    let message = this.getQuestion();
+    let bottomContent = "";
+    if (this.status === "answered") {
+      message += this.getMaskedValue(this.answer);
+    } else {
+      message += this.getMaskedValue(this.rl.line || "");
+    }
+    if (error) {
+      bottomContent = "\n" + source_default.red(">> ") + error;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  getMaskedValue(value) {
+    if (this.status === "answered") {
+      return this.opt.mask ? source_default.cyan(mask(value, this.opt.mask)) : source_default.italic.dim("[hidden]");
+    }
+    return this.opt.mask ? mask(value, this.opt.mask) : source_default.italic.dim("[input is hidden] ");
+  }
+  getSpinningValue(value) {
+    return this.getMaskedValue(value);
+  }
+  filterInput(input) {
+    if (!input) {
+      return this.opt.default == null ? "" : this.opt.default;
+    }
+    return input;
+  }
+  onEnd(state) {
+    this.status = "answered";
+    this.answer = state.value;
+    this.render();
+    this.screen.done();
+    this.done(state.value);
+  }
+  onError(state) {
+    this.render(state.isValid);
+  }
+  onKeypress() {
+    if (this.opt.default) {
+      this.opt.default = void 0;
+    }
+    this.render();
+  }
+};
+
+// node_modules/inquirer/lib/prompts/editor.js
+var import_external_editor = __toESM(require_main(), 1);
+var import_rxjs11 = __toESM(require_cjs(), 1);
+var EditorPrompt = class extends Prompt {
+  _run(cb) {
+    this.done = cb;
+    this.editorResult = new import_rxjs11.Subject();
+    const events = events_default(this.rl);
+    this.lineSubscription = events.line.subscribe(this.startExternalEditor.bind(this));
+    const waitUserInput = this.opt.waitUserInput === void 0 ? true : this.opt.waitUserInput;
+    if (!waitUserInput) {
+      this.startExternalEditor();
+    }
+    const validation = this.handleSubmitEvents(this.editorResult);
+    validation.success.forEach(this.onEnd.bind(this));
+    validation.error.forEach(this.onError.bind(this));
+    this.currentText = this.opt.default;
+    this.opt.default = null;
+    this.render();
+    return this;
+  }
+  render(error) {
+    let bottomContent = "";
+    let message = this.getQuestion();
+    if (this.status === "answered") {
+      message += source_default.dim("Received");
+    } else {
+      message += source_default.dim("Press <enter> to launch your preferred editor.");
+    }
+    if (error) {
+      bottomContent = source_default.red(">> ") + error;
+    }
+    this.screen.render(message, bottomContent);
+  }
+  startExternalEditor() {
+    this.rl.pause();
+    (0, import_external_editor.editAsync)(this.currentText, this.endExternalEditor.bind(this));
+  }
+  endExternalEditor(error, result) {
+    this.rl.resume();
+    if (error) {
+      this.editorResult.error(error);
+    } else {
+      this.editorResult.next(result);
+    }
+  }
+  onEnd(state) {
+    this.editorResult.unsubscribe();
+    this.lineSubscription.unsubscribe();
+    this.answer = state.value;
+    this.status = "answered";
+    this.render();
+    this.screen.done();
+    this.done(this.answer);
+  }
+  onError(state) {
+    this.render(state.isValid);
+  }
+};
+
+// node_modules/inquirer/lib/ui/bottom-bar.js
+var import_through = __toESM(require_through(), 1);
+
+// node_modules/inquirer/lib/ui/baseUI.js
+var import_mute_stream = __toESM(require_mute(), 1);
+var import_node_readline2 = __toESM(require("node:readline"), 1);
+var UI = class {
+  constructor(opt) {
+    if (!this.rl) {
+      this.rl = import_node_readline2.default.createInterface(setupReadlineOptions(opt));
+    }
+    this.rl.resume();
+    this.onForceClose = this.onForceClose.bind(this);
+    process.on("exit", this.onForceClose);
+    this.rl.on("SIGINT", this.onForceClose);
+  }
+  onForceClose() {
+    this.close();
+    process.kill(process.pid, "SIGINT");
+    console.log("");
+  }
+  close() {
+    this.rl.removeListener("SIGINT", this.onForceClose);
+    process.removeListener("exit", this.onForceClose);
+    this.rl.output.unmute();
+    if (this.activePrompt && typeof this.activePrompt.close === "function") {
+      this.activePrompt.close();
+    }
+    this.rl.output.end();
+    this.rl.pause();
+    this.rl.close();
+  }
+};
+function setupReadlineOptions(opt = {}) {
+  opt.skipTTYChecks = opt.skipTTYChecks === void 0 ? true : opt.skipTTYChecks;
+  const input = opt.input || process.stdin;
+  if (!opt.skipTTYChecks && !input.isTTY) {
+    const nonTtyError = new Error("Prompts can not be meaningfully rendered in non-TTY environments");
+    nonTtyError.isTtyError = true;
+    throw nonTtyError;
+  }
+  const ms = new import_mute_stream.default();
+  ms.pipe(opt.output || process.stdout);
+  const output = ms;
+  return {
+    terminal: true,
+    ...opt,
+    input,
+    output
+  };
+}
+
+// node_modules/inquirer/lib/ui/bottom-bar.js
+var BottomBar = class extends UI {
+  constructor(opt = {}) {
+    super(opt);
+    this.log = (0, import_through.default)(this.writeLog.bind(this));
+    this.bottomBar = opt.bottomBar || "";
+    this.render();
+  }
+  render() {
+    this.write(this.bottomBar);
+    return this;
+  }
+  clean() {
+    clearLine(this.rl, this.bottomBar.split("\n").length);
+    return this;
+  }
+  updateBottomBar(bottomBar) {
+    clearLine(this.rl, 1);
+    this.rl.output.unmute();
+    this.clean();
+    this.bottomBar = bottomBar;
+    this.render();
+    this.rl.output.mute();
+    return this;
+  }
+  writeLog(data) {
+    this.rl.output.unmute();
+    this.clean();
+    this.rl.output.write(this.enforceLF(data.toString()));
+    this.render();
+    this.rl.output.mute();
+    return this;
+  }
+  enforceLF(str) {
+    return str.match(/[\r\n]$/) ? str : str + "\n";
+  }
+  write(message) {
+    const msgLines = message.split(/\n/);
+    this.height = msgLines.length;
+    this.rl.setPrompt(msgLines[msgLines.length - 1]);
+    if (this.rl.output.rows === 0 && this.rl.output.columns === 0) {
+      left(this.rl, message.length + this.rl.line.length);
+    }
+    this.rl.output.write(message);
+  }
+};
+
+// node_modules/inquirer/lib/ui/prompt.js
+var import_isPlainObject = __toESM(require_isPlainObject(), 1);
+var import_get = __toESM(require_get(), 1);
+var import_set = __toESM(require_set(), 1);
+var import_rxjs13 = __toESM(require_cjs(), 1);
+var import_rxjs14 = __toESM(require_cjs(), 1);
+var import_run_async4 = __toESM(require_run_async(), 1);
+
+// node_modules/inquirer/lib/utils/utils.js
+var import_rxjs12 = __toESM(require_cjs(), 1);
+var import_run_async3 = __toESM(require_run_async(), 1);
+var fetchAsyncQuestionProperty = function(question, prop, answers) {
+  if (typeof question[prop] !== "function") {
+    return (0, import_rxjs12.of)(question);
+  }
+  return (0, import_rxjs12.from)((0, import_run_async3.default)(question[prop])(answers).then((value) => {
+    question[prop] = value;
+    return question;
+  }));
+};
+
+// node_modules/inquirer/lib/ui/prompt.js
+var _3 = {
+  isPlainObject: import_isPlainObject.default,
+  set: import_set.default,
+  get: import_get.default
+};
+var PromptUI = class extends UI {
+  constructor(prompts, opt) {
+    super(opt);
+    this.prompts = prompts;
+  }
+  run(questions, answers) {
+    if (_3.isPlainObject(answers)) {
+      this.answers = { ...answers };
+    } else {
+      this.answers = {};
+    }
+    if (_3.isPlainObject(questions)) {
+      questions = Object.values(questions).every((v) => _3.isPlainObject(v) && v.name === void 0) ? Object.entries(questions).map(([name, question]) => ({ name, ...question })) : [questions];
+    }
+    const obs = Array.isArray(questions) ? (0, import_rxjs13.from)(questions) : questions;
+    this.process = obs.pipe((0, import_rxjs14.concatMap)(this.processQuestion.bind(this)), (0, import_rxjs14.publish)());
+    this.process.connect();
+    return this.process.pipe((0, import_rxjs14.reduce)((answers2, answer) => {
+      _3.set(answers2, answer.name, answer.answer);
+      return answers2;
+    }, this.answers)).toPromise(Promise).then(this.onCompletion.bind(this), this.onError.bind(this));
+  }
+  onCompletion() {
+    this.close();
+    return this.answers;
+  }
+  onError(error) {
+    this.close();
+    return Promise.reject(error);
+  }
+  processQuestion(question) {
+    question = { ...question };
+    return (0, import_rxjs13.defer)(() => {
+      const obs = (0, import_rxjs13.of)(question);
+      return obs.pipe((0, import_rxjs14.concatMap)(this.setDefaultType.bind(this)), (0, import_rxjs14.concatMap)(this.filterIfRunnable.bind(this)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "message", this.answers)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "default", this.answers)), (0, import_rxjs14.concatMap)(() => fetchAsyncQuestionProperty(question, "choices", this.answers)), (0, import_rxjs14.concatMap)(this.fetchAnswer.bind(this)));
+    });
+  }
+  fetchAnswer(question) {
+    const Prompt2 = this.prompts[question.type];
+    this.activePrompt = new Prompt2(question, this.rl, this.answers);
+    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.from)(this.activePrompt.run().then((answer) => ({ name: question.name, answer }))));
+  }
+  setDefaultType(question) {
+    if (!this.prompts[question.type]) {
+      question.type = "input";
+    }
+    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.of)(question));
+  }
+  filterIfRunnable(question) {
+    if (question.askAnswered !== true && _3.get(this.answers, question.name) !== void 0) {
+      return (0, import_rxjs13.empty)();
+    }
+    if (question.when === false) {
+      return (0, import_rxjs13.empty)();
+    }
+    if (typeof question.when !== "function") {
+      return (0, import_rxjs13.of)(question);
+    }
+    const { answers } = this;
+    return (0, import_rxjs13.defer)(() => (0, import_rxjs13.from)((0, import_run_async4.default)(question.when)(answers).then((shouldRun) => {
+      if (shouldRun) {
+        return question;
+      }
+    })).pipe((0, import_rxjs14.filter)((val) => val != null)));
+  }
+};
+
+// node_modules/inquirer/lib/inquirer.js
+function createPromptModule(opt) {
+  const promptModule = function(questions, answers) {
+    let uiInstance;
+    try {
+      uiInstance = new PromptUI(promptModule.prompts, opt);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+    const promise = uiInstance.run(questions, answers);
+    promise.ui = uiInstance;
+    return promise;
+  };
+  promptModule.prompts = {};
+  promptModule.registerPrompt = function(name, prompt2) {
+    promptModule.prompts[name] = prompt2;
+    return this;
+  };
+  promptModule.restoreDefaultPrompts = function() {
+    this.registerPrompt("list", ListPrompt);
+    this.registerPrompt("input", InputPrompt);
+    this.registerPrompt("number", NumberPrompt);
+    this.registerPrompt("confirm", ConfirmPrompt);
+    this.registerPrompt("rawlist", RawListPrompt);
+    this.registerPrompt("expand", ExpandPrompt);
+    this.registerPrompt("checkbox", CheckboxPrompt);
+    this.registerPrompt("password", PasswordPrompt);
+    this.registerPrompt("editor", EditorPrompt);
+  };
+  promptModule.restoreDefaultPrompts();
+  return promptModule;
+}
+var prompt = createPromptModule();
+function registerPrompt(name, newPrompt) {
+  prompt.registerPrompt(name, newPrompt);
+}
+function restoreDefaultPrompts() {
+  prompt.restoreDefaultPrompts();
+}
+var inquirer = {
+  prompt,
+  ui: {
+    BottomBar,
+    Prompt: PromptUI
+  },
+  createPromptModule,
+  registerPrompt,
+  restoreDefaultPrompts,
+  Separator
+};
+var inquirer_default = inquirer;
+
 // src/init-commands.ts
-var dao_name2;
-var member_principal2;
-var token_principal2;
+var dao_name;
+var member_principal;
+var token_principal;
 var token_supply;
 var token_decimals;
 var sleep2 = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
@@ -46924,8 +46906,8 @@ var MultiSig2 = class {
     return __async(this, null, function* () {
       var _a;
       if ((_a = this.config) == null ? void 0 : _a.dao_name) {
-        dao_name2 = this.config.dao_name;
-        console.log(`Dao Name: ${dao_name2}`);
+        dao_name = this.config.dao_name;
+        console.log(`Dao Name: ${dao_name}`);
       } else {
         const answers = yield inquirer_default.prompt({
           name: "dao_name",
@@ -46943,8 +46925,8 @@ var MultiSig2 = class {
     return __async(this, null, function* () {
       var _a, _b;
       if ((_a = this.config) == null ? void 0 : _a.member_principal) {
-        member_principal2 = (_b = this.config) == null ? void 0 : _b.member_principal;
-        console.log(`Dao Member: ${member_principal2}`);
+        member_principal = (_b = this.config) == null ? void 0 : _b.member_principal;
+        console.log(`Dao Member: ${member_principal}`);
       } else {
         const answers = yield inquirer_default.prompt({
           name: "member_principal",
@@ -46962,8 +46944,8 @@ var MultiSig2 = class {
     return __async(this, null, function* () {
       var _a, _b;
       if ((_a = this.config) == null ? void 0 : _a.token_principal) {
-        token_principal2 = (_b = this.config) == null ? void 0 : _b.token_principal;
-        console.log(`Token Principal: ${token_principal2}`);
+        token_principal = (_b = this.config) == null ? void 0 : _b.token_principal;
+        console.log(`Token Principal: ${token_principal}`);
       } else {
         const answers = yield inquirer_default.prompt({
           name: "token_principal",
@@ -47044,7 +47026,7 @@ var config = {
 // src/commands.ts
 var initCommand = new Command("init");
 var deployCommand = new Command("deploy");
-initCommand.description("Creates a new MLP pproject").action((option) => __async(void 0, null, function* () {
+initCommand.description("Creates a new MLP project").action((option) => __async(void 0, null, function* () {
   const init = new MultiSig2(initCommand);
   yield init.welcome();
   config.dao_name = yield init.askDao();
@@ -47066,21 +47048,20 @@ initCommand.description("Creates a new MLP pproject").action((option) => __async
     console.error(err);
   }
 }));
-deployCommand.command("multi-sig").description("creates a new multi-sig wallet").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").action((option) => __async(void 0, null, function* () {
+deployCommand.description("creates and deploys a new Dao").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").action((option) => __async(void 0, null, function* () {
   const configExists = (0, import_fs.existsSync)(option.config);
   let configFile = void 0;
   if (configExists) {
     let rawdata = (0, import_fs.readFileSync)(option.config, "utf8");
     configFile = JSON.parse(rawdata);
   }
-  const ms = new MultiSig(deployCommand, configFile);
-  yield ms.welcome();
-  yield ms.askDao();
-  yield ms.askToken();
-  yield ms.askMember();
-  yield ms.install_dfx();
-  yield ms.deploy_multi_sig();
-  yield ms.finish();
+  const dp = new MultiSig(deployCommand, configFile);
+  yield dp.title();
+  yield dp.install_dfx();
+  yield dp.install_azle();
+  yield dp.install_multi_sig();
+  yield dp.deploy_local();
+  yield dp.finish();
 }));
 
 // src/index.ts
