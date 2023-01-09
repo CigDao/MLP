@@ -25,6 +25,15 @@ export default class MultiSig {
         rainbowTitle.stop();
     }
 
+    async title_local() {
+        const rainbowTitle = chalkAnimation.rainbow(
+            'Deploying To LocalHost... \n'
+        );
+
+        await sleep();
+        rainbowTitle.stop();
+    }
+
     async install_dfx() {
         const spinner = createSpinner('Installing dfx...').start();
         const whichDfx = await execa("which", ["dfx"]);

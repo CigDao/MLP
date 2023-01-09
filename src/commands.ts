@@ -39,19 +39,28 @@ initCommand.description("Creates a new MLP project")
 
 deployCommand.description("creates and deploys a new Dao")
 .option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json") // an optional flag where it grabs all inputs from congi file
-.action(async (option) => {
-    const configExists = existsSync(option.config);
+.option("-l, --local", "deploy to local dfx")
+.action(async (options) => {
+    const configExists = existsSync(options.config);
     let configFile: Mlpconfig | undefined = undefined;
     if (configExists) {
-        let rawdata = readFileSync(option.config, 'utf8');
+        let rawdata = readFileSync(options.config, 'utf8');
         configFile = JSON.parse(rawdata);
     }
     
     const dp = new Deploy(deployCommand, configFile);
-    await dp.title();
+    if(options.local){
+      await dp.title_local()
+    }else{
+      await dp.title();
+    }
     await dp.install_dfx()
     await dp.install_azle()
     await dp.install_multi_sig()
-    await dp.deploy_local()
+    if(options.local){
+      await dp.deploy_local()
+    }else{
+      await dp.deploy
+    }
     await dp.finish();
 })

@@ -44132,6 +44132,13 @@ var MultiSig = class {
       rainbowTitle.stop();
     });
   }
+  title_local() {
+    return __async(this, null, function* () {
+      const rainbowTitle = chalk_animation_default.rainbow("Deploying To LocalHost... \n");
+      yield sleep();
+      rainbowTitle.stop();
+    });
+  }
   install_dfx() {
     return __async(this, null, function* () {
       const spinner = (0, import_nanospinner.createSpinner)("Installing dfx...").start();
@@ -47048,19 +47055,27 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
     console.error(err);
   }
 }));
-deployCommand.description("creates and deploys a new Dao").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").action((option) => __async(void 0, null, function* () {
-  const configExists = (0, import_fs.existsSync)(option.config);
+deployCommand.description("creates and deploys a new Dao").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").option("-l, --local", "deploy to local dfx").action((options) => __async(void 0, null, function* () {
+  const configExists = (0, import_fs.existsSync)(options.config);
   let configFile = void 0;
   if (configExists) {
-    let rawdata = (0, import_fs.readFileSync)(option.config, "utf8");
+    let rawdata = (0, import_fs.readFileSync)(options.config, "utf8");
     configFile = JSON.parse(rawdata);
   }
   const dp = new MultiSig(deployCommand, configFile);
-  yield dp.title();
+  if (options.local) {
+    yield dp.title_local();
+  } else {
+    yield dp.title();
+  }
   yield dp.install_dfx();
   yield dp.install_azle();
   yield dp.install_multi_sig();
-  yield dp.deploy_local();
+  if (options.local) {
+    yield dp.deploy_local();
+  } else {
+    yield dp.deploy;
+  }
   yield dp.finish();
 }));
 
