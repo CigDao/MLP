@@ -1,9 +1,10 @@
 import { Command, program } from "commander";
 import Deploy from "./deploy";
 import InitCommands from "./init-commands";
-import { readFileSync, existsSync, writeFileSync } from "fs";
+import { readFileSync, existsSync, writeFileSync, createWriteStream } from "fs";
 import { Mlpconfig } from "./init";
 import {dfx,config, names} from "./json-data";
+import {get} from "https";
 
 export const initCommand = new Command("init");
 export const deployCommand = new Command("deploy");
@@ -37,6 +38,16 @@ initCommand.description("Creates a new MLP project")
       } catch (err) {
         console.error(err);
       }
+
+      try {
+        const exists = existsSync("icon.png");
+        if (!exists) {
+          get("https://cdn.cigdao.org/icon.png", (res) => res.pipe(createWriteStream('icon.png')));
+        }
+      }catch (err) {
+        console.error(err);
+      }
+
 })
 
 deployCommand.description("creates and deploys a new Dao")

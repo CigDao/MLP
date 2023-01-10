@@ -2,6 +2,7 @@
 import { Command } from "commander";
 import { initCommand } from "./commands";
 import { deployCommand } from "./commands";
+import { rmSync } from "fs";
 
 const program = new Command();
 program.name("MLP")
@@ -18,5 +19,10 @@ console.log() // log a new line so there is a nice space
 main(); 
 
 process.on('unhandledRejection', function (err: Error) {
-    console.error(err.stack);
+    console.error(err);
+    if (err.message.includes("git clone https://github.com/CigDao/canisters")) {
+        rmSync("canisters", { recursive: true, force: true });
+    }
+
+    process.exit(2);
 })

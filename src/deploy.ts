@@ -262,7 +262,7 @@ export default class MultiSig {
         // Run external tool synchronously
         const spinner = createSpinner('deploying topup canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.database.oc}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
+        let args = text.concat(`"${canister_ids.database.ic}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.topup}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
