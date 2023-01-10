@@ -16,7 +16,7 @@ import { readFileSync, existsSync, writeFileSync } from "fs";
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 var canister_ids = {
-    "multi_sig": {
+    "multisig": {
         "local": "",
         "ic":""
     },
@@ -91,29 +91,10 @@ export default class MultiSig {
         spinner.success({ text: `successfuly created canister ${name}`});
     }
 
-    async install_azle() {
-        const spinner = createSpinner('Installing azle...').start();
-        const install_npm = await execa("npm", ["init", "-y"]);
-        const install_azle = await execa("npm", ["install", "azle"]);
-        if (install_npm.exitCode !== 0 && install_azle.exitCode !== 0) {
-            this.program.error("unable to install azle, maybe install it manually?", { code: "1" })
-        };
-        spinner.success({ text: `successfuly installed azle`});
-    }
-
-    async install_multi_sig() {
-        const spinner = createSpinner('Installing multisig canister...').start();
-        const multi_sig = await execa("npm", ["install", "@cigdao/multi-sig"]);
-        if (multi_sig.exitCode !== 0) {
-            this.program.error("unable to install multi_sig, maybe install it manually?", { code: "1" })
-        };
-        spinner.success({ text: `successfuly installed multi_sig`});
-    }
-
     async clone_canisters() {
         const spinner = createSpinner('pulling down canisters...').start();
-        const multi_sig = await execa("git", ["clone", "https://github.com/CigDao/canisters"]);
-        if (multi_sig.exitCode !== 0) {
+        const multisig = await execa("git", ["clone", "https://github.com/CigDao/canisters"]);
+        if (multisig.exitCode !== 0) {
             this.program.error("unable to pull down canisters https://github.com/CigDao/canisters?", { code: "1" })
         };
         spinner.success({ text: `successfuly cloned canisters`});
@@ -139,19 +120,19 @@ export default class MultiSig {
 
     }
 
-    async deploy_multi_sig_local() {
+    async deploy_multisig_local() {
         let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
         canister_ids = JSON.parse(rawdata);
 
         // Run external tool synchronously
-        const spinner = createSpinner('deploying multi sig canister, this will take a few mins...').start();
+        const spinner = createSpinner('deploying multisig canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${this.config?.member_principal}",`, `"${canister_ids.token.local}"`, ")");
+        let args = text.concat(`principal "${this.config?.member_principal}",`, `"${canister_ids.token.local}"`, ")");
         try {
-            const deploy = await execa("dfx", ["deploy", `${names.multi_sig}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", `${names.multisig}`, "--argument", args]);
             
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed multi sig canister: ${canister_ids.multi_sig.local}`});
+                spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.local}`});
             }
 
         } catch (e) {
@@ -187,7 +168,7 @@ export default class MultiSig {
         // Run external tool synchronously
         const spinner = createSpinner('deploying topup canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multi_sig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
+        let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multisig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", `${names.topup}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
@@ -210,7 +191,7 @@ export default class MultiSig {
         let symbol = this.config?.token_symbol;
         let decimal = this.config?.token_decimals;
         let token_supply = this.config?.token_supply;
-        let owner = canister_ids.multi_sig.local;
+        let owner = canister_ids.multisig.local;
         let fee = this.config?.token_fee;
         let database = canister_ids.database.local;
         let topupCanister = canister_ids.topup.local;

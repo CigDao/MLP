@@ -44121,13 +44121,11 @@ Font modified May 20, 2012 by patorjk to add the 0xCA0 character
 // src/json-data.ts
 var dfx = {
   "canisters": {
-    "multi_sig": {
+    "multisig": {
       "type": "custom",
-      "build": "npx azle multi_sig",
-      "root": "src",
-      "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
-      "candid": "node_modules/@cigdao/multi-sig/src/index.did",
-      "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
+      "build": "",
+      "candid": "canisters/multisig/multisig.did",
+      "wasm": "canisters/multisig/multisig.wasm"
     },
     "database": {
       "type": "custom",
@@ -44165,7 +44163,7 @@ var config = {
   "token_symbol": ""
 };
 var names = {
-  "multi_sig": "multi_sig",
+  "multisig": "multisig",
   "database": "database",
   "topup": "topup",
   "token": "token",
@@ -44176,7 +44174,7 @@ var names = {
 var import_fs = require("fs");
 var sleep = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var canister_ids = {
-  "multi_sig": {
+  "multisig": {
     "local": "",
     "ic": ""
   },
@@ -44253,34 +44251,11 @@ var MultiSig = class {
       spinner.success({ text: `successfuly created canister ${name}` });
     });
   }
-  install_azle() {
-    return __async(this, null, function* () {
-      const spinner = (0, import_nanospinner.createSpinner)("Installing azle...").start();
-      const install_npm = yield execa("npm", ["init", "-y"]);
-      const install_azle = yield execa("npm", ["install", "azle"]);
-      if (install_npm.exitCode !== 0 && install_azle.exitCode !== 0) {
-        this.program.error("unable to install azle, maybe install it manually?", { code: "1" });
-      }
-      ;
-      spinner.success({ text: `successfuly installed azle` });
-    });
-  }
-  install_multi_sig() {
-    return __async(this, null, function* () {
-      const spinner = (0, import_nanospinner.createSpinner)("Installing multisig canister...").start();
-      const multi_sig = yield execa("npm", ["install", "@cigdao/multi-sig"]);
-      if (multi_sig.exitCode !== 0) {
-        this.program.error("unable to install multi_sig, maybe install it manually?", { code: "1" });
-      }
-      ;
-      spinner.success({ text: `successfuly installed multi_sig` });
-    });
-  }
   clone_canisters() {
     return __async(this, null, function* () {
       const spinner = (0, import_nanospinner.createSpinner)("pulling down canisters...").start();
-      const multi_sig = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
-      if (multi_sig.exitCode !== 0) {
+      const multisig = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
+      if (multisig.exitCode !== 0) {
         this.program.error("unable to pull down canisters https://github.com/CigDao/canisters?", { code: "1" });
       }
       ;
@@ -44306,18 +44281,18 @@ var MultiSig = class {
       }
     });
   }
-  deploy_multi_sig_local() {
+  deploy_multisig_local() {
     return __async(this, null, function* () {
       var _a;
       let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying multi sig canister, this will take a few mins...").start();
+      const spinner = (0, import_nanospinner.createSpinner)("deploying multisig canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.local}"`, ")");
+      let args = text.concat(`principal "${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.local}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", `${names.multi_sig}`, "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.multisig}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed multi sig canister: ${canister_ids.multi_sig.local}` });
+          spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.local}` });
         }
       } catch (e) {
         console.error(e);
@@ -44349,7 +44324,7 @@ var MultiSig = class {
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multi_sig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
+      let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multisig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.topup}`, "--argument", args]);
         if (deploy.exitCode === 0) {
@@ -44363,7 +44338,7 @@ var MultiSig = class {
   }
   deploy_token_local() {
     return __async(this, null, function* () {
-      var _a, _b, _c, _d, _e, _f;
+      var _a, _b, _c, _d, _e;
       let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
@@ -44372,8 +44347,8 @@ var MultiSig = class {
       let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
       let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
       let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
-      let owner = (_e = this.config) == null ? void 0 : _e.member_principal;
-      let fee = (_f = this.config) == null ? void 0 : _f.token_fee;
+      let owner = canister_ids.multisig.local;
+      let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
       let database = canister_ids.database.local;
       let topupCanister = canister_ids.topup.local;
       let text = "(";
@@ -47266,11 +47241,9 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
     yield dp.title();
   }
   yield dp.install_dfx();
-  yield dp.install_azle();
-  yield dp.install_multi_sig();
   yield dp.clone_canisters();
   if (options.local) {
-    yield dp.create_canisters_local(names.multi_sig);
+    yield dp.create_canisters_local(names.multisig);
     yield dp.create_canisters_local(names.database);
     yield dp.create_canisters_local(names.topup);
     yield dp.create_canisters_local(names.token);
@@ -47278,9 +47251,9 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
     yield dp.deploy_database_local();
     yield dp.deploy_topup_local();
     yield dp.deploy_token_local();
-    yield dp.deploy_multi_sig_local();
+    yield dp.deploy_multisig_local();
   } else {
-    yield dp.create_canisters(names.multi_sig);
+    yield dp.create_canisters(names.multisig);
     yield dp.create_canisters(names.database);
     yield dp.create_canisters(names.topup);
     yield dp.create_canisters(names.token);

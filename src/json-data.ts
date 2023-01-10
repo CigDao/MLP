@@ -1,12 +1,10 @@
 export let dfx = {
     "canisters": {
-        "multi_sig": {
+        "multisig": {
             "type": "custom",
-            "build": "npx azle multi_sig",
-            "root": "src",
-            "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
-            "candid": "node_modules/@cigdao/multi-sig/src/index.did",
-            "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
+            "build": "",
+            "candid": "canisters/multisig/multisig.did",
+            "wasm": "canisters/multisig/multisig.wasm"
         },
         "database": {
             "type": "custom",
@@ -46,7 +44,7 @@ export let config = {
 }
 
 export let names = {
-    "multi_sig": "multi_sig",
+    "multisig": "multisig",
     "database": "database",
     "topup": "topup",
     "token": "token",

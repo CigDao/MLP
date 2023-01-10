@@ -1,6 +1,6 @@
 {
   "name": "@cigdao/mlp",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "``` 1. npm install 2. npm run build:link 3. mlp init 4. mlp deploy 5. mlp -h",
   "main": "dist/index.js",
   "bin": {
@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "@cigdao/multi-sig": "^1.0.2",
-    "azle": "^0.9.0",
     "chalk": "^5.2.0",
     "chalk-animation": "^2.0.3",
     "commander": "^9.5.0",

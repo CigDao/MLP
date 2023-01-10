@@ -1,0 +1,7 @@
+// Version: 1.0.0
+actor {
+  stable var _canisterId : Text;
+  stable var memberEntries : [(Principal, Nat)];
+  stable var requestId : Nat32;
+  stable var threshold : Nat
+};
