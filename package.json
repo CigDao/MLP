@@ -1,13 +1,13 @@
 {
   "name": "@cigdao/mlp",
   "version": "0.0.9",
-  "description": "``` 1. npm install 2. npm run build:link 3. mlp init 4. mlp deploy 5. mlp -h",
+  "description": "My Little Protocol - Launching dao tools",
   "main": "dist/index.js",
   "bin": {
     "mlp": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc --noEmit ./src/index.ts && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js",
+    "build": "tsc --project tsconfig.json && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js",
     "build:link": "npm run build && npm link"
   },
   "author": "",

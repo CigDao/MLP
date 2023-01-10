@@ -71,8 +71,8 @@ var require_argument = __commonJS({
   "node_modules/commander/lib/argument.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Argument2 = class {
-      constructor(name, description) {
-        this.description = description || "";
+      constructor(name, description2) {
+        this.description = description2 || "";
         this.variadic = false;
         this.parseArg = void 0;
         this.defaultValue = void 0;
@@ -106,9 +106,9 @@ var require_argument = __commonJS({
         }
         return previous.concat(value);
       }
-      default(value, description) {
+      default(value, description2) {
         this.defaultValue = value;
-        this.defaultValueDescription = description;
+        this.defaultValueDescription = description2;
         return this;
       }
       argParser(fn) {
@@ -315,9 +315,9 @@ var require_help = __commonJS({
         const helpWidth = helper.helpWidth || 80;
         const itemIndentWidth = 2;
         const itemSeparatorWidth = 2;
-        function formatItem(term, description) {
-          if (description) {
-            const fullText = `${term.padEnd(termWidth + itemSeparatorWidth)}${description}`;
+        function formatItem(term, description2) {
+          if (description2) {
+            const fullText = `${term.padEnd(termWidth + itemSeparatorWidth)}${description2}`;
             return helper.wrap(fullText, helpWidth - itemIndentWidth, termWidth + itemSeparatorWidth);
           }
           return term;
@@ -389,9 +389,9 @@ var require_option = __commonJS({
   "node_modules/commander/lib/option.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Option2 = class {
-      constructor(flags, description) {
+      constructor(flags, description2) {
         this.flags = flags;
-        this.description = description || "";
+        this.description = description2 || "";
         this.required = flags.includes("<");
         this.optional = flags.includes("[");
         this.variadic = /\w\.\.\.[>\]]$/.test(flags);
@@ -413,9 +413,9 @@ var require_option = __commonJS({
         this.conflictsWith = [];
         this.implied = void 0;
       }
-      default(value, description) {
+      default(value, description2) {
         this.defaultValue = value;
-        this.defaultValueDescription = description;
+        this.defaultValueDescription = description2;
         return this;
       }
       preset(arg) {
@@ -761,11 +761,11 @@ var require_command = __commonJS({
         cmd.parent = this;
         return this;
       }
-      createArgument(name, description) {
-        return new Argument2(name, description);
+      createArgument(name, description2) {
+        return new Argument2(name, description2);
       }
-      argument(name, description, fn, defaultValue) {
-        const argument = this.createArgument(name, description);
+      argument(name, description2, fn, defaultValue) {
+        const argument = this.createArgument(name, description2);
         if (typeof fn === "function") {
           argument.default(defaultValue).argParser(fn);
         } else {
@@ -791,7 +791,7 @@ var require_command = __commonJS({
         this._args.push(argument);
         return this;
       }
-      addHelpCommand(enableOrNameAndArgs, description) {
+      addHelpCommand(enableOrNameAndArgs, description2) {
         if (enableOrNameAndArgs === false) {
           this._addImplicitHelpCommand = false;
         } else {
@@ -800,7 +800,7 @@ var require_command = __commonJS({
             this._helpCommandName = enableOrNameAndArgs.split(" ")[0];
             this._helpCommandnameAndArgs = enableOrNameAndArgs;
           }
-          this._helpCommandDescription = description || this._helpCommandDescription;
+          this._helpCommandDescription = description2 || this._helpCommandDescription;
         }
         return this;
       }
@@ -857,8 +857,8 @@ Expecting one of '${allowedValues.join("', '")}'`);
         this._actionHandler = listener;
         return this;
       }
-      createOption(flags, description) {
-        return new Option2(flags, description);
+      createOption(flags, description2) {
+        return new Option2(flags, description2);
       }
       addOption(option) {
         const oname = option.name();
@@ -913,11 +913,11 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this;
       }
-      _optionEx(config2, flags, description, fn, defaultValue) {
+      _optionEx(config2, flags, description2, fn, defaultValue) {
         if (typeof flags === "object" && flags instanceof Option2) {
           throw new Error("To add an Option object use addOption() instead of option() or requiredOption()");
         }
-        const option = this.createOption(flags, description);
+        const option = this.createOption(flags, description2);
         option.makeOptionMandatory(!!config2.mandatory);
         if (typeof fn === "function") {
           option.default(defaultValue).argParser(fn);
@@ -933,11 +933,11 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this.addOption(option);
       }
-      option(flags, description, fn, defaultValue) {
-        return this._optionEx({}, flags, description, fn, defaultValue);
+      option(flags, description2, fn, defaultValue) {
+        return this._optionEx({}, flags, description2, fn, defaultValue);
       }
-      requiredOption(flags, description, fn, defaultValue) {
-        return this._optionEx({ mandatory: true }, flags, description, fn, defaultValue);
+      requiredOption(flags, description2, fn, defaultValue) {
+        return this._optionEx({ mandatory: true }, flags, description2, fn, defaultValue);
       }
       combineFlagAndOptionalValue(combine = true) {
         this._combineFlagAndOptionalValue = !!combine;
@@ -1576,13 +1576,13 @@ Expecting one of '${allowedValues.join("', '")}'`);
         const message = `error: unknown command '${unknownName}'${suggestion}`;
         this.error(message, { code: "commander.unknownCommand" });
       }
-      version(str, flags, description) {
+      version(str, flags, description2) {
         if (str === void 0)
           return this._version;
         this._version = str;
         flags = flags || "-V, --version";
-        description = description || "output the version number";
-        const versionOption = this.createOption(flags, description);
+        description2 = description2 || "output the version number";
+        const versionOption = this.createOption(flags, description2);
         this._versionOptionName = versionOption.attributeName();
         this.options.push(versionOption);
         this.on("option:" + versionOption.name(), () => {
@@ -1694,13 +1694,13 @@ Expecting one of '${allowedValues.join("', '")}'`);
         this.emit("afterHelp", context);
         getCommandAndParents(this).forEach((command) => command.emit("afterAllHelp", context));
       }
-      helpOption(flags, description) {
+      helpOption(flags, description2) {
         if (typeof flags === "boolean") {
           this._hasHelpOption = flags;
           return this;
         }
         this._helpFlags = flags || this._helpFlags;
-        this._helpDescription = description || this._helpDescription;
+        this._helpDescription = description2 || this._helpDescription;
         const helpFlags = splitOptionFlags(this._helpFlags);
         this._helpShortFlag = helpFlags.shortFlag;
         this._helpLongFlag = helpFlags.longFlag;
@@ -2983,10 +2983,10 @@ var require_supports_color = __commonJS({
         return 3;
       }
       if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        const version2 = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
         switch (env2.TERM_PROGRAM) {
           case "iTerm.app":
-            return version >= 3 ? 3 : 2;
+            return version2 >= 3 ? 3 : 2;
           case "Apple_Terminal":
             return 2;
         }
@@ -5766,10 +5766,10 @@ var require_supports_color2 = __commonJS({
         return 3;
       }
       if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        const version2 = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
         switch (env2.TERM_PROGRAM) {
           case "iTerm.app":
-            return version >= 3 ? 3 : 2;
+            return version2 >= 3 ? 3 : 2;
           case "Apple_Terminal":
             return 2;
         }
@@ -39404,10 +39404,10 @@ var require_tmp = __commonJS({
     function setGracefulCleanup() {
       _gracefulCleanup = true;
     }
-    var version = process.versions.node.split(".").map(function(value) {
+    var version2 = process.versions.node.split(".").map(function(value) {
       return parseInt(value, 10);
     });
-    if (version[0] === 0 && (version[1] < 9 || version[1] === 9 && version[2] < 5)) {
+    if (version2[0] === 0 && (version2[1] < 9 || version2[1] === 9 && version2[2] < 5)) {
       process.addListener("uncaughtException", function _uncaughtExceptionThrown(err) {
         _uncaughtException = true;
         _garbageCollector();
@@ -40585,10 +40585,10 @@ function _supportsColor(haveStream, { streamIsTTY, sniffFlags = true } = {}) {
     return 3;
   }
   if ("TERM_PROGRAM" in env) {
-    const version = Number.parseInt((env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+    const version2 = Number.parseInt((env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
     switch (env.TERM_PROGRAM) {
       case "iTerm.app": {
-        return version >= 3 ? 3 : 2;
+        return version2 >= 3 ? 3 : 2;
       }
       case "Apple_Terminal": {
         return 2;
@@ -41418,7 +41418,7 @@ var getSignals = function() {
 var normalizeSignal = function({
   name,
   number: defaultNumber,
-  description,
+  description: description2,
   action,
   forced = false,
   standard
@@ -41428,7 +41428,7 @@ var normalizeSignal = function({
   } = import_os.constants;
   const supported = constantSignal !== void 0;
   const number = supported ? constantSignal : defaultNumber;
-  return { name, number, description, supported, action, forced, standard };
+  return { name, number, description: description2, supported, action, forced, standard };
 };
 
 // node_modules/human-signals/build/src/main.js
@@ -41436,10 +41436,10 @@ var getSignalsByName = function() {
   const signals = getSignals();
   return signals.reduce(getSignalByName, {});
 };
-var getSignalByName = function(signalByNameMemo, { name, number, description, supported, action, forced, standard }) {
+var getSignalByName = function(signalByNameMemo, { name, number, description: description2, supported, action, forced, standard }) {
   return {
     ...signalByNameMemo,
-    [name]: { name, number, description, supported, action, forced, standard }
+    [name]: { name, number, description: description2, supported, action, forced, standard }
   };
 };
 var signalsByName = getSignalsByName();
@@ -41454,12 +41454,12 @@ var getSignalByNumber = function(number, signals) {
   if (signal === void 0) {
     return {};
   }
-  const { name, description, supported, action, forced, standard } = signal;
+  const { name, description: description2, supported, action, forced, standard } = signal;
   return {
     [number]: {
       name,
       number,
-      description,
+      description: description2,
       supported,
       action,
       forced,
@@ -47385,10 +47385,16 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
 
 // src/index.ts
 var import_fs3 = require("fs");
+
+// package.json
+var version = "0.0.9";
+var description = "My Little Protocol - Launching dao tools";
+
+// src/index.ts
 var program3 = new Command();
 program3.name("MLP");
-program3.description("My Little Protocol - Launching dao tools");
-program3.version("0.0.1");
+program3.description(description);
+program3.version(version);
 program3.addCommand(initCommand);
 program3.addCommand(deployCommand);
 function main2() {

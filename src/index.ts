@@ -3,11 +3,11 @@ import { Command } from "commander";
 import { initCommand } from "./commands";
 import { deployCommand } from "./commands";
 import { rmSync } from "fs";
-
+import {version, description} from '../package.json';
 const program = new Command();
 program.name("MLP")
-program.description('My Little Protocol - Launching dao tools');
-program.version('0.0.1');
+program.description(description);
+program.version(version);
 program.addCommand(initCommand);
 program.addCommand(deployCommand);
 
