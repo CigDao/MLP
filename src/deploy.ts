@@ -210,7 +210,7 @@ export default class MultiSig {
         let symbol = this.config?.token_symbol;
         let decimal = this.config?.token_decimals;
         let token_supply = this.config?.token_supply;
-        let owner = this.config?.member_principal;
+        let owner = canister_ids.multi_sig.local;
         let fee = this.config?.token_fee;
         let database = canister_ids.database.local;
         let topupCanister = canister_ids.topup.local;
