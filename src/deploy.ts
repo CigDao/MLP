@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-
+// @ts-nocheck
 import chalk from 'chalk';
-import inquirer from 'inquirer';
 import * as gradient from 'gradient-string';
+
 import chalkAnimation from 'chalk-animation';
 import figlet from 'figlet';
 import { Command } from 'commander';
@@ -10,8 +10,8 @@ import {execa} from 'execa';
 import { createSpinner } from 'nanospinner';
 import { Mlpconfig } from './init';
 import standard from 'figlet/importable-fonts/Standard.js'
-import {dfx,config, names} from "./json-data";
-import { readFileSync, existsSync, writeFileSync } from "fs";
+import {names} from "./json-data";
+import { readFileSync } from "fs";
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 

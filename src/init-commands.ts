@@ -1,15 +1,9 @@
 #!/usr/bin/env node
-
-import chalk from 'chalk';
+// @ts-nocheck
 import inquirer from 'inquirer';
-import * as gradient from 'gradient-string';
 import chalkAnimation from 'chalk-animation';
-import figlet from 'figlet';
 import { Command } from 'commander';
-import {execa} from 'execa';
-import { createSpinner } from 'nanospinner';
 import { Mlpconfig } from './init';
-import standard from 'figlet/importable-fonts/Standard.js'
 
 let dao_name: string;
 let member_principal: string;
