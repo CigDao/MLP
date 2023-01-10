@@ -11,7 +11,9 @@ export const deployCommand = new Command("deploy");
 
 initCommand.description("Creates a new MLP project")
 .action(async (option) => {
-    const init = new InitCommands(initCommand);
+    const exists = existsSync("mlpconfig.json");
+    let defaultmlpConfig = exists ? JSON.parse(readFileSync("mlpconfig.json", 'utf8')) : undefined;
+    const init = new InitCommands(defaultmlpConfig);
 
     await init.welcome();
     config.dao_name = await init.askDao();
@@ -33,7 +35,10 @@ initCommand.description("Creates a new MLP project")
         console.error(err);
       }
       try {
-        writeFileSync('mlpconfig.json', JSON.stringify(config));
+        const exists = existsSync("mlpconfig.json");
+        if (!exists) {
+          writeFileSync('mlpconfig.json', JSON.stringify(config));
+        }
         // file written successfully
       } catch (err) {
         console.error(err);

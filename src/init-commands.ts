@@ -16,7 +16,7 @@ let token_fee:number;
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 export default class MultiSig {
-    constructor(private program: Command, private config?: Mlpconfig) { }
+    constructor(private config?: Mlpconfig) { }
 
     async welcome() {
         const rainbowTitle = chalkAnimation.rainbow(
