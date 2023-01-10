@@ -44148,8 +44148,8 @@ var dfx = {
     "swap": {
       "type": "custom",
       "build": "",
-      "candid": "canisters/token/token.did",
-      "wasm": "canisters/token/token.wasm"
+      "candid": "canisters/swap/swap.did",
+      "wasm": "canisters/swap/swap.wasm"
     }
   }
 };
@@ -44361,6 +44361,25 @@ var MultiSig = class {
       } catch (e) {
         console.error(e);
         this.program.error("failed to deploy token canister", { code: "1" });
+      }
+    });
+  }
+  deploy_swap_local() {
+    return __async(this, null, function* () {
+      let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.token.local}",`, `"${WICP_Canister}",`, `"${canister_ids.database.local}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.local}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
       }
     });
   }
@@ -47252,6 +47271,7 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
     yield dp.deploy_topup_local();
     yield dp.deploy_token_local();
     yield dp.deploy_multisig_local();
+    yield dp.deploy_swap_local();
   } else {
     yield dp.create_canisters(names.multisig);
     yield dp.create_canisters(names.database);

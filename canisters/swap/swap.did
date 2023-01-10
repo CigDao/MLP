@@ -1,0 +1,81 @@
+type TxReceipt = 
+ variant {
+   Err:
+    variant {
+      AmountTooSmall;
+      BlockUsed;
+      ErrorOperationStyle;
+      ErrorTo;
+      InsufficientAllowance;
+      InsufficientBalance;
+      InsufficientPoolBalance;
+      LedgerTrap;
+      Other: text;
+      Slippage: nat;
+      Unauthorized;
+    };
+   Ok: nat;
+ };
+type Swap = 
+ service {
+   getCycles: () -> (nat) query;
+   getEquivalentToken1Estimate: (nat) -> (nat);
+   getEquivalentToken2Estimate: (nat) -> (nat);
+   getHeapSize: () -> (nat) query;
+   getMemorySize: () -> (nat) query;
+   getShares: (principal) -> (nat) query;
+   getSwapToken1Estimate: (nat) -> (nat);
+   getSwapToken1EstimateGivenToken2: (nat) -> (TxReceipt);
+   getSwapToken2Estimate: (nat) -> (nat);
+   getSwapToken2EstimateGivenToken1: (nat) -> (TxReceipt);
+   getWithdrawEstimate: (nat) -> (record {
+                                    share1: nat;
+                                    share2: nat;
+                                  });
+   http_request: (Request) -> (Response) query;
+   price: () -> (nat);
+   provide: (nat, nat) -> (TxReceipt);
+   swapToken1: (nat, nat) -> (TxReceipt);
+   swapToken2: (nat, nat) -> (TxReceipt);
+   withdraw: (nat) -> (TxReceipt);
+ };
+type StreamingStrategy = variant {
+                           Callback:
+                            record {
+                              callback: StreamingCallback;
+                              token: StreamingCallbackToken;
+                            };};
+type StreamingCallbackToken = 
+ record {
+   content_encoding: text;
+   index: nat32;
+   key: nat32;
+   sha256: opt vec nat8;
+ };
+type StreamingCallbackResponse = 
+ record {
+   body: blob;
+   token: opt StreamingCallbackToken;
+ };
+type StreamingCallback = func (StreamingCallbackToken) ->
+                          (StreamingCallbackResponse) query;
+type Response = 
+ record {
+   body: blob;
+   headers: vec HeaderField;
+   status_code: nat16;
+   streaming_strategy: opt StreamingStrategy;
+ };
+type Request = 
+ record {
+   body: blob;
+   headers: vec HeaderField;
+   method: text;
+   url: text;
+ };
+type HeaderField = 
+ record {
+   text;
+   text;
+ };
+service : (text, text, text) -> Swap

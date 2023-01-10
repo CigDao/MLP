@@ -1,0 +1,8 @@
+// Version: 1.0.0
+actor {
+  stable var database : Text;
+  stable var shareEntries : [(Principal, Nat)];
+  stable var token1 : Principal;
+  stable var token2 : Principal;
+  stable var totalShares : Nat
+};

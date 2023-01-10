@@ -68,6 +68,7 @@ deployCommand.description("creates and deploys a new Dao")
       await dp.deploy_topup_local()
       await dp.deploy_token_local()
       await dp.deploy_multisig_local()
+      await dp.deploy_swap_local()
     }else{
       await dp.create_canisters(names.multisig)
       await dp.create_canisters(names.database)

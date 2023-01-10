@@ -27,8 +27,8 @@ export let dfx = {
         "swap": {
             "type": "custom",
             "build": "",
-            "candid": "canisters/token/token.did",
-            "wasm": "canisters/token/token.wasm"
+            "candid": "canisters/swap/swap.did",
+            "wasm": "canisters/swap/swap.wasm"
         }
     }
 }

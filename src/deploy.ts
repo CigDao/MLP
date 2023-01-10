@@ -211,6 +211,29 @@ export default class MultiSig {
 
     }
 
+    async deploy_swap_local() {
+        let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+        let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying swap canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.token.local}",`, `"${WICP_Canister}",`, `"${canister_ids.database.local}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.local}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
     finish() {
         figlet.parseFont('Standard', standard);
 
