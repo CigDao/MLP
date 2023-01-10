@@ -75,6 +75,11 @@ deployCommand.description("creates and deploys a new Dao")
       await dp.create_canisters(names.topup)
       await dp.create_canisters(names.token)
       await dp.create_canisters(names.swap)
+      await dp.deploy_database()
+      await dp.deploy_topup()
+      await dp.deploy_token()
+      await dp.deploy_multisig()
+      await dp.deploy_swap()
     }
     await dp.finish();
 })

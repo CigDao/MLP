@@ -100,26 +100,6 @@ export default class MultiSig {
         spinner.success({ text: `successfuly cloned canisters`});
     }
 
-    async deploy() {
-        // Run external tool synchronously
-        let rawdata = readFileSync("./canister_ids.json", 'utf8');
-        canister_ids = JSON.parse(rawdata);
-        const spinner = createSpinner('deploying canister, this will take a few mins...').start();
-        let text = "("
-        let args = text.concat(`"${this.config?.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
-        try {
-            const deploy = await execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
-            if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed canister`});
-            }
-
-        } catch (e) {
-            console.error(e);
-            this.program.error("failed to deploy canister", { code: "1" })
-        }
-
-    }
-
     async deploy_multisig_local() {
         let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
         canister_ids = JSON.parse(rawdata);
@@ -225,6 +205,120 @@ export default class MultiSig {
             
             if (deploy.exitCode === 0) {
                 spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.local}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_multisig() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying multisig canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`principal "${this.config?.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.multisig}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_database() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying database canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy database canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_topup() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying topup canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.database.oc}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.topup}` ,"--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed topup canister: ${canister_ids.topup.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy topup canister", { code: "1" })
+        }
+
+    }
+    async deploy_token() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying token canister, this will take a few mins...').start();
+        let icon = readFileSync("icon.png","base64");
+        let token_name = this.config?.token_name;
+        let symbol = this.config?.token_symbol;
+        let decimal = this.config?.token_decimals;
+        let token_supply = this.config?.token_supply;
+        let owner = canister_ids.multisig.ic;
+        let fee = this.config?.token_fee;
+        let database = canister_ids.database.ic;
+        let topupCanister = canister_ids.topup.ic;
+
+        let text = "("
+        let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.token}` ,"--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy token canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_swap() {
+        let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying swap canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.token.ic}",`, `"${WICP_Canister}",`, `"${canister_ids.database.ic}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.swap}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.ic}`});
             }
 
         } catch (e) {
