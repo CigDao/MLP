@@ -44194,20 +44194,77 @@ var MultiSig = class {
       }
     });
   }
-  deploy_local() {
+  deploy_multi_sig_local() {
     return __async(this, null, function* () {
       var _a, _b;
-      const spinner = (0, import_nanospinner.createSpinner)("deploying canister, this will take a few mins...").start();
+      const spinner = (0, import_nanospinner.createSpinner)("deploying multi sig canister, this will take a few mins...").start();
       let text = "(";
       let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${(_b = this.config) == null ? void 0 : _b.token_principal}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", "multi_sig", "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed canister` });
+          spinner.success({ text: `successfuly deployed multi sig canister` });
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy canister", { code: "1" });
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_database_local() {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("deploying database canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"",`, `"",`, `""`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "database", "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed database canister` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy database canister", { code: "1" });
+      }
+    });
+  }
+  deploy_topup_local() {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"",`, `vec {}`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "topup", "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed topup canister` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy topup canister", { code: "1" });
+      }
+    });
+  }
+  deploy_token_local() {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
+      let icon = "";
+      let name = "";
+      let symbol = "";
+      let decimal = 0;
+      let supply = 100;
+      let owner = "j26ec-ix7zw-kiwcx-ixw6w-72irq-zsbyr-4t7fk-alils-u33an-kh6rk-7qe";
+      let fee = 0;
+      let database = "";
+      let topupCanister = "";
+      let text = "(";
+      let args = text.concat(`"${icon}",`, `"${name}",`, `"${symbol}",`, `${decimal},`, `${supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "token", "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed token canister` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy token canister", { code: "1" });
       }
     });
   }
@@ -47072,7 +47129,10 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
   yield dp.install_azle();
   yield dp.install_multi_sig();
   if (options.local) {
-    yield dp.deploy_local();
+    yield dp.deploy_database_local();
+    yield dp.deploy_topup_local();
+    yield dp.deploy_token_local();
+    yield dp.deploy_multi_sig_local();
   } else {
     yield dp.deploy;
   }

@@ -1,0 +1,5 @@
+type TopUp = 
+ service {
+   topUp: () -> ();
+ };
+service : (text, vec text) -> TopUp

@@ -85,20 +85,84 @@ export default class MultiSig {
 
     }
 
-    async deploy_local() {
+    async deploy_multi_sig_local() {
         // Run external tool synchronously
-        const spinner = createSpinner('deploying canister, this will take a few mins...').start();
+        const spinner = createSpinner('deploying multi sig canister, this will take a few mins...').start();
         let text = "("
         let args = text.concat(`"${this.config?.member_principal}",`, `"${this.config?.token_principal}"`, ")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "multi_sig", "--argument", args]);
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed canister`});
+                spinner.success({ text: `successfuly deployed multi sig canister`});
             }
 
         } catch (e) {
             console.error(e);
-            this.program.error("failed to deploy canister", { code: "1" })
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_database_local() {
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying database canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"",`, `"",`, `""`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "database", "--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed database canister`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy database canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_topup_local() {
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying topup canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"",`, `vec {}`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "topup" ,"--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed topup canister`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy topup canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_token_local() {
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying token canister, this will take a few mins...').start();
+        let icon = "";
+        let name = "";
+        let symbol = "";
+        let decimal:number = 0;
+        let supply:number = 100;
+        let owner = "j26ec-ix7zw-kiwcx-ixw6w-72irq-zsbyr-4t7fk-alils-u33an-kh6rk-7qe";
+        let fee:number = 0;
+        let database = "";
+        let topupCanister = "";
+
+        let text = "("
+        let args = text.concat(`"${icon}",`, `"${name}",`, `"${symbol}",`, `${decimal},`, `${supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "token" ,"--argument", args]);
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed token canister`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy token canister", { code: "1" })
         }
 
     }

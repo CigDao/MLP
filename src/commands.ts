@@ -58,7 +58,10 @@ deployCommand.description("creates and deploys a new Dao")
     await dp.install_azle()
     await dp.install_multi_sig()
     if(options.local){
-      await dp.deploy_local()
+      await dp.deploy_database_local()
+      await dp.deploy_topup_local()
+      await dp.deploy_token_local()
+      await dp.deploy_multi_sig_local()
     }else{
       await dp.deploy
     }
