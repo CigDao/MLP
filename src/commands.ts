@@ -3,7 +3,7 @@ import Deploy from "./deploy";
 import InitCommands from "./init-commands";
 import { readFileSync, existsSync, writeFileSync } from "fs";
 import { Mlpconfig } from "./init";
-import {dfx,config} from "./json-data";
+import {dfx,config, names} from "./json-data";
 
 export const initCommand = new Command("init");
 export const deployCommand = new Command("deploy");
@@ -15,9 +15,11 @@ initCommand.description("Creates a new MLP project")
     await init.welcome();
     config.dao_name = await init.askDao();
     config.member_principal = await init.askMember();
-    config.token_principal = await init.askToken();
-    config.token_decimals = await init.askTokenDecimals();
+    config.token_name = await init.askTokenName();
+    config.token_symbol = await init.askTokenSymbol();
     config.token_supply = await init.askTokenSupply();
+    config.token_decimals = await init.askTokenDecimals();
+    config.token_fee = await init.askTokenFee();
 
     for (let i = 0; i < config.token_decimals; i++) {
       config.token_supply = config.token_supply * 10
@@ -57,13 +59,23 @@ deployCommand.description("creates and deploys a new Dao")
     await dp.install_dfx()
     await dp.install_azle()
     await dp.install_multi_sig()
+    await dp.clone_canisters()
     if(options.local){
+      await dp.create_canisters_local(names.multi_sig)
+      await dp.create_canisters_local(names.database)
+      await dp.create_canisters_local(names.topup)
+      await dp.create_canisters_local(names.token)
+      await dp.create_canisters_local(names.swap)
       await dp.deploy_database_local()
       await dp.deploy_topup_local()
       await dp.deploy_token_local()
       await dp.deploy_multi_sig_local()
     }else{
-      await dp.deploy
+      await dp.create_canisters(names.multi_sig)
+      await dp.create_canisters(names.database)
+      await dp.create_canisters(names.topup)
+      await dp.create_canisters(names.token)
+      await dp.create_canisters(names.swap)
     }
     await dp.finish();
 })

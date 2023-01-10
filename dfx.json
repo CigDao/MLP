@@ -25,6 +25,12 @@
             "build": "",
             "candid": "canisters/token/token.did",
             "wasm": "canisters/token/token.wasm"
+        },
+        "swap": {
+            "type": "custom",
+            "build": "",
+            "candid": "canisters/token/token.did",
+            "wasm": "canisters/token/token.wasm"
         }
     }
 }

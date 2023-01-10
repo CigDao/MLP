@@ -422,8 +422,8 @@ var require_option = __commonJS({
         this.presetArg = arg;
         return this;
       }
-      conflicts(names) {
-        this.conflictsWith = this.conflictsWith.concat(names);
+      conflicts(names2) {
+        this.conflictsWith = this.conflictsWith.concat(names2);
         return this;
       }
       implies(impliedOptionValues) {
@@ -774,8 +774,8 @@ var require_command = __commonJS({
         this.addArgument(argument);
         return this;
       }
-      arguments(names) {
-        names.split(/ +/).forEach((detail) => {
+      arguments(names2) {
+        names2.split(/ +/).forEach((detail) => {
           this.argument(detail);
         });
         return this;
@@ -913,12 +913,12 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this;
       }
-      _optionEx(config2, flags, description, fn, defaultValue) {
+      _optionEx(config3, flags, description, fn, defaultValue) {
         if (typeof flags === "object" && flags instanceof Option2) {
           throw new Error("To add an Option object use addOption() instead of option() or requiredOption()");
         }
         const option = this.createOption(flags, description);
-        option.makeOptionMandatory(!!config2.mandatory);
+        option.makeOptionMandatory(!!config3.mandatory);
         if (typeof fn === "function") {
           option.default(defaultValue).argParser(fn);
         } else if (fn instanceof RegExp) {
@@ -1470,9 +1470,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
           this._outputConfiguration.writeErr("\n");
           this.outputHelp({ error: true });
         }
-        const config2 = errorOptions || {};
-        const exitCode = config2.exitCode || 1;
-        const code = config2.code || "commander.error";
+        const config3 = errorOptions || {};
+        const exitCode = config3.exitCode || 1;
+        const code = config3.code || "commander.error";
         this._exit(exitCode, code, message);
       }
       _parseOptionsEnv() {
@@ -3941,7 +3941,7 @@ var require_tinycolor = __commonJS({
           return tinycolor.mostReadable(baseColor, ["#fff", "#000"], args);
         }
       };
-      var names = tinycolor.names = {
+      var names2 = tinycolor.names = {
         aliceblue: "f0f8ff",
         antiquewhite: "faebd7",
         aqua: "0ff",
@@ -4092,7 +4092,7 @@ var require_tinycolor = __commonJS({
         yellow: "ff0",
         yellowgreen: "9acd32"
       };
-      var hexNames = tinycolor.hexNames = flip(names);
+      var hexNames = tinycolor.hexNames = flip(names2);
       function flip(o) {
         var flipped = {};
         for (var i in o) {
@@ -4175,8 +4175,8 @@ var require_tinycolor = __commonJS({
       function stringInputToObject(color) {
         color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
         var named = false;
-        if (names[color]) {
-          color = names[color];
+        if (names2[color]) {
+          color = names2[color];
           named = true;
         } else if (color == "transparent") {
           return { r: 0, g: 0, b: 0, a: 0, format: "name" };
@@ -11791,8 +11791,8 @@ var require_lastValueFrom = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.lastValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
-    function lastValueFrom(source, config2) {
-      var hasConfig = typeof config2 === "object";
+    function lastValueFrom(source, config3) {
+      var hasConfig = typeof config3 === "object";
       return new Promise(function(resolve, reject) {
         var _hasValue = false;
         var _value;
@@ -11806,7 +11806,7 @@ var require_lastValueFrom = __commonJS({
             if (_hasValue) {
               resolve(_value);
             } else if (hasConfig) {
-              resolve(config2.defaultValue);
+              resolve(config3.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -11826,8 +11826,8 @@ var require_firstValueFrom = __commonJS({
     exports.firstValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
     var Subscriber_1 = require_Subscriber();
-    function firstValueFrom(source, config2) {
-      var hasConfig = typeof config2 === "object";
+    function firstValueFrom(source, config3) {
+      var hasConfig = typeof config3 === "object";
       return new Promise(function(resolve, reject) {
         var subscriber = new Subscriber_1.SafeSubscriber({
           next: function(value) {
@@ -11837,7 +11837,7 @@ var require_firstValueFrom = __commonJS({
           error: reject,
           complete: function() {
             if (hasConfig) {
-              resolve(config2.defaultValue);
+              resolve(config3.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -11938,8 +11938,8 @@ var require_timeout = __commonJS({
         this.info = info;
       };
     });
-    function timeout(config2, schedulerArg) {
-      var _a = isDate_1.isValidDate(config2) ? { first: config2 } : typeof config2 === "number" ? { each: config2 } : config2, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
+    function timeout(config3, schedulerArg) {
+      var _a = isDate_1.isValidDate(config3) ? { first: config3 } : typeof config3 === "number" ? { each: config3 } : config3, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
       if (first == null && each == null) {
         throw new TypeError("No timeout provided.");
       }
@@ -12501,12 +12501,12 @@ var require_connectable = __commonJS({
       },
       resetOnDisconnect: true
     };
-    function connectable(source, config2) {
-      if (config2 === void 0) {
-        config2 = DEFAULT_CONFIG;
+    function connectable(source, config3) {
+      if (config3 === void 0) {
+        config3 = DEFAULT_CONFIG;
       }
       var connection = null;
-      var connector = config2.connector, _a = config2.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
+      var connector = config3.connector, _a = config3.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
       var subject = connector();
       var result = new Observable_1.Observable(function(subscriber) {
         return subject.subscribe(subscriber);
@@ -14107,11 +14107,11 @@ var require_connect = __commonJS({
         return new Subject_1.Subject();
       }
     };
-    function connect(selector, config2) {
-      if (config2 === void 0) {
-        config2 = DEFAULT_CONFIG;
+    function connect(selector, config3) {
+      if (config3 === void 0) {
+        config3 = DEFAULT_CONFIG;
       }
-      var connector = config2.connector;
+      var connector = config3.connector;
       return lift_1.operate(function(source, subscriber) {
         var subject = connector();
         innerFrom_1.innerFrom(selector(fromSubscribable_1.fromSubscribable(subject))).subscribe(subscriber);
@@ -15599,15 +15599,15 @@ var require_retry = __commonJS({
       if (configOrCount === void 0) {
         configOrCount = Infinity;
       }
-      var config2;
+      var config3;
       if (configOrCount && typeof configOrCount === "object") {
-        config2 = configOrCount;
+        config3 = configOrCount;
       } else {
-        config2 = {
+        config3 = {
           count: configOrCount
         };
       }
-      var _a = config2.count, count = _a === void 0 ? Infinity : _a, delay = config2.delay, _b = config2.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
+      var _a = config3.count, count = _a === void 0 ? Infinity : _a, delay = config3.delay, _b = config3.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
       return count <= 0 ? identity_1.identity : lift_1.operate(function(source, subscriber) {
         var soFar = 0;
         var innerSub;
@@ -16328,12 +16328,12 @@ var require_throttle = __commonJS({
       leading: true,
       trailing: false
     };
-    function throttle(durationSelector, config2) {
-      if (config2 === void 0) {
-        config2 = exports.defaultThrottleConfig;
+    function throttle(durationSelector, config3) {
+      if (config3 === void 0) {
+        config3 = exports.defaultThrottleConfig;
       }
       return lift_1.operate(function(source, subscriber) {
-        var leading = config2.leading, trailing = config2.trailing;
+        var leading = config3.leading, trailing = config3.trailing;
         var hasValue = false;
         var sendValue = null;
         var throttled = null;
@@ -16385,17 +16385,17 @@ var require_throttleTime = __commonJS({
     var async_1 = require_async();
     var throttle_1 = require_throttle();
     var timer_1 = require_timer();
-    function throttleTime(duration, scheduler, config2) {
+    function throttleTime(duration, scheduler, config3) {
       if (scheduler === void 0) {
         scheduler = async_1.asyncScheduler;
       }
-      if (config2 === void 0) {
-        config2 = throttle_1.defaultThrottleConfig;
+      if (config3 === void 0) {
+        config3 = throttle_1.defaultThrottleConfig;
       }
       var duration$ = timer_1.timer(duration, scheduler);
       return throttle_1.throttle(function() {
         return duration$;
-      }, config2);
+      }, config3);
     }
     exports.throttleTime = throttleTime;
   }
@@ -44118,12 +44118,89 @@ Font modified May 20, 2012 by patorjk to add the 0xCA0 character
          @@
          `;
 
+// src/json-data.ts
+var dfx = {
+  "canisters": {
+    "multi_sig": {
+      "type": "custom",
+      "build": "npx azle multi_sig",
+      "root": "src",
+      "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
+      "candid": "node_modules/@cigdao/multi-sig/src/index.did",
+      "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
+    },
+    "database": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/database/database.did",
+      "wasm": "canisters/database/database.wasm"
+    },
+    "topup": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/topup/topup.did",
+      "wasm": "canisters/topup/topup.wasm"
+    },
+    "token": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/token/token.did",
+      "wasm": "canisters/token/token.wasm"
+    },
+    "swap": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/token/token.did",
+      "wasm": "canisters/token/token.wasm"
+    }
+  }
+};
+var config = {
+  "dao_name": "",
+  "member_principal": "",
+  "token_supply": 0,
+  "token_decimals": 0,
+  "token_fee": 0,
+  "token_name": "",
+  "token_symbol": ""
+};
+var names = {
+  "multi_sig": "multi_sig",
+  "database": "database",
+  "topup": "topup",
+  "token": "token",
+  "swap": "swap"
+};
+
 // src/deploy.ts
+var import_fs = require("fs");
 var sleep = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
+var canister_ids = {
+  "multi_sig": {
+    "local": "",
+    "ic": ""
+  },
+  "database": {
+    "local": "",
+    "ic": ""
+  },
+  "topup": {
+    "local": "",
+    "ic": ""
+  },
+  "token": {
+    "local": "",
+    "ic": ""
+  },
+  "swap": {
+    "local": "",
+    "ic": ""
+  }
+};
 var MultiSig = class {
-  constructor(program4, config2) {
+  constructor(program4, config3) {
     this.program = program4;
-    this.config = config2;
+    this.config = config3;
   }
   title() {
     return __async(this, null, function* () {
@@ -44154,6 +44231,28 @@ var MultiSig = class {
       spinner.success({ text: `dfx already installed` });
     });
   }
+  create_canisters_local(name) {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)(`creating canisters ${name}...`).start();
+      const create = yield execa("dfx", ["canister", "create", name]);
+      if (create.exitCode !== 0) {
+        this.program.error(`unable to create canister ${name}`, { code: "1" });
+      }
+      ;
+      spinner.success({ text: `successfuly created canister ${name}` });
+    });
+  }
+  create_canisters(name) {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("creating canisters...").start();
+      const create = yield execa("dfx", ["canister", "--network", "ic", "create", name]);
+      if (create.exitCode !== 0) {
+        this.program.error(`unable to create canister ${name}`, { code: "1" });
+      }
+      ;
+      spinner.success({ text: `successfuly created canister ${name}` });
+    });
+  }
   install_azle() {
     return __async(this, null, function* () {
       const spinner = (0, import_nanospinner.createSpinner)("Installing azle...").start();
@@ -44177,12 +44276,25 @@ var MultiSig = class {
       spinner.success({ text: `successfuly installed multi_sig` });
     });
   }
+  clone_canisters() {
+    return __async(this, null, function* () {
+      const spinner = (0, import_nanospinner.createSpinner)("pulling down canisters...").start();
+      const multi_sig = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
+      if (multi_sig.exitCode !== 0) {
+        this.program.error("unable to pull down canisters https://github.com/CigDao/canisters?", { code: "1" });
+      }
+      ;
+      spinner.success({ text: `successfuly cloned canisters` });
+    });
+  }
   deploy() {
     return __async(this, null, function* () {
-      var _a, _b;
+      var _a;
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${(_b = this.config) == null ? void 0 : _b.token_principal}"`, ")");
+      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
         if (deploy.exitCode === 0) {
@@ -44196,14 +44308,16 @@ var MultiSig = class {
   }
   deploy_multi_sig_local() {
     return __async(this, null, function* () {
-      var _a, _b;
+      var _a;
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying multi sig canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${(_b = this.config) == null ? void 0 : _b.token_principal}"`, ")");
+      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.local}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "multi_sig", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.multi_sig}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed multi sig canister` });
+          spinner.success({ text: `successfuly deployed multi sig canister: ${canister_ids.multi_sig.local}` });
         }
       } catch (e) {
         console.error(e);
@@ -44213,13 +44327,15 @@ var MultiSig = class {
   }
   deploy_database_local() {
     return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying database canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"",`, `"",`, `""`, ")");
+      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "database", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed database canister` });
+          spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
         }
       } catch (e) {
         console.error(e);
@@ -44229,13 +44345,15 @@ var MultiSig = class {
   }
   deploy_topup_local() {
     return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"",`, `vec {}`, ")");
+      let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multi_sig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "topup", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.topup}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed topup canister` });
+          spinner.success({ text: `successfuly deployed topup canister: ${canister_ids.topup.local}` });
         }
       } catch (e) {
         console.error(e);
@@ -44245,22 +44363,25 @@ var MultiSig = class {
   }
   deploy_token_local() {
     return __async(this, null, function* () {
+      var _a, _b, _c, _d, _e, _f;
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
-      let icon = "";
-      let name = "";
-      let symbol = "";
-      let decimal = 0;
-      let supply = 100;
-      let owner = "j26ec-ix7zw-kiwcx-ixw6w-72irq-zsbyr-4t7fk-alils-u33an-kh6rk-7qe";
-      let fee = 0;
-      let database = "";
-      let topupCanister = "";
+      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
+      let token_name2 = (_a = this.config) == null ? void 0 : _a.token_name;
+      let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
+      let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
+      let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
+      let owner = (_e = this.config) == null ? void 0 : _e.member_principal;
+      let fee = (_f = this.config) == null ? void 0 : _f.token_fee;
+      let database = canister_ids.database.local;
+      let topupCanister = canister_ids.topup.local;
       let text = "(";
-      let args = text.concat(`"${icon}",`, `"${name}",`, `"${symbol}",`, `${decimal},`, `${supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
+      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "token", "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.token}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed token canister` });
+          spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.local}` });
         }
       } catch (e) {
         console.error(e);
@@ -46950,14 +47071,16 @@ var inquirer_default = inquirer;
 // src/init-commands.ts
 var dao_name;
 var member_principal;
-var token_principal;
+var token_name;
+var token_symbol;
 var token_supply;
 var token_decimals;
+var token_fee;
 var sleep2 = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var MultiSig2 = class {
-  constructor(program4, config2) {
+  constructor(program4, config3) {
     this.program = program4;
-    this.config = config2;
+    this.config = config3;
   }
   welcome() {
     return __async(this, null, function* () {
@@ -47004,25 +47127,6 @@ var MultiSig2 = class {
       }
     });
   }
-  askToken() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      if ((_a = this.config) == null ? void 0 : _a.token_principal) {
-        token_principal = (_b = this.config) == null ? void 0 : _b.token_principal;
-        console.log(`Token Principal: ${token_principal}`);
-      } else {
-        const answers = yield inquirer_default.prompt({
-          name: "token_principal",
-          type: "input",
-          message: "The principal for your governace token",
-          default() {
-            return "Token Principal";
-          }
-        });
-        return answers.token_principal;
-      }
-    });
-  }
   askTokenDecimals() {
     return __async(this, null, function* () {
       var _a, _b;
@@ -47061,33 +47165,67 @@ var MultiSig2 = class {
       }
     });
   }
-};
-
-// src/commands.ts
-var import_fs = require("fs");
-
-// src/json-data.ts
-var dfx = {
-  "canisters": {
-    "multi_sig": {
-      "type": "custom",
-      "build": "npx azle multi_sig",
-      "root": "src",
-      "ts": "node_modules/@cigdao/multi-sig/src/index.ts",
-      "candid": "node_modules/@cigdao/multi-sig/src/index.did",
-      "wasm": "target/wasm32-unknown-unknown/release/multi_sig.wasm.gz"
-    }
+  askTokenFee() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_fee) {
+        token_fee = (_b = this.config) == null ? void 0 : _b.token_fee;
+        console.log(`Token Fee: ${token_fee}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_fee",
+          type: "input",
+          message: "The fee for your governace token",
+          default() {
+            return "Token Fee";
+          }
+        });
+        return answers.token_fee;
+      }
+    });
+  }
+  askTokenName() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_name) {
+        token_name = (_b = this.config) == null ? void 0 : _b.token_name;
+        console.log(`Token Name: ${token_name}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_name",
+          type: "input",
+          message: "The name of your governace token",
+          default() {
+            return "Token Name";
+          }
+        });
+        return answers.token_name;
+      }
+    });
+  }
+  askTokenSymbol() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_symbol) {
+        token_symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
+        console.log(`Token Symbol: ${token_symbol}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_symbol",
+          type: "input",
+          message: "The symbol of your governace token",
+          default() {
+            return "Token Symbol";
+          }
+        });
+        return answers.token_symbol;
+      }
+    });
   }
 };
-var config = {
-  "dao_name": "",
-  "token_principal": "",
-  "member_principal": "",
-  "token_supply": 0,
-  "token_decimals": 0
-};
 
 // src/commands.ts
+var import_fs2 = require("fs");
 var initCommand = new Command("init");
 var deployCommand = new Command("deploy");
 initCommand.description("Creates a new MLP project").action((option) => __async(void 0, null, function* () {
@@ -47095,28 +47233,30 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
   yield init.welcome();
   config.dao_name = yield init.askDao();
   config.member_principal = yield init.askMember();
-  config.token_principal = yield init.askToken();
-  config.token_decimals = yield init.askTokenDecimals();
+  config.token_name = yield init.askTokenName();
+  config.token_symbol = yield init.askTokenSymbol();
   config.token_supply = yield init.askTokenSupply();
+  config.token_decimals = yield init.askTokenDecimals();
+  config.token_fee = yield init.askTokenFee();
   for (let i = 0; i < config.token_decimals; i++) {
     config.token_supply = config.token_supply * 10;
   }
   try {
-    (0, import_fs.writeFileSync)("dfx.json", JSON.stringify(dfx));
+    (0, import_fs2.writeFileSync)("dfx.json", JSON.stringify(dfx));
   } catch (err) {
     console.error(err);
   }
   try {
-    (0, import_fs.writeFileSync)("mlpconfig.json", JSON.stringify(config));
+    (0, import_fs2.writeFileSync)("mlpconfig.json", JSON.stringify(config));
   } catch (err) {
     console.error(err);
   }
 }));
 deployCommand.description("creates and deploys a new Dao").option("-c, --config <configFile>", "Config file to avoid inputs", "mlpconfig.json").option("-l, --local", "deploy to local dfx").action((options) => __async(void 0, null, function* () {
-  const configExists = (0, import_fs.existsSync)(options.config);
+  const configExists = (0, import_fs2.existsSync)(options.config);
   let configFile = void 0;
   if (configExists) {
-    let rawdata = (0, import_fs.readFileSync)(options.config, "utf8");
+    let rawdata = (0, import_fs2.readFileSync)(options.config, "utf8");
     configFile = JSON.parse(rawdata);
   }
   const dp = new MultiSig(deployCommand, configFile);
@@ -47128,13 +47268,23 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
   yield dp.install_dfx();
   yield dp.install_azle();
   yield dp.install_multi_sig();
+  yield dp.clone_canisters();
   if (options.local) {
+    yield dp.create_canisters_local(names.multi_sig);
+    yield dp.create_canisters_local(names.database);
+    yield dp.create_canisters_local(names.topup);
+    yield dp.create_canisters_local(names.token);
+    yield dp.create_canisters_local(names.swap);
     yield dp.deploy_database_local();
     yield dp.deploy_topup_local();
     yield dp.deploy_token_local();
     yield dp.deploy_multi_sig_local();
   } else {
-    yield dp.deploy;
+    yield dp.create_canisters(names.multi_sig);
+    yield dp.create_canisters(names.database);
+    yield dp.create_canisters(names.topup);
+    yield dp.create_canisters(names.token);
+    yield dp.create_canisters(names.swap);
   }
   yield dp.finish();
 }));

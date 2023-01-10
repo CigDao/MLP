@@ -13,9 +13,11 @@ import standard from 'figlet/importable-fonts/Standard.js'
 
 let dao_name: string;
 let member_principal: string;
-let token_principal:string;
+let token_name:string;
+let token_symbol:string;
 let token_supply:number;
 let token_decimals:number;
+let token_fee:number;
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
@@ -67,24 +69,6 @@ export default class MultiSig {
         }
     }
 
-    async askToken() {
-        if (this.config?.token_principal) {
-            token_principal = this.config?.token_principal;
-            console.log(`Token Principal: ${token_principal}`)
-        } else {
-            const answers = await inquirer.prompt({
-                name: 'token_principal',
-                type: 'input',
-                message: "The principal for your governace token",
-                default() {
-                    return 'Token Principal';
-                },
-            });
-
-            return answers.token_principal;
-        }
-    }
-
     async askTokenDecimals() {
         if (this.config?.token_decimals) {
             token_decimals = this.config?.token_decimals;
@@ -118,6 +102,60 @@ export default class MultiSig {
             });
 
             return answers.token_supply;
+        }
+    }
+
+    async askTokenFee() {
+        if (this.config?.token_fee) {
+            token_fee = this.config?.token_fee;
+            console.log(`Token Fee: ${token_fee}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'token_fee',
+                type: 'input',
+                message: "The fee for your governace token",
+                default() {
+                    return 'Token Fee';
+                },
+            });
+
+            return answers.token_fee;
+        }
+    }
+
+    async askTokenName() {
+        if (this.config?.token_name) {
+            token_name = this.config?.token_name;
+            console.log(`Token Name: ${token_name}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'token_name',
+                type: 'input',
+                message: "The name of your governace token",
+                default() {
+                    return 'Token Name';
+                },
+            });
+
+            return answers.token_name;
+        }
+    }
+
+    async askTokenSymbol() {
+        if (this.config?.token_symbol) {
+            token_symbol = this.config?.token_symbol;
+            console.log(`Token Symbol: ${token_symbol}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'token_symbol',
+                type: 'input',
+                message: "The symbol of your governace token",
+                default() {
+                    return 'Token Symbol';
+                },
+            });
+
+            return answers.token_symbol;
         }
     }
 }
