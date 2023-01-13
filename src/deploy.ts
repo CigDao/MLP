@@ -36,6 +36,14 @@ var canister_ids = {
         "local": "",
         "ic":""
     },
+    "treasury": {
+        "local": "",
+        "ic":""
+    },
+    "dao": {
+        "local": "",
+        "ic":""
+    },
 }
 
 export default class MultiSig {
@@ -93,9 +101,9 @@ export default class MultiSig {
 
     async clone_canisters() {
         const spinner = createSpinner('pulling down canisters...').start();
-        const multisig = await execa("git", ["clone", "https://github.com/CigDao/canisters"]);
-        if (multisig.exitCode !== 0) {
-            this.program.error("unable to pull down canisters https://github.com/CigDao/canisters?", { code: "1" })
+        const clone_canisters = await execa("git", ["clone", "https://github.com/CigDao/canisters"]);
+        if (clone_canisters.exitCode !== 0) {
+            this.program.error("unable to pull down canisters https://github.com/CigDao/canisters", { code: "1" })
         };
         spinner.success({ text: `successfuly cloned canisters`});
     }
@@ -132,9 +140,13 @@ export default class MultiSig {
         try {
             const deploy = await execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
+                let call_args = text.concat(`"group#ledger"`,")");
+                const call = await execa("dfx", ["canister", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                if (call.exitCode === 0) {
+                    spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
+                }
             }
-
+            
         } catch (e) {
             console.error(e);
             this.program.error("failed to deploy database canister", { code: "1" })
@@ -214,6 +226,50 @@ export default class MultiSig {
 
     }
 
+    async deploy_treasury_local() {
+        let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.dao.local}",`, `"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`,`"${canister_ids.topup.local}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_dao_local() {
+        let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}",`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
     async deploy_multisig() {
         let rawdata = readFileSync("./canister_ids.json", 'utf8');
         canister_ids = JSON.parse(rawdata);
@@ -246,7 +302,11 @@ export default class MultiSig {
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
+                let call_args = text.concat(`"group#ledger"`,")");
+                const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                if (call.exitCode === 0) {
+                    spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
+                }
             }
 
         } catch (e) {
@@ -262,7 +322,7 @@ export default class MultiSig {
         // Run external tool synchronously
         const spinner = createSpinner('deploying topup canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.database.oc}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
+        let args = text.concat(`"${canister_ids.database.ic}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.topup}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
@@ -319,6 +379,50 @@ export default class MultiSig {
             
             if (deploy.exitCode === 0) {
                 spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_treasury() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.dao.ic}",`, `"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`,`"${canister_ids.topup.ic}"`, ")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}`});
+            }
+
+        } catch (e) {
+            console.error(e);
+            this.program.error("failed to deploy multi sig canister", { code: "1" })
+        }
+
+    }
+
+    async deploy_dao() {
+        let rawdata = readFileSync("./canister_ids.json", 'utf8');
+        canister_ids = JSON.parse(rawdata);
+
+        // Run external tool synchronously
+        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        let text = "("
+        let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}",`,")");
+        try {
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+            
+            if (deploy.exitCode === 0) {
+                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}`});
             }
 
         } catch (e) {

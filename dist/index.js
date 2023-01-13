@@ -44150,6 +44150,18 @@ var dfx = {
       "build": "",
       "candid": "canisters/swap/swap.did",
       "wasm": "canisters/swap/swap.wasm"
+    },
+    "treasury": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/treasury/treasury.did",
+      "wasm": "canisters/treasury/treasury.wasm"
+    },
+    "dao": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/dao/dao.did",
+      "wasm": "canisters/dao/dao.wasm"
     }
   }
 };
@@ -44160,14 +44172,18 @@ var config = {
   "token_decimals": 0,
   "token_fee": 0,
   "token_name": "",
-  "token_symbol": ""
+  "token_symbol": "",
+  "proposal_cost": 0,
+  "stake_time": 0
 };
 var names = {
   "multisig": "multisig",
   "database": "database",
   "topup": "topup",
   "token": "token",
-  "swap": "swap"
+  "swap": "swap",
+  "treasury": "treasury",
+  "dao": "dao"
 };
 
 // src/deploy.ts
@@ -44191,6 +44207,14 @@ var canister_ids = {
     "ic": ""
   },
   "swap": {
+    "local": "",
+    "ic": ""
+  },
+  "treasury": {
+    "local": "",
+    "ic": ""
+  },
+  "dao": {
     "local": "",
     "ic": ""
   }
@@ -44254,31 +44278,12 @@ var MultiSig = class {
   clone_canisters() {
     return __async(this, null, function* () {
       const spinner = (0, import_nanospinner.createSpinner)("pulling down canisters...").start();
-      const multisig = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
-      if (multisig.exitCode !== 0) {
-        this.program.error("unable to pull down canisters https://github.com/CigDao/canisters?", { code: "1" });
+      const clone_canisters = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
+      if (clone_canisters.exitCode !== 0) {
+        this.program.error("unable to pull down canisters https://github.com/CigDao/canisters", { code: "1" });
       }
       ;
       spinner.success({ text: `successfuly cloned canisters` });
-    });
-  }
-  deploy() {
-    return __async(this, null, function* () {
-      var _a;
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed canister` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy canister", { code: "1" });
-      }
     });
   }
   deploy_multisig_local() {
@@ -44310,7 +44315,11 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
+          let call_args = text.concat(`"group#ledger"`, ")");
+          const call = yield execa("dfx", ["canister", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+          if (call.exitCode === 0) {
+            spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
+          }
         }
       } catch (e) {
         console.error(e);
@@ -44376,6 +44385,186 @@ var MultiSig = class {
         const deploy = yield execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
         if (deploy.exitCode === 0) {
           spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.local}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_treasury_local() {
+    return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.dao.local}",`, `"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_dao_local() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_multisig() {
+    return __async(this, null, function* () {
+      var _a;
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying multisig canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`principal "${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.multisig}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.ic}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_database() {
+    return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying database canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          let call_args = text.concat(`"group#ledger"`, ")");
+          const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+          if (call.exitCode === 0) {
+            spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}` });
+          }
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy database canister", { code: "1" });
+      }
+    });
+  }
+  deploy_topup() {
+    return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.database.ic}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.topup}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed topup canister: ${canister_ids.topup.ic}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy topup canister", { code: "1" });
+      }
+    });
+  }
+  deploy_token() {
+    return __async(this, null, function* () {
+      var _a, _b, _c, _d, _e;
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
+      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
+      let token_name2 = (_a = this.config) == null ? void 0 : _a.token_name;
+      let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
+      let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
+      let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
+      let owner = canister_ids.multisig.ic;
+      let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
+      let database = canister_ids.database.ic;
+      let topupCanister = canister_ids.topup.ic;
+      let text = "(";
+      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.token}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy token canister", { code: "1" });
+      }
+    });
+  }
+  deploy_swap() {
+    return __async(this, null, function* () {
+      let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${WICP_Canister}",`, `"${canister_ids.database.ic}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.swap}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.ic}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_treasury() {
+    return __async(this, null, function* () {
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.dao.ic}",`, `"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}` });
+        }
+      } catch (e) {
+        console.error(e);
+        this.program.error("failed to deploy multi sig canister", { code: "1" });
+      }
+    });
+  }
+  deploy_dao() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
+      canister_ids = JSON.parse(rawdata);
+      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      let text = "(";
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
+      try {
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+        if (deploy.exitCode === 0) {
+          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}` });
         }
       } catch (e) {
         console.error(e);
@@ -47070,6 +47259,8 @@ var token_symbol;
 var token_supply;
 var token_decimals;
 var token_fee;
+var proposal_cost;
+var stake_time;
 var sleep2 = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var MultiSig2 = class {
   constructor(program4, config3) {
@@ -47216,6 +47407,72 @@ var MultiSig2 = class {
       }
     });
   }
+  askProposalCost() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.proposal_cost) {
+        proposal_cost = (_b = this.config) == null ? void 0 : _b.proposal_cost;
+        console.log(`Proposal Cost: ${proposal_cost}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "proposal_cost",
+          type: "number",
+          message: "The cost to create a proposal",
+          default() {
+            return "Proposal Cost";
+          }
+        });
+        return answers.proposal_cost;
+      }
+    });
+  }
+  askStakeTime() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.stake_time) {
+        stake_time = (_b = this.config) == null ? void 0 : _b.stake_time;
+        console.log(`Unstaking Time: ${stake_time}`);
+        return stake_time;
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "stake_time",
+          type: "list",
+          message: "The time it takes to unstake tokens",
+          choices: [
+            "1 minute",
+            "1 Day",
+            "3 Day",
+            "1 Week",
+            "1 Month"
+          ],
+          default() {
+            return "Stake Time";
+          }
+        });
+        answers.stake_time === "3 Day";
+        switch (answers.stake_time) {
+          case "1 Minute": {
+            return 6e10;
+          }
+          case "1 Day": {
+            return 864e11;
+          }
+          case "3 Day": {
+            return 864e11 * 3;
+          }
+          case "1 Week": {
+            return 864e11 * 7;
+          }
+          case "1 Month": {
+            return 864e11 * 30;
+          }
+          default: {
+            return 864e11 * 3;
+          }
+        }
+      }
+    });
+  }
 };
 
 // src/commands.ts
@@ -47232,6 +47489,8 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
   config.token_supply = yield init.askTokenSupply();
   config.token_decimals = yield init.askTokenDecimals();
   config.token_fee = yield init.askTokenFee();
+  config.proposal_cost = yield init.askProposalCost();
+  config.stake_time = yield init.askStakeTime();
   for (let i = 0; i < config.token_decimals; i++) {
     config.token_supply = config.token_supply * 10;
   }
@@ -47267,17 +47526,30 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
     yield dp.create_canisters_local(names.topup);
     yield dp.create_canisters_local(names.token);
     yield dp.create_canisters_local(names.swap);
+    yield dp.create_canisters_local(names.treasury);
+    yield dp.create_canisters_local(names.dao);
     yield dp.deploy_database_local();
     yield dp.deploy_topup_local();
     yield dp.deploy_token_local();
     yield dp.deploy_multisig_local();
     yield dp.deploy_swap_local();
+    yield dp.deploy_treasury_local();
+    yield dp.deploy_dao_local();
   } else {
     yield dp.create_canisters(names.multisig);
     yield dp.create_canisters(names.database);
     yield dp.create_canisters(names.topup);
     yield dp.create_canisters(names.token);
     yield dp.create_canisters(names.swap);
+    yield dp.create_canisters(names.treasury);
+    yield dp.create_canisters(names.dao);
+    yield dp.deploy_database();
+    yield dp.deploy_topup();
+    yield dp.deploy_token();
+    yield dp.deploy_multisig();
+    yield dp.deploy_swap();
+    yield dp.deploy_treasury();
+    yield dp.deploy_dao();
   }
   yield dp.finish();
 }));

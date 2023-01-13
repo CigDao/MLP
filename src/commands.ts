@@ -20,6 +20,8 @@ initCommand.description("Creates a new MLP project")
     config.token_supply = await init.askTokenSupply();
     config.token_decimals = await init.askTokenDecimals();
     config.token_fee = await init.askTokenFee();
+    config.proposal_cost = await init.askProposalCost();
+    config.stake_time = await init.askStakeTime();
 
     for (let i = 0; i < config.token_decimals; i++) {
       config.token_supply = config.token_supply * 10
@@ -64,22 +66,30 @@ deployCommand.description("creates and deploys a new Dao")
       await dp.create_canisters_local(names.topup)
       await dp.create_canisters_local(names.token)
       await dp.create_canisters_local(names.swap)
+      await dp.create_canisters_local(names.treasury)
+      await dp.create_canisters_local(names.dao)
       await dp.deploy_database_local()
       await dp.deploy_topup_local()
       await dp.deploy_token_local()
       await dp.deploy_multisig_local()
       await dp.deploy_swap_local()
+      await dp.deploy_treasury_local()
+      await dp.deploy_dao_local()
     }else{
       await dp.create_canisters(names.multisig)
       await dp.create_canisters(names.database)
       await dp.create_canisters(names.topup)
       await dp.create_canisters(names.token)
       await dp.create_canisters(names.swap)
+      await dp.create_canisters(names.treasury)
+      await dp.create_canisters(names.dao)
       await dp.deploy_database()
       await dp.deploy_topup()
       await dp.deploy_token()
       await dp.deploy_multisig()
       await dp.deploy_swap()
+      await dp.deploy_treasury()
+      await dp.deploy_dao()
     }
     await dp.finish();
 })

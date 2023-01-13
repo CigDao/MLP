@@ -6,4 +6,6 @@ export type Mlpconfig = {
     "token_fee": number,
     "token_name": string,
     "token_symbol": string,
+    "proposal_cost":number,
+    "stake_time":number
 }

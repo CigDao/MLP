@@ -1,0 +1,10 @@
+// Version: 1.0.0
+actor {
+  stable var _owner : Principal;
+  stable var _swap : Text;
+  stable var _token : Text;
+  stable var _topupCanister : Text;
+  stable var memberEntries : [(Principal, Nat)];
+  stable var requestId : Nat32;
+  stable var threshold : Nat
+};
