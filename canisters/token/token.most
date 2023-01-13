@@ -9,6 +9,7 @@ actor {
   stable var burnt : Nat;
   stable var database_ : Text;
   stable var decimals_ : Nat8;
+  stable var distributed : Bool;
   stable var fee : Nat;
   stable var feeTo : Principal;
   stable genesis :
