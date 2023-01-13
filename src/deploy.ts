@@ -349,13 +349,17 @@ export default class MultiSig {
         let fee = this.config?.token_fee;
         let database = canister_ids.database.ic;
         let topupCanister = canister_ids.topup.ic;
-
+        let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
         let text = "("
         let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.token}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}`});
+                let call_args = text.concat(`"${YC_Canister}"`,")");
+                const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.token}`,"distribute", call_args]);
+                if (call.exitCode === 0) {
+                    spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}`});
+                }
             }
 
         } catch (e) {

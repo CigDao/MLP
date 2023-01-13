@@ -77,6 +77,7 @@ export const idlFactory = ({ IDL }) => {
     'bulkTransfer' : IDL.Func([IDL.Vec(Holder)], [IDL.Text], []),
     'burn' : IDL.Func([IDL.Nat], [TxReceipt], []),
     'decimals' : IDL.Func([], [IDL.Nat8], ['query']),
+    'distribute' : IDL.Func([IDL.Text], [], []),
     'getAllowanceSize' : IDL.Func([], [IDL.Nat], ['query']),
     'getCycles' : IDL.Func([], [IDL.Nat], ['query']),
     'getHeapSize' : IDL.Func([], [IDL.Nat], ['query']),

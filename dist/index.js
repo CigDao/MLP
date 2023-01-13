@@ -44375,12 +44375,12 @@ var MultiSig = class {
   }
   deploy_swap_local() {
     return __async(this, null, function* () {
-      let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
       let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.token.local}",`, `"${WICP_Canister}",`, `"${canister_ids.database.local}"`, ")");
+      let args = text.concat(`"${canister_ids.token.local}",`, `"${YC_Canister}",`, `"${canister_ids.database.local}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
         if (deploy.exitCode === 0) {
@@ -44503,12 +44503,17 @@ var MultiSig = class {
       let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
       let database = canister_ids.database.ic;
       let topupCanister = canister_ids.topup.ic;
+      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
       let text = "(";
       let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.token}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}` });
+          let call_args = text.concat(`"${YC_Canister}"`, ")");
+          const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.token}`, "distribute", call_args]);
+          if (call.exitCode === 0) {
+            spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}` });
+          }
         }
       } catch (e) {
         console.error(e);
@@ -44518,12 +44523,12 @@ var MultiSig = class {
   }
   deploy_swap() {
     return __async(this, null, function* () {
-      let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
       let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${WICP_Canister}",`, `"${canister_ids.database.ic}"`, ")");
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${YC_Canister}",`, `"${canister_ids.database.ic}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.swap}`, "--argument", args]);
         if (deploy.exitCode === 0) {

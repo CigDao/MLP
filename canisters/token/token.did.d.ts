@@ -52,6 +52,7 @@ export interface Token {
   'bulkTransfer' : ActorMethod<[Array<Holder>], string>,
   'burn' : ActorMethod<[bigint], TxReceipt>,
   'decimals' : ActorMethod<[], number>,
+  'distribute' : ActorMethod<[string], undefined>,
   'getAllowanceSize' : ActorMethod<[], bigint>,
   'getCycles' : ActorMethod<[], bigint>,
   'getHeapSize' : ActorMethod<[], bigint>,
