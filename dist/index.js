@@ -44405,7 +44405,7 @@ var MultiSig = class {
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
+        this.program.error("failed to deploy treasury canister", { code: "1" });
       }
     });
   }
@@ -44414,17 +44414,17 @@ var MultiSig = class {
       var _a, _b;
       let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
       let text = "(";
       let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", `${names.dao}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}` });
+          spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.local}` });
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
+        this.program.error("failed to deploy dao canister", { code: "1" });
       }
     });
   }
@@ -44553,7 +44553,7 @@ var MultiSig = class {
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
+        this.program.error("failed to deploy treasury canister", { code: "1" });
       }
     });
   }
@@ -44562,17 +44562,17 @@ var MultiSig = class {
       var _a, _b;
       let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
       canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
+      const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
       let text = "(";
       let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
       try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}` });
+          spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.ic}` });
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
+        this.program.error("failed to deploy dao canister", { code: "1" });
       }
     });
   }

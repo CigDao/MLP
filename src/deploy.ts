@@ -242,7 +242,7 @@ export default class MultiSig {
 
         } catch (e) {
             console.error(e);
-            this.program.error("failed to deploy multi sig canister", { code: "1" })
+            this.program.error("failed to deploy treasury canister", { code: "1" })
         }
 
     }
@@ -252,19 +252,19 @@ export default class MultiSig {
         canister_ids = JSON.parse(rawdata);
 
         // Run external tool synchronously
-        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        const spinner = createSpinner('deploying dao canister, this will take a few mins...').start();
         let text = "("
         let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}",`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", `${names.dao}`, "--argument", args]);
             
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}`});
+                spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.local}`});
             }
 
         } catch (e) {
             console.error(e);
-            this.program.error("failed to deploy multi sig canister", { code: "1" })
+            this.program.error("failed to deploy dao canister", { code: "1" })
         }
 
     }
@@ -408,7 +408,7 @@ export default class MultiSig {
 
         } catch (e) {
             console.error(e);
-            this.program.error("failed to deploy multi sig canister", { code: "1" })
+            this.program.error("failed to deploy treasury canister", { code: "1" })
         }
 
     }
@@ -418,19 +418,19 @@ export default class MultiSig {
         canister_ids = JSON.parse(rawdata);
 
         // Run external tool synchronously
-        const spinner = createSpinner('deploying treasury canister, this will take a few mins...').start();
+        const spinner = createSpinner('deploying dao canister, this will take a few mins...').start();
         let text = "("
         let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}",`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
             
             if (deploy.exitCode === 0) {
-                spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}`});
+                spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.ic}`});
             }
 
         } catch (e) {
             console.error(e);
-            this.program.error("failed to deploy multi sig canister", { code: "1" })
+            this.program.error("failed to deploy dao canister", { code: "1" })
         }
 
     }
