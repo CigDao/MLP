@@ -44356,12 +44356,11 @@ var MultiSig = class {
       let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
       let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
       let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
-      let owner = canister_ids.multisig.local;
       let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
       let database = canister_ids.database.local;
       let topupCanister = canister_ids.topup.local;
       let text = "(";
-      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
+      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.token}`, "--argument", args]);
         if (deploy.exitCode === 0) {
@@ -44499,13 +44498,12 @@ var MultiSig = class {
       let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
       let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
       let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
-      let owner = canister_ids.multisig.ic;
       let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
       let database = canister_ids.database.ic;
       let topupCanister = canister_ids.topup.ic;
       let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
       let text = "(";
-      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `principal "${owner}",`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
+      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.token}`, "--argument", args]);
         if (deploy.exitCode === 0) {
