@@ -177,7 +177,6 @@ export const idlFactory = ({ IDL }) => {
     'status_code' : IDL.Nat16,
   });
   const Dao = IDL.Service({
-    '_tally' : IDL.Func([], [], []),
     'createProposal' : IDL.Func([ProposalRequest], [TxReceipt], []),
     'fetchAcceptedProposals' : IDL.Func([], [IDL.Vec(Proposal)], ['query']),
     'fetchRejectedProposals' : IDL.Func([], [IDL.Vec(Proposal)], ['query']),
@@ -187,9 +186,11 @@ export const idlFactory = ({ IDL }) => {
     'getProposal' : IDL.Func([], [IDL.Opt(Proposal)], ['query']),
     'getProposalCost' : IDL.Func([], [IDL.Nat], ['query']),
     'getStake' : IDL.Func([IDL.Principal], [Stake], ['query']),
+    'getStakedAmount' : IDL.Func([IDL.Principal], [IDL.Nat], ['query']),
     'http_request' : IDL.Func([Request], [Response], ['query']),
     'stakeTokens' : IDL.Func([IDL.Nat], [TxReceipt], []),
     'startUnStaking' : IDL.Func([], [TxReceipt], []),
+    'totalStaked' : IDL.Func([], [IDL.Nat], ['query']),
     'unStakeTokens' : IDL.Func([IDL.Nat], [TxReceipt], []),
     'vote' : IDL.Func([IDL.Nat32, IDL.Bool], [TxReceipt], []),
   });

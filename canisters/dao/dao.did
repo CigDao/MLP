@@ -201,7 +201,6 @@ type HeaderField =
  };
 type Dao = 
  service {
-   _tally: () -> ();
    createProposal: (ProposalRequest) -> (TxReceipt);
    fetchAcceptedProposals: () -> (vec Proposal) query;
    fetchRejectedProposals: () -> (vec Proposal) query;
@@ -211,9 +210,11 @@ type Dao =
    getProposal: () -> (opt Proposal) query;
    getProposalCost: () -> (nat) query;
    getStake: (principal) -> (Stake) query;
+   getStakedAmount: (principal) -> (nat) query;
    http_request: (Request) -> (Response) query;
    stakeTokens: (nat) -> (TxReceipt);
    startUnStaking: () -> (TxReceipt);
+   totalStaked: () -> (nat) query;
    unStakeTokens: (nat) -> (TxReceipt);
    vote: (nat32, bool) -> (TxReceipt);
  };

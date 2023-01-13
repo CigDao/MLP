@@ -6,7 +6,6 @@ export type Canister = { 'dao' : null } |
   { 'taxCollector' : null } |
   { 'treasury' : null };
 export interface Dao {
-  '_tally' : ActorMethod<[], undefined>,
   'createProposal' : ActorMethod<[ProposalRequest], TxReceipt>,
   'fetchAcceptedProposals' : ActorMethod<[], Array<Proposal>>,
   'fetchRejectedProposals' : ActorMethod<[], Array<Proposal>>,
@@ -16,9 +15,11 @@ export interface Dao {
   'getProposal' : ActorMethod<[], [] | [Proposal]>,
   'getProposalCost' : ActorMethod<[], bigint>,
   'getStake' : ActorMethod<[Principal], Stake>,
+  'getStakedAmount' : ActorMethod<[Principal], bigint>,
   'http_request' : ActorMethod<[Request], Response>,
   'stakeTokens' : ActorMethod<[bigint], TxReceipt>,
   'startUnStaking' : ActorMethod<[], TxReceipt>,
+  'totalStaked' : ActorMethod<[], bigint>,
   'unStakeTokens' : ActorMethod<[bigint], TxReceipt>,
   'vote' : ActorMethod<[number, boolean], TxReceipt>,
 }

@@ -44564,7 +44564,7 @@ var MultiSig = class {
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time},`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
         if (deploy.exitCode === 0) {
