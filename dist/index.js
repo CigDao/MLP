@@ -44507,6 +44507,7 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.token}`, "--argument", args]);
         if (deploy.exitCode === 0) {
+          spinner.update({ text: `Distributioning Tokens` });
           let call_args = text.concat(`"${YC_Canister}"`, ")");
           const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.token}`, "distribute", call_args]);
           if (call.exitCode === 0) {
