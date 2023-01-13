@@ -123,7 +123,6 @@ export const init = ({ IDL }) => {
     IDL.Text,
     IDL.Nat8,
     IDL.Nat,
-    IDL.Principal,
     IDL.Nat,
     IDL.Text,
     IDL.Text,

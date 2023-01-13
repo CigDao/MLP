@@ -117,4 +117,4 @@ type HeaderField =
    text;
    text;
  };
-service : (text, text, text, nat8, nat, principal, nat, text, text) -> Token
+service : (text, text, text, nat8, nat, nat, text, text) -> Token

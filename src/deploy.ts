@@ -183,13 +183,12 @@ export default class MultiSig {
         let symbol = this.config?.token_symbol;
         let decimal = this.config?.token_decimals;
         let token_supply = this.config?.token_supply;
-        let owner = canister_ids.multisig.local;
         let fee = this.config?.token_fee;
         let database = canister_ids.database.local;
         let topupCanister = canister_ids.topup.local;
 
         let text = "("
-        let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
+        let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
         try {
             const deploy = await execa("dfx", ["deploy", `${names.token}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
@@ -345,13 +344,12 @@ export default class MultiSig {
         let symbol = this.config?.token_symbol;
         let decimal = this.config?.token_decimals;
         let token_supply = this.config?.token_supply;
-        let owner = canister_ids.multisig.ic;
         let fee = this.config?.token_fee;
         let database = canister_ids.database.ic;
         let topupCanister = canister_ids.topup.ic;
         let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
         let text = "("
-        let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `principal "${owner}",`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
+        let args = text.concat(`"${icon}",`, `"${token_name}",`, `"${symbol}",`, `${decimal},`, `${token_supply},`, `${fee},`, `"${database}",`,`"${topupCanister}"`,")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.token}` ,"--argument", args]);
             if (deploy.exitCode === 0) {
