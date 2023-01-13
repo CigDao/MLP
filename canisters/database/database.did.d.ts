@@ -13,11 +13,11 @@ export interface IndexCanister {
   'autoScaleCollectionServiceCanister' : ActorMethod<[string], string>,
   'createCollectionServiceCanisterByGroup' : ActorMethod<
     [string],
-    [] | [string],
+    [] | [string]
   >,
   'deleteCanistersByPK' : ActorMethod<
     [string],
-    [] | [CanisterCleanupStatusMap],
+    [] | [CanisterCleanupStatusMap]
   >,
   'getCanistersByPK' : ActorMethod<[string], Array<string>>,
   'getCycles' : ActorMethod<[], bigint>,
@@ -26,7 +26,7 @@ export interface IndexCanister {
   'http_request' : ActorMethod<[Request], Response>,
   'upgradeGroupCanistersInPKRange' : ActorMethod<
     [string, string, Uint8Array],
-    UpgradePKRangeResult,
+    UpgradePKRangeResult
   >,
 }
 export type InterCanisterActionResult = { 'ok' : null } |
@@ -45,7 +45,7 @@ export interface Response {
 }
 export type StreamingCallback = ActorMethod<
   [StreamingCallbackToken],
-  StreamingCallbackResponse,
+  StreamingCallbackResponse
 >;
 export interface StreamingCallbackResponse {
   'token' : [] | [StreamingCallbackToken],

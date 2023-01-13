@@ -140,7 +140,7 @@ export default class MultiSig {
         try {
             const deploy = await execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                let call_args = text.concat(`"group#ledger"`,")");
+                let call_args = text.concat(`"ledger"`,")");
                 const call = await execa("dfx", ["canister", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
                 if (call.exitCode === 0) {
                     spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
@@ -204,14 +204,14 @@ export default class MultiSig {
     }
 
     async deploy_swap_local() {
-        let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+        let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
         let rawdata = readFileSync("./.dfx/local/canister_ids.json", 'utf8');
         canister_ids = JSON.parse(rawdata);
 
         // Run external tool synchronously
         const spinner = createSpinner('deploying swap canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.token.local}",`, `"${WICP_Canister}",`, `"${canister_ids.database.local}"`, ")");
+        let args = text.concat(`"${canister_ids.token.local}",`, `"${YC_Canister}",`, `"${canister_ids.database.local}"`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
             
@@ -302,7 +302,7 @@ export default class MultiSig {
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                let call_args = text.concat(`"group#ledger"`,")");
+                let call_args = text.concat(`"ledger"`,")");
                 const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
                 if (call.exitCode === 0) {
                     spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
@@ -366,14 +366,14 @@ export default class MultiSig {
     }
 
     async deploy_swap() {
-        let WICP_Canister = "utozz-siaaa-aaaam-qaaxq-cai";
+        let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
         let rawdata = readFileSync("./canister_ids.json", 'utf8');
         canister_ids = JSON.parse(rawdata);
 
         // Run external tool synchronously
         const spinner = createSpinner('deploying swap canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.token.ic}",`, `"${WICP_Canister}",`, `"${canister_ids.database.ic}"`, ")");
+        let args = text.concat(`"${canister_ids.token.ic}",`, `"${YC_Canister}",`, `"${canister_ids.database.ic}"`, ")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.swap}`, "--argument", args]);
             

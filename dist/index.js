@@ -44315,7 +44315,7 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          let call_args = text.concat(`"group#ledger"`, ")");
+          let call_args = text.concat(`"ledger"`, ")");
           const call = yield execa("dfx", ["canister", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
           if (call.exitCode === 0) {
             spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
@@ -44458,7 +44458,7 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          let call_args = text.concat(`"group#ledger"`, ")");
+          let call_args = text.concat(`"ledger"`, ")");
           const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
           if (call.exitCode === 0) {
             spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}` });

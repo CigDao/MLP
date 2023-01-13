@@ -2,6 +2,7 @@ import type { Principal } from '@dfinity/principal';
 import type { ActorMethod } from '@dfinity/agent';
 
 export type HeaderField = [string, string];
+export interface Holder { 'holder' : string, 'amount' : bigint }
 export interface Metadata {
   'fee' : bigint,
   'decimals' : number,
@@ -25,7 +26,7 @@ export interface Response {
 }
 export type StreamingCallback = ActorMethod<
   [StreamingCallbackToken],
-  StreamingCallbackResponse,
+  StreamingCallbackResponse
 >;
 export interface StreamingCallbackResponse {
   'token' : [] | [StreamingCallbackToken],
@@ -48,6 +49,7 @@ export interface Token {
   'allowance' : ActorMethod<[Principal, Principal], bigint>,
   'approve' : ActorMethod<[Principal, bigint], TxReceipt>,
   'balanceOf' : ActorMethod<[Principal], bigint>,
+  'bulkTransfer' : ActorMethod<[Array<Holder>], string>,
   'burn' : ActorMethod<[bigint], TxReceipt>,
   'decimals' : ActorMethod<[], number>,
   'getAllowanceSize' : ActorMethod<[], bigint>,

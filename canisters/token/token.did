@@ -28,6 +28,7 @@ type Token =
    allowance: (principal, principal) -> (nat) query;
    approve: (principal, nat) -> (TxReceipt);
    balanceOf: (principal) -> (nat) query;
+   bulkTransfer: (vec Holder) -> (text);
    burn: (nat) -> (TxReceipt);
    decimals: () -> (nat8) query;
    getAllowanceSize: () -> (nat) query;
@@ -104,6 +105,11 @@ type Metadata =
    owner: principal;
    symbol: text;
    totalSupply: nat;
+ };
+type Holder = 
+ record {
+   amount: nat;
+   holder: text;
  };
 type HeaderField = 
  record {
