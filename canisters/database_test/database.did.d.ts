@@ -28,6 +28,7 @@ export interface IndexCanister {
     [string, string, Uint8Array],
     UpgradePKRangeResult
   >,
+  'wallet_receive' : ActorMethod<[], { 'accepted' : bigint }>,
 }
 export type InterCanisterActionResult = { 'ok' : null } |
   { 'err' : string };
