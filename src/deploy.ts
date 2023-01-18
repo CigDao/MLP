@@ -138,7 +138,7 @@ export default class MultiSig {
         let text = "("
         let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--with-cycles", "20000000000000", `${names.database}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
                 spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
                 const call = await execa("dfx", ["wallet", "send", `${canister_ids.database.local}`,'20000000000000']);
