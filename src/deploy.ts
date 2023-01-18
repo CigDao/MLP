@@ -254,7 +254,7 @@ export default class MultiSig {
         // Run external tool synchronously
         const spinner = createSpinner('deploying dao canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}",`,")");
+        let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`,`"${this.config?.proposal_cost}",`, `"${this.config?.stake_time}"`,")");
         try {
             const deploy = await execa("dfx", ["deploy", `${names.dao}`, "--argument", args]);
             
@@ -420,7 +420,7 @@ export default class MultiSig {
         // Run external tool synchronously
         const spinner = createSpinner('deploying dao canister, this will take a few mins...').start();
         let text = "("
-        let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`,`${this.config?.proposal_cost},`, `${this.config?.stake_time},`,")");
+        let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`,`${this.config?.proposal_cost},`, `${this.config?.stake_time}`,")");
         try {
             const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
             
