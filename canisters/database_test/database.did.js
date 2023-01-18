@@ -83,6 +83,11 @@ export const idlFactory = ({ IDL }) => {
         [UpgradePKRangeResult],
         [],
       ),
+    'wallet_receive' : IDL.Func(
+        [],
+        [IDL.Record({ 'accepted' : IDL.Nat64 })],
+        [],
+      ),
   });
   return IndexCanister;
 };

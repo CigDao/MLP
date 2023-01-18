@@ -140,10 +140,15 @@ export default class MultiSig {
         try {
             const deploy = await execa("dfx", ["deploy", "--with-cycles", "20000000000000", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                let call_args = text.concat(`"ledger"`,")");
-                const call = await execa("dfx", ["canister", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
+                const call = await execa("dfx", ["wallet", "send", `${canister_ids.database.local}`,'20000000000000']);
                 if (call.exitCode === 0) {
-                    spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}`});
+                    spinner.update({ text: `successfuly sent database canister 20000000000000 cycles`});
+                    let call_args = text.concat(`"ledger"`,")");
+                    const call = await execa("dfx", ["canister", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                    if (call.exitCode === 0) {
+                        spinner.success({ text: `successfuly created database partition: ${canister_ids.database.local}`});
+                    }
                 }
             }
             
@@ -151,7 +156,6 @@ export default class MultiSig {
             console.error(e);
             this.program.error("failed to deploy database canister", { code: "1" })
         }
-
     }
 
     async deploy_topup_local() {
@@ -299,12 +303,17 @@ export default class MultiSig {
         let text = "("
         let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--network", "ic", "--with-cycles", "20000000000000", `${names.database}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
-                let call_args = text.concat(`"ledger"`,")");
-                const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
+                const call = await execa("dfx", ["wallet", "--network", "ic", "send", `${canister_ids.database.ic}`,'20000000000000']);
                 if (call.exitCode === 0) {
-                    spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}`});
+                    spinner.update({ text: `successfuly sent database canister 20000000000000 cycles`});
+                    let call_args = text.concat(`"ledger"`,")");
+                    const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
+                    if (call.exitCode === 0) {
+                        spinner.success({ text: `successfuly created database partition: ${canister_ids.database.ic}`});
+                    }
                 }
             }
 

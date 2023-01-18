@@ -71,6 +71,7 @@ type IndexCanister =
    http_request: (Request) -> (Response) query;
    upgradeGroupCanistersInPKRange: (text, text, blob) ->
     (UpgradePKRangeResult);
+   wallet_receive: () -> (record {accepted: nat64;});
  };
 type HeaderField = 
  record {
