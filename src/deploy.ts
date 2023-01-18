@@ -138,7 +138,7 @@ export default class MultiSig {
         let text = "("
         let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "--with-cycles", "100000000000000", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
                 let call_args = text.concat(`"ledger"`,")");
                 const call = await execa("dfx", ["canister", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
@@ -299,7 +299,7 @@ export default class MultiSig {
         let text = "("
         let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`,")");
         try {
-            const deploy = await execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
+            const deploy = await execa("dfx", ["deploy", "--network", "ic", "--with-cycles", "20000000000000", `${names.database}`, "--argument", args]);
             if (deploy.exitCode === 0) {
                 let call_args = text.concat(`"ledger"`,")");
                 const call = await execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`,"createCollectionServiceCanisterByGroup", call_args]);
