@@ -13,6 +13,7 @@ export const idlFactory = ({ IDL }) => {
       'AmountTooSmall' : IDL.Null,
     }),
   });
+  const Holder = IDL.Record({ 'holder' : IDL.Text, 'amount' : IDL.Nat });
   const Metadata = IDL.Record({
     'fee' : IDL.Nat,
     'decimals' : IDL.Nat8,
@@ -73,8 +74,10 @@ export const idlFactory = ({ IDL }) => {
       ),
     'approve' : IDL.Func([IDL.Principal, IDL.Nat], [TxReceipt], []),
     'balanceOf' : IDL.Func([IDL.Principal], [IDL.Nat], ['query']),
+    'bulkTransfer' : IDL.Func([IDL.Vec(Holder)], [IDL.Text], []),
     'burn' : IDL.Func([IDL.Nat], [TxReceipt], []),
     'decimals' : IDL.Func([], [IDL.Nat8], ['query']),
+    'distribute' : IDL.Func([IDL.Text], [], []),
     'getAllowanceSize' : IDL.Func([], [IDL.Nat], ['query']),
     'getCycles' : IDL.Func([], [IDL.Nat], ['query']),
     'getHeapSize' : IDL.Func([], [IDL.Nat], ['query']),
@@ -120,7 +123,6 @@ export const init = ({ IDL }) => {
     IDL.Text,
     IDL.Nat8,
     IDL.Nat,
-    IDL.Principal,
     IDL.Nat,
     IDL.Text,
     IDL.Text,

@@ -1,9 +1,9 @@
 #Local
 
 ```
-3. mlp init
-4. mlp deploy -l
-5. mlp -h
+1. mlp init
+2. mlp deploy -l
+3. mlp -h
 
 ```
 
@@ -15,3 +15,11 @@
 4. mlp -h
 
 ```
+
+#Build Local
+```
+1. npm run build:link --force
+
+```
+
+  

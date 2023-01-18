@@ -12,6 +12,8 @@ let token_symbol:string;
 let token_supply:number;
 let token_decimals:number;
 let token_fee:number;
+let proposal_cost:number;
+let stake_time:number;
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
@@ -150,6 +152,70 @@ export default class MultiSig {
             });
 
             return answers.token_symbol;
+        }
+    }
+
+    async askProposalCost() {
+        if (this.config?.proposal_cost) {
+            proposal_cost = this.config?.proposal_cost;
+            console.log(`Proposal Cost: ${proposal_cost}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'proposal_cost',
+                type: 'number',
+                message: "The cost to create a proposal",
+                default() {
+                    return 'Proposal Cost';
+                },
+            });
+
+            return answers.proposal_cost;
+        }
+    }
+
+    async askStakeTime() {
+        if (this.config?.stake_time) {
+            stake_time = this.config?.stake_time;
+            console.log(`Unstaking Time: ${stake_time}`)
+            return stake_time;
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'stake_time',
+                type: 'list',
+                message: "The time it takes to unstake tokens",
+                choices: [
+                    '1 minute',
+                    '1 Day',
+                    '3 Day',
+                    '1 Week',
+                    '1 Month',
+                  ],
+                default() {
+                    return 'Stake Time';
+                },
+            });
+            answers.stake_time === '3 Day';
+            
+            switch(answers.stake_time) { 
+                case '1 Minute': { 
+                    return 60000000000;
+                } 
+                case '1 Day': { 
+                   return 86400000000000;
+                } 
+                case '3 Day': { 
+                    return 86400000000000 * 3;
+                }
+                case '1 Week': { 
+                    return 86400000000000 * 7;
+                }
+                case '1 Month': { 
+                    return 86400000000000 * 30;
+                } 
+                default: { 
+                    return 86400000000000 * 3;
+                } 
+             }
         }
     }
 }
