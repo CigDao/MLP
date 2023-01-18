@@ -44315,10 +44315,15 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          let call_args = text.concat(`"ledger"`, ")");
-          const call = yield execa("dfx", ["canister", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+          spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
+          const call = yield execa("dfx", ["wallet", "send", `${canister_ids.database.local}`, "20000000000000"]);
           if (call.exitCode === 0) {
-            spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
+            spinner.update({ text: `successfuly sent database canister 20000000000000 cycles` });
+            let call_args = text.concat(`"ledger"`, ")");
+            const call2 = yield execa("dfx", ["canister", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+            if (call2.exitCode === 0) {
+              spinner.success({ text: `successfuly created database partition: ${canister_ids.database.local}` });
+            }
           }
         }
       } catch (e) {
@@ -44416,7 +44421,7 @@ var MultiSig = class {
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`, `"${(_a = this.config) == null ? void 0 : _a.proposal_cost}",`, `"${(_b = this.config) == null ? void 0 : _b.stake_time}",`, ")");
+      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time}`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", `${names.dao}`, "--argument", args]);
         if (deploy.exitCode === 0) {
@@ -44457,10 +44462,15 @@ var MultiSig = class {
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
         if (deploy.exitCode === 0) {
-          let call_args = text.concat(`"ledger"`, ")");
-          const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+          spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.ic}` });
+          const call = yield execa("dfx", ["wallet", "--network", "ic", "send", `${canister_ids.database.ic}`, "20000000000000"]);
           if (call.exitCode === 0) {
-            spinner.success({ text: `successfuly deployed database canister: ${canister_ids.database.ic}` });
+            spinner.update({ text: `successfuly sent database canister 20000000000000 cycles` });
+            let call_args = text.concat(`"ledger"`, ")");
+            const call2 = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
+            if (call2.exitCode === 0) {
+              spinner.success({ text: `successfuly created database partition: ${canister_ids.database.ic}` });
+            }
           }
         }
       } catch (e) {
@@ -44564,7 +44574,7 @@ var MultiSig = class {
       canister_ids = JSON.parse(rawdata);
       const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
       let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time},`, ")");
+      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time}`, ")");
       try {
         const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
         if (deploy.exitCode === 0) {
