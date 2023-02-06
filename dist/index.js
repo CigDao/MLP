@@ -71,8 +71,8 @@ var require_argument = __commonJS({
   "node_modules/commander/lib/argument.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Argument2 = class {
-      constructor(name, description) {
-        this.description = description || "";
+      constructor(name, description2) {
+        this.description = description2 || "";
         this.variadic = false;
         this.parseArg = void 0;
         this.defaultValue = void 0;
@@ -106,9 +106,9 @@ var require_argument = __commonJS({
         }
         return previous.concat(value);
       }
-      default(value, description) {
+      default(value, description2) {
         this.defaultValue = value;
-        this.defaultValueDescription = description;
+        this.defaultValueDescription = description2;
         return this;
       }
       argParser(fn) {
@@ -315,9 +315,9 @@ var require_help = __commonJS({
         const helpWidth = helper.helpWidth || 80;
         const itemIndentWidth = 2;
         const itemSeparatorWidth = 2;
-        function formatItem(term, description) {
-          if (description) {
-            const fullText = `${term.padEnd(termWidth + itemSeparatorWidth)}${description}`;
+        function formatItem(term, description2) {
+          if (description2) {
+            const fullText = `${term.padEnd(termWidth + itemSeparatorWidth)}${description2}`;
             return helper.wrap(fullText, helpWidth - itemIndentWidth, termWidth + itemSeparatorWidth);
           }
           return term;
@@ -389,9 +389,9 @@ var require_option = __commonJS({
   "node_modules/commander/lib/option.js"(exports) {
     var { InvalidArgumentError: InvalidArgumentError2 } = require_error();
     var Option2 = class {
-      constructor(flags, description) {
+      constructor(flags, description2) {
         this.flags = flags;
-        this.description = description || "";
+        this.description = description2 || "";
         this.required = flags.includes("<");
         this.optional = flags.includes("[");
         this.variadic = /\w\.\.\.[>\]]$/.test(flags);
@@ -413,9 +413,9 @@ var require_option = __commonJS({
         this.conflictsWith = [];
         this.implied = void 0;
       }
-      default(value, description) {
+      default(value, description2) {
         this.defaultValue = value;
-        this.defaultValueDescription = description;
+        this.defaultValueDescription = description2;
         return this;
       }
       preset(arg) {
@@ -761,11 +761,11 @@ var require_command = __commonJS({
         cmd.parent = this;
         return this;
       }
-      createArgument(name, description) {
-        return new Argument2(name, description);
+      createArgument(name, description2) {
+        return new Argument2(name, description2);
       }
-      argument(name, description, fn, defaultValue) {
-        const argument = this.createArgument(name, description);
+      argument(name, description2, fn, defaultValue) {
+        const argument = this.createArgument(name, description2);
         if (typeof fn === "function") {
           argument.default(defaultValue).argParser(fn);
         } else {
@@ -791,7 +791,7 @@ var require_command = __commonJS({
         this._args.push(argument);
         return this;
       }
-      addHelpCommand(enableOrNameAndArgs, description) {
+      addHelpCommand(enableOrNameAndArgs, description2) {
         if (enableOrNameAndArgs === false) {
           this._addImplicitHelpCommand = false;
         } else {
@@ -800,7 +800,7 @@ var require_command = __commonJS({
             this._helpCommandName = enableOrNameAndArgs.split(" ")[0];
             this._helpCommandnameAndArgs = enableOrNameAndArgs;
           }
-          this._helpCommandDescription = description || this._helpCommandDescription;
+          this._helpCommandDescription = description2 || this._helpCommandDescription;
         }
         return this;
       }
@@ -857,8 +857,8 @@ Expecting one of '${allowedValues.join("', '")}'`);
         this._actionHandler = listener;
         return this;
       }
-      createOption(flags, description) {
-        return new Option2(flags, description);
+      createOption(flags, description2) {
+        return new Option2(flags, description2);
       }
       addOption(option) {
         const oname = option.name();
@@ -913,12 +913,12 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this;
       }
-      _optionEx(config3, flags, description, fn, defaultValue) {
+      _optionEx(config2, flags, description2, fn, defaultValue) {
         if (typeof flags === "object" && flags instanceof Option2) {
           throw new Error("To add an Option object use addOption() instead of option() or requiredOption()");
         }
-        const option = this.createOption(flags, description);
-        option.makeOptionMandatory(!!config3.mandatory);
+        const option = this.createOption(flags, description2);
+        option.makeOptionMandatory(!!config2.mandatory);
         if (typeof fn === "function") {
           option.default(defaultValue).argParser(fn);
         } else if (fn instanceof RegExp) {
@@ -933,11 +933,11 @@ Expecting one of '${allowedValues.join("', '")}'`);
         }
         return this.addOption(option);
       }
-      option(flags, description, fn, defaultValue) {
-        return this._optionEx({}, flags, description, fn, defaultValue);
+      option(flags, description2, fn, defaultValue) {
+        return this._optionEx({}, flags, description2, fn, defaultValue);
       }
-      requiredOption(flags, description, fn, defaultValue) {
-        return this._optionEx({ mandatory: true }, flags, description, fn, defaultValue);
+      requiredOption(flags, description2, fn, defaultValue) {
+        return this._optionEx({ mandatory: true }, flags, description2, fn, defaultValue);
       }
       combineFlagAndOptionalValue(combine = true) {
         this._combineFlagAndOptionalValue = !!combine;
@@ -1470,9 +1470,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
           this._outputConfiguration.writeErr("\n");
           this.outputHelp({ error: true });
         }
-        const config3 = errorOptions || {};
-        const exitCode = config3.exitCode || 1;
-        const code = config3.code || "commander.error";
+        const config2 = errorOptions || {};
+        const exitCode = config2.exitCode || 1;
+        const code = config2.code || "commander.error";
         this._exit(exitCode, code, message);
       }
       _parseOptionsEnv() {
@@ -1576,13 +1576,13 @@ Expecting one of '${allowedValues.join("', '")}'`);
         const message = `error: unknown command '${unknownName}'${suggestion}`;
         this.error(message, { code: "commander.unknownCommand" });
       }
-      version(str, flags, description) {
+      version(str, flags, description2) {
         if (str === void 0)
           return this._version;
         this._version = str;
         flags = flags || "-V, --version";
-        description = description || "output the version number";
-        const versionOption = this.createOption(flags, description);
+        description2 = description2 || "output the version number";
+        const versionOption = this.createOption(flags, description2);
         this._versionOptionName = versionOption.attributeName();
         this.options.push(versionOption);
         this.on("option:" + versionOption.name(), () => {
@@ -1694,13 +1694,13 @@ Expecting one of '${allowedValues.join("', '")}'`);
         this.emit("afterHelp", context);
         getCommandAndParents(this).forEach((command) => command.emit("afterAllHelp", context));
       }
-      helpOption(flags, description) {
+      helpOption(flags, description2) {
         if (typeof flags === "boolean") {
           this._hasHelpOption = flags;
           return this;
         }
         this._helpFlags = flags || this._helpFlags;
-        this._helpDescription = description || this._helpDescription;
+        this._helpDescription = description2 || this._helpDescription;
         const helpFlags = splitOptionFlags(this._helpFlags);
         this._helpShortFlag = helpFlags.shortFlag;
         this._helpLongFlag = helpFlags.longFlag;
@@ -2778,10 +2778,10 @@ var require_ansi_styles = __commonJS({
     };
     var ansi2ansi = (n) => n;
     var rgb2rgb = (r, g, b) => [r, g, b];
-    var setLazyProperty = (object, property, get2) => {
+    var setLazyProperty = (object, property, get3) => {
       Object.defineProperty(object, property, {
         get: () => {
-          const value = get2();
+          const value = get3();
           Object.defineProperty(object, property, {
             value,
             enumerable: true,
@@ -2983,10 +2983,10 @@ var require_supports_color = __commonJS({
         return 3;
       }
       if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        const version2 = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
         switch (env2.TERM_PROGRAM) {
           case "iTerm.app":
-            return version >= 3 ? 3 : 2;
+            return version2 >= 3 ? 3 : 2;
           case "Apple_Terminal":
             return 2;
         }
@@ -5561,10 +5561,10 @@ var require_ansi_styles2 = __commonJS({
     };
     var ansi2ansi = (n) => n;
     var rgb2rgb = (r, g, b) => [r, g, b];
-    var setLazyProperty = (object, property, get2) => {
+    var setLazyProperty = (object, property, get3) => {
       Object.defineProperty(object, property, {
         get: () => {
-          const value = get2();
+          const value = get3();
           Object.defineProperty(object, property, {
             value,
             enumerable: true,
@@ -5766,10 +5766,10 @@ var require_supports_color2 = __commonJS({
         return 3;
       }
       if ("TERM_PROGRAM" in env2) {
-        const version = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        const version2 = parseInt((env2.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
         switch (env2.TERM_PROGRAM) {
           case "iTerm.app":
-            return version >= 3 ? 3 : 2;
+            return version2 >= 3 ? 3 : 2;
           case "Apple_Terminal":
             return 2;
         }
@@ -11791,8 +11791,8 @@ var require_lastValueFrom = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.lastValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
-    function lastValueFrom(source, config3) {
-      var hasConfig = typeof config3 === "object";
+    function lastValueFrom(source, config2) {
+      var hasConfig = typeof config2 === "object";
       return new Promise(function(resolve, reject) {
         var _hasValue = false;
         var _value;
@@ -11806,7 +11806,7 @@ var require_lastValueFrom = __commonJS({
             if (_hasValue) {
               resolve(_value);
             } else if (hasConfig) {
-              resolve(config3.defaultValue);
+              resolve(config2.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -11826,8 +11826,8 @@ var require_firstValueFrom = __commonJS({
     exports.firstValueFrom = void 0;
     var EmptyError_1 = require_EmptyError();
     var Subscriber_1 = require_Subscriber();
-    function firstValueFrom(source, config3) {
-      var hasConfig = typeof config3 === "object";
+    function firstValueFrom(source, config2) {
+      var hasConfig = typeof config2 === "object";
       return new Promise(function(resolve, reject) {
         var subscriber = new Subscriber_1.SafeSubscriber({
           next: function(value) {
@@ -11837,7 +11837,7 @@ var require_firstValueFrom = __commonJS({
           error: reject,
           complete: function() {
             if (hasConfig) {
-              resolve(config3.defaultValue);
+              resolve(config2.defaultValue);
             } else {
               reject(new EmptyError_1.EmptyError());
             }
@@ -11938,8 +11938,8 @@ var require_timeout = __commonJS({
         this.info = info;
       };
     });
-    function timeout(config3, schedulerArg) {
-      var _a = isDate_1.isValidDate(config3) ? { first: config3 } : typeof config3 === "number" ? { each: config3 } : config3, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
+    function timeout(config2, schedulerArg) {
+      var _a = isDate_1.isValidDate(config2) ? { first: config2 } : typeof config2 === "number" ? { each: config2 } : config2, first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
       if (first == null && each == null) {
         throw new TypeError("No timeout provided.");
       }
@@ -12501,12 +12501,12 @@ var require_connectable = __commonJS({
       },
       resetOnDisconnect: true
     };
-    function connectable(source, config3) {
-      if (config3 === void 0) {
-        config3 = DEFAULT_CONFIG;
+    function connectable(source, config2) {
+      if (config2 === void 0) {
+        config2 = DEFAULT_CONFIG;
       }
       var connection = null;
-      var connector = config3.connector, _a = config3.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
+      var connector = config2.connector, _a = config2.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
       var subject = connector();
       var result = new Observable_1.Observable(function(subscriber) {
         return subject.subscribe(subscriber);
@@ -14107,11 +14107,11 @@ var require_connect = __commonJS({
         return new Subject_1.Subject();
       }
     };
-    function connect(selector, config3) {
-      if (config3 === void 0) {
-        config3 = DEFAULT_CONFIG;
+    function connect(selector, config2) {
+      if (config2 === void 0) {
+        config2 = DEFAULT_CONFIG;
       }
-      var connector = config3.connector;
+      var connector = config2.connector;
       return lift_1.operate(function(source, subscriber) {
         var subject = connector();
         innerFrom_1.innerFrom(selector(fromSubscribable_1.fromSubscribable(subject))).subscribe(subscriber);
@@ -15599,15 +15599,15 @@ var require_retry = __commonJS({
       if (configOrCount === void 0) {
         configOrCount = Infinity;
       }
-      var config3;
+      var config2;
       if (configOrCount && typeof configOrCount === "object") {
-        config3 = configOrCount;
+        config2 = configOrCount;
       } else {
-        config3 = {
+        config2 = {
           count: configOrCount
         };
       }
-      var _a = config3.count, count = _a === void 0 ? Infinity : _a, delay = config3.delay, _b = config3.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
+      var _a = config2.count, count = _a === void 0 ? Infinity : _a, delay = config2.delay, _b = config2.resetOnSuccess, resetOnSuccess = _b === void 0 ? false : _b;
       return count <= 0 ? identity_1.identity : lift_1.operate(function(source, subscriber) {
         var soFar = 0;
         var innerSub;
@@ -16328,12 +16328,12 @@ var require_throttle = __commonJS({
       leading: true,
       trailing: false
     };
-    function throttle(durationSelector, config3) {
-      if (config3 === void 0) {
-        config3 = exports.defaultThrottleConfig;
+    function throttle(durationSelector, config2) {
+      if (config2 === void 0) {
+        config2 = exports.defaultThrottleConfig;
       }
       return lift_1.operate(function(source, subscriber) {
-        var leading = config3.leading, trailing = config3.trailing;
+        var leading = config2.leading, trailing = config2.trailing;
         var hasValue = false;
         var sendValue = null;
         var throttled = null;
@@ -16385,17 +16385,17 @@ var require_throttleTime = __commonJS({
     var async_1 = require_async();
     var throttle_1 = require_throttle();
     var timer_1 = require_timer();
-    function throttleTime(duration, scheduler, config3) {
+    function throttleTime(duration, scheduler, config2) {
       if (scheduler === void 0) {
         scheduler = async_1.asyncScheduler;
       }
-      if (config3 === void 0) {
-        config3 = throttle_1.defaultThrottleConfig;
+      if (config2 === void 0) {
+        config2 = throttle_1.defaultThrottleConfig;
       }
       var duration$ = timer_1.timer(duration, scheduler);
       return throttle_1.throttle(function() {
         return duration$;
-      }, config3);
+      }, config2);
     }
     exports.throttleTime = throttleTime;
   }
@@ -20791,7 +20791,7 @@ var require_lodash = __commonJS({
         function baseAt(object, paths) {
           var index = -1, length = paths.length, result2 = Array2(length), skip = object == null;
           while (++index < length) {
-            result2[index] = skip ? undefined2 : get2(object, paths[index]);
+            result2[index] = skip ? undefined2 : get3(object, paths[index]);
           }
           return result2;
         }
@@ -21236,7 +21236,7 @@ var require_lodash = __commonJS({
             return matchesStrictComparable(toKey(path3), srcValue);
           }
           return function(object) {
-            var objValue = get2(object, path3);
+            var objValue = get3(object, path3);
             return objValue === undefined2 && objValue === srcValue ? hasIn(object, path3) : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
           };
         }
@@ -23969,7 +23969,7 @@ var require_lodash = __commonJS({
         function functionsIn(object) {
           return object == null ? [] : baseFunctions(object, keysIn(object));
         }
-        function get2(object, path3, defaultValue) {
+        function get3(object, path3, defaultValue) {
           var result2 = object == null ? undefined2 : baseGet(object, path3);
           return result2 === undefined2 ? defaultValue : result2;
         }
@@ -24824,7 +24824,7 @@ var require_lodash = __commonJS({
         lodash.forInRight = forInRight;
         lodash.forOwn = forOwn;
         lodash.forOwnRight = forOwnRight;
-        lodash.get = get2;
+        lodash.get = get3;
         lodash.gt = gt;
         lodash.gte = gte;
         lodash.has = has;
@@ -27840,7 +27840,7 @@ var require_stream_writable = __commonJS({
     };
     Object.defineProperty(Writable.prototype, "writableBuffer", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState && this._writableState.getBuffer();
       }
     });
@@ -27852,7 +27852,7 @@ var require_stream_writable = __commonJS({
     }
     Object.defineProperty(Writable.prototype, "writableHighWaterMark", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState.highWaterMark;
       }
     });
@@ -28030,7 +28030,7 @@ var require_stream_writable = __commonJS({
     };
     Object.defineProperty(Writable.prototype, "writableLength", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState.length;
       }
     });
@@ -28102,7 +28102,7 @@ var require_stream_writable = __commonJS({
     }
     Object.defineProperty(Writable.prototype, "destroyed", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         if (this._writableState === void 0) {
           return false;
         }
@@ -28168,19 +28168,19 @@ var require_stream_duplex = __commonJS({
     }
     Object.defineProperty(Duplex.prototype, "writableHighWaterMark", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState.highWaterMark;
       }
     });
     Object.defineProperty(Duplex.prototype, "writableBuffer", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState && this._writableState.getBuffer();
       }
     });
     Object.defineProperty(Duplex.prototype, "writableLength", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._writableState.length;
       }
     });
@@ -28194,7 +28194,7 @@ var require_stream_duplex = __commonJS({
     }
     Object.defineProperty(Duplex.prototype, "destroyed", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         if (this._readableState === void 0 || this._writableState === void 0) {
           return false;
         }
@@ -29024,7 +29024,7 @@ var require_stream_readable = __commonJS({
     }
     Object.defineProperty(Readable.prototype, "destroyed", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         if (this._readableState === void 0) {
           return false;
         }
@@ -29611,19 +29611,19 @@ var require_stream_readable = __commonJS({
     }
     Object.defineProperty(Readable.prototype, "readableHighWaterMark", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._readableState.highWaterMark;
       }
     });
     Object.defineProperty(Readable.prototype, "readableBuffer", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._readableState && this._readableState.buffer;
       }
     });
     Object.defineProperty(Readable.prototype, "readableFlowing", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._readableState.flowing;
       },
       set: function set2(state) {
@@ -29635,7 +29635,7 @@ var require_stream_readable = __commonJS({
     Readable._fromList = fromList;
     Object.defineProperty(Readable.prototype, "readableLength", {
       enumerable: false,
-      get: function get2() {
+      get: function get3() {
         return this._readableState.length;
       }
     });
@@ -29989,7 +29989,7 @@ var require_BufferList = __commonJS({
       }
       return offset;
     };
-    BufferList.prototype.get = function get2(index) {
+    BufferList.prototype.get = function get3(index) {
       if (index > this.length || index < 0) {
         return void 0;
       }
@@ -39404,10 +39404,10 @@ var require_tmp = __commonJS({
     function setGracefulCleanup() {
       _gracefulCleanup = true;
     }
-    var version = process.versions.node.split(".").map(function(value) {
+    var version2 = process.versions.node.split(".").map(function(value) {
       return parseInt(value, 10);
     });
-    if (version[0] === 0 && (version[1] < 9 || version[1] === 9 && version[2] < 5)) {
+    if (version2[0] === 0 && (version2[1] < 9 || version2[1] === 9 && version2[2] < 5)) {
       process.addListener("uncaughtException", function _uncaughtExceptionThrown(err) {
         _uncaughtException = true;
         _garbageCollector();
@@ -40246,11 +40246,11 @@ var require_baseGet = __commonJS({
 var require_get = __commonJS({
   "node_modules/lodash/get.js"(exports, module2) {
     var baseGet = require_baseGet();
-    function get2(object, path3, defaultValue) {
+    function get3(object, path3, defaultValue) {
       var result = object == null ? void 0 : baseGet(object, path3);
       return result === void 0 ? defaultValue : result;
     }
-    module2.exports = get2;
+    module2.exports = get3;
   }
 });
 
@@ -40585,10 +40585,10 @@ function _supportsColor(haveStream, { streamIsTTY, sniffFlags = true } = {}) {
     return 3;
   }
   if ("TERM_PROGRAM" in env) {
-    const version = Number.parseInt((env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+    const version2 = Number.parseInt((env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
     switch (env.TERM_PROGRAM) {
       case "iTerm.app": {
-        return version >= 3 ? 3 : 2;
+        return version2 >= 3 ? 3 : 2;
       }
       case "Apple_Terminal": {
         return 2;
@@ -41418,7 +41418,7 @@ var getSignals = function() {
 var normalizeSignal = function({
   name,
   number: defaultNumber,
-  description,
+  description: description2,
   action,
   forced = false,
   standard
@@ -41428,7 +41428,7 @@ var normalizeSignal = function({
   } = import_os.constants;
   const supported = constantSignal !== void 0;
   const number = supported ? constantSignal : defaultNumber;
-  return { name, number, description, supported, action, forced, standard };
+  return { name, number, description: description2, supported, action, forced, standard };
 };
 
 // node_modules/human-signals/build/src/main.js
@@ -41436,10 +41436,10 @@ var getSignalsByName = function() {
   const signals = getSignals();
   return signals.reduce(getSignalByName, {});
 };
-var getSignalByName = function(signalByNameMemo, { name, number, description, supported, action, forced, standard }) {
+var getSignalByName = function(signalByNameMemo, { name, number, description: description2, supported, action, forced, standard }) {
   return {
     ...signalByNameMemo,
-    [name]: { name, number, description, supported, action, forced, standard }
+    [name]: { name, number, description: description2, supported, action, forced, standard }
   };
 };
 var signalsByName = getSignalsByName();
@@ -41454,12 +41454,12 @@ var getSignalByNumber = function(number, signals) {
   if (signal === void 0) {
     return {};
   }
-  const { name, description, supported, action, forced, standard } = signal;
+  const { name, description: description2, supported, action, forced, standard } = signal;
   return {
     [number]: {
       name,
       number,
-      description,
+      description: description2,
       supported,
       action,
       forced,
@@ -44118,111 +44118,13 @@ Font modified May 20, 2012 by patorjk to add the 0xCA0 character
          @@
          `;
 
-// src/json-data.ts
-var dfx = {
-  "canisters": {
-    "multisig": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/multisig/multisig.did",
-      "wasm": "canisters/multisig/multisig.wasm"
-    },
-    "database": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/database/database.did",
-      "wasm": "canisters/database/database.wasm"
-    },
-    "topup": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/topup/topup.did",
-      "wasm": "canisters/topup/topup.wasm"
-    },
-    "token": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/token/token.did",
-      "wasm": "canisters/token/token.wasm"
-    },
-    "swap": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/swap/swap.did",
-      "wasm": "canisters/swap/swap.wasm"
-    },
-    "treasury": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/treasury/treasury.did",
-      "wasm": "canisters/treasury/treasury.wasm"
-    },
-    "dao": {
-      "type": "custom",
-      "build": "",
-      "candid": "canisters/dao/dao.did",
-      "wasm": "canisters/dao/dao.wasm"
-    }
-  }
-};
-var config = {
-  "dao_name": "",
-  "member_principal": "",
-  "token_supply": 0,
-  "token_decimals": 0,
-  "token_fee": 0,
-  "token_name": "",
-  "token_symbol": "",
-  "proposal_cost": 0,
-  "stake_time": 0
-};
-var names = {
-  "multisig": "multisig",
-  "database": "database",
-  "topup": "topup",
-  "token": "token",
-  "swap": "swap",
-  "treasury": "treasury",
-  "dao": "dao"
-};
-
 // src/deploy.ts
 var import_fs = require("fs");
 var sleep = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
-var canister_ids = {
-  "multisig": {
-    "local": "",
-    "ic": ""
-  },
-  "database": {
-    "local": "",
-    "ic": ""
-  },
-  "topup": {
-    "local": "",
-    "ic": ""
-  },
-  "token": {
-    "local": "",
-    "ic": ""
-  },
-  "swap": {
-    "local": "",
-    "ic": ""
-  },
-  "treasury": {
-    "local": "",
-    "ic": ""
-  },
-  "dao": {
-    "local": "",
-    "ic": ""
-  }
-};
 var MultiSig = class {
-  constructor(program4, config3) {
+  constructor(program4, config2) {
     this.program = program4;
-    this.config = config3;
+    this.config = config2;
   }
   title() {
     return __async(this, null, function* () {
@@ -44253,336 +44155,89 @@ var MultiSig = class {
       spinner.success({ text: `dfx already installed` });
     });
   }
-  create_canisters_local(name) {
+  create_dao() {
     return __async(this, null, function* () {
-      const spinner = (0, import_nanospinner.createSpinner)(`creating canisters ${name}...`).start();
-      const create = yield execa("dfx", ["canister", "create", name]);
-      if (create.exitCode !== 0) {
-        this.program.error(`unable to create canister ${name}`, { code: "1" });
-      }
-      ;
-      spinner.success({ text: `successfuly created canister ${name}` });
-    });
-  }
-  create_canisters(name) {
-    return __async(this, null, function* () {
-      const spinner = (0, import_nanospinner.createSpinner)("creating canisters...").start();
-      const create = yield execa("dfx", ["canister", "--network", "ic", "create", name]);
-      if (create.exitCode !== 0) {
-        this.program.error(`unable to create canister ${name}`, { code: "1" });
-      }
-      ;
-      spinner.success({ text: `successfuly created canister ${name}` });
-    });
-  }
-  clone_canisters() {
-    return __async(this, null, function* () {
-      const spinner = (0, import_nanospinner.createSpinner)("pulling down canisters...").start();
-      const clone_canisters = yield execa("git", ["clone", "https://github.com/CigDao/canisters"]);
-      if (clone_canisters.exitCode !== 0) {
-        this.program.error("unable to pull down canisters https://github.com/CigDao/canisters", { code: "1" });
-      }
-      ;
-      spinner.success({ text: `successfuly cloned canisters` });
-    });
-  }
-  deploy_multisig_local() {
-    return __async(this, null, function* () {
-      var _a;
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying multisig canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`principal "${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.local}"`, ")");
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
+      const composer_canister = "xpfnk-5yaaa-aaaan-qc3ga-cai";
+      const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
+      const spinner = (0, import_nanospinner.createSpinner)("registering dao").start();
+      let args = `(
+            record  {
+                        daoName = ${(_a = this.config) == null ? void 0 : _a.dao_name};
+                        logo = "${icon}";
+                        name = ${(_b = this.config) == null ? void 0 : _b.token_name};
+                        symbol = ${(_c = this.config) == null ? void 0 : _c.token_symbol};
+                        decimals = ${(_d = this.config) == null ? void 0 : _d.token_decimals}:nat8;
+                        totalSupply = ${(_e = this.config) == null ? void 0 : _e.token_supply}:nat;
+                        fee = ${(_f = this.config) == null ? void 0 : _f.token_fee}:nat;
+                        token2 = ${(_g = this.config) == null ? void 0 : _g.token_2};
+                        proposalCost = ${(_h = this.config) == null ? void 0 : _h.proposal_cost}:nat;
+                        stakedTime = ${(_i = this.config) == null ? void 0 : _i.stake_time}:nat;
+                        clif = ${(_j = this.config) == null ? void 0 : _j.clif}:nat;
+                        maxClaims = ${(_k = this.config) == null ? void 0 : _k.max_claims}:nat;
+                        vestingThreshold = ${(_l = this.config) == null ? void 0 : _l.vesting_threshold}:nat;
+                        fundingGoal = ${(_m = this.config) == null ? void 0 : _m.funding_goal}:nat;
+                        swapFee = ${(_n = this.config) == null ? void 0 : _n.swap_fee}:float64;
+                        swapFundersfee = ${(_o = this.config) == null ? void 0 : _o.swap_funders_fee}:float64;
+                    },
+            )`;
       try {
-        const deploy = yield execa("dfx", ["deploy", `${names.multisig}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
-      }
-    });
-  }
-  deploy_database_local() {
-    return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying database canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", `${names.database}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.local}` });
-          const call = yield execa("dfx", ["wallet", "send", `${canister_ids.database.local}`, "20000000000000"]);
-          if (call.exitCode === 0) {
-            spinner.update({ text: `successfuly sent database canister 20000000000000 cycles` });
-            let call_args = text.concat(`"ledger"`, ")");
-            const call2 = yield execa("dfx", ["canister", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
-            if (call2.exitCode === 0) {
-              spinner.success({ text: `successfuly created database partition: ${canister_ids.database.local}` });
-            }
+        const set_name = yield execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `(${(_p = this.config) == null ? void 0 : _p.dao_name})`]);
+        if (set_name.exitCode === 0) {
+          spinner.update({ text: `successfuly registered dao` });
+          yield sleep();
+          spinner.update({ text: `creating dao, this will take a few mins...` });
+          const create = yield execa("dfx", ["canister", "--network", "ic", "call", composer_canister, "create", args]);
+          if (create.exitCode === 0) {
+            spinner.success({ text: `successfuly created Dao` });
           }
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy database canister", { code: "1" });
+        this.program.error("failed to created Dao", { code: "1" });
       }
     });
   }
-  deploy_topup_local() {
+  create_dao_local() {
     return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.database.local}",`, `vec {"${canister_ids.multisig.local}"; "${canister_ids.swap.local}"; "${canister_ids.token.local}"}`, ")");
+      const composer_canister = "rrkah-fqaaa-aaaaa-aaaaq-cai";
+      const registry_canister = "rno2w-sqaaa-aaaaa-aaacq-cai";
+      const spinner = (0, import_nanospinner.createSpinner)("registering dao").start();
+      let icon2 = (0, import_fs.readFileSync)("icon.png", "base64");
+      let args = `(
+            record  {
+                        daoName = "Test Dao";
+                        logo = "${icon2}";
+                        name = "Test Token";
+                        symbol = "TT";
+                        decimals = 8:nat8;
+                        totalSupply = 100000000000000:nat;
+                        fee = 0:nat;
+                        token2 = "5gxp5-jyaaa-aaaag-qarma-cai";
+                        proposalCost = 100000000:nat;
+                        stakedTime = 300000000000:nat;
+                        clif = 10:nat;
+                        maxClaims = 100:nat;
+                        vestingThreshold = 1:nat;
+                        fundingGoal = 1:nat;
+                        swapFee = 0.5:float64;
+                        swapFundersfee = 0.5:float64;
+                    },
+            )`;
       try {
-        const deploy = yield execa("dfx", ["deploy", `${names.topup}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed topup canister: ${canister_ids.topup.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy topup canister", { code: "1" });
-      }
-    });
-  }
-  deploy_token_local() {
-    return __async(this, null, function* () {
-      var _a, _b, _c, _d, _e;
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
-      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
-      let token_name2 = (_a = this.config) == null ? void 0 : _a.token_name;
-      let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
-      let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
-      let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
-      let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
-      let database = canister_ids.database.local;
-      let topupCanister = canister_ids.topup.local;
-      let text = "(";
-      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", `${names.token}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy token canister", { code: "1" });
-      }
-    });
-  }
-  deploy_swap_local() {
-    return __async(this, null, function* () {
-      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.local}",`, `"${YC_Canister}",`, `"${canister_ids.database.local}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", `${names.swap}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
-      }
-    });
-  }
-  deploy_treasury_local() {
-    return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.dao.local}",`, `"${canister_ids.token.local}",`, `"${canister_ids.swap.local}",`, `"${canister_ids.topup.local}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", `${names.treasury}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy treasury canister", { code: "1" });
-      }
-    });
-  }
-  deploy_dao_local() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      let rawdata = (0, import_fs.readFileSync)("./.dfx/local/canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.local}",`, `"${canister_ids.treasury.local}",`, `"${canister_ids.topup.local}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time}`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", `${names.dao}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.local}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy dao canister", { code: "1" });
-      }
-    });
-  }
-  deploy_multisig() {
-    return __async(this, null, function* () {
-      var _a;
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying multisig canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`principal "${(_a = this.config) == null ? void 0 : _a.member_principal}",`, `"${canister_ids.token.ic}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.multisig}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed multisig canister: ${canister_ids.multisig.ic}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
-      }
-    });
-  }
-  deploy_database() {
-    return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying database canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.database}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.update({ text: `successfuly deployed database canister: ${canister_ids.database.ic}` });
-          const call = yield execa("dfx", ["wallet", "--network", "ic", "send", `${canister_ids.database.ic}`, "20000000000000"]);
-          if (call.exitCode === 0) {
-            spinner.update({ text: `successfuly sent database canister 20000000000000 cycles` });
-            let call_args = text.concat(`"ledger"`, ")");
-            const call2 = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.database}`, "createCollectionServiceCanisterByGroup", call_args]);
-            if (call2.exitCode === 0) {
-              spinner.success({ text: `successfuly created database partition: ${canister_ids.database.ic}` });
-            }
+        const set_name = yield execa("dfx", ["canister", "call", registry_canister, "setName", `("Test Dao")`]);
+        if (set_name.exitCode === 0) {
+          spinner.update({ text: `successfuly registered dao` });
+          yield sleep();
+          spinner.update({ text: `creating dao, this will take a few mins...` });
+          const create = yield execa("dfx", ["canister", "call", composer_canister, "create", args]);
+          if (create.exitCode === 0) {
+            spinner.success({ text: `successfuly created Dao` });
           }
         }
       } catch (e) {
         console.error(e);
-        this.program.error("failed to deploy database canister", { code: "1" });
-      }
-    });
-  }
-  deploy_topup() {
-    return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying topup canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.database.ic}",`, `vec {"${canister_ids.multisig.ic}"; "${canister_ids.swap.ic}"; "${canister_ids.token.ic}"}`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.topup}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed topup canister: ${canister_ids.topup.ic}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy topup canister", { code: "1" });
-      }
-    });
-  }
-  deploy_token() {
-    return __async(this, null, function* () {
-      var _a, _b, _c, _d, _e;
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying token canister, this will take a few mins...").start();
-      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
-      let token_name2 = (_a = this.config) == null ? void 0 : _a.token_name;
-      let symbol = (_b = this.config) == null ? void 0 : _b.token_symbol;
-      let decimal = (_c = this.config) == null ? void 0 : _c.token_decimals;
-      let token_supply2 = (_d = this.config) == null ? void 0 : _d.token_supply;
-      let fee = (_e = this.config) == null ? void 0 : _e.token_fee;
-      let database = canister_ids.database.ic;
-      let topupCanister = canister_ids.topup.ic;
-      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
-      let text = "(";
-      let args = text.concat(`"${icon}",`, `"${token_name2}",`, `"${symbol}",`, `${decimal},`, `${token_supply2},`, `${fee},`, `"${database}",`, `"${topupCanister}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.token}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.update({ text: `Distributioning Tokens` });
-          let call_args = text.concat(`"${YC_Canister}"`, ")");
-          const call = yield execa("dfx", ["canister", "--network", "ic", "call", `${names.token}`, "distribute", call_args]);
-          if (call.exitCode === 0) {
-            spinner.success({ text: `successfuly deployed token canister: ${canister_ids.token.ic}` });
-          }
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy token canister", { code: "1" });
-      }
-    });
-  }
-  deploy_swap() {
-    return __async(this, null, function* () {
-      let YC_Canister = "5gxp5-jyaaa-aaaag-qarma-cai";
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying swap canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${YC_Canister}",`, `"${canister_ids.database.ic}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.swap}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed swap canister: ${canister_ids.swap.ic}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy multi sig canister", { code: "1" });
-      }
-    });
-  }
-  deploy_treasury() {
-    return __async(this, null, function* () {
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying treasury canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.dao.ic}",`, `"${canister_ids.token.ic}",`, `"${canister_ids.swap.ic}",`, `"${canister_ids.topup.ic}"`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.treasury}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed treasury canister: ${canister_ids.treasury.ic}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy treasury canister", { code: "1" });
-      }
-    });
-  }
-  deploy_dao() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      let rawdata = (0, import_fs.readFileSync)("./canister_ids.json", "utf8");
-      canister_ids = JSON.parse(rawdata);
-      const spinner = (0, import_nanospinner.createSpinner)("deploying dao canister, this will take a few mins...").start();
-      let text = "(";
-      let args = text.concat(`"${canister_ids.token.ic}",`, `"${canister_ids.treasury.ic}",`, `"${canister_ids.topup.ic}",`, `${(_a = this.config) == null ? void 0 : _a.proposal_cost},`, `${(_b = this.config) == null ? void 0 : _b.stake_time}`, ")");
-      try {
-        const deploy = yield execa("dfx", ["deploy", "--network", "ic", `${names.dao}`, "--argument", args]);
-        if (deploy.exitCode === 0) {
-          spinner.success({ text: `successfuly deployed dao canister: ${canister_ids.dao.ic}` });
-        }
-      } catch (e) {
-        console.error(e);
-        this.program.error("failed to deploy dao canister", { code: "1" });
+        this.program.error("failed to created Dao", { code: "1" });
       }
     });
   }
@@ -47273,13 +46928,19 @@ var token_symbol;
 var token_supply;
 var token_decimals;
 var token_fee;
+var token_2;
 var proposal_cost;
 var stake_time;
+var clif;
+var max_claims;
+var vesting_threshold;
+var funding_goal;
+var swap_fee;
+var swap_funders_fee;
 var sleep2 = (ms = 2e3) => new Promise((r) => setTimeout(r, ms));
 var MultiSig2 = class {
-  constructor(program4, config3) {
-    this.program = program4;
-    this.config = config3;
+  constructor(config2) {
+    this.config = config2;
   }
   welcome() {
     return __async(this, null, function* () {
@@ -47487,14 +47148,218 @@ var MultiSig2 = class {
       }
     });
   }
+  askToken2() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.token_2) {
+        token_2 = (_b = this.config) == null ? void 0 : _b.token_2;
+        console.log(`Token 2: ${token_2}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "token_2",
+          type: "input",
+          message: "Canister id for 2nd token of swap pair",
+          default() {
+            return "Token 2 of swap pair";
+          }
+        });
+        return answers.token_2;
+      }
+    });
+  }
+  askClif() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.clif) {
+        clif = (_b = this.config) == null ? void 0 : _b.clif;
+        console.log(`Vesting Clif: ${clif}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "clif",
+          type: "number",
+          message: "The amount of time before your allocation release (nanoseconds)",
+          default() {
+            return "Clif";
+          }
+        });
+        return answers.clif;
+      }
+    });
+  }
+  askMaxClaims() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.max_claims) {
+        max_claims = (_b = this.config) == null ? void 0 : _b.max_claims;
+        console.log(`Max Claim: ${max_claims}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "max_claims",
+          type: "number",
+          message: "The amount of claims in a vesting period (nanoseconds)",
+          default() {
+            return "Max Claim";
+          }
+        });
+        return answers.max_claims;
+      }
+    });
+  }
+  askVestingThreshold() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.vesting_threshold) {
+        vesting_threshold = (_b = this.config) == null ? void 0 : _b.vesting_threshold;
+        console.log(`Vesting Threashold: ${vesting_threshold}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "vesting_threshold",
+          type: "number",
+          message: "The total amount of time your allocation is vested (nanoseconds)",
+          default() {
+            return "Vesting Threshold";
+          }
+        });
+        return answers.vesting_threshold;
+      }
+    });
+  }
+  askFundingGoal() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.funding_goal) {
+        funding_goal = (_b = this.config) == null ? void 0 : _b.funding_goal;
+        console.log(`Funding Goal: ${funding_goal}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "funding_goal",
+          type: "number",
+          message: "The amount token 2 deposited to the swap before its activiated",
+          default() {
+            return "Funding Goal";
+          }
+        });
+        return answers.funding_goal;
+      }
+    });
+  }
+  askSwapFee() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.swap_fee) {
+        swap_fee = (_b = this.config) == null ? void 0 : _b.swap_fee;
+        console.log(`Swap Fee: ${swap_fee}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "swap_fee",
+          type: "number",
+          message: "The fee paid to liquidty providers (float)",
+          default() {
+            return "Swap Fee";
+          }
+        });
+        return answers.swap_fee;
+      }
+    });
+  }
+  askSwapFundersFee() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.swap_funders_fee) {
+        swap_funders_fee = (_b = this.config) == null ? void 0 : _b.swap_funders_fee;
+        console.log(`Swap Funders Fee: ${swap_funders_fee}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "swap_funders_fee",
+          type: "number",
+          message: "The additional percentage givin to those that funded the swap (float)",
+          default() {
+            return "Swap Funders_Fee";
+          }
+        });
+        return answers.swap_funders_fee;
+      }
+    });
+  }
 };
 
 // src/commands.ts
 var import_fs2 = require("fs");
+
+// src/json-data.ts
+var dfx = {
+  "canisters": {
+    "multisig": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/multisig/multisig.did",
+      "wasm": "canisters/multisig/multisig.wasm"
+    },
+    "database": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/database/database.did",
+      "wasm": "canisters/database/database.wasm"
+    },
+    "topup": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/topup/topup.did",
+      "wasm": "canisters/topup/topup.wasm"
+    },
+    "token": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/token/token.did",
+      "wasm": "canisters/token/token.wasm"
+    },
+    "swap": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/swap/swap.did",
+      "wasm": "canisters/swap/swap.wasm"
+    },
+    "treasury": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/treasury/treasury.did",
+      "wasm": "canisters/treasury/treasury.wasm"
+    },
+    "dao": {
+      "type": "custom",
+      "build": "",
+      "candid": "canisters/dao/dao.did",
+      "wasm": "canisters/dao/dao.wasm"
+    }
+  }
+};
+var config = {
+  "dao_name": "",
+  "member_principal": "",
+  "token_supply": 0,
+  "token_decimals": 0,
+  "token_fee": 0,
+  "token_name": "",
+  "token_symbol": "",
+  "proposal_cost": 0,
+  "stake_time": 0,
+  "token_2": 0,
+  "clif": 0,
+  "max_claims": 0,
+  "vesting_threshold": 0,
+  "funding_goal": 0,
+  "swap_fee": 0,
+  "swap_funders_fee": 0
+};
+
+// src/commands.ts
+var import_https = require("https");
 var initCommand = new Command("init");
 var deployCommand = new Command("deploy");
 initCommand.description("Creates a new MLP project").action((option) => __async(void 0, null, function* () {
-  const init = new MultiSig2(initCommand);
+  const exists = (0, import_fs2.existsSync)("mlpconfig.json");
+  let defaultmlpConfig = exists ? JSON.parse((0, import_fs2.readFileSync)("mlpconfig.json", "utf8")) : void 0;
+  const init = new MultiSig2(defaultmlpConfig);
   yield init.welcome();
   config.dao_name = yield init.askDao();
   config.member_principal = yield init.askMember();
@@ -47505,6 +47370,12 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
   config.token_fee = yield init.askTokenFee();
   config.proposal_cost = yield init.askProposalCost();
   config.stake_time = yield init.askStakeTime();
+  config.token_2 = yield init.askToken2();
+  config.clif = yield init.askClif();
+  config.vesting_threshold = yield init.askVestingThreshold();
+  config.funding_goal = yield init.askFundingGoal();
+  config.swap_fee = yield init.askSwapFee();
+  config.swap_funders_fee = yield init.askSwapFundersFee();
   for (let i = 0; i < config.token_decimals; i++) {
     config.token_supply = config.token_supply * 10;
   }
@@ -47514,7 +47385,18 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
     console.error(err);
   }
   try {
-    (0, import_fs2.writeFileSync)("mlpconfig.json", JSON.stringify(config));
+    const exists2 = (0, import_fs2.existsSync)("mlpconfig.json");
+    if (!exists2) {
+      (0, import_fs2.writeFileSync)("mlpconfig.json", JSON.stringify(config));
+    }
+  } catch (err) {
+    console.error(err);
+  }
+  try {
+    const exists2 = (0, import_fs2.existsSync)("icon.png");
+    if (!exists2) {
+      (0, import_https.get)("https://cdn.cigdao.org/icon.png", (res) => res.pipe((0, import_fs2.createWriteStream)("icon.png")));
+    }
   } catch (err) {
     console.error(err);
   }
@@ -47533,46 +47415,26 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
     yield dp.title();
   }
   yield dp.install_dfx();
-  yield dp.clone_canisters();
   if (options.local) {
-    yield dp.create_canisters_local(names.multisig);
-    yield dp.create_canisters_local(names.database);
-    yield dp.create_canisters_local(names.topup);
-    yield dp.create_canisters_local(names.token);
-    yield dp.create_canisters_local(names.swap);
-    yield dp.create_canisters_local(names.treasury);
-    yield dp.create_canisters_local(names.dao);
-    yield dp.deploy_database_local();
-    yield dp.deploy_topup_local();
-    yield dp.deploy_token_local();
-    yield dp.deploy_multisig_local();
-    yield dp.deploy_swap_local();
-    yield dp.deploy_treasury_local();
-    yield dp.deploy_dao_local();
+    yield dp.create_dao_local();
   } else {
-    yield dp.create_canisters(names.multisig);
-    yield dp.create_canisters(names.database);
-    yield dp.create_canisters(names.topup);
-    yield dp.create_canisters(names.token);
-    yield dp.create_canisters(names.swap);
-    yield dp.create_canisters(names.treasury);
-    yield dp.create_canisters(names.dao);
-    yield dp.deploy_database();
-    yield dp.deploy_topup();
-    yield dp.deploy_token();
-    yield dp.deploy_multisig();
-    yield dp.deploy_swap();
-    yield dp.deploy_treasury();
-    yield dp.deploy_dao();
+    yield dp.create_dao();
   }
   yield dp.finish();
 }));
 
 // src/index.ts
+var import_fs3 = require("fs");
+
+// package.json
+var version = "0.0.9";
+var description = "My Little Protocol - Launching dao tools";
+
+// src/index.ts
 var program3 = new Command();
 program3.name("MLP");
-program3.description("My Little Protocol - Launching dao tools");
-program3.version("0.0.1");
+program3.description(description);
+program3.version(version);
 program3.addCommand(initCommand);
 program3.addCommand(deployCommand);
 function main2() {
@@ -47583,7 +47445,11 @@ function main2() {
 console.log();
 main2();
 process.on("unhandledRejection", function(err) {
-  console.error(err.stack);
+  console.error(err);
+  if (err.message.includes("git clone https://github.com/CigDao/canisters")) {
+    (0, import_fs3.rmSync)("canisters", { recursive: true, force: true });
+  }
+  process.exit(2);
 });
 /*!
  * Tmp

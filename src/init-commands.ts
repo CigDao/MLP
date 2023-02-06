@@ -12,8 +12,15 @@ let token_symbol:string;
 let token_supply:number;
 let token_decimals:number;
 let token_fee:number;
+let token_2:string;
 let proposal_cost:number;
 let stake_time:number;
+let clif:number;
+let max_claims:number;
+let vesting_threshold:number;
+let funding_goal:number;
+let swap_fee:number;
+let swap_funders_fee:number;
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
@@ -216,6 +223,132 @@ export default class MultiSig {
                     return 86400000000000 * 3;
                 } 
              }
+        }
+    }
+
+    async askToken2() {
+        if (this.config?.token_2) {
+            token_2 = this.config?.token_2;
+            console.log(`Token 2: ${token_2}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'token_2',
+                type: 'input',
+                message: "Canister id for 2nd token of swap pair",
+                default() {
+                    return 'Token 2 of swap pair';
+                },
+            });
+
+            return answers.token_2;
+        }
+    }
+
+    async askClif() {
+        if (this.config?.clif) {
+            clif = this.config?.clif;
+            console.log(`Vesting Clif: ${clif}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'clif',
+                type: 'number',
+                message: "The amount of time before your allocation release (nanoseconds)",
+                default() {
+                    return 'Clif';
+                },
+            });
+
+            return answers.clif;
+        }
+    }
+
+    async askMaxClaims() {
+        if (this.config?.max_claims) {
+            max_claims = this.config?.max_claims;
+            console.log(`Max Claim: ${max_claims}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'max_claims',
+                type: 'number',
+                message: "The amount of claims in a vesting period (nanoseconds)",
+                default() {
+                    return 'Max Claim';
+                },
+            });
+
+            return answers.max_claims;
+        }
+    }
+
+    async askVestingThreshold() {
+        if (this.config?.vesting_threshold) {
+            vesting_threshold = this.config?.vesting_threshold;
+            console.log(`Vesting Threashold: ${vesting_threshold}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'vesting_threshold',
+                type: 'number',
+                message: "The total amount of time your allocation is vested (nanoseconds)",
+                default() {
+                    return 'Vesting Threshold';
+                },
+            });
+
+            return answers.vesting_threshold;
+        }
+    }
+
+    async askFundingGoal() {
+        if (this.config?.funding_goal) {
+            funding_goal = this.config?.funding_goal;
+            console.log(`Funding Goal: ${funding_goal}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'funding_goal',
+                type: 'number',
+                message: "The amount token 2 deposited to the swap before its activiated",
+                default() {
+                    return 'Funding Goal';
+                },
+            });
+
+            return answers.funding_goal;
+        }
+    }
+
+    async askSwapFee() {
+        if (this.config?.swap_fee) {
+            swap_fee = this.config?.swap_fee;
+            console.log(`Swap Fee: ${swap_fee}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'swap_fee',
+                type: 'number',
+                message: "The fee paid to liquidty providers (float)",
+                default() {
+                    return 'Swap Fee';
+                },
+            });
+
+            return answers.swap_fee;
+        }
+    }
+
+    async askSwapFundersFee() {
+        if (this.config?.swap_funders_fee) {
+            swap_funders_fee = this.config?.swap_funders_fee;
+            console.log(`Swap Funders Fee: ${swap_funders_fee}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'swap_funders_fee',
+                type: 'number',
+                message: "The additional percentage givin to those that funded the swap (float)",
+                default() {
+                    return 'Swap Funders_Fee';
+                },
+            });
+
+            return answers.swap_funders_fee;
         }
     }
 }

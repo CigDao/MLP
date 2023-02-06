@@ -4,8 +4,15 @@ export type Mlpconfig = {
     "token_supply": number,
     "token_decimals": number,
     "token_fee": number,
+    "token_2": string,
     "token_name": string,
     "token_symbol": string,
     "proposal_cost":number,
-    "stake_time":number
+    "stake_time":number,
+    "clif":number,
+    "max_claims":number,
+    "vesting_threshold":number,
+    "funding_goal":number,
+    "swap_fee":number,
+    "swap_funders_fee":number,
 }

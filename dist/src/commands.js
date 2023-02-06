@@ -34,6 +34,14 @@ exports.initCommand.description("Creates a new MLP project")
     json_data_1.config.token_supply = yield init.askTokenSupply();
     json_data_1.config.token_decimals = yield init.askTokenDecimals();
     json_data_1.config.token_fee = yield init.askTokenFee();
+    json_data_1.config.proposal_cost = yield init.askProposalCost();
+    json_data_1.config.stake_time = yield init.askStakeTime();
+    json_data_1.config.token_2 = yield init.askToken2();
+    json_data_1.config.clif = yield init.askClif();
+    json_data_1.config.vesting_threshold = yield init.askVestingThreshold();
+    json_data_1.config.funding_goal = yield init.askFundingGoal();
+    json_data_1.config.swap_fee = yield init.askSwapFee();
+    json_data_1.config.swap_funders_fee = yield init.askSwapFundersFee();
     for (let i = 0; i < json_data_1.config.token_decimals; i++) {
         json_data_1.config.token_supply = json_data_1.config.token_supply * 10;
     }
@@ -82,30 +90,11 @@ exports.deployCommand.description("creates and deploys a new Dao")
         yield dp.title();
     }
     yield dp.install_dfx();
-    yield dp.clone_canisters();
     if (options.local) {
-        yield dp.create_canisters_local(json_data_1.names.multisig);
-        yield dp.create_canisters_local(json_data_1.names.database);
-        yield dp.create_canisters_local(json_data_1.names.topup);
-        yield dp.create_canisters_local(json_data_1.names.token);
-        yield dp.create_canisters_local(json_data_1.names.swap);
-        yield dp.deploy_database_local();
-        yield dp.deploy_topup_local();
-        yield dp.deploy_token_local();
-        yield dp.deploy_multisig_local();
-        yield dp.deploy_swap_local();
+        yield dp.create_dao_local();
     }
     else {
-        yield dp.create_canisters(json_data_1.names.multisig);
-        yield dp.create_canisters(json_data_1.names.database);
-        yield dp.create_canisters(json_data_1.names.topup);
-        yield dp.create_canisters(json_data_1.names.token);
-        yield dp.create_canisters(json_data_1.names.swap);
-        yield dp.deploy_database();
-        yield dp.deploy_topup();
-        yield dp.deploy_token();
-        yield dp.deploy_multisig();
-        yield dp.deploy_swap();
+        yield dp.create_dao();
     }
     yield dp.finish();
 }));
