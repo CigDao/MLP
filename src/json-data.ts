@@ -54,7 +54,14 @@ export let config = {
     "token_name":"",
     "token_symbol":"",
     "proposal_cost":0,
-    "stake_time":0
+    "stake_time":0,
+    "token_2":0,
+    "clif":0,
+    "max_claims":0,
+    "vesting_threshold":0,
+    "funding_goal":0,
+    "swap_fee":0,
+    "swap_funders_fee":0,
 }
 
 export let names = {
