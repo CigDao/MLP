@@ -38,22 +38,10 @@ Do build mlp ecosystem follow directions closely.
 
 If you followed your instructions correctly the prompt should like like so
 ```
-
-Welcome To My Little Protocol 
-
-? What is your dao's name? documentation
-? You need to add at least 1 member 1
-? The name of your governace token doc
-? The symbol of your governace token doc
-? The total supply for your governace token 100
-? The number of decimals for your governace token 100
-cigdao@cigdao-Mac-Studio myapp % mlp init
-
 Welcome To My Little Protocol 
 
 ? What is your dao's name? DocumentationDao
 ? You need to add at least 1 member 
-qn4yi-5bmj3-4xqzh-knt34-wfrhw-srz26-p463o-tn6ih-mm3vv-2smqt-6ae
 ? The name of your governace token Test
 ? The symbol of your governace token Test
 ? The total supply for your governace token 1000
@@ -61,15 +49,6 @@ qn4yi-5bmj3-4xqzh-knt34-wfrhw-srz26-p463o-tn6ih-mm3vv-2smqt-6ae
 ? The fee for your governace token 0
 ? The cost to create a proposal 0
 ? The time it takes to unstake tokens 1 minute
-
-cigdao@cigdao-Mac-Studio myapp % dfx start --background
-Running dfx start for version 0.12.1
-Using the default definition for the 'local' shared network because /Users/cigdao/.config/dfx/networks.json does not exist.
-[Canister ryjl3-tyaaa-aaaaa-aaaba-cai] creating new Collection service canister with pk=group#ledger
-[Canister ryjl3-tyaaa-aaaaa-aaaba-cai] new Collection service canisterId=qjdve-lqaaa-aaaaa-aaaeq-cai
-Dashboard: http://localhost:59751/_/dashboard
-
-cigdao@cigdao-Mac-Studio myapp % mlp deploy -l
 
 Deploying To LocalHost... 
 
