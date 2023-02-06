@@ -23,6 +23,15 @@ let token_symbol;
 let token_supply;
 let token_decimals;
 let token_fee;
+let token_2;
+let proposal_cost;
+let stake_time;
+let clif;
+let max_claims;
+let vesting_threshold;
+let funding_goal;
+let swap_fee;
+let swap_funders_fee;
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 class MultiSig {
     constructor(config) {
@@ -172,6 +181,214 @@ class MultiSig {
                     },
                 });
                 return answers.token_symbol;
+            }
+        });
+    }
+    askProposalCost() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.proposal_cost) {
+                proposal_cost = (_b = this.config) === null || _b === void 0 ? void 0 : _b.proposal_cost;
+                console.log(`Proposal Cost: ${proposal_cost}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'proposal_cost',
+                    type: 'number',
+                    message: "The cost to create a proposal",
+                    default() {
+                        return 'Proposal Cost';
+                    },
+                });
+                return answers.proposal_cost;
+            }
+        });
+    }
+    askStakeTime() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.stake_time) {
+                stake_time = (_b = this.config) === null || _b === void 0 ? void 0 : _b.stake_time;
+                console.log(`Unstaking Time: ${stake_time}`);
+                return stake_time;
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'stake_time',
+                    type: 'list',
+                    message: "The time it takes to unstake tokens",
+                    choices: [
+                        '1 minute',
+                        '1 Day',
+                        '3 Day',
+                        '1 Week',
+                        '1 Month',
+                    ],
+                    default() {
+                        return 'Stake Time';
+                    },
+                });
+                answers.stake_time === '3 Day';
+                switch (answers.stake_time) {
+                    case '1 Minute': {
+                        return 60000000000;
+                    }
+                    case '1 Day': {
+                        return 86400000000000;
+                    }
+                    case '3 Day': {
+                        return 86400000000000 * 3;
+                    }
+                    case '1 Week': {
+                        return 86400000000000 * 7;
+                    }
+                    case '1 Month': {
+                        return 86400000000000 * 30;
+                    }
+                    default: {
+                        return 86400000000000 * 3;
+                    }
+                }
+            }
+        });
+    }
+    askToken2() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.token_2) {
+                token_2 = (_b = this.config) === null || _b === void 0 ? void 0 : _b.token_2;
+                console.log(`Token 2: ${token_2}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'token_2',
+                    type: 'input',
+                    message: "Canister id for 2nd token of swap pair",
+                    default() {
+                        return 'Token 2 of swap pair';
+                    },
+                });
+                return answers.token_2;
+            }
+        });
+    }
+    askClif() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.clif) {
+                clif = (_b = this.config) === null || _b === void 0 ? void 0 : _b.clif;
+                console.log(`Vesting Clif: ${clif}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'clif',
+                    type: 'number',
+                    message: "The amount of time before your allocation release (nanoseconds)",
+                    default() {
+                        return 'Clif';
+                    },
+                });
+                return answers.clif;
+            }
+        });
+    }
+    askMaxClaims() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.max_claims) {
+                max_claims = (_b = this.config) === null || _b === void 0 ? void 0 : _b.max_claims;
+                console.log(`Max Claim: ${max_claims}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'max_claims',
+                    type: 'number',
+                    message: "The amount of claims in a vesting period (nanoseconds)",
+                    default() {
+                        return 'Max Claim';
+                    },
+                });
+                return answers.max_claims;
+            }
+        });
+    }
+    askVestingThreshold() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.vesting_threshold) {
+                vesting_threshold = (_b = this.config) === null || _b === void 0 ? void 0 : _b.vesting_threshold;
+                console.log(`Vesting Threashold: ${vesting_threshold}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'vesting_threshold',
+                    type: 'number',
+                    message: "The total amount of time your allocation is vested (nanoseconds)",
+                    default() {
+                        return 'Vesting Threshold';
+                    },
+                });
+                return answers.vesting_threshold;
+            }
+        });
+    }
+    askFundingGoal() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.funding_goal) {
+                funding_goal = (_b = this.config) === null || _b === void 0 ? void 0 : _b.funding_goal;
+                console.log(`Funding Goal: ${funding_goal}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'funding_goal',
+                    type: 'number',
+                    message: "The amount token 2 deposited to the swap before its activiated",
+                    default() {
+                        return 'Funding Goal';
+                    },
+                });
+                return answers.funding_goal;
+            }
+        });
+    }
+    askSwapFee() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.swap_fee) {
+                swap_fee = (_b = this.config) === null || _b === void 0 ? void 0 : _b.swap_fee;
+                console.log(`Swap Fee: ${swap_fee}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'swap_fee',
+                    type: 'number',
+                    message: "The fee paid to liquidty providers (float)",
+                    default() {
+                        return 'Swap Fee';
+                    },
+                });
+                return answers.swap_fee;
+            }
+        });
+    }
+    askSwapFundersFee() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.swap_funders_fee) {
+                swap_funders_fee = (_b = this.config) === null || _b === void 0 ? void 0 : _b.swap_funders_fee;
+                console.log(`Swap Funders Fee: ${swap_funders_fee}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'swap_funders_fee',
+                    type: 'number',
+                    message: "The additional percentage givin to those that funded the swap (float)",
+                    default() {
+                        return 'Swap Funders_Fee';
+                    },
+                });
+                return answers.swap_funders_fee;
             }
         });
     }

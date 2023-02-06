@@ -1,6 +1,6 @@
 {
   "name": "@cigdao/mlp",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "My Little Protocol - Launching dao tools",
   "main": "dist/index.js",
   "bin": {

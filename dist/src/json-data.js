@@ -32,6 +32,18 @@ exports.dfx = {
             "build": "",
             "candid": "canisters/swap/swap.did",
             "wasm": "canisters/swap/swap.wasm"
+        },
+        "treasury": {
+            "type": "custom",
+            "build": "",
+            "candid": "canisters/treasury/treasury.did",
+            "wasm": "canisters/treasury/treasury.wasm"
+        },
+        "dao": {
+            "type": "custom",
+            "build": "",
+            "candid": "canisters/dao/dao.did",
+            "wasm": "canisters/dao/dao.wasm"
         }
     }
 };
@@ -42,12 +54,23 @@ exports.config = {
     "token_decimals": 0,
     "token_fee": 0,
     "token_name": "",
-    "token_symbol": ""
+    "token_symbol": "",
+    "proposal_cost": 0,
+    "stake_time": 0,
+    "token_2": 0,
+    "clif": 0,
+    "max_claims": 0,
+    "vesting_threshold": 0,
+    "funding_goal": 0,
+    "swap_fee": 0,
+    "swap_funders_fee": 0,
 };
 exports.names = {
     "multisig": "multisig",
     "database": "database",
     "topup": "topup",
     "token": "token",
-    "swap": "swap"
+    "swap": "swap",
+    "treasury": "treasury",
+    "dao": "dao"
 };
