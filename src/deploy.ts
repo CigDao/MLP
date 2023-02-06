@@ -107,7 +107,7 @@ export default class MultiSig {
             )`
         try {
 
-            const set_name = await execa("dfx", ["canister", "--network", "ic", "call",registry_canister, "setName", `(${this.config?.dao_name})`]);
+            const set_name = await execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `(${this.config?.dao_name})`]);
             
             if (set_name.exitCode === 0) {
                 spinner.update({ text: `successfuly registered dao`});
