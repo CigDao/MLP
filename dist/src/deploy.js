@@ -46,36 +46,6 @@ const nanospinner_1 = require("nanospinner");
 const Standard_js_1 = __importDefault(require("figlet/importable-fonts/Standard.js"));
 const fs_1 = require("fs");
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
-var canister_ids = {
-    "multisig": {
-        "local": "",
-        "ic": ""
-    },
-    "database": {
-        "local": "",
-        "ic": ""
-    },
-    "topup": {
-        "local": "",
-        "ic": ""
-    },
-    "token": {
-        "local": "",
-        "ic": ""
-    },
-    "swap": {
-        "local": "",
-        "ic": ""
-    },
-    "treasury": {
-        "local": "",
-        "ic": ""
-    },
-    "dao": {
-        "local": "",
-        "ic": ""
-    },
-};
 class MultiSig {
     constructor(program, config) {
         this.program = program;
@@ -118,6 +88,7 @@ class MultiSig {
             const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
             // Run external tool synchronously
             const spinner = (0, nanospinner_1.createSpinner)('registering dao').start();
+            let icon = (0, fs_1.readFileSync)("icon.png", "base64");
             let args = `(
             record  {
                         daoName = ${(_a = this.config) === null || _a === void 0 ? void 0 : _a.dao_name};

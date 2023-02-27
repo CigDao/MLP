@@ -44161,6 +44161,7 @@ var MultiSig = class {
       const composer_canister = "xpfnk-5yaaa-aaaan-qc3ga-cai";
       const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
       const spinner = (0, import_nanospinner.createSpinner)("registering dao").start();
+      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
       let args = `(
             record  {
                         daoName = ${(_a = this.config) == null ? void 0 : _a.dao_name};
@@ -44203,11 +44204,11 @@ var MultiSig = class {
       const composer_canister = "rrkah-fqaaa-aaaaa-aaaaq-cai";
       const registry_canister = "rno2w-sqaaa-aaaaa-aaacq-cai";
       const spinner = (0, import_nanospinner.createSpinner)("registering dao").start();
-      let icon2 = (0, import_fs.readFileSync)("icon.png", "base64");
+      let icon = (0, import_fs.readFileSync)("icon.png", "base64");
       let args = `(
             record  {
                         daoName = "Test Dao";
-                        logo = "${icon2}";
+                        logo = "${icon}";
                         name = "Test Token";
                         symbol = "TT";
                         decimals = 8:nat8;
@@ -47427,7 +47428,7 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
 var import_fs3 = require("fs");
 
 // package.json
-var version = "0.0.9";
+var version = "0.0.12";
 var description = "My Little Protocol - Launching dao tools";
 
 // src/index.ts
