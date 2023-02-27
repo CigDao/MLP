@@ -44174,9 +44174,9 @@ var MultiSig = class {
                         token2 = "${(_g = this.config) == null ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) == null ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_i = this.config) == null ? void 0 : _i.stake_time}:nat;
-                        clif = variant {"Day":${(_j = this.config) == null ? void 0 : _j.clif}:nat};
-                        vested = variant {"Day":${(_k = this.config) == null ? void 0 : _k.vested}:nat};
-                        interval = variant {"Day":${(_l = this.config) == null ? void 0 : _l.interval}:nat};
+                        clif = variant {"Day"=${(_j = this.config) == null ? void 0 : _j.clif}:nat};
+                        vested = variant {"Day"=${(_k = this.config) == null ? void 0 : _k.vested}:nat};
+                        interval = variant {"Day"=${(_l = this.config) == null ? void 0 : _l.interval}:nat};
                         totalAllocation = ${(_m = this.config) == null ? void 0 : _m.total_allocation}:nat;
                         fundingGoal = ${(_n = this.config) == null ? void 0 : _n.funding_goal}:nat;
                         swapFee = ${(_o = this.config) == null ? void 0 : _o.swap_fee}:float64;
@@ -47471,7 +47471,7 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
 var import_fs3 = require("fs");
 
 // package.json
-var version = "0.0.15";
+var version = "0.0.17";
 var description = "My Little Protocol - Launching dao tools";
 
 // src/index.ts

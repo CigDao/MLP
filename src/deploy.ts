@@ -67,9 +67,9 @@ export default class MultiSig {
                         token2 = "${this.config?.token_2}";
                         proposalCost = ${this.config?.proposal_cost}:nat;
                         stakedTime = ${this.config?.stake_time}:nat;
-                        clif = variant {"Day":${this.config?.clif}:nat};
-                        vested = variant {"Day":${this.config?.vested}:nat};
-                        interval = variant {"Day":${this.config?.interval}:nat};
+                        clif = variant {"Day"=${this.config?.clif}:nat};
+                        vested = variant {"Day"=${this.config?.vested}:nat};
+                        interval = variant {"Day"=${this.config?.interval}:nat};
                         totalAllocation = ${this.config?.total_allocation}:nat;
                         fundingGoal = ${this.config?.funding_goal}:nat;
                         swapFee = ${this.config?.swap_fee}:float64;

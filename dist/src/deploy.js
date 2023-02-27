@@ -101,9 +101,9 @@ class MultiSig {
                         token2 = "${(_g = this.config) === null || _g === void 0 ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) === null || _h === void 0 ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_j = this.config) === null || _j === void 0 ? void 0 : _j.stake_time}:nat;
-                        clif = variant {"Day":${(_k = this.config) === null || _k === void 0 ? void 0 : _k.clif}:nat};
-                        vested = variant {"Day":${(_l = this.config) === null || _l === void 0 ? void 0 : _l.vested}:nat};
-                        interval = variant {"Day":${(_m = this.config) === null || _m === void 0 ? void 0 : _m.interval}:nat};
+                        clif = variant {"Day"=${(_k = this.config) === null || _k === void 0 ? void 0 : _k.clif}:nat};
+                        vested = variant {"Day"=${(_l = this.config) === null || _l === void 0 ? void 0 : _l.vested}:nat};
+                        interval = variant {"Day"=${(_m = this.config) === null || _m === void 0 ? void 0 : _m.interval}:nat};
                         totalAllocation = ${(_o = this.config) === null || _o === void 0 ? void 0 : _o.total_allocation}:nat;
                         fundingGoal = ${(_p = this.config) === null || _p === void 0 ? void 0 : _p.funding_goal}:nat;
                         swapFee = ${(_q = this.config) === null || _q === void 0 ? void 0 : _q.swap_fee}:float64;
