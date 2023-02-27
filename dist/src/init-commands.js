@@ -27,8 +27,9 @@ let token_2;
 let proposal_cost;
 let stake_time;
 let clif;
-let max_claims;
-let vesting_threshold;
+let vested;
+let interval;
+let total_allocation;
 let funding_goal;
 let swap_fee;
 let swap_funders_fee;
@@ -312,23 +313,63 @@ class MultiSig {
             }
         });
     }
-    askVestingThreshold() {
+    askVested() {
         var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
-            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.vesting_threshold) {
-                vesting_threshold = (_b = this.config) === null || _b === void 0 ? void 0 : _b.vesting_threshold;
-                console.log(`Vesting Threashold: ${vesting_threshold}`);
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.vested) {
+                vested = (_b = this.config) === null || _b === void 0 ? void 0 : _b.vested;
+                console.log(`vested: ${vested}`);
             }
             else {
                 const answers = yield inquirer_1.default.prompt({
-                    name: 'vesting_threshold',
+                    name: 'vested',
                     type: 'number',
-                    message: "The total amount of time your allocation is vested (nanoseconds)",
+                    message: "The total amount of time your allocation is vested",
                     default() {
-                        return 'Vesting Threshold';
+                        return 'vested';
                     },
                 });
-                return answers.vesting_threshold;
+                return answers.vested;
+            }
+        });
+    }
+    askInterval() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.interval) {
+                interval = (_b = this.config) === null || _b === void 0 ? void 0 : _b.interval;
+                console.log(`vested: ${interval}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'interval',
+                    type: 'number',
+                    message: "interval in when funds are released",
+                    default() {
+                        return 'interval';
+                    },
+                });
+                return answers.interval;
+            }
+        });
+    }
+    askTotalAllocation() {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            if ((_a = this.config) === null || _a === void 0 ? void 0 : _a.total_allocation) {
+                total_allocation = (_b = this.config) === null || _b === void 0 ? void 0 : _b.total_allocation;
+                console.log(`vested: ${interval}`);
+            }
+            else {
+                const answers = yield inquirer_1.default.prompt({
+                    name: 'total_allocation',
+                    type: 'number',
+                    message: "total allocation for air drop",
+                    default() {
+                        return 'total allocation';
+                    },
+                });
+                return answers.total_allocation;
             }
         });
     }

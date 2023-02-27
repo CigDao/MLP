@@ -7912,7 +7912,7 @@ var require_nanospinner = __commonJS({
       return str.replace(/\u001b[^m]*?m/g, "").split("\n").reduce((col, line) => col += Math.max(1, Math.ceil(line.length / width)), 0);
     }
     function createSpinner2(text = "", opts = {}) {
-      let current = 0, interval = opts.interval || 50, stream = opts.stream || process.stderr, frames = opts.frames && opts.frames.length ? opts.frames : symbols.frames, color = opts.color || "yellow", lines = 0, timer;
+      let current = 0, interval2 = opts.interval || 50, stream = opts.stream || process.stderr, frames = opts.frames && opts.frames.length ? opts.frames : symbols.frames, color = opts.color || "yellow", lines = 0, timer;
       let spinner = {
         reset() {
           current = 0;
@@ -7950,7 +7950,7 @@ var require_nanospinner = __commonJS({
         update(opts2 = {}) {
           text = opts2.text || text;
           frames = opts2.frames && opts2.frames.length ? opts2.frames : frames;
-          interval = opts2.interval || interval;
+          interval2 = opts2.interval || interval2;
           color = opts2.color || color;
           if (frames.length - 1 < current) {
             current = 0;
@@ -7958,7 +7958,7 @@ var require_nanospinner = __commonJS({
           return spinner;
         },
         loop() {
-          isTTY && (timer = setTimeout(() => spinner.loop(), interval));
+          isTTY && (timer = setTimeout(() => spinner.loop(), interval2));
           return spinner.spin();
         },
         start(opts2 = {}) {
@@ -12914,7 +12914,7 @@ var require_interval = __commonJS({
     exports.interval = void 0;
     var async_1 = require_async();
     var timer_1 = require_timer();
-    function interval(period, scheduler) {
+    function interval2(period, scheduler) {
       if (period === void 0) {
         period = 0;
       }
@@ -12926,7 +12926,7 @@ var require_interval = __commonJS({
       }
       return timer_1.timer(period, period, scheduler);
     }
-    exports.interval = interval;
+    exports.interval = interval2;
   }
 });
 
@@ -16418,17 +16418,17 @@ var require_timeInterval = __commonJS({
         var last = scheduler.now();
         source.subscribe(OperatorSubscriber_1.createOperatorSubscriber(subscriber, function(value) {
           var now = scheduler.now();
-          var interval = now - last;
+          var interval2 = now - last;
           last = now;
-          subscriber.next(new TimeInterval(value, interval));
+          subscriber.next(new TimeInterval(value, interval2));
         }));
       });
     }
     exports.timeInterval = timeInterval;
     var TimeInterval = function() {
-      function TimeInterval2(value, interval) {
+      function TimeInterval2(value, interval2) {
         this.value = value;
-        this.interval = interval;
+        this.interval = interval2;
       }
       return TimeInterval2;
     }();
@@ -44157,7 +44157,7 @@ var MultiSig = class {
   }
   create_dao() {
     return __async(this, null, function* () {
-      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q;
       const composer_canister = "xpfnk-5yaaa-aaaan-qc3ga-cai";
       const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
       const spinner = (0, import_nanospinner.createSpinner)("registering dao").start();
@@ -44174,16 +44174,17 @@ var MultiSig = class {
                         token2 = "${(_g = this.config) == null ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) == null ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_i = this.config) == null ? void 0 : _i.stake_time}:nat;
-                        clif = ${(_j = this.config) == null ? void 0 : _j.clif}:nat;
-                        maxClaims = ${(_k = this.config) == null ? void 0 : _k.max_claims}:nat;
-                        vestingThreshold = ${(_l = this.config) == null ? void 0 : _l.vesting_threshold}:nat;
-                        fundingGoal = ${(_m = this.config) == null ? void 0 : _m.funding_goal}:nat;
-                        swapFee = ${(_n = this.config) == null ? void 0 : _n.swap_fee}:float64;
-                        swapFundersfee = ${(_o = this.config) == null ? void 0 : _o.swap_funders_fee}:float64;
+                        clif = variant {"Day":${(_j = this.config) == null ? void 0 : _j.clif}:nat};
+                        vested = variant {"Day":${(_k = this.config) == null ? void 0 : _k.vested}:nat};
+                        interval = variant {"Day":${(_l = this.config) == null ? void 0 : _l.interval}:nat};
+                        totalAllocation = ${(_m = this.config) == null ? void 0 : _m.total_allocation}:nat;
+                        fundingGoal = ${(_n = this.config) == null ? void 0 : _n.funding_goal}:nat;
+                        swapFee = ${(_o = this.config) == null ? void 0 : _o.swap_fee}:float64;
+                        swapFundersfee = ${(_p = this.config) == null ? void 0 : _p.swap_funders_fee}:float64;
                     },
             )`;
       try {
-        const set_name = yield execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_p = this.config) == null ? void 0 : _p.dao_name}")`]);
+        const set_name = yield execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_q = this.config) == null ? void 0 : _q.dao_name}")`]);
         if (set_name.exitCode === 0) {
           spinner.update({ text: `successfuly registered dao` });
           yield sleep();
@@ -46933,8 +46934,9 @@ var token_2;
 var proposal_cost;
 var stake_time;
 var clif;
-var max_claims;
-var vesting_threshold;
+var vested;
+var interval;
+var total_allocation;
 var funding_goal;
 var swap_fee;
 var swap_funders_fee;
@@ -47206,22 +47208,60 @@ var MultiSig2 = class {
       }
     });
   }
-  askVestingThreshold() {
+  askVested() {
     return __async(this, null, function* () {
       var _a, _b;
-      if ((_a = this.config) == null ? void 0 : _a.vesting_threshold) {
-        vesting_threshold = (_b = this.config) == null ? void 0 : _b.vesting_threshold;
-        console.log(`Vesting Threashold: ${vesting_threshold}`);
+      if ((_a = this.config) == null ? void 0 : _a.vested) {
+        vested = (_b = this.config) == null ? void 0 : _b.vested;
+        console.log(`vested: ${vested}`);
       } else {
         const answers = yield inquirer_default.prompt({
-          name: "vesting_threshold",
+          name: "vested",
           type: "number",
-          message: "The total amount of time your allocation is vested (nanoseconds)",
+          message: "The total amount of time your allocation is vested",
           default() {
-            return "Vesting Threshold";
+            return "vested";
           }
         });
-        return answers.vesting_threshold;
+        return answers.vested;
+      }
+    });
+  }
+  askInterval() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.interval) {
+        interval = (_b = this.config) == null ? void 0 : _b.interval;
+        console.log(`vested: ${interval}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "interval",
+          type: "number",
+          message: "interval in when funds are released",
+          default() {
+            return "interval";
+          }
+        });
+        return answers.interval;
+      }
+    });
+  }
+  askTotalAllocation() {
+    return __async(this, null, function* () {
+      var _a, _b;
+      if ((_a = this.config) == null ? void 0 : _a.total_allocation) {
+        total_allocation = (_b = this.config) == null ? void 0 : _b.total_allocation;
+        console.log(`vested: ${interval}`);
+      } else {
+        const answers = yield inquirer_default.prompt({
+          name: "total_allocation",
+          type: "number",
+          message: "total allocation for air drop",
+          default() {
+            return "total allocation";
+          }
+        });
+        return answers.total_allocation;
       }
     });
   }
@@ -47346,8 +47386,9 @@ var config = {
   "stake_time": 0,
   "token_2": 0,
   "clif": 0,
-  "max_claims": 0,
-  "vesting_threshold": 0,
+  "vested": 0,
+  "interval": 0,
+  "total_allocation": 0,
   "funding_goal": 0,
   "swap_fee": 0,
   "swap_funders_fee": 0
@@ -47373,7 +47414,9 @@ initCommand.description("Creates a new MLP project").action((option) => __async(
   config.stake_time = yield init.askStakeTime();
   config.token_2 = yield init.askToken2();
   config.clif = yield init.askClif();
-  config.vesting_threshold = yield init.askVestingThreshold();
+  config.vested = yield init.askVested();
+  config.interval = yield init.askInterval();
+  config.interval = yield init.askTotalAllocation();
   config.funding_goal = yield init.askFundingGoal();
   config.swap_fee = yield init.askSwapFee();
   config.swap_funders_fee = yield init.askSwapFundersFee();
@@ -47428,7 +47471,7 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
 var import_fs3 = require("fs");
 
 // package.json
-var version = "0.0.14";
+var version = "0.0.15";
 var description = "My Little Protocol - Launching dao tools";
 
 // src/index.ts

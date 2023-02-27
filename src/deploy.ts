@@ -5,11 +5,11 @@ import * as gradient from 'gradient-string';
 import chalkAnimation from 'chalk-animation';
 import figlet from 'figlet';
 import { Command } from 'commander';
-import {execa} from 'execa';
+import { execa } from 'execa';
 import { createSpinner } from 'nanospinner';
 import { Mlpconfig } from './init';
 import standard from 'figlet/importable-fonts/Standard.js'
-import {names} from "./json-data";
+import { names } from "./json-data";
 import { readFileSync } from "fs";
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
@@ -44,7 +44,7 @@ export default class MultiSig {
             if (installDfx.exitCode !== 0) {
                 this.program.error("unable to install dfx, maybe install it manually?", { code: "1" })
             };
-            spinner.success({ text: `successfuly installed dfx`});
+            spinner.success({ text: `successfuly installed dfx` });
         }
         spinner.success({ text: `dfx already installed` });
     }
@@ -54,7 +54,7 @@ export default class MultiSig {
         const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
         // Run external tool synchronously
         const spinner = createSpinner('registering dao').start();
-        let icon = readFileSync("icon.png","base64");
+        let icon = readFileSync("icon.png", "base64");
         let args = `(
             record  {
                         daoName = "${this.config?.dao_name}";
@@ -67,9 +67,10 @@ export default class MultiSig {
                         token2 = "${this.config?.token_2}";
                         proposalCost = ${this.config?.proposal_cost}:nat;
                         stakedTime = ${this.config?.stake_time}:nat;
-                        clif = ${this.config?.clif}:nat;
-                        maxClaims = ${this.config?.max_claims}:nat;
-                        vestingThreshold = ${this.config?.vesting_threshold}:nat;
+                        clif = variant {"Day":${this.config?.clif}:nat};
+                        vested = variant {"Day":${this.config?.vested}:nat};
+                        interval = variant {"Day":${this.config?.interval}:nat};
+                        totalAllocation = ${this.config?.total_allocation}:nat;
                         fundingGoal = ${this.config?.funding_goal}:nat;
                         swapFee = ${this.config?.swap_fee}:float64;
                         swapFundersfee = ${this.config?.swap_funders_fee}:float64;
@@ -78,15 +79,15 @@ export default class MultiSig {
         try {
 
             const set_name = await execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${this.config?.dao_name}")`]);
-            
+
             if (set_name.exitCode === 0) {
-                spinner.update({ text: `successfuly registered dao`});
+                spinner.update({ text: `successfuly registered dao` });
                 await sleep();
-                spinner.update({ text: `creating dao, this will take a few mins...`});
+                spinner.update({ text: `creating dao, this will take a few mins...` });
                 const create = await execa("dfx", ["canister", "--network", "ic", "call", composer_canister, "create", args]);
-            
+
                 if (create.exitCode === 0) {
-                    spinner.success({ text: `successfuly created Dao`});
+                    spinner.success({ text: `successfuly created Dao` });
                 }
             }
 
@@ -102,7 +103,7 @@ export default class MultiSig {
         const registry_canister = "rno2w-sqaaa-aaaaa-aaacq-cai";
         // Run external tool synchronously
         const spinner = createSpinner('registering dao').start();
-        let icon = readFileSync("icon.png","base64");
+        let icon = readFileSync("icon.png", "base64");
         let args = `(
             record  {
                         daoName = "Test Dao";
@@ -126,15 +127,15 @@ export default class MultiSig {
         try {
 
             const set_name = await execa("dfx", ["canister", "call", registry_canister, "setName", `("Test Dao")`]);
-            
+
             if (set_name.exitCode === 0) {
-                spinner.update({ text: `successfuly registered dao`});
+                spinner.update({ text: `successfuly registered dao` });
                 await sleep();
-                spinner.update({ text: `creating dao, this will take a few mins...`});
+                spinner.update({ text: `creating dao, this will take a few mins...` });
                 const create = await execa("dfx", ["canister", "call", composer_canister, "create", args]);
-            
+
                 if (create.exitCode === 0) {
-                    spinner.success({ text: `successfuly created Dao`});
+                    spinner.success({ text: `successfuly created Dao` });
                 }
             }
 

@@ -27,7 +27,9 @@ initCommand.description("Creates a new MLP project")
     config.stake_time = await init.askStakeTime();
     config.token_2 = await init.askToken2();
     config.clif = await init.askClif();
-    config.vesting_threshold = await init.askVestingThreshold();
+    config.vested = await init.askVested();
+    config.interval = await init.askInterval();
+    config.interval = await init.askTotalAllocation();
     config.funding_goal = await init.askFundingGoal();
     config.swap_fee = await init.askSwapFee();
     config.swap_funders_fee = await init.askSwapFundersFee();

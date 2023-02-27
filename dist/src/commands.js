@@ -38,7 +38,9 @@ exports.initCommand.description("Creates a new MLP project")
     json_data_1.config.stake_time = yield init.askStakeTime();
     json_data_1.config.token_2 = yield init.askToken2();
     json_data_1.config.clif = yield init.askClif();
-    json_data_1.config.vesting_threshold = yield init.askVestingThreshold();
+    json_data_1.config.vested = yield init.askVested();
+    json_data_1.config.interval = yield init.askInterval();
+    json_data_1.config.interval = yield init.askTotalAllocation();
     json_data_1.config.funding_goal = yield init.askFundingGoal();
     json_data_1.config.swap_fee = yield init.askSwapFee();
     json_data_1.config.swap_funders_fee = yield init.askSwapFundersFee();

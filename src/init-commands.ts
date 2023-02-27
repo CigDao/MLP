@@ -16,8 +16,9 @@ let token_2:string;
 let proposal_cost:number;
 let stake_time:number;
 let clif:number;
-let max_claims:number;
-let vesting_threshold:number;
+let vested:number;
+let interval:number;
+let total_allocation:number;
 let funding_goal:number;
 let swap_fee:number;
 let swap_funders_fee:number;
@@ -280,24 +281,60 @@ export default class MultiSig {
         }
     }
 
-    async askVestingThreshold() {
-        if (this.config?.vesting_threshold) {
-            vesting_threshold = this.config?.vesting_threshold;
-            console.log(`Vesting Threashold: ${vesting_threshold}`)
+    async askVested() {
+        if (this.config?.vested) {
+            vested = this.config?.vested;
+            console.log(`vested: ${vested}`)
         } else {
             const answers = await inquirer.prompt({
-                name: 'vesting_threshold',
+                name: 'vested',
                 type: 'number',
-                message: "The total amount of time your allocation is vested (nanoseconds)",
+                message: "The total amount of time your allocation is vested",
                 default() {
-                    return 'Vesting Threshold';
+                    return 'vested';
                 },
             });
 
-            return answers.vesting_threshold;
+            return answers.vested;
         }
     }
 
+    async askInterval() {
+        if (this.config?.interval) {
+            interval = this.config?.interval;
+            console.log(`vested: ${interval}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'interval',
+                type: 'number',
+                message: "interval in when funds are released",
+                default() {
+                    return 'interval';
+                },
+            });
+
+            return answers.interval;
+        }
+    }
+
+    async askTotalAllocation() {
+        if (this.config?.total_allocation) {
+            total_allocation = this.config?.total_allocation;
+            console.log(`vested: ${interval}`)
+        } else {
+            const answers = await inquirer.prompt({
+                name: 'total_allocation',
+                type: 'number',
+                message: "total allocation for air drop",
+                default() {
+                    return 'total allocation';
+                },
+            });
+
+            return answers.total_allocation;
+        }
+    }
+    
     async askFundingGoal() {
         if (this.config?.funding_goal) {
             funding_goal = this.config?.funding_goal;

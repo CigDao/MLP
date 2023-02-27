@@ -82,7 +82,7 @@ class MultiSig {
         });
     }
     create_dao() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s;
         return __awaiter(this, void 0, void 0, function* () {
             const composer_canister = "xpfnk-5yaaa-aaaan-qc3ga-cai";
             const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
@@ -101,16 +101,17 @@ class MultiSig {
                         token2 = "${(_g = this.config) === null || _g === void 0 ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) === null || _h === void 0 ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_j = this.config) === null || _j === void 0 ? void 0 : _j.stake_time}:nat;
-                        clif = ${(_k = this.config) === null || _k === void 0 ? void 0 : _k.clif}:nat;
-                        maxClaims = ${(_l = this.config) === null || _l === void 0 ? void 0 : _l.max_claims}:nat;
-                        vestingThreshold = ${(_m = this.config) === null || _m === void 0 ? void 0 : _m.vesting_threshold}:nat;
-                        fundingGoal = ${(_o = this.config) === null || _o === void 0 ? void 0 : _o.funding_goal}:nat;
-                        swapFee = ${(_p = this.config) === null || _p === void 0 ? void 0 : _p.swap_fee}:float64;
-                        swapFundersfee = ${(_q = this.config) === null || _q === void 0 ? void 0 : _q.swap_funders_fee}:float64;
+                        clif = variant {"Day":${(_k = this.config) === null || _k === void 0 ? void 0 : _k.clif}:nat};
+                        vested = variant {"Day":${(_l = this.config) === null || _l === void 0 ? void 0 : _l.vested}:nat};
+                        interval = variant {"Day":${(_m = this.config) === null || _m === void 0 ? void 0 : _m.interval}:nat};
+                        totalAllocation = ${(_o = this.config) === null || _o === void 0 ? void 0 : _o.total_allocation}:nat;
+                        fundingGoal = ${(_p = this.config) === null || _p === void 0 ? void 0 : _p.funding_goal}:nat;
+                        swapFee = ${(_q = this.config) === null || _q === void 0 ? void 0 : _q.swap_fee}:float64;
+                        swapFundersfee = ${(_r = this.config) === null || _r === void 0 ? void 0 : _r.swap_funders_fee}:float64;
                     },
             )`;
             try {
-                const set_name = yield (0, execa_1.execa)("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_r = this.config) === null || _r === void 0 ? void 0 : _r.dao_name}")`]);
+                const set_name = yield (0, execa_1.execa)("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_s = this.config) === null || _s === void 0 ? void 0 : _s.dao_name}")`]);
                 if (set_name.exitCode === 0) {
                     spinner.update({ text: `successfuly registered dao` });
                     yield sleep();
