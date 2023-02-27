@@ -14,37 +14,6 @@ import { readFileSync } from "fs";
 
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
-var canister_ids = {
-    "multisig": {
-        "local": "",
-        "ic":""
-    },
-    "database": {
-        "local": "",
-        "ic":""
-    },
-    "topup": {
-        "local": "",
-        "ic":""
-    },
-    "token": {
-        "local": "",
-        "ic":""
-    },
-    "swap": {
-        "local": "",
-        "ic":""
-    },
-    "treasury": {
-        "local": "",
-        "ic":""
-    },
-    "dao": {
-        "local": "",
-        "ic":""
-    },
-}
-
 export default class MultiSig {
     constructor(private program: Command, private config?: Mlpconfig) { }
 
@@ -85,6 +54,7 @@ export default class MultiSig {
         const registry_canister = "xuarp-haaaa-aaaan-qc3eq-cai";
         // Run external tool synchronously
         const spinner = createSpinner('registering dao').start();
+        let icon = readFileSync("icon.png","base64");
         let args = `(
             record  {
                         daoName = ${this.config?.dao_name};
