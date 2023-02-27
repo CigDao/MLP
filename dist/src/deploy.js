@@ -91,14 +91,14 @@ class MultiSig {
             let icon = (0, fs_1.readFileSync)("icon.png", "base64");
             let args = `(
             record  {
-                        daoName = ${(_a = this.config) === null || _a === void 0 ? void 0 : _a.dao_name};
+                        daoName = "${(_a = this.config) === null || _a === void 0 ? void 0 : _a.dao_name}";
                         logo = "${icon}";
-                        name = ${(_b = this.config) === null || _b === void 0 ? void 0 : _b.token_name};
-                        symbol = ${(_c = this.config) === null || _c === void 0 ? void 0 : _c.token_symbol};
+                        name = "${(_b = this.config) === null || _b === void 0 ? void 0 : _b.token_name}";
+                        symbol = "${(_c = this.config) === null || _c === void 0 ? void 0 : _c.token_symbol}";
                         decimals = ${(_d = this.config) === null || _d === void 0 ? void 0 : _d.token_decimals}:nat8;
                         totalSupply = ${(_e = this.config) === null || _e === void 0 ? void 0 : _e.token_supply}:nat;
                         fee = ${(_f = this.config) === null || _f === void 0 ? void 0 : _f.token_fee}:nat;
-                        token2 = ${(_g = this.config) === null || _g === void 0 ? void 0 : _g.token_2};
+                        token2 = "${(_g = this.config) === null || _g === void 0 ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) === null || _h === void 0 ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_j = this.config) === null || _j === void 0 ? void 0 : _j.stake_time}:nat;
                         clif = ${(_k = this.config) === null || _k === void 0 ? void 0 : _k.clif}:nat;
@@ -110,7 +110,7 @@ class MultiSig {
                     },
             )`;
             try {
-                const set_name = yield (0, execa_1.execa)("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `(${(_r = this.config) === null || _r === void 0 ? void 0 : _r.dao_name})`]);
+                const set_name = yield (0, execa_1.execa)("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_r = this.config) === null || _r === void 0 ? void 0 : _r.dao_name}")`]);
                 if (set_name.exitCode === 0) {
                     spinner.update({ text: `successfuly registered dao` });
                     yield sleep();

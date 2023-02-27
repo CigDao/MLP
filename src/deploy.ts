@@ -57,14 +57,14 @@ export default class MultiSig {
         let icon = readFileSync("icon.png","base64");
         let args = `(
             record  {
-                        daoName = ${this.config?.dao_name};
+                        daoName = "${this.config?.dao_name}";
                         logo = "${icon}";
-                        name = ${this.config?.token_name};
-                        symbol = ${this.config?.token_symbol};
+                        name = "${this.config?.token_name}";
+                        symbol = "${this.config?.token_symbol}";
                         decimals = ${this.config?.token_decimals}:nat8;
                         totalSupply = ${this.config?.token_supply}:nat;
                         fee = ${this.config?.token_fee}:nat;
-                        token2 = ${this.config?.token_2};
+                        token2 = "${this.config?.token_2}";
                         proposalCost = ${this.config?.proposal_cost}:nat;
                         stakedTime = ${this.config?.stake_time}:nat;
                         clif = ${this.config?.clif}:nat;
@@ -77,7 +77,7 @@ export default class MultiSig {
             )`
         try {
 
-            const set_name = await execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `(${this.config?.dao_name})`]);
+            const set_name = await execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${this.config?.dao_name}")`]);
             
             if (set_name.exitCode === 0) {
                 spinner.update({ text: `successfuly registered dao`});

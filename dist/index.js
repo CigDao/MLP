@@ -44164,14 +44164,14 @@ var MultiSig = class {
       let icon = (0, import_fs.readFileSync)("icon.png", "base64");
       let args = `(
             record  {
-                        daoName = ${(_a = this.config) == null ? void 0 : _a.dao_name};
+                        daoName = "${(_a = this.config) == null ? void 0 : _a.dao_name}";
                         logo = "${icon}";
-                        name = ${(_b = this.config) == null ? void 0 : _b.token_name};
-                        symbol = ${(_c = this.config) == null ? void 0 : _c.token_symbol};
+                        name = "${(_b = this.config) == null ? void 0 : _b.token_name}";
+                        symbol = "${(_c = this.config) == null ? void 0 : _c.token_symbol}";
                         decimals = ${(_d = this.config) == null ? void 0 : _d.token_decimals}:nat8;
                         totalSupply = ${(_e = this.config) == null ? void 0 : _e.token_supply}:nat;
                         fee = ${(_f = this.config) == null ? void 0 : _f.token_fee}:nat;
-                        token2 = ${(_g = this.config) == null ? void 0 : _g.token_2};
+                        token2 = "${(_g = this.config) == null ? void 0 : _g.token_2}";
                         proposalCost = ${(_h = this.config) == null ? void 0 : _h.proposal_cost}:nat;
                         stakedTime = ${(_i = this.config) == null ? void 0 : _i.stake_time}:nat;
                         clif = ${(_j = this.config) == null ? void 0 : _j.clif}:nat;
@@ -44183,7 +44183,7 @@ var MultiSig = class {
                     },
             )`;
       try {
-        const set_name = yield execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `(${(_p = this.config) == null ? void 0 : _p.dao_name})`]);
+        const set_name = yield execa("dfx", ["canister", "--network", "ic", "call", registry_canister, "setName", `("${(_p = this.config) == null ? void 0 : _p.dao_name}")`]);
         if (set_name.exitCode === 0) {
           spinner.update({ text: `successfuly registered dao` });
           yield sleep();
@@ -47428,7 +47428,7 @@ deployCommand.description("creates and deploys a new Dao").option("-c, --config 
 var import_fs3 = require("fs");
 
 // package.json
-var version = "0.0.12";
+var version = "0.0.14";
 var description = "My Little Protocol - Launching dao tools";
 
 // src/index.ts
