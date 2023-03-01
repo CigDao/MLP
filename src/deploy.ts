@@ -56,7 +56,8 @@ export default class MultiSig {
         const spinner = createSpinner('registering dao').start();
         let icon = readFileSync("icon.png", "base64");
         let args = `(
-            record  {
+            record  {   
+                        owner = "${this.config?.member_principal}";
                         daoName = "${this.config?.dao_name}";
                         logo = "${icon}";
                         name = "${this.config?.token_name}";
@@ -106,6 +107,7 @@ export default class MultiSig {
         let icon = readFileSync("icon.png", "base64");
         let args = `(
             record  {
+                        owner = "rrkah-fqaaa-aaaaa-aaaaq-cai";
                         daoName = "Test Dao";
                         logo = "${icon}";
                         name = "Test Token";
